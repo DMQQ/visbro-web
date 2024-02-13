@@ -1,0 +1,271 @@
+{
+  "Contact": {
+    "heading": "Kontakt",
+    "heading_helper": "Haben Sie Fragen? Schreiben Sie unseren Recruitern!",
+
+    "location_heading": "Standort",
+    "phone_heading": "Telefon für die Zentrale",
+    "open_hours": "Geöffnet"
+  },
+  "JobOffers": {
+    "heading": "Jobangebote",
+    "search": {
+      "label": "Anzeigen durchsuchen",
+      "placeholder": "Z.B. Kurierjob...",
+      "button": "Suchen"
+    },
+    "buttons": {
+      "card": {
+        "apply": "Mehr erfahren"
+      }
+    }
+  },
+  "Gallery": {
+    "heading": "Galerie",
+    "heading_helper": "Fotos von unserer Arbeit und dem Unternehmen"
+  },
+  "Career": {
+    "heading": "Karriere bei Visbro Personal Solution",
+    "form": {
+      "name": {
+        "text": "Name",
+        "error": "Das Namensfeld darf nicht leer sein"
+      },
+      "surname": {
+        "text": "Nachname",
+        "error": "Das Nachnamenfeld darf nicht leer sein"
+      },
+      "email": {
+        "text": "E-Mail-Adresse",
+        "error": "Die E-Mail-Adresse ist erforderlich"
+      },
+      "education": {
+        "text": "Bildung",
+        "error": "Das Bildungsfeld darf nicht leer sein"
+      },
+      "gender": {
+        "text": "Geschlecht",
+        "error": "Das Geschlechterfeld darf nicht leer sein"
+      },
+      "languages": {
+        "text": "Bekannte Sprachen",
+        "error": "Das Feld für bekannte Sprachen darf nicht leer sein"
+      },
+      "hasDriverLicenseCatB": {
+        "text": "Besitzt einen Führerschein der Kategorie B",
+        "error": "Das Feld mit der Information über den Besitz eines Führerscheins der Kategorie B darf nicht leer sein"
+      },
+      "hasBeenArrested": {
+        "text": "Wurde verhaftet",
+        "error": "Das Feld mit der Information über eine Verhaftung darf nicht leer sein"
+      },
+      "civilState": {
+        "text": "Familienstand",
+        "error": "Das Feld für den Familienstand darf nicht leer sein"
+      },
+      "additionalInfo": {
+        "text": "Zusätzliche Informationen",
+        "error": "Das Feld für zusätzliche Informationen darf nicht leer sein"
+      },
+      "submit": "Senden"
+    }
+  },
+  "About": {
+    "heading": "Über Visbro",
+    "content": "\nDie Vision von Visbro Personal Solution UG seit unserer Gründung im Jahr 2021\nist die Schaffung eines Raums, in dem die Rekrutierung nicht nur ein Prozess ist, sondern eine Gelegenheit\nzum Aufbau dauerhafter Beziehungen. Unser Hauptsitz in Leipzig ist der Ort, an dem\ndie Idee entstand, neue Standards in der HR-Branche zu setzen, und seitdem\narbeiten wir unermüdlich an ihrer Umsetzung. Unsere HR-Dienstleistungen, basierend auf\nindividuellem Ansatz und höchsten Qualitätsstandards, resultieren nicht nur aus unserem Wissen\nund unserer Erfahrung, sondern auch aus dem Zuhören der Bedürfnisse unserer Kunden. Mitarbeiterquartiere\nin verschiedenen Regionen Deutschlands sind Teil unserer Strategie und betonen unser Engagement für die Bereitstellung von\nstabilen Arbeits- und Lebensbedingungen für die Mitarbeiter. Unser Team von talentierten und\nerfahrenen Spezialisten arbeitet mit Leidenschaft und Engagement, um sicherzustellen,\ndass unseren Kunden der höchste Servicestandard geboten wird, was sich in der Effektivität\nund dem Erfolg jeder Zusammenarbeit niederschlägt.\n\n"
+  },
+  "Home": {
+    "buttons": {
+      "learn_more": "Erfahren Sie mehr",
+      "offers": "Jobangebote prüfen"
+    },
+    "headings": {
+      "top3": "Top 4 Angebote",
+      "trusted_us": "Sie haben uns vertraut",
+      "socials": "Sie finden uns auch auf",
+      "why_us": "Warum Visbro?"
+    },
+    "text": {
+      "short_about": "Willkommen bei Visbro Personal Solution UG, wo Ihre HR-Bedürfnisse\n            auf innovative Lösungen treffen. Unsere Leidenschaft ist es, außergewöhnliche Talente mit Unternehmen zu verbinden, die nicht nur nach Mitarbeitern suchen,\n            sondern vor allem nach Teammitgliedern.\n",
+      "why_us": "\n Wir setzen auf Personalisierung, Qualität und Transparenz in jeder Phase unserer Zusammenarbeit.\n\nMit Visbro hört der Rekrutierungsprozess auf, eine Herausforderung zu sein. \n\n Wir bieten Unterstützung in jeder Phase - vom Finden des perfekten Kandidaten bis zur Unterbringung und Erledigung der Formalitäten. Unser Angebot umfasst eine Vielzahl von Dienstleistungen, die auf die individuellen Bedürfnisse jedes Kunden zugeschnitten sind.\n\nUnsere Spezialität ist die Bereitstellung erstklassiger Fachleute in verschiedenen Bereichen. Egal, ob Sie Fahrer, Reinigungspersonal, Landarbeiter oder IT-Experten benötigen, Visbro ist Ihre Lösung. Treten Sie ein und lassen Sie uns gemeinsam Erfolg aufbauen!\n"
+    }
+  },
+  "Rental": {
+    "header_title": "Visbro Autovermietung",
+    "header_helper": "Schauen Sie sich unser Angebot an!",
+    "car_options": "Lieferwagen;Lastwagen"
+  },
+  "Footer": {
+    "contact": {
+      "heading": "Kontakt",
+      "phone_number_office": "Telefonnummer Sekretariat",
+      "phone_number_owner": "Telefonnummer des Eigentümers",
+      "email": "E-Mail-Adresse"
+    },
+    "address": {
+      "heading": "Adresse",
+      "headquater_location": "Firmensitz",
+      "other_location": "Andere Standorte des Unternehmens",
+      "open_hours": "Öffnungszeiten"
+    },
+    "about": {
+      "heading": "Über das Unternehmen",
+      "tax_number": "Steuernummer",
+      "data_admin": "Datenadministrator",
+      "website_owner": "Website-Eigentümer",
+      "company_name": "Firmenname"
+    }
+  },
+  "Navigation": {
+    "about": "Überuns",
+    "collab": "Zusammenarbeit",
+    "offers": "Jobangebote",
+    "biuroservis": "Bürodienstleistungen",
+    "gallery": "Galerie",
+    "contact": "Kontakt",
+    "career": "Karriere bei Visbro",
+    "rental": "TruckRental"
+  },
+  "Collaboration": {
+    "title": "Arbeiten Sie mit uns zusammen",
+    "form": {
+      "name": {
+        "text": "Name",
+        "error": "Das Namensfeld darf nicht leer sein"
+      },
+      "surname": {
+        "text": "Nachname",
+        "error": "Das Nachnamenfeld darf nicht leer sein"
+      },
+      "companyName": {
+        "text": "Firmenname",
+        "error": "Das Feld für den Firmennamen darf nicht leer sein"
+      },
+      "jobPosition": {
+        "text": "Jobposition",
+        "error": "Das Feld für die Jobposition darf nicht leer sein"
+      },
+      "phoneNumber": {
+        "text": "Telefonnummer",
+        "error": "Das Feld für die Telefonnummer darf nicht leer sein"
+      },
+      "email": {
+        "text": "E-Mail-Adresse",
+        "error": "Das Feld für die E-Mail-Adresse darf nicht leer sein",
+        "errorFormat": "Ungültiges E-Mail-Format"
+      },
+      "message": {
+        "text": "Nachricht",
+        "error": "Das Feld für die Nachricht darf nicht leer sein"
+      },
+      "messagePlaceholder": {
+        "text": "Wie können wir Ihnen helfen?",
+        "error": "Das Feld für die Nachricht darf nicht leer sein"
+      },
+      "submit": "Senden"
+    },
+    "content": "Bei Visbro Personal Solution UG wissen wir, dass eine effektive Zusammenarbeit entscheidend ist\nfür den Erfolg jedes Unternehmens. Seit über einem Jahr unterstützen wir Unternehmer\nim ganzen Land dabei, starke und effiziente Teams aufzubauen und ihre\nstrategischen Geschäftsziele zu erreichen. Unsere HR-Dienstleistungen basieren auf einem tiefen\nVerständnis der Bedürfnisse unserer Kunden und bieten umfassende Unterstützung bei der\nPersonalführung.\nAls erfahrenes Team von Spezialisten sind wir bereit, Sie in allen Aspekten des\nPersonalmanagements zu unterstützen - von der Rekrutierung und Auswahl über die Schulung und Entwicklung von Mitarbeitern bis hin zur Leistungssteigerung und Talentbindung.\nUnser Ansatz basiert auf Zusammenarbeit und partnerschaftlichem Denken, das\nsich in dauerhaften und fruchtbaren Geschäftsbeziehungen niederschlägt.\nWir ermutigen Sie, das unten stehende Kontaktformular zu nutzen, damit wir\nbesprechen können, wie wir die Entwicklung Ihres Unternehmens unterstützen und zu\nIhren Geschäftszielen beitragen können.\n\n"
+  },
+
+  "ApplicationForm": {
+    "heading": "Anmeldeformular",
+    "heading_helper": "Step {from} out of {to}",
+    "buttons": {
+      "next": "Nächste",
+      "back": "Rückwärts"
+    },
+    "form": {
+      "name": {
+        "text": "Name",
+        "error": "Das Namensfeld darf nicht leer sein"
+      },
+      "surname": {
+        "text": "Nachname",
+        "error": "Das Nachnamenfeld darf nicht leer sein"
+      },
+      "phoneNumber": {
+        "text": "Telefonnummer",
+        "error": "Das Feld für die Telefonnummer darf nicht leer sein"
+      },
+      "dateOfBirth": {
+        "text": "Geburtsdatum",
+        "error": "Das Feld für das Geburtsdatum darf nicht leer sein"
+      },
+      "lastJobPosition": {
+        "text": "Letzte Arbeitsposition",
+        "error": "Das Feld für die letzte Arbeitsposition darf nicht leer sein"
+      },
+      "education": {
+        "text": "Bildung",
+        "error": "Das Bildungsfeld darf nicht leer sein"
+      },
+      "gender": {
+        "text": "Geschlecht",
+        "error": "Das Geschlechterfeld darf nicht leer sein"
+      },
+      "age": {
+        "text": "Alter",
+        "error": "Das Feld für das Alter darf nicht leer sein"
+      },
+      "hasOwnCar": {
+        "text": "Besitzen Sie ein eigenes Auto?",
+        "error": "Das Feld zur Autobesitzangabe darf nicht leer sein"
+      },
+      "civilState": {
+        "text": "Familienstand (verheiratet, geschieden, etc.)",
+        "error": "Das Feld für den Familienstand darf nicht leer sein"
+      },
+      "workStart": {
+        "text": "Bereitschaft zur Arbeitsaufnahme",
+        "error": "Das Feld für die Arbeitsbereitschaft darf nicht leer sein"
+      },
+      "bankNumber": {
+        "text": "Bankkontonummer",
+        "error": "Das Feld für die Bankkontonummer darf nicht leer sein"
+      },
+      "bankName": {
+        "text": "Bankname",
+        "error": "Das Feld für den Banknamen darf nicht leer sein"
+      },
+      "bankCode": {
+        "text": "Bankleitzahl",
+        "error": "Das Feld für die Bankleitzahl darf nicht leer sein"
+      },
+      "address": {
+        "text": "Wohnadresse",
+        "error": "Das Feld für die Wohnadresse darf nicht leer sein"
+      },
+      "currentAddress": {
+        "text": "Aktuelle Adresse",
+        "error": "Das Feld für die aktuelle Adresse darf nicht leer sein"
+      },
+      "mailAddress": {
+        "text": "E-Mail-Adresse",
+        "error": "Das Feld für die E-Mail-Adresse darf nicht leer sein",
+        "errorFormat": "Ungültiges E-Mail-Format"
+      },
+      "emergencyContact": {
+        "text": "Notfallkontakt im Falle eines Unfalls (Name und Kontakt)",
+        "error": "Das Feld für den Notfallkontakt darf nicht leer sein"
+      },
+      "dataProcessingConsent": {
+        "text": "Einwilligung zur Verarbeitung personenbezogener Daten",
+        "error": "Die Einwilligung zur Datenverarbeitung muss ausgewählt sein"
+      },
+      "documentId": {
+        "text": "Fotos Ihres Personalausweises",
+        "error": ""
+      },
+      "driverLicense": {
+        "text": "Führerscheinfotos"
+      }
+    }
+  },
+  "Biuroservis": {
+    "heading": "Biuroservis",
+    "heading_helper": "Unsere Dienstleistungen"
+  },
+  "Impressum": {
+    "content": "Bank account number: 0000 0000 0000 000 00 (Tax identification number for Germany in maintenance, Tax identification number for the EU in maintenance) "
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "Contact": {
+    "heading": "Contact",
+    "heading_helper": "Have questions? Write to our recruiters!",
+
+    "location_heading": "Location",
+    "phone_heading": "Headquarters Phone",
+    "open_hours": "Open"
+  },
+  "JobOffers": {
+    "heading": "Job Offers",
+    "search": {
+      "label": "Search Ads",
+      "placeholder": "E.g., Courier job...",
+      "button": "Search"
+    },
+    "buttons": {
+      "card": {
+        "apply": "Learn More"
+      }
+    }
+  },
+  "Gallery": {
+    "heading": "Gallery",
+    "heading_helper": "Photos from our work and company"
+  },
+  "Career": {
+    "heading": "Career at Visbro Personal Solution",
+    "content": "We invite you to join the Visbro team! Discover our current job offers below and become part of our dynamic team. If you have an idea you would like to bring to our company, please fill out the contact form and share it with us!",
+    "form": {
+      "name": {
+        "text": "Name",
+        "error": "Name field cannot be empty"
+      },
+      "surname": {
+        "text": "Surname",
+        "error": "Surname field cannot be empty"
+      },
+      "email": {
+        "text": "Email Address",
+        "error": "Email address is required"
+      },
+      "education": {
+        "text": "Education",
+        "error": "Education field cannot be empty"
+      },
+      "gender": {
+        "text": "Gender",
+        "error": "Gender field cannot be empty"
+      },
+      "languages": {
+        "text": "Known Languages",
+        "error": "Known languages field cannot be empty"
+      },
+      "hasDriverLicenseCatB": {
+        "text": "Has a driver's license category B",
+        "error": "Field with information about having a driver's license category B cannot be empty"
+      },
+      "hasBeenArrested": {
+        "text": "Has been arrested",
+        "error": "Field with information about being arrested cannot be empty"
+      },
+      "civilState": {
+        "text": "Civil Status",
+        "error": "Field with civil status cannot be empty"
+      },
+      "additionalInfo": {
+        "text": "Additional Information",
+        "error": "Field with additional information cannot be empty"
+      },
+      "submit": "Submit"
+    }
+  },
+  "About": {
+    "heading": "About Visbro",
+    "content": "\n\nThe vision of Visbro Personal Solution UG since the beginning of our operations in 2021 has been to create a space where recruitment is not just a process but an opportunity to build lasting relationships. Our headquarters in Leipzig is where the idea of ​​setting new standards in the HR industry was born, and since then, we have been constantly striving to achieve them. Our HR service offer, based on an individual approach and the highest quality standards, is the result not only of our knowledge and experience but also of listening to the needs of our clients. Employee accommodations in various regions of Germany are part of our strategy, which emphasizes our commitment to providing employees with stable working and living conditions. Our team of talented and experienced professionals works with passion and dedication to ensure the highest level of service to our clients, which translates into the efficiency and success of every collaboration.\n"
+  },
+  "Home": {
+    "buttons": {
+      "learn_more": "Learn More",
+      "offers": "Check Job Offers"
+    },
+    "headings": {
+      "top3": "Top 4 Offers",
+      "trusted_us": "They Trusted Us",
+      "socials": "You Can Also Find Us On",
+      "why_us": "Why Visbro?"
+    },
+    "text": {
+      "short_about": "\nWelcome to Visbro Personal Solution UG, where your HR needs meet innovative solutions. Our passion is connecting exceptional talents with companies that seek not only employees but above all team players. We prioritize personalization, quality, and transparency in every aspect of our collaboration.\n",
+      "why_us": "\nWith Visbro, the recruitment process ceases to be a challenge. We provide support at every stage - from finding the perfect candidate to their accommodation and handling formalities. Our offer encompasses a wide range of services tailored to the individual needs of each client. \nOur specialty lies in delivering top-notch professionals in various fields. Whether you need drivers, cleaning staff, agricultural workers, or IT experts, Visbro is your solution. Join us and let's build success together!\n\n"
+    }
+  },
+  "Rental": {
+    "header_title": "Visbro Car Rental",
+    "header_helper": "Check out our offer!",
+    "car_options": "Delivery Vans;Trucks"
+  },
+  "Footer": {
+    "contact": {
+      "heading": "Contact",
+      "phone_number_office": "Secretariat Phone Number",
+      "phone_number_owner": "Owner's Phone Number",
+      "email": "Email Address"
+    },
+    "address": {
+      "heading": "Address",
+      "headquater_location": "Company Headquarters",
+      "other_location": "Other Company Points",
+      "open_hours": "Opening Hours"
+    },
+    "about": {
+      "heading": "About the Company",
+      "tax_number": "Tax Number",
+      "data_admin": "Data Administrator",
+      "website_owner": "Website Owner",
+      "company_name": "Company Name"
+    }
+  },
+  "Navigation": {
+    "about": "About Us",
+    "collab": "Collaboration",
+    "offers": "Job Offers",
+    "biuroservis": "Office Services",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "career": "Career at Visbro",
+    "rental": "TruckRental"
+  },
+  "Collaboration": {
+    "title": "Collaborate with Us",
+    "form": {
+      "heading": "Tell us about yourself!",
+      "name": {
+        "text": "Name",
+        "error": "Name field cannot be empty"
+      },
+      "surname": {
+        "text": "Surname",
+        "error": "Surname field cannot be empty"
+      },
+      "companyName": {
+        "text": "Company Name",
+        "error": "Company name field cannot be empty"
+      },
+      "jobPosition": {
+        "text": "Job Position",
+        "error": "Job position field cannot be empty"
+      },
+      "phoneNumber": {
+        "text": "Phone Number",
+        "error": "Phone number field cannot be empty"
+      },
+      "email": {
+        "text": "Email Address",
+        "error": "Email address field cannot be empty",
+        "errorFormat": "Invalid email address format"
+      },
+      "message": {
+        "text": "Message",
+        "error": "Message field cannot be empty"
+      },
+      "messagePlaceholder": {
+        "text": "How can we help you?",
+        "error": "Message field cannot be empty"
+      },
+      "submit": "Submit"
+    },
+    "content": "\nAt Visbro Personal Solution UG, we understand that effective collaboration is key to the success of any business. For over a year, we have been helping entrepreneurs across the country build strong and efficient teams and achieve their strategic business goals. Our HR services are based on a deep understanding of our clients' needs and provide comprehensive support in personnel management. <br></br><br></br>\nAs an experienced team of specialists, we are ready to support you in all aspects of human resource management - from recruitment and selection, through employee training and development, to performance management and talent retention. Our approach is based on collaboration and a partnership approach, which translates into lasting and fruitful business relationships.\nWe encourage you to use the contact form below so that we can discuss how we can support the development of your business and contribute to achieving your business goals.\n"
+  },
+
+  "ApplicationForm": {
+    "heading": "Offer application",
+    "step": "Step {from} out of {to}",
+    "buttons": {
+      "next": "Continue",
+      "back": "Back"
+    },
+    "form": {
+      "name": {
+        "text": "Name",
+        "error": "Name field cannot be empty"
+      },
+      "surname": {
+        "text": "Surname",
+        "error": "Surname field cannot be empty"
+      },
+      "phoneNumber": {
+        "text": "Phone Number",
+        "error": "Phone number field cannot be empty"
+      },
+      "dateOfBirth": {
+        "text": "Date of Birth",
+        "error": "Date of birth field cannot be empty"
+      },
+      "lastJobPosition": {
+        "text": "Previous Job Position",
+        "error": "Field with previous job position cannot be empty"
+      },
+      "education": {
+        "text": "Education",
+        "error": "Education field cannot be empty"
+      },
+      "gender": {
+        "text": "Gender",
+        "error": "Gender field cannot be empty"
+      },
+      "age": {
+        "text": "Age",
+        "error": "Field with age cannot be empty"
+      },
+      "hasOwnCar": {
+        "text": "Do you own a car?",
+        "error": "Field regarding car ownership cannot be empty"
+      },
+      "civilState": {
+        "text": "Civil Status (married, divorced, etc.)",
+        "error": "Field with civil status cannot be empty"
+      },
+      "workStart": {
+        "text": "Readiness to Start Work",
+        "error": "Field with readiness to work cannot be empty"
+      },
+      "bankNumber": {
+        "text": "Bank Account Number",
+        "error": "Field with bank account number cannot be empty"
+      },
+      "bankName": {
+        "text": "Bank Name",
+        "error": "Field with bank name cannot be empty"
+      },
+      "bankCode": {
+        "text": "Bank Code",
+        "error": "Field with bank code cannot be empty"
+      },
+      "address": {
+        "text": "Residence Address",
+        "error": "Field with residence address cannot be empty"
+      },
+      "currentAddress": {
+        "text": "Current Address",
+        "error": "Field with current address cannot be empty"
+      },
+      "mailAddress": {
+        "text": "Email Address",
+        "error": "Email address field cannot be empty",
+        "errorFormat": "Invalid email address format"
+      },
+      "emergencyContact": {
+        "text": "Emergency Contact in case of an accident (Name and contact)",
+        "error": "Field with emergency contact cannot be empty"
+      },
+      "dataProcessingConsent": {
+        "text": "Consent for Personal Data Processing",
+        "error": "Consent for data processing must be selected"
+      }
+    }
+  },
+  "Biuroservis": {
+    "heading": "Biuro servis",
+    "heading_helper": "Our services"
+  },
+  "Impressum": {
+    "content": "Bank account number: 0000 0000 0000 000 00 (Tax identification number for Germany in maintenance, Tax identification number for the EU in maintenance) "
+  }
+}

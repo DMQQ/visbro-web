@@ -1,0 +1,274 @@
+{
+  "Contact": {
+    "heading": "Kontakt",
+    "heading_helper": "Masz pytania? Napisz do naszych rekruterów!",
+
+    "location_heading": "Lokalizacja",
+    "phone_heading": "Telefon do siedziby",
+    "open_hours": "Czynne"
+  },
+  "JobOffers": {
+    "heading": "Oferty pracy",
+    "search": {
+      "label": "Szukaj ogłoszeń",
+      "placeholder": "Np. Praca kurier...",
+      "button": "Szukaj"
+    },
+    "buttons": {
+      "card": {
+        "apply": "Dowiedź się więcej"
+      }
+    }
+  },
+  "Gallery": {
+    "heading": "Galeria",
+    "heading_helper": "Zdjęcia z naszej pracy oraz firmy"
+  },
+  "Career": {
+    "heading": "Kariera w Visbro Personal Solution",
+    "content": "\nZapraszamy Cię do dołączenia do zespołu Visbro! Odkryj nasze aktualne\noferty pracy poniżej i dołącz do naszej dynamicznej drużyny. Jeśli masz\npomysł, który chciałbyś wnieść do naszej firmy, wypełnij formularz\nkontaktowy i podziel się nim z nami!\n",
+    "form": {
+      "name": {
+        "text": "Imię",
+        "error": "Pole z imieniem nie może być puste"
+      },
+      "surname": {
+        "text": "Nazwisko",
+        "error": "Pole z nazwiskiem nie może być puste"
+      },
+      "email": {
+        "text": "Adres email",
+        "error": "Adres email jest wymagany"
+      },
+
+      "education": {
+        "text": "Wykształcenie",
+        "error": "Pole z wykształceniem nie może być puste"
+      },
+      "gender": {
+        "text": "Płeć",
+        "error": "Pole z płcią nie może być puste"
+      },
+      "languages": {
+        "text": "Znane języki",
+        "error": "Pole z znanymi językami nie może być puste"
+      },
+      "hasDriverLicenseCatB": {
+        "text": "Posiada prawo jazdy kategorii B",
+        "error": "Pole z informacją o posiadaniu prawa jazdy kategorii B nie może być puste"
+      },
+      "hasBeenArrested": {
+        "text": "Był aresztowany/a",
+        "error": "Pole z informacją o byciu aresztowanym/a nie może być puste"
+      },
+      "civilState": {
+        "text": "Status cywilny",
+        "error": "Pole ze statusem cywilnym nie może być puste"
+      },
+      "additionalInfo": {
+        "text": "Dodatkowe informacje",
+        "error": "Pole z dodatkowymi informacjami nie może być puste"
+      },
+      "submit": "Wyślij"
+    }
+  },
+  "About": {
+    "heading": "O Visbro",
+    "content": "Wizją Visbro Personal Solution UG od początku naszej działalności w\n2021 roku jest stworzenie przestrzeni, gdzie rekrutacja nie jest tylko\nprocesem, ale szansą na budowanie trwałych relacji. Nasza centrala w\nLipsku to miejsce, w którym narodził się pomysł na wyznaczanie nowych\nstandardów w branży HR, i od tego czasu nieustannie dążymy do ich\nrealizacji. Nasza oferta usług HR, oparta na indywidualnym podejściu i\nnajwyższych standardach jakości, to efekt nie tylko naszej wiedzy i\ndoświadczenia, ale także wsłuchiwania się w potrzeby naszych klientów.\nKwatery pracownicze w różnych regionach Niemiec to element naszej\nstrategii, który podkreśla nasze zaangażowanie w zapewnienie\npracownikom stabilnych warunków pracy i życia. Nasz zespół,\nutalentowanych i doświadczonych specjalistów, pracuje z pasją i\nzaangażowaniem, by zapewnić naszym klientom najwyższy poziom\nobsługi, który przekłada się na efektywność i sukces każdej współpracy\n"
+  },
+  "Home": {
+    "buttons": {
+      "learn_more": "Dowiedź się więcej",
+      "offers": "Sprawdź oferty pracy"
+    },
+    "headings": {
+      "top3": "Najpopularniejsze oferty",
+      "trusted_us": "Zaufali nam",
+      "socials": "Znajdziesz nas również na",
+      "why_us": "Dlaczego Visbro?"
+    },
+    "text": {
+      "short_about": "Witaj w Visbro Personal Solution UG, gdzie Twoje potrzeby HR\n    spotykają innowacyjne rozwiązania. Naszą pasją jest łączenie\n            wyjątkowych talentów z firmami, które szukają nie tylko pracowników,\n            ale przede wszystkim zespołowców.\nStawiamy na personalizację, jakość i przejrzystość w każdym aspekcie naszej współpracy.",
+      "why_us": "\nZ Visbro proces rekrutacji przestaje być wyzwaniem. Zapewniamy wsparcie na\nkażdym etapie - od znalezienia idealnego kandydata, po jego zakwaterowanie i\nzałatwienie formalności. Nasza oferta to szeroki wachlarz usług, dopasowany do\nindywidualnych potrzeb każdego klienta.\nNasza specjalność to dostarczanie wysokiej klasy specjalistów w różnych dziedzinach.\nNiezależnie od tego, czy potrzebujesz kierowców, personelu sprzątającego,\npracowników rolnych czy ekspertów IT, Visbro jest Twoim rozwiązaniem. Dołącz do\nnas i zbudujmy sukces razem!\n"
+    }
+  },
+  "Rental": {
+    "header_title": "Visbro wypożyczalnia samochodów",
+    "header_helper": "Sprawdź naszą ofertę!",
+    "car_options": "Samochody dostawcze;Samochody ciężarowe"
+  },
+  "Footer": {
+    "contact": {
+      "heading": "Kontakt",
+      "phone_number_office": "Numer telefonu sekretariat",
+      "phone_number_owner": "Numer telefonu właściciel",
+      "email": "Adres email"
+    },
+    "address": {
+      "heading": "Adres",
+      "headquater_location": "Siedziba firmy",
+      "other_location": "Inne punkty firmy",
+      "open_hours": "Godziny otwarcia"
+    },
+    "about": {
+      "heading": "O firmie",
+      "tax_number": "Numer podatkowy",
+      "data_admin": "Administrator danych",
+      "website_owner": "Właściciel strony",
+      "company_name": "Nazwa firmy"
+    }
+  },
+  "Navigation": {
+    "about": "O Nas",
+    "collab": "Współpraca",
+    "offers": "Oferty pracy",
+    "biuroservis": "Serwis administracyjny",
+    "gallery": "Galeria",
+    "contact": "Kontakt",
+    "career": "Kariera w Visbro",
+    "rental": "TruckRental"
+  },
+  "Collaboration": {
+    "title": "Podejmij z nami współpracę",
+    "form": {
+      "heading": "Formularz o współprace",
+      "name": {
+        "text": "Imię",
+        "error": "Pole z imieniem nie może być puste"
+      },
+      "surname": {
+        "text": "Nazwisko",
+        "error": "Pole z nazwiskiem nie może być puste"
+      },
+      "companyName": {
+        "text": "Nazwa Firmy",
+        "error": "Pole z nazwą firmy nie może być puste"
+      },
+      "jobPosition": {
+        "text": "Stanowisko",
+        "error": "Pole ze stanowiskiem nie może być puste"
+      },
+      "phoneNumber": {
+        "text": "Numer telefonu",
+        "error": "Pole z numerem telefonu nie może być puste"
+      },
+      "email": {
+        "text": "Adres email",
+        "error": "Pole z adresem email nie może być puste",
+        "errorFormat": "Nieprawidłowy format adresu email"
+      },
+      "message": {
+        "text": "Wiadomość",
+        "error": "Pole z wiadomością nie może być puste"
+      },
+      "messagePlaceholder": {
+        "text": "Jak możemy ci pomóc?",
+        "error": "Pole z wiadomością nie może być puste"
+      },
+      "submit": "Wyślij"
+    },
+    "content": "\nW Visbro Personal Solution UG, wiemy, że skuteczna współpraca jest\nkluczowa dla sukcesu każdego biznesu. Od ponad roku pomagamy\nprzedsiębiorcom w całym kraju w budowaniu silnych i wydajnych\nzespołów oraz w osiąganiu ich strategicznych celów biznesowych. Nasze\nusługi HR opierają się na głębokim zrozumieniu potrzeb naszych klientów\ni zapewniają kompleksowe wsparcie w zarządzaniu personelem. <br></br> <br></br> \nJako doświadczony zespół specjalistów, jesteśmy gotowi wesprzeć Cię\nwe wszystkich aspektach zarządzania zasobami ludzkimi - od rekrutacji i\nselekcji, przez szkolenia i rozwój pracowników, po zarządzanie\nwydajnością i retencję talentów. Nasze podejście opiera się na\nwspółpracy i partnerskim podejściu, które przekłada się na trwałe i\nowocne relacje biznesowe. <br></br> <br></br> \nZachęcamy do skorzystania z formularza kontaktowego poniżej, abyśmy\nmogli omówić, jak możemy wesprzeć rozwój Twojego biznesu i\nprzyczynić się do osiągnięcia Twoich celów biznesowych.\n\n"
+  },
+
+  "ApplicationForm": {
+    "heading": "Formularz aplikacyjny",
+    "step": "Etap {from} z  {to}",
+    "buttons": {
+      "next": "Dalej",
+      "back": "Cofnij"
+    },
+    "form": {
+      "name": {
+        "text": "Imię",
+        "error": "Pole z imieniem nie może być puste"
+      },
+      "surname": {
+        "text": "Nazwisko",
+        "error": "Pole z nazwiskiem nie może być puste"
+      },
+      "phoneNumber": {
+        "text": "Numer telefonu",
+        "error": "Pole z numerem telefonu nie może być puste"
+      },
+      "dateOfBirth": {
+        "text": "Data urodzenia",
+        "error": "Pole z datą urodzenia nie może być puste"
+      },
+      "lastJobPosition": {
+        "text": "Poprzednie stanowisko pracy",
+        "error": "Pole z poprzednim stanowiskiem pracy nie może być puste"
+      },
+      "education": {
+        "text": "Wykształcenie",
+        "error": "Pole z wykształceniem nie może być puste"
+      },
+      "gender": {
+        "text": "Płeć",
+        "error": "Pole z płcią nie może być puste"
+      },
+      "age": {
+        "text": "Wiek",
+        "error": "Pole z wiekiem nie może być puste"
+      },
+      "hasOwnCar": {
+        "text": "Czy posiadasz własny samochód?",
+        "error": "Pole dotyczące posiadania samochodu nie może być puste"
+      },
+      "civilState": {
+        "text": "Status cywilny (żonaty, rozwodnik, etc)",
+        "error": "Pole ze statusem cywilnym nie może być puste"
+      },
+      "workStart": {
+        "text": "Gotowość do rozpoczęcia pracy",
+        "error": "Pole z gotowością do pracy nie może być puste"
+      },
+      "bankNumber": {
+        "text": "Numer konta bankowego",
+        "error": "Pole z numerem konta bankowego nie może być puste"
+      },
+      "bankName": {
+        "text": "Nazwa banku",
+        "error": "Pole z nazwą banku nie może być puste"
+      },
+      "bankCode": {
+        "text": "Kod banku",
+        "error": "Pole z kodem banku nie może być puste"
+      },
+      "address": {
+        "text": "Adres zameldowania",
+        "error": "Pole z adresem zameldowania nie może być puste"
+      },
+      "currentAddress": {
+        "text": "Obecny adres",
+        "error": "Pole z obecnym adresem nie może być puste"
+      },
+      "mailAddress": {
+        "text": "Adres email",
+        "error": "Pole z adresem email nie może być puste",
+        "errorFormat": "Niewłaściwy format emaila"
+      },
+      "emergencyContact": {
+        "text": "Kontakt awaryjny (Imię, nr. telefonu)",
+        "error": "Pole z kontaktem awaryjnym nie może być puste"
+      },
+      "dataProcessingConsent": {
+        "text": "Zgoda na przetwarzanie danych osobowych",
+        "error": "Zgoda na przetwarzanie danych musi być zaznaczona"
+      },
+      "documentId": {
+        "text": "Zdjęcia dowodu",
+        "error": "Brak zdjęć"
+      },
+      "driverLicense": {
+        "text": "Prawo jazdy"
+      }
+    }
+  },
+  "Biuroservis": {
+    "heading": "Serwis administracyjny",
+    "heading_helper": "Nasze usługi"
+  },
+  "Impressum": {
+    "content": "Numer konta >0000 0000 0000 000 00 Podam później Numer podatkowy niemcy in wartung numer podatkowy ue in wartung "
+  }
+}

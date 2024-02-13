@@ -1,0 +1,238 @@
+"use client";
+import { EntryField } from "@/components/ApplicationForm/CVApplicationForm";
+import Button from "@/components/ui/Button/Button";
+import { useRouter } from "@/navigation";
+import { useFormik } from "formik";
+import { useTranslations } from "next-intl";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { RxCross1 } from "react-icons/rx";
+import * as Yup from "yup";
+
+const initialValues = {
+  dataProcessingConsent: false,
+  name: "",
+  surname: "",
+  phoneNumber: "",
+  dateOfBirth: "",
+  lastJobPosition: "",
+  education: "", // podstawowe, zawodowe (jakie), średnie, wyższe, doktorat?
+  gender: "",
+  age: "",
+  hasOwnCar: false,
+  civilState: "", // żonaty, rozwodnik, w związku nieformalnym, wdowiec, rodzic samotnie wychowujący dzieci.
+  workStart: "",
+  bankName: "",
+  bankNumber: "",
+  bankCode: "",
+  address: "",
+  mailAddress: "",
+  currentAddress: "",
+  emergencyContact: "",
+};
+
+const selects = {
+  education: ["Podstawowe", "Zawodowe", "Średnie", "Wyższe", "Tytuł doktora"],
+  civilState: [
+    "Żonaty",
+    "Rozwodnik",
+    "W związku nieformalnym",
+    "Wdowiec",
+    "Rodzic samotnie wychowywujący dzieci",
+  ],
+  gender: ["Kobieta", "Mężczyzna", "Inne"],
+};
+
+const checkboxs = ["dataProcessingConsent", "hasOwnCar"];
+
+const types = {
+  phoneNumber: "tel",
+  mailAddress: "email",
+  bankNumber: "number",
+  dateOfBirth: "date",
+  age: "number",
+} as any;
+
+const steps = {
+  personalInfo: {
+    name: "",
+    surname: "",
+    phoneNumber: "",
+    lastJobPosition: "",
+    dataProcessingConsent: false,
+  },
+
+  civilState: {
+    education: "",
+    dateOfBirth: "",
+    hasOwnCar: false,
+    civilState: "",
+  },
+
+  addressAndContact: {
+    workStart: "",
+    bankName: "",
+    bankNumber: "",
+    bankCode: "",
+    address: "",
+    mailAddress: "",
+    currentAddress: "",
+    emergencyContact: "",
+  },
+
+  files: { documentId: "", driverLicense: "" },
+};
+
+export default function ApplicationModal() {
+  const t = useTranslations("ApplicationForm.form");
+
+  const formValidationSchema = useMemo(
+    () =>
+      Yup.object().shape({
+        name: Yup.string().required(t("name.error")),
+        surname: Yup.string().required(t("surname.error")),
+        phoneNumber: Yup.string().required(t("phoneNumber.error")),
+        dateOfBirth: Yup.string().required(t("dateOfBirth.error")),
+        lastJobPosition: Yup.string().required(t("lastJobPosition.error")),
+        education: Yup.string().required(t("education.error")),
+        gender: Yup.string().required(t("gender.error")),
+        hasOwnCar: Yup.string().required(t("hasOwnCar.error")),
+        civilState: Yup.string().required(t("civilState.error")),
+        workStart: Yup.string().required(t("workStart.error")),
+        bankNumber: Yup.string().required(t("bankNumber.error")),
+        bankName: Yup.string().required(t("bankName.error")),
+        bankCode: Yup.string().required(t("bankCode.error")),
+        address: Yup.string().required(t("address.error")),
+        currentAddress: Yup.string().required(t("currentAddress.error")),
+        mailAddress: Yup.string()
+          .email(t("mailAddress.errorFormat"))
+          .required(t("mailAddress.error")),
+        emergencyContact: Yup.string().required(t("emergencyContact.error")),
+        dataProcessingConsent: Yup.boolean().oneOf(
+          [true],
+          t("dataProcessingConsent.error")
+        ),
+      }),
+    []
+  );
+
+  const formik = useFormik({
+    initialValues,
+    onSubmit() {},
+    validationSchema: formValidationSchema,
+    initialErrors: {
+      name: t("name.error"),
+      education: t("education.error"),
+      workStart: t("workStart.error"),
+    },
+  });
+
+  const [step, setStep] = useState<keyof typeof steps>("personalInfo");
+  const stepsArray = Object.keys(steps) as (keyof typeof steps)[];
+  const currentStepIndex = stepsArray.findIndex((key) => key === step);
+
+  function nextStep() {
+    const N = stepsArray.length;
+
+    if (currentStepIndex + 1 < N) {
+      setStep(stepsArray[currentStepIndex + 1]);
+    }
+  }
+  function prevStep() {
+    if (currentStepIndex - 1 >= 0) {
+      setStep(stepsArray[currentStepIndex - 1]);
+    }
+  }
+
+  const isError = (() => {
+    const stepField = Object.keys(steps[step]);
+    const errors = Object.keys(formik.errors);
+
+    for (let errorKey of errors) {
+      if (stepField.includes(errorKey)) return true;
+    }
+    return false;
+  })();
+
+  useEffect(() => {
+    if (document) {
+      if (params.get("modal") === "true") {
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${window.scrollY}px`;
+      }
+    }
+    return () => {
+      document.body.style.position = "";
+      document.body.style.top = ``;
+    };
+  }, []);
+
+  const router = useRouter();
+
+  const t2 = useTranslations("ApplicationForm");
+
+  const params = useSearchParams();
+
+  return (
+    <main
+      tabIndex={10}
+      style={{
+        background: "rgba(0,0,0,0.7)",
+        zIndex: 1000,
+      }}
+      className="modal-overlay fixed top-0 w-screen h-screen"
+    >
+      <section
+        tabIndex={11}
+        className="modal w-full sm:w-3/4 md:max-w-lg absolute sm:left-1/2 sm:top-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2 h-[100vh] sm:max-h-[calc(100vh-10rem)] bg-zinc-900 p-5 rounded-md flex flex-col"
+      >
+        <div className="flex flex-row items-center justify-between">
+          <h2 className="text-white font-bold text-3xl px-4">
+            {t2("heading")}
+          </h2>
+          <button onClick={() => router.back()}>
+            <RxCross1 color="#fff" size={25} />
+          </button>
+        </div>
+
+        <p className="px-4 text-blue-500">
+          {t2("step", { from: currentStepIndex + 1, to: stepsArray.length })}
+        </p>
+
+        <section className="flex flex-col justify-between flex-1">
+          <form
+            onSubmit={(e) => e.preventDefault()}
+            className="flex-1 mt-5 overflow-y-auto max-h-[calc(100vh-18rem)] sm:max-h-[calc(100vh-25rem)]"
+          >
+            {Object.keys(steps[step]).map((key) => (
+              <EntryField
+                translationNamespace="ApplicationForm.form"
+                types={types}
+                checkboxs={checkboxs}
+                selects={selects}
+                formik={formik as any}
+                key={key}
+                listKey={key as any}
+                files={["documentId", "driverLicense"]}
+              />
+            ))}
+          </form>
+          <div className="flex align-bottom mb-14">
+            <Button
+              text={t2("buttons.back")}
+              onClick={() => prevStep()}
+              className="w-full py-4 flex-[1]"
+              type="text"
+            />
+            <Button
+              disabled={isError}
+              text={t2("buttons.next")}
+              onClick={() => nextStep()}
+              className="w-full py-4 flex-[3]"
+            />
+          </div>
+        </section>
+      </section>
+    </main>
+  );
+}

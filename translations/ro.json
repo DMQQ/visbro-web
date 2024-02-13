@@ -1,0 +1,264 @@
+{
+  "Contact": {
+    "heading": "Contact",
+    "heading_helper": "Aveți întrebări? Scrieți recrutorilor noștri!",
+    "location_heading": "Locație",
+    "phone_heading": "Telefon Sediu Central",
+    "open_hours": "Deschis"
+  },
+  "JobOffers": {
+    "heading": "Oferte de muncă",
+    "search": {
+      "label": "Caută Anunțuri",
+      "placeholder": "De exemplu, loc de muncă de curier...",
+      "button": "Caută"
+    },
+    "buttons": {
+      "card": {
+        "apply": "Află mai mult"
+      }
+    }
+  },
+  "Gallery": {
+    "heading": "Galerie",
+    "heading_helper": "Fotografii de la locul nostru de muncă și companie"
+  },
+  "Career": {
+    "heading": "Carieră la Visbro Personal Solution",
+    "content": "nVă invităm să vă alăturați echipei Visbro! Descoperiți ofertele noastre de muncă actuale mai jos și alăturați-vă echipei noastre dinamice. Dacă aveți o idee pe care doriți să o aduceți în compania noastră, vă rugăm să completați formularul de contact și să ne împărtășiți!\n\n",
+    "form": {
+      "name": {
+        "text": "Nume",
+        "error": "Câmpul Nume nu poate fi gol"
+      },
+      "surname": {
+        "text": "Prenume",
+        "error": "Câmpul Prenume nu poate fi gol"
+      },
+      "email": {
+        "text": "Adresă de email",
+        "error": "Adresa de email este obligatorie"
+      },
+      "education": {
+        "text": "Educație",
+        "error": "Câmpul Educație nu poate fi gol"
+      },
+      "gender": {
+        "text": "Gen",
+        "error": "Câmpul Gen nu poate fi gol"
+      },
+      "languages": {
+        "text": "Limbi Cunoscute",
+        "error": "Câmpul Limbi Cunoscute nu poate fi gol"
+      },
+      "hasDriverLicenseCatB": {
+        "text": "Deține permis de conducere categoria B",
+        "error": "Câmpul cu informații despre deținerea permisului de conducere categoria B nu poate fi gol"
+      },
+      "hasBeenArrested": {
+        "text": "A fost arestat",
+        "error": "Câmpul cu informații despre arestare nu poate fi gol"
+      },
+      "civilState": {
+        "text": "Stare Civilă",
+        "error": "Câmpul cu stare civilă nu poate fi gol"
+      },
+      "additionalInfo": {
+        "text": "Informații Suplimentare",
+        "error": "Câmpul cu informații suplimentare nu poate fi gol"
+      },
+      "submit": "Trimite"
+    }
+  },
+  "About": {
+    "heading": "Despre noi",
+    "content": "\nViziunea Visbro Personal Solution UG, încă de la începuturile noastre în 2021, este de a crea un spațiu în care recrutarea nu este doar un proces, ci și o oportunitate de a construi relații durabile. Sediul nostru din Leipzig este locul unde s-a născut ideea de a stabili noi standarde în industria resurselor umane, și de atunci ne străduim neîncetat să le realizăm. Oferta noastră de servicii HR, bazată pe abordarea individuală și cele mai înalte standarde de calitate, este rezultatul nu doar al cunoștințelor și experienței noastre, ci și al ascultării nevoilor clienților noștri. Locurile de cazare pentru angajați în diferite regiuni ale Germaniei fac parte din strategia noastră, evidențiind implicarea noastră în asigurarea unor condiții stabile de muncă și viață pentru angajați. Echipa noastră, formată din specialiști talentați și experimentați, lucrează cu pasiune și dedicare pentru a oferi clienților noștri cel mai înalt nivel de servicii, ceea ce se traduce prin eficiență și succes în fiecare colaborare.\n\n"
+  },
+  "Home": {
+    "buttons": {
+      "learn_more": "Află mai mult",
+      "offers": "Verifică Ofertele de Muncă"
+    },
+    "headings": {
+      "top3": "Top 4 Oferte",
+      "trusted_us": "Ne-au Încredințat",
+      "socials": "Ne Găsiți și Pe",
+      "why_us": "De Ce Visbro?"
+    },
+    "text": {
+      "short_about": "\nBine ați venit la Visbro Personal Solution UG, unde nevoile tale de resurse umane întâlnesc soluții inovatoare. Pasunea noastră este să combinăm talentele excepționale cu companiile care caută nu doar angajați, ci mai ales membri ai echipei. Ne concentrăm pe personalizare, calitate și transparență în fiecare aspect al colaborării noastre.\n",
+      "why_us": "\nCu Visbro, procesul de recrutare încetează să fie o provocare. Oferim suport în fiecare etapă - de la găsirea candidatului ideal, până la cazarea și rezolvarea formalităților. Oferta noastră cuprinde o gamă largă de servicii, adaptată la nevoile individuale ale fiecărui client.\n\nSpecialitatea noastră constă în furnizarea de specialiști de înaltă calitate în diferite domenii. Indiferent dacă aveți nevoie de șoferi, personal de curățenie, lucrători agricoli sau experți IT, Visbro este soluția ta. Alăturați-vă nouă și să construim succesul împreună!\n\n"
+    }
+  },
+  "Rental": {
+    "header_title": "Închiriere Mașini Visbro",
+    "header_helper": "Verificați oferta noastră!",
+    "car_options": "Furgonete de Livrare;Camioane"
+  },
+  "Footer": {
+    "contact": {
+      "heading": "Contact",
+      "phone_number_office": "Număr Telefon Secretariat",
+      "phone_number_owner": "Număr Telefon Proprietar",
+      "email": "Adresă de Email"
+    },
+    "address": {
+      "heading": "Adresă",
+      "headquater_location": "Sediul Companiei",
+      "other_location": "Alte Puncte ale Companiei",
+      "open_hours": "Program de Lucru"
+    },
+    "about": {
+      "heading": "Despre Companie",
+      "tax_number": "Număr de Identificare Fiscală",
+      "data_admin": "Administrator de Date",
+      "website_owner": "Proprietar Website",
+      "company_name": "Nume Companie"
+    }
+  },
+  "Navigation": {
+    "about": "Despre Noi",
+    "collab": "Colaborare",
+    "offers": "Oferte de Muncă",
+    "biuroservis": "Servicii de Birou",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "career": "Carieră la Visbro",
+    "rental": "Închiriere Camioane"
+  },
+  "Collaboration": {
+    "title": "Colaborează cu Noi",
+    "form": {
+      "heading": "Spune-ne despre tine!",
+      "name": {
+        "text": "Nume",
+        "error": "Câmpul Nume nu poate fi gol"
+      },
+      "surname": {
+        "text": "Prenume",
+        "error": "Câmpul Prenume nu poate fi gol"
+      },
+      "companyName": {
+        "text": "Nume Companie",
+        "error": "Câmpul Nume Companie nu poate fi gol"
+      },
+      "jobPosition": {
+        "text": "Poziția de Muncă",
+        "error": "Câmpul Poziția de Muncă nu poate fi gol"
+      },
+      "phoneNumber": {
+        "text": "Număr Telefon",
+        "error": "Câmpul Număr Telefon nu poate fi gol"
+      },
+      "email": {
+        "text": "Adresă de Email",
+        "error": "Câmpul Adresă de Email nu poate fi gol",
+        "errorFormat": "Format de email invalid"
+      },
+      "message": {
+        "text": "Mesaj",
+        "error": "Câmpul Mesaj nu poate fi gol"
+      },
+      "messagePlaceholder": {
+        "text": "Cum vă putem ajuta?",
+        "error": "Câmpul Mesaj nu poate fi gol"
+      },
+      "submit": "Trimite"
+    },
+    "content": "\nLa Visbro Personal Solution UG, știm că colaborarea eficientă este cheia succesului oricărei afaceri. De peste un an, ajutăm antreprenorii din întreaga țară să construiască echipe puternice și eficiente și să-și atingă obiectivele strategice de afaceri. Serviciile noastre HR se bazează pe o înțelegere profundă a nevoilor clienților noștri și asigură suport cuprinzător în gestionarea personalului.\n <br></br> <br></br>\nCa echipă experimentată de specialiști, suntem pregătiți să vă sprijinim în toate aspectele gestionării resurselor umane - de la recrutare și selecție, până la formare și dezvoltare a angajaților, gestionarea performanței și retenția talentelor. Abordarea noastră se bazează pe colaborare și o abordare partenerială, care se traduce în relații de afaceri durabile și productive.\n <br></br> <br></br>\nVă încurajăm să utilizați formularul de contact de mai jos pentru a discuta cum vă putem sprijini dezvoltarea afacerii și contribui la atingerea obiectivelor dvs. de afaceri.\n\n"
+  },
+  "ApplicationForm": {
+    "heading": "Formular de Aplicare",
+    "step": "Pasul {from} din {to}",
+    "buttons": {
+      "next": "Continuă",
+      "back": "Înapoi"
+    },
+    "form": {
+      "name": {
+        "text": "Nume",
+        "error": "Câmpul Nume nu poate fi gol"
+      },
+      "surname": {
+        "text": "Prenume",
+        "error": "Câmpul Prenume nu poate fi gol"
+      },
+      "phoneNumber": {
+        "text": "Număr Telefon",
+        "error": "Câmpul Număr Telefon nu poate fi gol"
+      },
+      "dateOfBirth": {
+        "text": "Data Nașterii",
+        "error": "Câmpul Data Nașterii nu poate fi gol"
+      },
+      "lastJobPosition": {
+        "text": "Ultima Poziție de Muncă",
+        "error": "Câmpul cu ultima poziție de muncă nu poate fi gol"
+      },
+      "education": {
+        "text": "Educație",
+        "error": "Câmpul Educație nu poate fi gol"
+      },
+      "gender": {
+        "text": "Gen",
+        "error": "Câmpul Gen nu poate fi gol"
+      },
+      "age": {
+        "text": "Vârstă",
+        "error": "Câmpul cu vârsta nu poate fi gol"
+      },
+      "hasOwnCar": {
+        "text": "Dețineți o mașină?",
+        "error": "Câmpul referitor la deținerea mașinii nu poate fi gol"
+      },
+      "civilState": {
+        "text": "Stare Civilă (căsătorit, divorțat, etc.)",
+        "error": "Câmpul cu stare civilă nu poate fi gol"
+      },
+      "workStart": {
+        "text": "Disponibilitate pentru începerea muncii",
+        "error": "Câmpul cu disponibilitatea de a lucra nu poate fi gol"
+      },
+      "bankNumber": {
+        "text": "Număr Cont Bancar",
+        "error": "Câmpul cu numărul contului bancar nu poate fi gol"
+      },
+      "bankName": {
+        "text": "Nume Bancă",
+        "error": "Câmpul cu numele băncii nu poate fi gol"
+      },
+      "bankCode": {
+        "text": "Cod Bancar",
+        "error": "Câmpul cu codul băncii nu poate fi gol"
+      },
+      "address": {
+        "text": "Adresă Rezidență",
+        "error": "Câmpul cu adresa de rezidență nu poate fi gol"
+      },
+      "currentAddress": {
+        "text": "Adresă Curentă",
+        "error": "Câmpul cu adresa curentă nu poate fi gol"
+      },
+      "mailAddress": {
+        "text": "Adresă de Email",
+        "error": "Câmpul Adresă de Email nu poate fi gol",
+        "errorFormat": "Format de email invalid"
+      },
+      "emergencyContact": {
+        "text": "Contact de Urgență în caz de accident (Nume și contact)",
+        "error": "Câmpul cu contact de urgență nu poate fi gol"
+      },
+      "dataProcessingConsent": {
+        "text": "Consent pentru Prelucrarea Datelor Personale",
+        "error": "Trebuie selectat consimțământul pentru prelucrarea datelor"
+      }
+    }
+  },
+  "Biuroservis": {
+    "heading": "Biuro servis",
+    "heading_helper": "Serviciile Noastre"
+  },
+  "Impressum": {
+    "content": "Număr de cont: >0000 0000 0000 000 00 (Voi furniza mai târziu)Cod fiscal Germania în mentenanță Cod fiscal UE în mentenanță "
+  }
+}
