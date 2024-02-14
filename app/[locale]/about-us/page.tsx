@@ -3,6 +3,18 @@ import PageWrapper from "@/components/ui/PageWrapper/PageWrapper";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }: any) {
+  unstable_setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "About" });
+
+  return {
+    title: t("heading"),
+    description: t("content"),
+  };
+}
+
 export default function AboutUs({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("About");

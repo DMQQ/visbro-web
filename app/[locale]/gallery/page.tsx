@@ -2,6 +2,17 @@ import PageWrapper from "@/components/ui/PageWrapper/PageWrapper";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }: any) {
+  unstable_setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Gallery" });
+
+  return {
+    title: t("heading"),
+  };
+}
+
 export default function Gallery({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("Gallery");

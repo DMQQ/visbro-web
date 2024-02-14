@@ -26,6 +26,7 @@
   },
   "Career": {
     "heading": "Karriere bei Visbro Personal Solution",
+    "content": "Wir laden Sie ein, dem Visbro-Team beizutreten! Entdecken Sie unsere aktuellen Stellenangebote unten und werden Sie Teil unseres dynamischen Teams. Wenn Sie eine Idee haben, die Sie in unser Unternehmen einbringen möchten, füllen Sie bitte das Kontaktformular aus und teilen Sie sie mit uns!",
     "form": {
       "name": {
         "text": "Name",
@@ -129,6 +130,7 @@
   "Collaboration": {
     "title": "Arbeiten Sie mit uns zusammen",
     "form": {
+      "heading": "Arbeiten Sie mit uns zusammen",
       "name": {
         "text": "Name",
         "error": "Das Namensfeld darf nicht leer sein"

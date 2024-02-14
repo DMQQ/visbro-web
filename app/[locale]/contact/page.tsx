@@ -5,6 +5,17 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useMemo } from "react";
 
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }: any) {
+  unstable_setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Contact" });
+
+  return {
+    title: t("heading"),
+  };
+}
+
 export default function Contact({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const Map = useMemo(

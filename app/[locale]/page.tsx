@@ -23,20 +23,24 @@ export default function Home({ params: { locale } }: any) {
   return (
     <main className="w-full">
       <Slider images={defaultImages} />
-      <article className="w-full p-5 flex flex-col mx-auto gap-10 lg:w-2/3 md:flex-row items-center dark:dark:bg-zinc-900 rounded-xl mt-20">
-        <div className="flex flex-col flex-1">
-          <h2 className="text-4xl font-bold mb-5">{t("headings.why_us")}</h2>
 
-          <p className="text-zinc-300 w-full ">{t("text.why_us")}</p>
-        </div>
-        <div className="div flex flex-1 h-full">
-          <Image
-            src={why_us}
-            alt="Placeholder"
-            className="rounded-md h-72 w-full object-cover"
-          />
-        </div>
-      </article>
+      <section className="p-5">
+        <article className="w-full p-5 flex flex-col mx-auto gap-10 md:flex-row items-center dark:dark:bg-zinc-900 rounded-xl mt-20 lg:w-10/12 xl:w-9/12 2xl:w-2/3">
+          <div className="flex flex-col flex-1">
+            <h2 className="text-4xl font-bold mb-5">{t("headings.why_us")}</h2>
+
+            <p className="text-zinc-300 w-full ">{t("text.why_us")}</p>
+          </div>
+          <div className="div flex flex-1 h-full w-full">
+            <Image
+              src={why_us}
+              alt="Placeholder"
+              className="rounded-md max-h-72 w-full object-cover"
+            />
+          </div>
+        </article>
+      </section>
+
       <Suspense>
         <article className="w-full p-5 my-20 flex justify-center items-center">
           <section className="w-full lg:w-2/3 ">

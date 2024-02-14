@@ -83,29 +83,32 @@ export default function Slider({ images }: SliderProps) {
       <section
         style={{ backgroundColor: "rgba(0,0,0,0.7)" }}
         className="absolute w-full h-full flex items-center justify-center flex-col-reverse lg:flex-row"
-        // className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       >
         <section className="hidden lg:grid grid-cols-2 md:grid-cols-2 gap-3 justify-center px-5 mb-5 flex-1 md:flex-[2]">
-          {[0, 1, 2, 3].map((key) => (
+          {[1, 2, 3, 4].map((key) => (
             <Image
               priority={false}
               key={key}
               src={key % 3 === 0 ? tile1 : tile2}
               alt="Work image"
-              className="object-fit"
+              className="object-fit "
             />
           ))}
         </section>
 
-        <section className="w-full relative top-1/2 -translate-y-2/3 lg:top-0 lg:-translate-y-2 p-5 md:w-3/4 lg:w-4/5 z-50 xl:w-1/2 flex flex-col justify-center items-center flex-[3] mt-20">
-          <h1 className="text-white text-4xl md:text-6xl xl:text-8xl font-bold text-center">
+        <section
+          // relative top-1/2 -translate-y-2/3 lg:top-0 lg:-translate-y-2
+
+          className="w-full relative top-1/2 -translate-y-2/3 lg:top-0 lg:-translate-y-2  p-5 md:w-10/12 lg:w-4/5 z-50 xl:w-1/2 flex flex-col justify-center items-center flex-[3] mt-20"
+        >
+          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center">
             Visbro Personal Solution
           </h1>
           <p className="w-full mt-5 sm:w-2/3 text-md xs:text-lg text-white">
             {t("text.short_about")}
           </p>
 
-          <div className="mt-3 flex xs:gap-5 gap-3 justify-center  flex-row w-full">
+          <div className="mt-5 flex xs:gap-5 gap-3 justify-center  flex-row w-full">
             {socials.map((social, index) => (
               <a href="#" key={index}>
                 <Image
@@ -120,7 +123,7 @@ export default function Slider({ images }: SliderProps) {
             ))}
           </div>
 
-          <div className="mt-3 flex gap-3 justify-center flex-col w-full xs:flex-row ">
+          <div className="mt-5 flex gap-3 justify-center flex-col w-full xs:flex-row ">
             <Link
               href={"/about-us"}
               className="w-full bg-white xs:w-48 text-center text-black p-2 py-4 rounded-md"

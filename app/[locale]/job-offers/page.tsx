@@ -4,13 +4,23 @@ import PageWrapper from "@/components/ui/PageWrapper/PageWrapper";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations({ locale, namespace: "JobOffers" });
+
+  return {
+    title: t("heading"),
+  };
+}
+
 export default function JobOffers({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("JobOffers");
   return (
-    <PageWrapper>
+    <PageWrapper style="mt-0">
       <section
-        className="mx-auto my-10 w-full rounded-lg lg:w-9/12 xl:w-2/3 dark:bg-zinc-900 p-5"
+        className="mx-auto !my-10 sm:!mt-32 w-full rounded-lg lg:w-9/12 xl:w-2/3 bg-zinc-900 p-5"
         style={{ marginTop: "8rem" }}
       >
         <h1 className="text-4xl md:text-6xl font-bold mb-10 mt-5">

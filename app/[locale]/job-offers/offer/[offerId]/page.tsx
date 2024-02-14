@@ -1,8 +1,18 @@
-"use client";
 import ApplicationModal from "@/components/ApplicationModal/ApplicationModal";
 import ApplicationPanel from "./ApplicationPanel";
+import { unstable_setRequestLocale } from "next-intl/server";
+
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }: any) {
+  unstable_setRequestLocale(locale);
+  return {
+    title: "Job Offer ",
+  };
+}
 
 export default function OfferPage({ searchParams, params: { locale } }: any) {
+  unstable_setRequestLocale(locale);
   return (
     <main className={`w-full h-full min-h-screen`}>
       <article

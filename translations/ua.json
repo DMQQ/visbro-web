@@ -259,5 +259,8 @@
   "Biuroservis": {
     "heading": "Бюро сервіс",
     "heading_helper": "Наші послуги"
+  },
+  "Impressum": {
+    "content": "Bank account number: 0000 0000 0000 000 00 (Tax identification number for Germany in maintenance, Tax identification number for the EU in maintenance) "
   }
 }

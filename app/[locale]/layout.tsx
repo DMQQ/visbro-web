@@ -31,7 +31,7 @@ function RootLayout({
 
   return (
     <html lang={params.locale || "en"} className="dark ">
-      <NextIntlClientProvider messages={messages}>
+      <NextIntlClientProvider locale={params.locale} messages={messages}>
         <Body locale={params.locale}>{children}</Body>
       </NextIntlClientProvider>
     </html>

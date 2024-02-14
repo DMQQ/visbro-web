@@ -4,13 +4,26 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
 import { unstable_setRequestLocale } from "next-intl/server";
 
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }: any) {
+  unstable_setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Rental" });
+
+  return {
+    title: t("header_title"),
+  };
+}
+
 export default function CarRental({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("Rental");
   return (
     <PageWrapper>
-      <section className="w-full md:w-1/2 my-12 mx-auto p-5">
-        <h1 className="text-5xl font-bold mt-10">{t("header_title")}</h1>
+      <section className="w-full md:w-2/3 lg:w-1/2 my-12 mx-auto p-5">
+        <h1 className="text-4xl md:text-5xl font-bold mt-10">
+          {t("header_title")}
+        </h1>
         <p className="text-zinc-400 px-2">{t("header_helper")}</p>
 
         <article className="flex flex-row flex-1 w-full gap-2 mt-5 flex-wrap">
@@ -26,11 +39,11 @@ export default function CarRental({ params: { locale } }: any) {
             ))}
         </article>
 
-        <article className="mt-5 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <article className="mt-5 w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
           {Array.from(new Array(6).keys()).map((key) => (
             <section className="dark:bg-zinc-900 p-3 rounded-lg" key={key}>
               <img
-                src="https://weudealerimagesprd.blob.core.windows.net/pl3076/stockvehicles/35702_4f319c5d-311a-4ebf-9046-da28ff57c766.jpg"
+                src="/car-rental-concept-illustration_114360-9267.avif"
                 alt=""
                 className="mb-2 rounded-md"
               />
