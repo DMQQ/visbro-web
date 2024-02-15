@@ -257,8 +257,32 @@
     }
   },
   "Biuroservis": {
-    "heading": "Biuro servis",
-    "heading_helper": "Our services"
+    "heading": "Administrative Service",
+    "heading_helper": "Our Services",
+    "form": {
+      "heading": "Service Form",
+      "email": {
+        "text": "Email Address",
+        "error": "Email address is required"
+      },
+      "name": {
+        "text": "First Name",
+        "error": "The field with the first name cannot be empty"
+      },
+      "surname": {
+        "text": "Last Name",
+        "error": "The field with the last name cannot be empty"
+      },
+      "phoneNumber": {
+        "text": "Phone Number",
+        "error": "The field with the phone number cannot be empty"
+      },
+      "additionalInfo": {
+        "text": "Additional Information",
+        "error": ""
+      },
+      "button": "Submit Request"
+    }
   },
   "Impressum": {
     "content": "Bank account number: 0000 0000 0000 000 00 (Tax identification number for Germany in maintenance, Tax identification number for the EU in maintenance) "

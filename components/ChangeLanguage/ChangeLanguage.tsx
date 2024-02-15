@@ -26,7 +26,7 @@ export default function ChangeLanguage() {
       <button
         role="menu"
         onClick={() => setIsOpen((p) => !p)}
-        data-dropdown-toggle="dropdown"
+        aria-label="language change button"
         className="bg-zinc-950 p-2 rounded-md flex"
         type="button"
       >
@@ -55,17 +55,14 @@ export default function ChangeLanguage() {
       {open && (
         <div
           aria-label="menu-list"
-          className="absolute right-0 translate-x-5 top-10 rounded-md bg-zinc-950"
+          className="absolute right-12 translate-x-5 top-10 rounded-md bg-zinc-950"
         >
-          <ul
-            className="py-2 text-sm text-zinc-300 w-20 overflow-hidden"
-            aria-labelledby="dropdownDefaultButton"
-          >
+          <ul className=" text-zinc-300 w-8 overflow-hidden">
             {localesWithFlags.map(([locale, flag]) => (
-              <li key={locale} className="p-2">
+              <li key={locale} className="p-2 mb-1">
                 <Link href={"/"} locale={locale} className="flex items-center">
-                  <img src={flag} alt={locale + " flag"} className="w-4 mr-2" />{" "}
-                  {locale}
+                  <img src={flag} alt={locale + " flag"} className="w-4" />
+                  {/* {locale} */}
                 </Link>
               </li>
             ))}

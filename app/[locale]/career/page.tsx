@@ -19,17 +19,12 @@ export default function Career({ params: { locale } }: any) {
   const t = useTranslations("Career");
 
   return (
-    <main
-      style={{
-        marginBottom: "4rem",
-      }}
-      className="w-full min-h-screen gap-5 p-3 md:p-5 flex flex-col lg:flex-row items-center justify-start lg:items-start lg:justify-around md:mt-32"
-    >
-      <section className="w-full sm:w-10/12 lg:w-3/5 xl:w-1/3 mb-5 ">
-        <h1 className="text-4xl lg:text-5xl font-bold text-white  mt-16">
+    <main className="w-full min-h-screen flex items-center flex-col lg:flex-row justify-around gap-5">
+      <section className="dark:bg-zinc-950 p-5 rounded-md md:w-10/12 lg:w-4/5 xl:w-1/2 2xl:w-1/3">
+        <h1 className="text-4xl lg:text-6xl font-bold pb-5 text-white ">
           {t("heading")}
         </h1>
-        <p className="text-zinc-200 mt-10 text-xl ">{t("content")}</p>
+        <p className="text-zinc-200 text-md sm:text-lg ">{t("content")}</p>
 
         <div className="grid grid-cols-2 gap-5 mt-5">
           <img

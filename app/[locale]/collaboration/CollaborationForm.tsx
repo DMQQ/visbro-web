@@ -37,75 +37,75 @@ const Form = () => {
   }, []);
 
   return (
-    <section className="dark:dark:bg-zinc-900 p-3 rounded-md py-5 w-full md:w-2/3 lg:w-3/5 xl:w-1/3 mb-10">
-      <Formik
-        validationSchema={contactFormValidationSchema}
-        onSubmit={() => {}}
-        initialValues={initialFormValues}
-      >
-        {(f: any) => (
-          <>
-            {/* <h2 className="px-2 text-2xl font-bold">{t("heading")}</h2> */}
+    <article className="w-full md:w-2/3 lg:w-3/5 xl:w-1/3 p-5">
+      <section className="dark:dark:bg-zinc-900 p-2 rounded-md w-full">
+        <Formik
+          validationSchema={contactFormValidationSchema}
+          onSubmit={() => {}}
+          initialValues={initialFormValues}
+        >
+          {(f: any) => (
+            <>
+              <div className="flex flex-col sm:flex-row">
+                <EntryField
+                  formik={f}
+                  listKey={"name"}
+                  translationNamespace="Collaboration.form"
+                />
+                <EntryField
+                  formik={f}
+                  listKey={"surname"}
+                  translationNamespace="Collaboration.form"
+                  files={[]}
+                />
+              </div>
 
-            <div className="flex flex-col sm:flex-row mt-5">
+              <div className="flex flex-col sm:flex-row">
+                <EntryField
+                  formik={f}
+                  listKey={"companyName"}
+                  translationNamespace="Collaboration.form"
+                />
+                <EntryField
+                  formik={f}
+                  listKey={"jobPosition"}
+                  translationNamespace="Collaboration.form"
+                />
+              </div>
+
               <EntryField
                 formik={f}
-                listKey={"name"}
+                listKey={"email"}
+                types={{ email: "email" }}
                 translationNamespace="Collaboration.form"
               />
+
               <EntryField
                 formik={f}
-                listKey={"surname"}
+                listKey={"phoneNumber"}
                 translationNamespace="Collaboration.form"
-                files={[]}
               />
-            </div>
 
-            <div className="flex flex-col sm:flex-row">
-              <EntryField
+              <TextArea
                 formik={f}
-                listKey={"companyName"}
-                translationNamespace="Collaboration.form"
+                formKey="message"
+                label={t("message.text")}
+                rows={5}
               />
-              <EntryField
-                formik={f}
-                listKey={"jobPosition"}
-                translationNamespace="Collaboration.form"
-              />
-            </div>
 
-            <EntryField
-              formik={f}
-              listKey={"email"}
-              types={{ email: "email" }}
-              translationNamespace="Collaboration.form"
-            />
-
-            <EntryField
-              formik={f}
-              listKey={"phoneNumber"}
-              translationNamespace="Collaboration.form"
-            />
-
-            <TextArea
-              formik={f}
-              formKey="message"
-              label={t("message.text")}
-              rows={5}
-            />
-
-            <div className="p-2">
-              <Button
-                disabled={!(f.isValid && f.dirty)}
-                onClick={f.handleSubmit}
-                className={`py-3 w-full`}
-                text={t("submit")}
-              />
-            </div>
-          </>
-        )}
-      </Formik>
-    </section>
+              <div className="p-2">
+                <Button
+                  disabled={!(f.isValid && f.dirty)}
+                  onClick={f.handleSubmit}
+                  className={`py-3 w-full`}
+                  text={t("submit")}
+                />
+              </div>
+            </>
+          )}
+        </Formik>
+      </section>
+    </article>
   );
 };
 

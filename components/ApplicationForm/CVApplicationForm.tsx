@@ -217,11 +217,9 @@ export const TextArea = ({
   <div className="p-2" key={formKey}>
     <label
       htmlFor={`${formKey}_input`}
-      className={`block mb-2 text-sm font-medium   dark:text-white ${
-        !!formik.errors[formKey] && formik.touched[formKey]
-          ? "!text-red-600"
-          : ""
-      } `}
+      className={clsx("block mb-2 text-sm font-medium   dark:text-white", {
+        "!text-red-600": !!formik.errors[formKey] && formik.touched[formKey],
+      })}
     >
       {label}
     </label>

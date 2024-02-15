@@ -256,9 +256,34 @@
       }
     }
   },
+
   "Biuroservis": {
-    "heading": "Бюро сервіс",
-    "heading_helper": "Наші послуги"
+    "heading": "Адміністративні послуги",
+    "heading_helper": "Наші послуги",
+    "form": {
+      "heading": "Форма заявки на послуги",
+      "email": {
+        "text": "Адреса електронної пошти",
+        "error": "Адреса електронної пошти обов'язкова"
+      },
+      "name": {
+        "text": "Ім'я",
+        "error": "Поле з ім'ям не може бути порожнім"
+      },
+      "surname": {
+        "text": "Прізвище",
+        "error": "Поле з прізвищем не може бути порожнім"
+      },
+      "phoneNumber": {
+        "text": "Номер телефону",
+        "error": "Поле з номером телефону не може бути порожнім"
+      },
+      "additionalInfo": {
+        "text": "Додаткова інформація",
+        "error": ""
+      },
+      "button": "Надіслати запит"
+    }
   },
   "Impressum": {
     "content": "Bank account number: 0000 0000 0000 000 00 (Tax identification number for Germany in maintenance, Tax identification number for the EU in maintenance) "

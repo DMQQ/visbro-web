@@ -255,8 +255,32 @@
     }
   },
   "Biuroservis": {
-    "heading": "Biuro servis",
-    "heading_helper": "Serviciile Noastre"
+    "heading": "Servicii Administrative",
+    "heading_helper": "Serviciile Noastre",
+    "form": {
+      "heading": "Formular de Servicii",
+      "email": {
+        "text": "Adresa de Email",
+        "error": "Adresa de email este obligatorie"
+      },
+      "name": {
+        "text": "Prenume",
+        "error": "Câmpul cu prenumele nu poate fi gol"
+      },
+      "surname": {
+        "text": "Nume",
+        "error": "Câmpul cu numele nu poate fi gol"
+      },
+      "phoneNumber": {
+        "text": "Număr de Telefon",
+        "error": "Câmpul cu numărul de telefon nu poate fi gol"
+      },
+      "additionalInfo": {
+        "text": "Informații Suplimentare",
+        "error": ""
+      },
+      "button": "Trimite Cererea"
+    }
   },
   "Impressum": {
     "content": "Număr de cont: >0000 0000 0000 000 00 (Voi furniza mai târziu)Cod fiscal Germania în mentenanță Cod fiscal UE în mentenanță "

@@ -18,21 +18,21 @@ export default function JobOffers({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("JobOffers");
   return (
-    <PageWrapper style="mt-0">
-      <section
-        className="mx-auto !my-10 sm:!mt-32 w-full rounded-lg lg:w-9/12 xl:w-2/3 bg-zinc-900 p-5"
-        style={{ marginTop: "8rem" }}
-      >
-        <h1 className="text-4xl md:text-6xl font-bold mb-10 mt-5">
-          {t("heading")}
-        </h1>
+    <PageWrapper>
+      <section className="mx-auto w-full rounded-lg lg:w-9/12 xl:w-2/3 p-5">
+        <div className="mb-10">
+          <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold ">
+            {t("heading")}
+          </h1>
+          <p className="text-zinc-300 mt-2">Lorem ipsum dolor sit amet?</p>
+        </div>
 
         <Search />
 
         {[0, 1, 2, 3].map((key) => (
           <article
             key={key}
-            className="mt-3 flex flex-col md:flex-row gap-3 rounded-lg hover:bg-zinc-950 p-3 transition duration-200"
+            className="mt-3 flex flex-col md:flex-row gap-3 rounded-xl bg-zinc-900  p-4 transition duration-200"
           >
             <img
               src="/car-rental-concept-illustration_114360-9267.avif"
@@ -40,7 +40,7 @@ export default function JobOffers({ params: { locale } }: any) {
               className=" w-full sm:w-52 rounded-md object-cover"
             />
             <section className="flex flex-col">
-              <h2 className="font-bold text-2xl">Offer name</h2>
+              <h2 className="font-bold text-xl">Offer name</h2>
               <p className="text-zinc-400">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
                 nemo, alias molestiae, est ea tenetur quod a voluptas dolor

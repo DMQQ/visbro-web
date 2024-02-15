@@ -17,8 +17,8 @@ export default function Gallery({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("Gallery");
   return (
-    <PageWrapper style="">
-      <article className=" p-5 rounded-md w-full md:w-4/5 lg:w-2/3 m-auto">
+    <PageWrapper>
+      <article className="p-5 rounded-md w-full md:w-4/5 lg:w-2/3 m-auto">
         <div className="mb-10">
           <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold ">
             {t("heading")}

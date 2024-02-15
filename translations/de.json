@@ -264,8 +264,32 @@
     }
   },
   "Biuroservis": {
-    "heading": "Biuroservis",
-    "heading_helper": "Unsere Dienstleistungen"
+    "heading": "Verwaltungsdienst",
+    "heading_helper": "Unsere Dienstleistungen",
+    "form": {
+      "heading": "Dienstleistungsformular",
+      "email": {
+        "text": "E-Mail-Adresse",
+        "error": "Die E-Mail-Adresse ist erforderlich"
+      },
+      "name": {
+        "text": "Vorname",
+        "error": "Das Feld mit dem Vornamen darf nicht leer sein"
+      },
+      "surname": {
+        "text": "Nachname",
+        "error": "Das Feld mit dem Nachnamen darf nicht leer sein"
+      },
+      "phoneNumber": {
+        "text": "Telefonnummer",
+        "error": "Das Feld mit der Telefonnummer darf nicht leer sein"
+      },
+      "additionalInfo": {
+        "text": "Zusätzliche Informationen",
+        "error": ""
+      },
+      "button": "Anfrage senden"
+    }
   },
   "Impressum": {
     "content": "Bank account number: 0000 0000 0000 000 00 (Tax identification number for Germany in maintenance, Tax identification number for the EU in maintenance) "

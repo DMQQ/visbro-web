@@ -266,7 +266,31 @@
   },
   "Biuroservis": {
     "heading": "Serwis administracyjny",
-    "heading_helper": "Nasze usługi"
+    "heading_helper": "Nasze usługi",
+    "form": {
+      "heading": "Formularz usługowy",
+      "email": {
+        "text": "Adres email",
+        "error": "Adres email jest wymagany"
+      },
+      "name": {
+        "text": "Imię",
+        "error": "Pole z imieniem nie może być puste"
+      },
+      "surname": {
+        "text": "Nazwisko",
+        "error": "Pole z nazwiskiem nie może być puste"
+      },
+      "phoneNumber": {
+        "text": "Numer telefonu",
+        "error": "Pole z numerem telefonu nie może być puste"
+      },
+      "additionalInfo": {
+        "text": "Dodatkowe informacje",
+        "error": ""
+      },
+      "button": "Wyślij zgłoszenie"
+    }
   },
   "Impressum": {
     "content": "Numer konta >0000 0000 0000 000 00 Podam później Numer podatkowy niemcy in wartung numer podatkowy ue in wartung "

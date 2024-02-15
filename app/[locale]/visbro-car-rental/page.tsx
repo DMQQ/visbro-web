@@ -18,42 +18,48 @@ export async function generateMetadata({ params: { locale } }: any) {
 export default function CarRental({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("Rental");
+
+  const carOptions = t("car_options").split(";");
+
   return (
     <PageWrapper>
-      <section className="w-full md:w-2/3 lg:w-1/2 my-12 mx-auto p-5">
-        <h1 className="text-4xl md:text-5xl font-bold mt-10">
-          {t("header_title")}
-        </h1>
-        <p className="text-zinc-400 px-2">{t("header_helper")}</p>
+      <section className="mx-auto w-full rounded-lg lg:w-9/12 xl:w-2/3 p-5">
+        <div className="mb-10">
+          <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold ">
+            {t("header_title")}
+          </h1>
+          <p className="text-zinc-300 mt-2">{t("header_helper")}</p>
+        </div>
 
-        <article className="flex flex-row flex-1 w-full gap-2 mt-5 flex-wrap">
-          {t("car_options")
-            .split(";")
-            .map((text) => (
-              <button
-                key={text}
-                className="dark:bg-zinc-900 p-3 text-sm rounded-lg"
-              >
-                {text}
-              </button>
-            ))}
+        <article className="flex flex-row w-full gap-2 mb-10 flex-wrap">
+          {carOptions.map((text) => (
+            <button
+              key={text}
+              className="dark:bg-zinc-900 p-3 text-sm rounded-lg"
+            >
+              {text}
+            </button>
+          ))}
         </article>
 
-        <article className="mt-5 w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+        <article className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
           {Array.from(new Array(6).keys()).map((key) => (
-            <section className="dark:bg-zinc-900 p-3 rounded-lg" key={key}>
+            <section
+              key={key}
+              className="dark:bg-zinc-900 w-full p-4 rounded-xl flex flex-col"
+            >
               <img
                 src="/car-rental-concept-illustration_114360-9267.avif"
-                alt=""
-                className="mb-2 rounded-md"
+                alt="offer image"
+                className="w-full rounded-md"
               />
-              <h4>Porsche</h4>
-              <p className="text-zinc-300 text-sm my-2">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Veritatis <br />
-                💵$2500/day 💵deposit
+              <h3 className="mt-2 text-lg">Car to rent</h3>
+              <p className="text-zinc-500 mt-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eius
+                assumenda,
               </p>
-              <Link href={"/visbro-car-rental"} className=" text-sm">
+              <span className="text-zinc-500 mt-1">$20/h </span>
+              <Link href={"/job-offers"} className="mt-2">
                 Learn more
               </Link>
             </section>

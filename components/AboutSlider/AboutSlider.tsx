@@ -8,8 +8,9 @@ import img2 from "@/public/slider/p2.png";
 import img3 from "@/public/slider/p3.avif";
 import img4 from "@/public/slider/p4.jpg";
 import img5 from "@/public/slider/p5.jpg";
+import img6 from "@/public/slider/p6.jpg";
 
-const defaultImages = [img1, img2, img3, img4, img5];
+const defaultImages = [img1, img2, img3, img4, img5, img6];
 
 export default function AboutSlider() {
   const [currentImage, setCurrentImage] = useState<number>(0); // index of a number
@@ -17,7 +18,7 @@ export default function AboutSlider() {
   useEffect(() => {
     let intv = setInterval(() => {
       setCurrentImage((prev) =>
-        prev + 1 >= defaultImages.length ? 0 : prev + 1
+        prev + 2 >= defaultImages.length ? 0 : prev + 1
       );
     }, 2000);
 
@@ -25,27 +26,28 @@ export default function AboutSlider() {
   }, []);
 
   return (
-    <div className="flex flex-row overflow-hidden w-full transition-transform duration-200 ease-in-out">
-      {defaultImages.map((src, index) => (
-        <div
-          key={src.src}
-          className="flex-shrink-0 w-full relative"
-          style={{
-            transform: `translateX(${currentImage * 100 * -1}%)`,
-          }}
-        >
-          <Image
-            priority={index === 0}
-            blurDataURL={src.blurDataURL}
-            placeholder="blur"
-            width={400}
-            height={300}
-            src={src}
-            className="w-full h-full object-cover"
-            alt=""
-          />
-        </div>
-      ))}
+    <div className="w-full mt-10 overflow-hidden">
+      <div
+        className="w-full relative flex flex-row gap-5 transition duration-200 ease-in-out"
+        style={{
+          transform: `translateX(${currentImage * 31.25 * -1}rem)`,
+        }}
+      >
+        {defaultImages.map((src, index) => (
+          <div key={index} className="w-[30rem] flex-shrink-0 relative">
+            <Image
+              priority
+              blurDataURL={src.blurDataURL}
+              placeholder="blur"
+              width={400}
+              height={300}
+              src={src}
+              className="w-full select-none h-full object-cover"
+              alt="Visbro image"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

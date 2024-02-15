@@ -52,7 +52,7 @@ const Form = () => {
     gender: ["Kobieta", "Mężczyzna", "Inne"],
   };
 
-  const checkboxs = ["hasDriverLicenseCatB", "hasBeenArrested"];
+  const checkboxs = ["hasDriverLicenseCatB"];
 
   const types = {
     phoneNumber: "tel",
@@ -64,62 +64,98 @@ const Form = () => {
   } as any;
 
   return (
-    <section className="dark:bg-zinc-900 p-2 rounded-md py-5 w-full max-w-md">
-      <Formik
-        validationSchema={contactFormValidationSchema}
-        onSubmit={() => {}}
-        initialValues={{
-          name: "",
-          surname: "",
-          ...initialFormValues,
-          additionalInfo: "",
-        }}
-      >
-        {(f: any) => (
-          <>
-            <div className="flex">
+    <article className="w-full md:w-2/3 lg:w-3/5 xl:w-1/3 p-5">
+      <section className="dark:dark:bg-zinc-900 p-2 rounded-md w-full">
+        <Formik
+          validationSchema={contactFormValidationSchema}
+          onSubmit={() => {}}
+          initialValues={{
+            name: "",
+            surname: "",
+            ...initialFormValues,
+            additionalInfo: "",
+          }}
+        >
+          {(f: any) => (
+            <>
+              <div className="flex flex-col sm:flex-row">
+                <EntryField
+                  translationNamespace="Career.form"
+                  formik={f}
+                  listKey={"name"}
+                  types={types}
+                />
+                <EntryField
+                  translationNamespace="Career.form"
+                  formik={f}
+                  listKey={"surname"}
+                  types={types}
+                />
+              </div>
               <EntryField
                 translationNamespace="Career.form"
                 formik={f}
-                listKey={"name"}
-              />
-              <EntryField
-                translationNamespace="Career.form"
-                formik={f}
-                listKey={"surname"}
-              />
-            </div>
-            {Object.keys(initialFormValues).map((formKey) => (
-              <EntryField
-                translationNamespace="Career.form"
+                listKey={"email"}
                 types={types}
+              />
+
+              <div className="flex flex-col sm:flex-row">
+                <EntryField
+                  translationNamespace="Career.form"
+                  formik={f}
+                  listKey="education"
+                  selects={selects}
+                  types={types}
+                />
+                <EntryField
+                  translationNamespace="Career.form"
+                  formik={f}
+                  listKey="gender"
+                  selects={selects}
+                />
+              </div>
+
+              <EntryField
+                translationNamespace="Career.form"
                 formik={f}
-                listKey={formKey}
-                checkboxs={checkboxs}
+                listKey="languages"
+                types={types}
+              />
+
+              <EntryField
+                translationNamespace="Career.form"
+                formik={f}
+                listKey="civilState"
                 selects={selects}
-                key={formKey}
               />
-            ))}
 
-            <TextArea
-              formKey="additionalInfo"
-              formik={f}
-              label={t("additionalInfo.text")}
-              rows={10}
-            />
-
-            <div className="p-2">
-              <Button
-                disabled={!(f.isValid && f.dirty)}
-                onClick={f.handleSubmit}
-                className={`py-3 w-full`}
-                text={t("submit")}
+              <EntryField
+                translationNamespace="Career.form"
+                formik={f}
+                listKey="hasDriverLicenseCatB"
+                checkboxs={checkboxs}
               />
-            </div>
-          </>
-        )}
-      </Formik>
-    </section>
+
+              <TextArea
+                formKey="additionalInfo"
+                formik={f}
+                label={t("additionalInfo.text")}
+                rows={8}
+              />
+
+              <div className="p-2">
+                <Button
+                  disabled={!(f.isValid && f.dirty)}
+                  onClick={f.handleSubmit}
+                  className={`py-3 w-full`}
+                  text={t("submit")}
+                />
+              </div>
+            </>
+          )}
+        </Formik>
+      </section>
+    </article>
   );
 };
 

@@ -50,7 +50,7 @@ export default function Partners() {
   }, [currentImage]);
 
   return (
-    <div className="w-full lg:w-2/3 m-auto mt-10 overflow-hidden">
+    <div className="w-full lg:w-2/3 m-auto mt-16 overflow-hidden">
       <div
         className="flex flex-row gap-5 transition-transform duration-200 ease-in-out"
         style={{
@@ -65,6 +65,7 @@ export default function Partners() {
               fill
               className="select-none w-auto h-auto"
               sizes="160px"
+              quality={75}
             />
           </div>
         ))}

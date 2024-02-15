@@ -17,6 +17,8 @@ export interface InputProps {
   onChange?: any;
   onBlur?: any;
   onFocus?: any;
+
+  rest: any;
 }
 
 export default function Input(props: InputProps) {
@@ -52,6 +54,7 @@ export default function Input(props: InputProps) {
             "!text-red-600 !border-red-600": isError,
           }
         )}
+        {...props.rest}
       />
       {isError && (
         <p className="mt-0.5 text-sm  dark:text-red-600">{props.error}</p>

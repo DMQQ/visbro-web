@@ -8,28 +8,30 @@ import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";
 import clsx from "clsx";
 
 const links = [
-  { path: "/about-us", text: "about" },
-  { path: "/collaboration", text: "collab" },
   {
     path: "/job-offers",
     text: "offers",
   },
   {
+    path: "/visbro-car-rental",
+    text: "rental",
+  },
+  { path: "/collaboration", text: "collab" },
+
+  { path: "/career", text: "career" },
+  {
     path: "/biuroservis",
     text: "biuroservis",
   },
-  {
-    path: "/gallery",
-    text: "gallery",
-  },
+
+  { path: "/about-us", text: "about" },
   {
     path: "/contact",
     text: "contact",
   },
-  { path: "/career", text: "career" },
   {
-    path: "/visbro-car-rental",
-    text: "rental",
+    path: "/gallery",
+    text: "gallery",
   },
 ] as const;
 
@@ -55,12 +57,12 @@ const NavigationList = (props: { dismiss: () => void }) => {
           >
             <Link
               href={link.path}
-              className={
-                pathname.startsWith(link.path) ? "text-blue-400" : "text-white"
-              }
+              className={clsx("text-white", {
+                "text-blue-400": pathname.startsWith(link.path),
+              })}
               onClick={() => props.dismiss()}
             >
-              {t(link.text)}
+              <span>{t(link.text)}</span>
             </Link>
           </li>
         ))}
@@ -94,6 +96,7 @@ export default function AppHeader() {
           className="font-bold text-2xl flex items-center mr-2"
         >
           <Image
+            priority
             alt="logo"
             src={"/logo_placeholder.ico"}
             width={30}
@@ -118,7 +121,7 @@ export default function AppHeader() {
               >
                 <Link
                   href={link.path}
-                  className={clsx("text-white", {
+                  className={clsx("text-white text-md", {
                     "!text-blue-400": pathname.startsWith(link.path),
                   })}
                 >
