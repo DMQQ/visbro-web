@@ -16,7 +16,7 @@ export default function Search() {
           onChange={({ target }) => setText(target.value)}
           className="dark:bg-zinc-800 border-2 border-zinc-700 rounded-md w-full p-2 outline-none focus:border-blue-600"
         />
-        <button className="bg-blue-600 px-5 py-3 rounded-md hover:bg-blue-700 active:bg-blue-800">
+        <button className="bg-blue-900 px-5 py-3 rounded-md hover:bg-blue-700 active:bg-blue-800">
           {t("search.button")}
         </button>
       </div>

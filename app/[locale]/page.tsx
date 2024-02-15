@@ -23,7 +23,7 @@ export async function generateMetadata({ params: { locale } }: any) {
 
   return {
     title: "Visbro Personal Solution",
-    content: t("text.short_about"),
+    description: t("text.short_about"),
   };
 }
 
@@ -85,7 +85,7 @@ export default function Home({ params: { locale } }: any) {
                   eius assumenda,
                 </p>
                 <span className="text-zinc-300 mt-1">$20/h </span>
-                <Link href={"/job-offers"} className="mt-2">
+                <Link href={"/job-offers"} className="mt-2" about="">
                   {t("buttons.learn_more")}
                 </Link>
               </section>

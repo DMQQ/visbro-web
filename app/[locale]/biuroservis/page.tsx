@@ -30,39 +30,40 @@ export default function Biuroservis({ searchParams }: any) {
   const t = useTranslations("Biuroservis");
 
   return (
-    <PageWrapper>
-      <article className="p-5 rounded-md w-full md:w-4/5 lg:w-2/3 m-auto">
-        <div className="mb-10">
-          <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold ">
-            {t("heading")}
-          </h1>
-          <p className="text-zinc-300 mt-2">{t("heading_helper")}</p>
-        </div>
+    <>
+      <PageWrapper>
+        <article className="p-5 rounded-md w-full md:w-4/5 lg:w-2/3 m-auto">
+          <div className="mb-10">
+            <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold ">
+              {t("heading")}
+            </h1>
+            <p className="text-zinc-300 mt-2">{t("heading_helper")}</p>
+          </div>
 
-        <div className="px-5 mb-5">
-          <ul className="list-disc">
-            <li className="list-item">
-              Rekrutacja pracowników do wszystkich sektorów
-            </li>
-            <li>Sprostanie każdej ilości osób wymaganych do danej firmy</li>
-            <li>
-              Mieszkania pracownicze przygotowane dla twoich pracowników,
-              dostosowane do potrzeb i wymagań etc
-            </li>
-          </ul>
-        </div>
+          <div className="px-5 mb-5">
+            <ul className="list-disc">
+              <li className="list-item">
+                Rekrutacja pracowników do wszystkich sektorów
+              </li>
+              <li>Sprostanie każdej ilości osób wymaganych do danej firmy</li>
+              <li>
+                Mieszkania pracownicze przygotowane dla twoich pracowników,
+                dostosowane do potrzeb i wymagań etc
+              </li>
+            </ul>
+          </div>
 
-        <section className="flex flex-col w-full gap-5">
-          {content.map(([heading, content], index) => (
-            <Tile content={content} heading={heading} key={index} />
-          ))}
-        </section>
-      </article>
-
+          <section className="flex flex-col w-full gap-5">
+            {content.map(([heading, content], index) => (
+              <Tile content={content} heading={heading} key={index} />
+            ))}
+          </section>
+        </article>
+      </PageWrapper>
       {searchParams.modal === "true" && (
         <Modal service={searchParams.service} />
       )}
-    </PageWrapper>
+    </>
   );
 }
 
@@ -73,21 +74,22 @@ const Tile = (props: { heading: string; content: string }) => {
         {props.heading.split(".")[1]}
       </summary>
 
-      <p className="mt-5 text-left">{props.content}</p>
-      <div className="mt-5 mb-2">
-        <Link
-          href={{
-            pathname: "/biuroservis",
-            query: {
-              modal: "true",
-              service: props.heading.split(".")[1],
-            },
-          }}
-          className="bg-blue-600 px-5 py-3 rounded-md"
-        >
-          Aplikuj
-        </Link>
-      </div>
+      <p className="mt-5 text-left flex-1 mb-5 text-zinc-300">
+        {props.content}
+      </p>
+
+      <Link
+        href={{
+          pathname: "/biuroservis",
+          query: {
+            modal: "true",
+            service: props.heading.split(".")[1],
+          },
+        }}
+        className="bg-blue-800 w-full px-5 text-center py-3 rounded-md sm:w-52"
+      >
+        Aplikuj
+      </Link>
     </details>
   );
 };

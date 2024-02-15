@@ -36,6 +36,7 @@ export default function JobOffers({ params: { locale } }: any) {
             className="mt-3 flex flex-col md:flex-row gap-3 rounded-xl bg-zinc-900  p-4 transition duration-200"
           >
             <Image
+              priority
               width={300}
               height={200}
               src="/car-rental-concept-illustration_114360-9267.avif"
@@ -59,9 +60,9 @@ export default function JobOffers({ params: { locale } }: any) {
                 </ul>
                 <Link
                   href={"/job-offers/offer/" + key}
-                  className="p-2 bg-blue-600 rounded-md w-48 text-center hover:bg-blue-700 active:bg-blue-700"
+                  className="p-2 bg-blue-900 rounded-md w-48 text-center hover:bg-blue-700 active:bg-blue-700"
                 >
-                  {t("buttons.card.apply")}
+                  {t("buttons.learn_more")}
                 </Link>
               </div>
             </section>

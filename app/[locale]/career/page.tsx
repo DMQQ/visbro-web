@@ -24,7 +24,7 @@ export default function Career({ params: { locale } }: any) {
         <h1 className="text-4xl lg:text-6xl font-bold pb-5 text-white ">
           {t("heading")}
         </h1>
-        <p className="text-zinc-200 text-md sm:text-lg ">{t("content")}</p>
+        <p className="text-zinc-300 text-md sm:text-lg ">{t("content")}</p>
 
         <div className="grid grid-cols-2 gap-5 mt-5">
           <img

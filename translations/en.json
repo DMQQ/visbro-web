@@ -13,11 +13,6 @@
       "label": "Search Ads",
       "placeholder": "E.g., Courier job...",
       "button": "Search"
-    },
-    "buttons": {
-      "card": {
-        "apply": "Learn More"
-      }
     }
   },
   "Gallery": {
@@ -77,8 +72,9 @@
   },
   "Home": {
     "buttons": {
-      "learn_more": "Learn More",
-      "offers": "Check Job Offers"
+      "learn_more": "More about us",
+      "offers": "Check Job Offers",
+      "card": "View full description"
     },
     "headings": {
       "top3": "Top 4 Offers",

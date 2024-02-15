@@ -36,14 +36,14 @@ export default function AboutUs({ params: { locale } }: any) {
   return (
     <PageWrapper>
       <article className="p-5 rounded-md w-full md:w-4/5 lg:w-2/3 m-auto">
-        <div className="mb-10">
+        <div className="mb-10 ">
           <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold ">
             {t("heading")}
           </h1>
           <p className="text-zinc-300 mt-2">Visbro Personal Solution</p>
         </div>
 
-        <section className="flex flex-col">
+        <section className="flex flex-col bg-zinc-950">
           <p className="text-zinc-300 text-md sm:text-lg">{t("content")}</p>
 
           <AboutSlider />
