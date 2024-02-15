@@ -77,13 +77,14 @@ SliderProps) {
       </div>
 
       <section className="absolute hidden xl:flex right-0 top-1/2 -translate-y-2/3 z-20 p-2 gap-2 flex-col">
-        {["TikTok", "YouTube", "Facebook", "Instagram"].map((social) => (
+        {socials.map((social) => (
           <a href="#" key={social} className="cursor-pointer">
             <Image
-              src={"/socials/" + social + ".png"}
+              priority
+              src={social}
               width={30}
               height={30}
-              alt={social}
+              alt={"social"}
               className="w-auto h-auto"
             />
           </a>

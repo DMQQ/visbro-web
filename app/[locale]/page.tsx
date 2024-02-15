@@ -8,15 +8,12 @@ import img1 from "@/public/slider/p1.webp";
 import img2 from "@/public/slider/p2.png";
 import img3 from "@/public/slider/p3.avif";
 import img4 from "@/public/slider/p4.jpg";
-import img5 from "@/public/slider/p5.jpg";
-import img6 from "@/public/slider/p6.jpg";
-import img7 from "@/public/slider/p7.jpg";
 
 import Image from "next/image";
 import why_us from "@/public/why_us.webp";
 import { Suspense } from "react";
 
-const defaultImages = [img1, img2, img3, img4, img5, img6, img7];
+const defaultImages = [img1, img2, img3, img4];
 
 import { getTranslations } from "next-intl/server";
 
