@@ -7,9 +7,9 @@ export default function ApplicationPanel() {
   const pathname = usePathname();
 
   return (
-    <section className="flex-1 p-2 dark:bg-zinc-900 min-w-96 border-l border-l-zinc-800">
+    <section className="flex-1 p-2 dark:bg-zinc-900 min-w-72 border-l border-l-zinc-800">
       <div className="p-4">
-        <h2 className="font-bold text-2xl">Formularz aplikacyjny</h2>
+        <h2 className="font-bold text-xl">Formularz aplikacyjny</h2>
         <p className="text-zinc-300 text-sm">Do oferty xxx-xxx-xxx</p>
 
         <Button

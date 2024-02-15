@@ -18,7 +18,7 @@ export interface InputProps {
   onBlur?: any;
   onFocus?: any;
 
-  rest: any;
+  rest?: any;
 }
 
 export default function Input(props: InputProps) {

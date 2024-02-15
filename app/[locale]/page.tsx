@@ -51,6 +51,7 @@ export default function Home({ params: { locale } }: any) {
             <Image
               src={why_us}
               alt="Placeholder"
+              priority
               className="rounded-md max-h-72 w-full object-cover"
             />
           </div>
@@ -74,7 +75,9 @@ export default function Home({ params: { locale } }: any) {
                 key={key}
                 className="dark:bg-zinc-900 w-full p-4 rounded-xl flex flex-col"
               >
-                <img
+                <Image
+                  width={300}
+                  height={200}
                   src="/car-rental-concept-illustration_114360-9267.avif"
                   alt="offer image"
                   className="w-full rounded-md"

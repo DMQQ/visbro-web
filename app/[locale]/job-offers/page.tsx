@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations({ locale, namespace: "JobOffers" });
@@ -34,7 +35,9 @@ export default function JobOffers({ params: { locale } }: any) {
             key={key}
             className="mt-3 flex flex-col md:flex-row gap-3 rounded-xl bg-zinc-900  p-4 transition duration-200"
           >
-            <img
+            <Image
+              width={300}
+              height={200}
               src="/car-rental-concept-illustration_114360-9267.avif"
               alt="offer thumbnail"
               className=" w-full sm:w-52 rounded-md object-cover"

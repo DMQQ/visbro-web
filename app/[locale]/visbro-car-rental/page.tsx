@@ -5,6 +5,7 @@ import { Link } from "@/navigation";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 export async function generateMetadata({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
@@ -48,7 +49,10 @@ export default function CarRental({ params: { locale } }: any) {
               key={key}
               className="dark:bg-zinc-900 w-full p-4 rounded-xl flex flex-col"
             >
-              <img
+              <Image
+                priority
+                width={300}
+                height={200}
                 src="/car-rental-concept-illustration_114360-9267.avif"
                 alt="offer image"
                 className="w-full rounded-md"
