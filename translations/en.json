@@ -282,5 +282,10 @@
   },
   "Impressum": {
     "content": "Bank account number: 0000 0000 0000 000 00 (Tax identification number for Germany in maintenance, Tax identification number for the EU in maintenance) "
+  },
+  "Selects": {
+    "education": "Elementary;Vocational;High School;Higher Education;Doctoral Degree",
+    "civilState": "Married;Divorced;In an informal relationship;Widowed;Single parent;Single",
+    "gender": "Female;Male;Other"
   }
 }

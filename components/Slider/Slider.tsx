@@ -47,6 +47,7 @@ export default function Slider({ images }: SliderProps) {
         {images.map((image, index) => (
           <div className="w-screen h-screen relative" key={index}>
             <Image
+              // priority
               quality={95}
               width={1200}
               height={800} // ? troche psuje performance

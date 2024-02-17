@@ -1,4 +1,5 @@
 import { Link } from "@/navigation";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 const content =
   `1. Pomoc w Uzyskaniu Kindergeld: Zapewniamy wsparcie w kompleksowym procesie aplikowania o Kindergeld, w tym wypełnianiu wniosków i zarządzaniu wymaganą dokumentacją.
@@ -22,7 +23,8 @@ const content =
     .split("\n")
     .map((service) => service.split(":"));
 
-export default function Services({ searchParams }: any) {
+export default function Services({ searchParams, params: { locale } }: any) {
+  unstable_setRequestLocale(locale);
   return (
     <>
       <article className="mt-5 border-t border-t-zinc-700">

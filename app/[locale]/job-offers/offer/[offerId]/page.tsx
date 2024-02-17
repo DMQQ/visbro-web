@@ -1,8 +1,43 @@
 import ApplicationModal from "@/components/ApplicationModal/ApplicationModal";
 import ApplicationPanel from "./ApplicationPanel";
 import { unstable_setRequestLocale } from "next-intl/server";
-
+import axios from "axios";
 import { getTranslations } from "next-intl/server";
+import { locales } from "@/locales";
+import { useTranslations } from "next-intl";
+
+async function getOfferIds() {
+  try {
+    const response = await axios.get("/offers");
+    return response.data.map((offer: any) => offer.id);
+  } catch (error) {
+    return ["0", "1", "2", "3"];
+  }
+}
+
+export async function generateStaticParams() {
+  const jobOffers = await getOfferIds();
+
+  const params = [] as { locale: string; offerId: string }[];
+
+  for (let offer in jobOffers) {
+    for (let locale in locales) {
+      params.push({ locale, offerId: offer });
+    }
+  }
+
+  return params;
+}
+
+async function getOfferById(id: string, locale: string) {
+  const data = await axios.get("/posts/" + id, {
+    headers: {
+      language: locale,
+    },
+  });
+
+  return data.data;
+}
 
 export async function generateMetadata({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
@@ -11,14 +46,22 @@ export async function generateMetadata({ params: { locale } }: any) {
   };
 }
 
-export default function OfferPage({ searchParams, params: { locale } }: any) {
+export default async function OfferPage({
+  searchParams,
+  params: { locale },
+}: any) {
   unstable_setRequestLocale(locale);
+
+  const data = await new Promise((res) => setTimeout(res, 2000));
+
+  const t = getTranslations("JobOffers");
+
   return (
     <main className={`w-full h-full min-h-screen`}>
       <article
-        className="flex flex-col md:flex-row mx-auto lg:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg"
+        className="flex flex-col md:flex-row mx-auto lg:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg sm:mt-32"
         style={{
-          marginTop: "8rem",
+          //   marginTop: "8rem",
           marginBottom: "4rem",
         }}
       >

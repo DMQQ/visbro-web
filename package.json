@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "accept-language": "^3.0.18",
+    "axios": "^1.6.7",
     "clsx": "^2.1.0",
     "formik": "^2.4.5",
     "leaflet": "^1.9.4",

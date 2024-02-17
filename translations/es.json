@@ -1,0 +1,290 @@
+{
+  "Contact": {
+    "heading": "Contacto",
+    "heading_helper": "¿Tienes preguntas? ¡Escríbenos a nuestros reclutadores!",
+    "location_heading": "Ubicación",
+    "phone_heading": "Teléfono de la Sede Principal",
+    "open_hours": "Abierto"
+  },
+  "JobOffers": {
+    "heading": "Ofertas de Trabajo",
+    "search": {
+      "label": "Buscar Anuncios",
+      "placeholder": "Ej., trabajo de mensajero...",
+      "button": "Buscar"
+    }
+  },
+  "Gallery": {
+    "heading": "Galería",
+    "heading_helper": "Fotos de nuestro trabajo y empresa"
+  },
+  "Career": {
+    "heading": "Carrera en Visbro Personal Solution",
+    "content": "Te invitamos a unirte al equipo de Visbro. Descubre nuestras ofertas de trabajo actuales a continuación y sé parte de nuestro equipo dinámico. Si tienes alguna idea que te gustaría compartir con nuestra empresa, ¡por favor completa el formulario de contacto y compártela con nosotros!",
+    "form": {
+      "name": {
+        "text": "Nombre",
+        "error": "El campo de nombre no puede estar vacío"
+      },
+      "surname": {
+        "text": "Apellido",
+        "error": "El campo de apellido no puede estar vacío"
+      },
+      "email": {
+        "text": "Dirección de Correo Electrónico",
+        "error": "Se requiere la dirección de correo electrónico"
+      },
+      "education": {
+        "text": "Educación",
+        "error": "El campo de educación no puede estar vacío"
+      },
+      "gender": {
+        "text": "Género",
+        "error": "El campo de género no puede estar vacío"
+      },
+      "languages": {
+        "text": "Idiomas Conocidos",
+        "error": "El campo de idiomas conocidos no puede estar vacío"
+      },
+      "hasDriverLicenseCatB": {
+        "text": "Tiene licencia de conducir categoría B",
+        "error": "El campo con información sobre tener licencia de conducir categoría B no puede estar vacío"
+      },
+      "hasBeenArrested": {
+        "text": "Ha sido arrestado",
+        "error": "El campo con información sobre haber sido arrestado no puede estar vacío"
+      },
+      "civilState": {
+        "text": "Estado Civil",
+        "error": "El campo de estado civil no puede estar vacío"
+      },
+      "additionalInfo": {
+        "text": "Información Adicional",
+        "error": "El campo de información adicional no puede estar vacío"
+      },
+      "submit": "Enviar"
+    }
+  },
+  "About": {
+    "heading": "Acerca de Visbro",
+    "content": "\n\nLa visión de Visbro Personal Solution UG desde el inicio de nuestras operaciones en 2021 ha sido crear un espacio donde el reclutamiento no sea solo un proceso, sino una oportunidad para construir relaciones duraderas. Nuestra sede en Leipzig es donde nació la idea de establecer nuevos estándares en la industria de recursos humanos, y desde entonces, hemos estado esforzándonos constantemente por alcanzarlos. Nuestra oferta de servicios de recursos humanos, basada en un enfoque individual y los más altos estándares de calidad, es el resultado no solo de nuestro conocimiento y experiencia, sino también de escuchar las necesidades de nuestros clientes. Las viviendas para empleados en varias regiones de Alemania forman parte de nuestra estrategia, que destaca nuestro compromiso de proporcionar a los empleados condiciones de trabajo y vida estables. Nuestro equipo de profesionales talentosos y experimentados trabaja con pasión y dedicación para garantizar el más alto nivel de servicio a nuestros clientes, lo que se traduce en la eficiencia y el éxito de cada colaboración.\n"
+  },
+  "Home": {
+    "buttons": {
+      "learn_more": "Más sobre nosotros",
+      "offers": "Ver Ofertas de Trabajo",
+      "card": "Ver descripción completa"
+    },
+    "headings": {
+      "top3": "Top 4 Ofertas",
+      "trusted_us": "Confían en Nosotros",
+      "socials": "También Puedes Encontrarnos en",
+      "why_us": "¿Por qué Visbro?"
+    },
+    "text": {
+      "short_about": "\nBienvenido a Visbro Personal Solution UG, donde tus necesidades de recursos humanos encuentran soluciones innovadoras. Nuestra pasión es conectar talentos excepcionales con empresas que buscan no solo empleados, sino sobre todo jugadores de equipo. Priorizamos la personalización, la calidad y la transparencia en cada aspecto de nuestra colaboración.\n",
+      "why_us": "\nCon Visbro, el proceso de reclutamiento deja de ser un desafío. Brindamos apoyo en cada etapa, desde encontrar al candidato perfecto hasta su alojamiento y trámites. Nuestra oferta abarca una amplia gama de servicios adaptados a las necesidades individuales de cada cliente. \nNuestra especialidad radica en ofrecer profesionales de primera en diversos campos. Ya sea que necesites conductores, personal de limpieza, trabajadores agrícolas o expertos en tecnología de la información, Visbro es tu solución. ¡Únete a nosotros y construyamos el éxito juntos!\n\n"
+    }
+  },
+  "Rental": {
+    "header_title": "Alquiler de Autos Visbro",
+    "header_helper": "¡Consulta nuestra oferta!",
+    "car_options": "Furgonetas de Entrega;Camiones"
+  },
+  "Footer": {
+    "contact": {
+      "heading": "Contacto",
+      "phone_number_office": "Número de Teléfono de la Secretaría",
+      "phone_number_owner": "Número de Teléfono del Propietario",
+      "email": "Dirección de Correo Electrónico"
+    },
+    "address": {
+      "heading": "Dirección",
+      "headquater_location": "Sede de la Empresa",
+      "other_location": "Otros Puntos de la Empresa",
+      "open_hours": "Horario de Atención"
+    },
+    "about": {
+      "heading": "Acerca de la Empresa",
+      "tax_number": "Número de Identificación Fiscal",
+      "data_admin": "Administrador de Datos",
+      "website_owner": "Propietario del Sitio Web",
+      "company_name": "Nombre de la Empresa"
+    }
+  },
+  "Navigation": {
+    "about": "Acerca de Nosotros",
+    "collab": "Colaboración",
+    "offers": "Ofertas de Trabajo",
+    "biuroservis": "Servicios de Oficina",
+    "gallery": "Galería",
+    "contact": "Contacto",
+    "career": "Carrera en Visbro",
+    "rental": "Alquiler de Camiones"
+  },
+  "Collaboration": {
+    "title": "Colabora con Nosotros",
+    "form": {
+      "heading": "¡Cuéntanos sobre ti!",
+      "name": {
+        "text": "Nombre",
+        "error": "El campo de nombre no puede estar vacío"
+      },
+      "surname": {
+        "text": "Apellido",
+        "error": "El campo de apellido no puede estar vacío"
+      },
+      "companyName": {
+        "text": "Nombre de la Empresa",
+        "error": "El campo de nombre de la empresa no puede estar vacío"
+      },
+      "jobPosition": {
+        "text": "Cargo",
+        "error": "El campo de cargo no puede estar vacío"
+      },
+      "phoneNumber": {
+        "text": "Número de Teléfono",
+        "error": "El campo de número de teléfono no puede estar vacío"
+      },
+      "email": {
+        "text": "Dirección de Correo Electrónico",
+        "error": "El campo de dirección de correo electrónico no puede estar vacío",
+        "errorFormat": "Formato de dirección de correo electrónico inválido"
+      },
+      "message": {
+        "text": "Mensaje",
+        "error": "El campo de mensaje no puede estar vacío"
+      },
+      "messagePlaceholder": {
+        "text": "¿Cómo podemos ayudarte?",
+        "error": "El campo de mensaje no puede estar vacío"
+      },
+      "submit": "Enviar"
+    },
+    "content": "\nEn Visbro Personal Solution UG, entendemos que la colaboración efectiva es clave para el éxito de cualquier negocio. Durante más de un año, hemos estado ayudando a empresarios de todo el país a construir equipos fuertes y eficientes y alcanzar sus objetivos estratégicos. Nuestros servicios de recursos humanos se basan en una comprensión profunda de las necesidades de nuestros clientes y brindan un apoyo integral en la gestión de personal. <br></br><br></br>\nComo un equipo experimentado de especialistas, estamos listos para apoyarte en todos los aspectos de la gestión de recursos humanos, desde la selección y contratación, pasando por la capacitación y desarrollo de empleados, hasta la gestión del rendimiento y la retención de talento. Nuestro enfoque se basa en la colaboración y un enfoque de asociación, lo que se traduce en relaciones comerciales duraderas y fructíferas.\nTe animamos a utilizar el formulario de contacto a continuación para que podamos discutir cómo podemos apoyar el desarrollo de tu negocio y contribuir a alcanzar tus objetivos comerciales.\n"
+  },
+
+  "ApplicationForm": {
+    "heading": "Solicitud de Oferta",
+    "step": "Paso {from} de {to}",
+    "buttons": {
+      "next": "Continuar",
+      "back": "Atrás"
+    },
+    "form": {
+      "name": {
+        "text": "Nombre",
+        "error": "El campo de nombre no puede estar vacío"
+      },
+      "surname": {
+        "text": "Apellido",
+        "error": "El campo de apellido no puede estar vacío"
+      },
+      "phoneNumber": {
+        "text": "Número de Teléfono",
+        "error": "El campo de número de teléfono no puede estar vacío"
+      },
+      "dateOfBirth": {
+        "text": "Fecha de Nacimiento",
+        "error": "El campo de fecha de nacimiento no puede estar vacío"
+      },
+      "lastJobPosition": {
+        "text": "Último Cargo",
+        "error": "El campo de último cargo no puede estar vacío"
+      },
+      "education": {
+        "text": "Educación",
+        "error": "El campo de educación no puede estar vacío"
+      },
+      "gender": {
+        "text": "Género",
+        "error": "El campo de género no puede estar vacío"
+      },
+      "age": {
+        "text": "Edad",
+        "error": "El campo de edad no puede estar vacío"
+      },
+      "hasOwnCar": {
+        "text": "¿Tienes tu propio coche?",
+        "error": "El campo sobre la propiedad del coche no puede estar vacío"
+      },
+      "civilState": {
+        "text": "Estado Civil (casado, divorciado, etc.)",
+        "error": "El campo de estado civil no puede estar vacío"
+      },
+      "workStart": {
+        "text": "Disposición para Comenzar a Trabajar",
+        "error": "El campo de disposición para trabajar no puede estar vacío"
+      },
+      "bankNumber": {
+        "text": "Número de Cuenta Bancaria",
+        "error": "El campo de número de cuenta bancaria no puede estar vacío"
+      },
+      "bankName": {
+        "text": "Nombre del Banco",
+        "error": "El campo de nombre del banco no puede estar vacío"
+      },
+      "bankCode": {
+        "text": "Código Bancario",
+        "error": "El campo de código bancario no puede estar vacío"
+      },
+      "address": {
+        "text": "Dirección de Residencia",
+        "error": "El campo de dirección de residencia no puede estar vacío"
+      },
+      "currentAddress": {
+        "text": "Dirección Actual",
+        "error": "El campo de dirección actual no puede estar vacío"
+      },
+      "mailAddress": {
+        "text": "Dirección de Correo Electrónico",
+        "error": "Se requiere la dirección de correo electrónico",
+        "errorFormat": "Formato de dirección de correo electrónico inválido"
+      },
+      "emergencyContact": {
+        "text": "Contacto de Emergencia en caso de un accidente (Nombre y contacto)",
+        "error": "El campo de contacto de emergencia no puede estar vacío"
+      },
+      "dataProcessingConsent": {
+        "text": "Consentimiento para el Procesamiento de Datos Personales",
+        "error": "Debe seleccionarse el consentimiento para el procesamiento de datos"
+      }
+    }
+  },
+  "Biuroservis": {
+    "heading": "Servicio Administrativo",
+    "heading_helper": "Nuestros Servicios",
+    "form": {
+      "heading": "Formulario de Servicio",
+      "email": {
+        "text": "Dirección de Correo Electrónico",
+        "error": "Se requiere la dirección de correo electrónico"
+      },
+      "name": {
+        "text": "Nombre",
+        "error": "El campo de nombre nopuede estar vacío"
+      },
+      "surname": {
+        "text": "Apellido",
+        "error": "El campo de apellido no puede estar vacío"
+      },
+      "phoneNumber": {
+        "text": "Número de Teléfono",
+        "error": "El campo de número de teléfono no puede estar vacío"
+      },
+      "additionalInfo": {
+        "text": "Información Adicional",
+        "error": ""
+      },
+      "button": "Enviar Solicitud"
+    }
+  },
+  "Impressum": {
+    "content": "Número de cuenta bancaria: 0000 0000 0000 000 00 (Número de identificación fiscal para Alemania en mantenimiento, Número de identificación fiscal para la UE en mantenimiento)"
+  },
+  "Selects": {
+    "education": "Primaria;Vocacional;Secundaria;Educación Superior;Doctorado",
+    "civilState": "Casado;Divorciado;En una relación informal;Viudo;Padre/Madre soltero;Soltero",
+    "gender": "Mujer;Hombre;Otro"
+  }
+}

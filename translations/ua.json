@@ -287,5 +287,10 @@
   },
   "Impressum": {
     "content": "Bank account number: 0000 0000 0000 000 00 (Tax identification number for Germany in maintenance, Tax identification number for the EU in maintenance) "
+  },
+  "Selects": {
+    "education": "Початкова;Професійна;Середня;Вища;Докторська ступінь",
+    "civilState": "Одружений(Заміжня);Розлучений(а);У неофіційних відносинах;Вдівець(Вдова);Одинокий батько/мати;Одинокий",
+    "gender": "Жінка;Чоловік;Інший"
   }
 }

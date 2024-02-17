@@ -21,7 +21,7 @@ export default function Button({ type = "primay", ...props }: ButtonProps) {
     <button
       disabled={props.disabled}
       onClick={props.onClick}
-      className={`text-white font-medium text-sm px-5 py-2.5 me-2 mb-2  disabled:dark:bg-zinc-800 hover:disabled:dark:bg-zinc-800 ${
+      className={`text-white transition font-medium text-sm px-5 py-2.5 me-2 mb-2  disabled:dark:bg-zinc-800 hover:disabled:dark:bg-zinc-800 ${
         ButtonTypes[type]
       } ${props.className || ""}`}
     >

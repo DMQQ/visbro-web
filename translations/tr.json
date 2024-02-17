@@ -1,0 +1,291 @@
+{
+  "Contact": {
+    "heading": "İletişim",
+    "heading_helper": "Sorularınız mı var? Recruiterlarımıza yazın!",
+
+    "location_heading": "Konum",
+    "phone_heading": "Merkez Telefon",
+    "open_hours": "Açık"
+  },
+  "JobOffers": {
+    "heading": "İş Teklifleri",
+    "search": {
+      "label": "İlan Ara",
+      "placeholder": "Örn., Kurye işi...",
+      "button": "Ara"
+    }
+  },
+  "Gallery": {
+    "heading": "Galeri",
+    "heading_helper": "İşimizden ve şirketimizden fotoğraflar"
+  },
+  "Career": {
+    "heading": "Visbro Personal Solution'da Kariyer",
+    "content": "Sizi Visbro ekibine katılmaya davet ediyoruz! Aşağıdaki mevcut iş tekliflerimizi keşfedin ve dinamik ekibimizin bir parçası olun. Şirketimize getirmek istediğiniz bir fikriniz varsa, lütfen iletişim formunu doldurun ve bizimle paylaşın!",
+    "form": {
+      "name": {
+        "text": "Ad",
+        "error": "Ad alanı boş olamaz"
+      },
+      "surname": {
+        "text": "Soyad",
+        "error": "Soyad alanı boş olamaz"
+      },
+      "email": {
+        "text": "E-posta Adresi",
+        "error": "E-posta adresi gereklidir"
+      },
+      "education": {
+        "text": "Eğitim",
+        "error": "Eğitim alanı boş olamaz"
+      },
+      "gender": {
+        "text": "Cinsiyet",
+        "error": "Cinsiyet alanı boş olamaz"
+      },
+      "languages": {
+        "text": "Bilinen Diller",
+        "error": "Bilinen diller alanı boş olamaz"
+      },
+      "hasDriverLicenseCatB": {
+        "text": "B sınıfı ehliyet var mı",
+        "error": "B sınıfı ehliyet bilgisi alanı boş olamaz"
+      },
+      "hasBeenArrested": {
+        "text": "Tutuklanma durumu",
+        "error": "Tutuklanma bilgisi alanı boş olamaz"
+      },
+      "civilState": {
+        "text": "Medeni Durum",
+        "error": "Medeni durum alanı boş olamaz"
+      },
+      "additionalInfo": {
+        "text": "Ek Bilgiler",
+        "error": "Ek bilgiler alanı boş olamaz"
+      },
+      "submit": "Gönder"
+    }
+  },
+  "About": {
+    "heading": "Visbro Hakkında",
+    "content": "\n\nVisbro Personal Solution UG'nin 2021'deki faaliyetlerinin başlangıcından bu yana vizyonu, işe alımın sadece bir süreç olmadığı, aynı zamanda kalıcı ilişkiler kurma fırsatı yaratan bir alan yaratmaktı. Leipzig'deki merkezimiz, İK endüstrisinde yeni standartlar belirleme fikrinin doğduğu yerdir ve o günden beri bunu başarmaya sürekli olarak çalışıyoruz. Bireysel bir yaklaşım ve en yüksek kalite standartlarına dayanan İK hizmet teklifimiz, sadece bilgi ve deneyimimizin değil, aynı zamanda müşterilerimizin ihtiyaçlarına kulak vermemizin bir sonucudur. Almanya'nın çeşitli bölgelerindeki işçi konaklamaları, çalışanlara istikrarlı çalışma ve yaşama koşulları sağlama taahhüdümüzü vurgulayan bir strateji parçasıdır. Yetenekli ve deneyimli profesyonellerden oluşan ekibimiz, her işbirliğinin etkinlik ve başarısına dönüşen en yüksek hizmet seviyesini sağlamak için tutku ve özveri ile çalışmaktadır.\n"
+  },
+  "Home": {
+    "buttons": {
+      "learn_more": "Bize Daha Fazla Hakında Bilgi Ver",
+      "offers": "İş Tekliflerini Kontrol Et",
+      "card": "Tam Açıklamayı Görüntüle"
+    },
+    "headings": {
+      "top3": "En İyi 4 Teklif",
+      "trusted_us": "Bize Güvendiler",
+      "socials": "Bizi Ayrıca Şurada Bulabilirsiniz",
+      "why_us": "Neden Visbro?"
+    },
+    "text": {
+      "short_about": "\nVisbro Personal Solution UG'ye hoş geldiniz, burada İK ihtiyaçlarınız yenilikçi çözümlerle buluşuyor. Tutku, olağanüstü yetenekleri şirketlerle buluşturmak, sadece çalışanları değil, her şeyden önce takım oyuncularını arayan şirketlerle bağlantı kurmaktır. İşbirliğimizin her yönünde kişiselleştirme, kalite ve şeffaflığı öncelikli kılıyoruz.\n",
+      "why_us": "\nVisbro ile işe alım süreci bir zorluk olmaktan çıkıyor. Mükemmel adayı bulmaktan, konaklamalarını sağlamaya ve formaliteleri halletmeye kadar her aşamada destek sağlıyoruz. Teklifimiz, her müşterinin bireysel ihtiyaçlarına uygun geniş bir hizmet yelpazesini kapsar. \nUzmanlık alanımız, çeşitli alanlarda üst düzey profesyoneller sunmaktadır. Sürücüler, temizlik personeli, tarım işçileri veya IT uzmanlarına ihtiyacınız olsun, Visbro çözümünüzdür. Bize katılın ve birlikte başarı inşa edelim!\n\n"
+    }
+  },
+  "Rental": {
+    "header_title": "Visbro Araç Kiralama",
+    "header_helper": "Teklifimize göz atın!",
+    "car_options": "Teslimat Kamyonları;Kamyonlar"
+  },
+  "Footer": {
+    "contact": {
+      "heading": "İletişim",
+      "phone_number_office": "Sekreterlik Telefon Numarası",
+      "phone_number_owner": "Sahibin Telefon Numarası",
+      "email": "E-posta Adresi"
+    },
+    "address": {
+      "heading": "Adres",
+      "headquater_location": "Şirket Merkezi",
+      "other_location": "Diğer Şirket Noktaları",
+      "open_hours": "Açılış Saatleri"
+    },
+    "about": {
+      "heading": "Şirket Hakkında",
+      "tax_number": "Vergi Numarası",
+      "data_admin": "Veri Yöneticisi",
+      "website_owner": "Web Sitesi Sahibi",
+      "company_name": "Şirket Adı"
+    }
+  },
+  "Navigation": {
+    "about": "Hakkımızda",
+    "collab": "İşbirliği",
+    "offers": "İş Teklifleri",
+    "biuroservis": "Ofis Hizmetleri",
+    "gallery": "Galeri",
+    "contact": "İletişim",
+    "career": "Visbro'da Kariyer",
+    "rental": "Kiralık Kamyon"
+  },
+  "Collaboration": {
+    "title": "Bizimle İşbirliği Yapın",
+    "form": {
+      "heading": "Bize Kendinizden Bahsedin!",
+      "name": {
+        "text": "Ad",
+        "error": "Ad alanı boş olamaz"
+      },
+      "surname": {
+        "text": "Soyad",
+        "error": "Soyad alanı boş olamaz"
+      },
+      "companyName": {
+        "text": "Şirket Adı",
+        "error": "Şirket adı alanı boş olamaz"
+      },
+      "jobPosition": {
+        "text": "İş Pozisyonu",
+        "error": "İş pozisyonu alanı boş olamaz"
+      },
+      "phoneNumber": {
+        "text": "Telefon Numarası",
+        "error": "Telefon numarası alanı boş olamaz"
+      },
+      "email": {
+        "text": "E-posta Adresi",
+        "error": "E-posta adresi alanı boş olamaz",
+        "errorFormat": "Geçersiz e-posta adresi formatı"
+      },
+      "message": {
+        "text": "Mesaj",
+        "error": "Mesaj alanı boş olamaz"
+      },
+      "messagePlaceholder": {
+        "text": "Size nasıl yardımcı olabiliriz?",
+        "error": "Mesaj alanı boş olamaz"
+      },
+      "submit": "Gönder"
+    },
+    "content": "\nVisbro Personal Solution UG olarak, etkili işbirliğinin her işletmenin başarısı için anahtar olduğunu anlıyoruz. Bir yıldan fazla süredir, ülke genelindeki girişimcilerin güçlü ve verimli takımlar kurmalarına ve stratejik iş hedeflerine ulaşmalarına yardımcı oluyoruz. İK hizmetlerimiz, müşterilerimizin ihtiyaçlarına derin bir anlayışa dayanmakta olup personel yönetiminde kapsamlı destek sağlamaktadır. <br></br><br></br>\nDeneyimli bir uzman ekibi olarak, sizi işe alım ve seçimden, çalışan eğitim ve geliştirmeye, performans yönetimine ve yetenek koruma konularında desteklemeye hazırız. Yaklaşımımız işbirliğine ve ortaklık yaklaşımına dayanmaktadır ve bu, kalıcı ve verimli iş ilişkilerine dönüşmektedir.\nİşletmenizin gelişimine nasıl destek olabileceğimizi ve iş hedeflerinize ulaşmada nasıl katkıda bulunabileceğimizi tartışmak için aşağıdaki iletişim formunu kullanmanızı öneririz.\n"
+  },
+
+  "ApplicationForm": {
+    "heading": "Teklif Başvurusu",
+    "step": "{from} adımı {to} dışında",
+    "buttons": {
+      "next": "Devam",
+      "back": "Geri"
+    },
+    "form": {
+      "name": {
+        "text": "Ad",
+        "error": "Ad alanı boş olamaz"
+      },
+      "surname": {
+        "text": "Soyad",
+        "error": "Soyad alanı boş olamaz"
+      },
+      "phoneNumber": {
+        "text": "Telefon Numarası",
+        "error": "Telefon numarası alanı boş olamaz"
+      },
+      "dateOfBirth": {
+        "text": "Doğum Tarihi",
+        "error": "Doğum tarihi alanı boş olamaz"
+      },
+      "lastJobPosition": {
+        "text": "Önceki İş Pozisyonu",
+        "error": "Önceki iş pozisyonu alanı boş olamaz"
+      },
+      "education": {
+        "text": "Eğitim",
+        "error": "Eğitim alanı boş olamaz"
+      },
+      "gender": {
+        "text": "Cinsiyet",
+        "error": "Cinsiyet alanı boş olamaz"
+      },
+      "age": {
+        "text": "Yaş",
+        "error": "Yaş alanı boş olamaz"
+      },
+      "hasOwnCar": {
+        "text": "Aracınız var mı?",
+        "error": "Araç sahipliği hakkındaki alan boş olamaz"
+      },
+      "civilState": {
+        "text": "Medeni Durum (evli, boşanmış, vb.)",
+        "error": "Medeni durum alanı boş olamaz"
+      },
+      "workStart": {
+        "text": "İşe Başlama Hazırlığı",
+        "error": "İşe başlama hazırlığı alanı boş olamaz"
+      },
+      "bankNumber": {
+        "text": "Banka Hesap Numarası",
+        "error": "Banka hesap numarası alanı boş olamaz"
+      },
+      "bankName": {
+        "text": "Banka Adı",
+        "error": "Banka adı alanı boş olamaz"
+      },
+      "bankCode": {
+        "text": "Banka Kodu",
+        "error": "Banka kodu alanı boş olamaz"
+      },
+      "address": {
+        "text": "İkamet Adresi",
+        "error": "İkamet adresi alanı boş olamaz"
+      },
+      "currentAddress": {
+        "text": "Mevcut Adres",
+        "error": "Mevcut adres alanı boş olamaz"
+      },
+      "mailAddress": {
+        "text": "E-posta Adresi",
+        "error": "E-posta adresi alanı boş olamaz",
+        "errorFormat": "Geçersiz e-posta adresi formatı"
+      },
+      "emergencyContact": {
+        "text": "Kaza durumunda Acil İletişim (Ad ve iletişim)",
+        "error": "Acil durum iletişim bilgisi alanı boş olamaz"
+      },
+      "dataProcessingConsent": {
+        "text": "Kişisel Veri İşleme İzni",
+        "error": "Veri işleme izni seçilmelidir"
+      }
+    }
+  },
+  "Biuroservis": {
+    "heading": "Yönetim Hizmeti",
+    "heading_helper": "Hizmetlerimiz",
+    "form": {
+      "heading": "Hizmet Formu",
+      "email": {
+        "text": "E-posta Adresi",
+        "error": "E-posta adresi gereklidir"
+      },
+      "name": {
+        "text": "Ad",
+        "error": "Ad alanı boş olamaz"
+      },
+      "surname": {
+        "text": "Soyad",
+        "error": "Soyad alanı boş olamaz"
+      },
+      "phoneNumber": {
+        "text": "Telefon Numarası",
+        "error": "Telefon numarası alanı boş olamaz"
+      },
+      "additionalInfo": {
+        "text": "Ek Bilgiler",
+        "error": ""
+      },
+      "button": "Talebi Gönder"
+    }
+  },
+  "Impressum": {
+    "content": "Banka hesap numarası: 0000 0000 0000 000 00 (Almanya için vergi kimlik numarası bakımda, AB için vergi kimlik numarası bakımda) "
+  },
+  "Selects": {
+    "education": "İlkokul;Mesleki;Ortaokul;Yükseköğrenim;Doktora",
+    "civilState": "Evli;Boşanmış;Resmi olmayan ilişkide;Dul;Tek ebeveyn;Bekar",
+    "gender": "Kadın;Erkek;Diğer"
+  }
+}

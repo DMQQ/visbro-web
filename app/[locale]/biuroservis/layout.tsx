@@ -1,10 +1,23 @@
 import PageWrapper from "@/components/ui/PageWrapper/PageWrapper";
 import { useTranslations } from "next-intl";
-import { ReactNode } from "react";
+import { ReactNode, Suspense } from "react";
 import Modal from "./Modal";
 import Navigation from "./Navigation";
+import { locales } from "@/locales";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Layout({ children }: { children: ReactNode }) {
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default function Layout({
+  children,
+  params,
+}: {
+  children: ReactNode;
+  params: any;
+}) {
+  unstable_setRequestLocale(params.locale);
   const t = useTranslations("Biuroservis");
   return (
     <>
@@ -24,7 +37,9 @@ export default function Layout({ children }: { children: ReactNode }) {
         </article>
       </PageWrapper>
 
-      <Modal />
+      <Suspense>
+        <Modal />
+      </Suspense>
     </>
   );
 }
