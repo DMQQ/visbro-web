@@ -16,7 +16,7 @@ export default function OfferPage({ searchParams, params: { locale } }: any) {
   return (
     <main className={`w-full h-full min-h-screen`}>
       <article
-        className="flex flex-col md:flex-row mx-auto lg:w-4/6 gap-5 dark:bg-zinc-900 "
+        className="flex flex-col md:flex-row mx-auto lg:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg"
         style={{
           marginTop: "8rem",
           marginBottom: "4rem",

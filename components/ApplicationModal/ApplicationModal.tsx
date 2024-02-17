@@ -2,6 +2,7 @@
 import { EntryField } from "@/components/ApplicationForm/CVApplicationForm";
 import Button from "@/components/ui/Button/Button";
 import { useRouter } from "@/navigation";
+import useSelects from "@/utils/useSelects";
 import { useFormik } from "formik";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
@@ -29,18 +30,6 @@ const initialValues = {
   mailAddress: "",
   currentAddress: "",
   emergencyContact: "",
-};
-
-const selects = {
-  education: ["Podstawowe", "Zawodowe", "Średnie", "Wyższe", "Tytuł doktora"],
-  civilState: [
-    "Żonaty",
-    "Rozwodnik",
-    "W związku nieformalnym",
-    "Wdowiec",
-    "Rodzic samotnie wychowywujący dzieci",
-  ],
-  gender: ["Kobieta", "Mężczyzna", "Inne"],
 };
 
 const checkboxs = ["dataProcessingConsent", "hasOwnCar"];
@@ -85,6 +74,8 @@ const steps = {
 
 export default function ApplicationModal() {
   const t = useTranslations("ApplicationForm.form");
+
+  const selects = useSelects();
 
   const formValidationSchema = useMemo(
     () =>

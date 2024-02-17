@@ -1,9 +1,12 @@
 "use client";
 import {
   EntryField,
+  TabSelect,
   TextArea,
 } from "@/components/ApplicationForm/CVApplicationForm";
 import Button from "@/components/ui/Button/Button";
+import { languages } from "@/utils/languagesList";
+import useSelects from "@/utils/useSelects";
 import { Formik } from "formik";
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
@@ -19,10 +22,10 @@ const Form = () => {
       education: Yup.string().required(t("education.error")),
       gender: Yup.string().required(t("gender.error")),
       languages: Yup.string().required(t("languages.error")),
-      hasDriverLicenseCatB: Yup.boolean().oneOf(
-        [true],
+      hasDriverLicenseCatB: Yup.string().required(
         t("hasDriverLicenseCatB.error")
       ),
+
       civilState: Yup.string().required(t("civilState.error")),
       additionalInfo: Yup.string()
         .min(200)
@@ -35,24 +38,11 @@ const Form = () => {
     email: "",
     education: "",
     gender: "",
-    languages: "",
     hasDriverLicenseCatB: false,
     civilState: "",
   };
 
-  const selects = {
-    education: ["Podstawowe", "Zawodowe", "Średnie", "Wyższe", "Tytuł doktora"],
-    civilState: [
-      "Żonaty",
-      "Rozwodnik",
-      "W związku nieformalnym",
-      "Wdowiec",
-      "Rodzic samotnie wychowywujący dzieci",
-    ],
-    gender: ["Kobieta", "Mężczyzna", "Inne"],
-  };
-
-  const checkboxs = ["hasDriverLicenseCatB"];
+  const selects = useSelects();
 
   const types = {
     phoneNumber: "tel",
@@ -64,7 +54,7 @@ const Form = () => {
   } as any;
 
   return (
-    <article className="w-full md:w-2/3 lg:w-3/5 xl:w-1/3 p-5">
+    <article className="w-full md:w-2/3 lg:w-3/5 xl:w-1/3 p-5 mt-10 ">
       <section className="dark:dark:bg-zinc-900 p-2 rounded-md w-full">
         <Formik
           validationSchema={contactFormValidationSchema}
@@ -116,10 +106,16 @@ const Form = () => {
               </div>
 
               <EntryField
+                multiSelect
                 translationNamespace="Career.form"
                 formik={f}
                 listKey="languages"
-                types={types}
+                selects={{
+                  languages: Object.entries(languages).map(([key, native]) => ({
+                    label: native,
+                    value: key,
+                  })),
+                }}
               />
 
               <EntryField
@@ -129,11 +125,11 @@ const Form = () => {
                 selects={selects}
               />
 
-              <EntryField
-                translationNamespace="Career.form"
+              <TabSelect
+                options={["Tak", "Nie"]}
+                label={t("hasDriverLicenseCatB.text")}
                 formik={f}
-                listKey="hasDriverLicenseCatB"
-                checkboxs={checkboxs}
+                formKey="hasDriverLicenseCatB"
               />
 
               <TextArea

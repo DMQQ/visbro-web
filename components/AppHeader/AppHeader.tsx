@@ -8,23 +8,13 @@ import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";
 import clsx from "clsx";
 
 const links = [
+  { path: "/collaboration", text: "collab" },
+  { path: "/about-us", text: "about" },
   {
     path: "/job-offers",
     text: "offers",
   },
-  {
-    path: "/visbro-car-rental",
-    text: "rental",
-  },
-  { path: "/collaboration", text: "collab" },
-
   { path: "/career", text: "career" },
-  {
-    path: "/biuroservis",
-    text: "biuroservis",
-  },
-
-  { path: "/about-us", text: "about" },
   {
     path: "/contact",
     text: "contact",
@@ -32,6 +22,10 @@ const links = [
   {
     path: "/gallery",
     text: "gallery",
+  },
+  {
+    path: "/biuroservis",
+    text: "biuroservis",
   },
 ] as const;
 

@@ -1,8 +1,4 @@
-import {
-  DetailedHTMLProps,
-  HTMLInputTypeAttribute,
-  InputHTMLAttributes,
-} from "react";
+import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 
 interface DropFileProps
   extends DetailedHTMLProps<

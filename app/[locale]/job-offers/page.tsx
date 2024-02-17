@@ -12,6 +12,7 @@ export async function generateMetadata({ params: { locale } }: any) {
 
   return {
     title: t("heading"),
+    description: "Visbro Job offers",
   };
 }
 
@@ -62,7 +63,7 @@ export default function JobOffers({ params: { locale } }: any) {
                   href={"/job-offers/offer/" + key}
                   className="p-2 bg-blue-900 rounded-md w-48 text-center hover:bg-blue-700 active:bg-blue-700"
                 >
-                  {t("buttons.learn_more")}
+                  More details
                 </Link>
               </div>
             </section>

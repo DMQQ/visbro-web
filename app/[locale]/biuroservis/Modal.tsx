@@ -14,8 +14,11 @@ import { useTranslations } from "next-intl";
 
 import * as Yup from "yup";
 
-export default function Modal({ service }: { service: string }) {
+export default function Modal() {
   const params = useSearchParams();
+
+  const service = params.get("service");
+
   useEffect(() => {
     if (document) {
       if (params.get("modal") === "true") {
@@ -51,81 +54,84 @@ export default function Modal({ service }: { service: string }) {
 
   const router = useRouter();
 
-  return (
-    <main
-      tabIndex={10}
-      style={{
-        background: "rgba(0,0,0,0.7)",
-        zIndex: 1000,
-      }}
-      className="modal-overlay fixed top-0 w-screen h-screen"
-    >
-      <section
-        tabIndex={11}
-        className="modal w-full sm:w-3/4 md:max-w-lg absolute sm:left-1/2 sm:top-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2 h-[100vh] sm:max-h-[calc(100vh-10rem)] bg-zinc-900 p-5 rounded-md flex flex-col"
+  if (params.get("modal") === "true")
+    return (
+      <main
+        tabIndex={10}
+        style={{
+          background: "rgba(0,0,0,0.7)",
+          zIndex: 1000,
+        }}
+        className="modal-overlay fixed top-0 w-screen h-screen"
       >
-        <div className="flex flex-row justify-between p-2 mb-5">
-          <h2 className="font-bold text-xl">{t("form.heading")}</h2>
-          <button onClick={() => router.back()}>
-            <RxCross1 color="#fff" size={25} />
-          </button>
-        </div>
-        <Formik
-          validationSchema={validationSchema}
-          initialValues={initialValues}
-          onSubmit={() => {}}
+        <section
+          tabIndex={11}
+          className="modal w-full sm:w-3/4 md:max-w-lg absolute sm:left-1/2 sm:top-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2 h-[100vh] sm:max-h-[calc(100vh-10rem)] bg-zinc-900 p-5 rounded-md flex flex-col"
         >
-          {(f) => (
-            <>
-              <EntryField
-                translationNamespace="Biuroservis.form"
-                formik={f}
-                listKey="email"
-                types={{ email: "email" }}
-              />
-              <div className="flex flex-col sm:flex-row">
+          <div className="flex flex-row justify-between p-2 mb-5">
+            <h2 className="font-bold text-xl">{t("form.heading")}</h2>
+            <button onClick={() => router.back()}>
+              <RxCross1 color="#fff" size={25} />
+            </button>
+          </div>
+          <Formik
+            validationSchema={validationSchema}
+            initialValues={initialValues}
+            onSubmit={() => {}}
+          >
+            {(f) => (
+              <>
                 <EntryField
                   translationNamespace="Biuroservis.form"
                   formik={f}
-                  listKey="name"
+                  listKey="email"
+                  types={{ email: "email" }}
                 />
+                <div className="flex flex-col sm:flex-row">
+                  <EntryField
+                    translationNamespace="Biuroservis.form"
+                    formik={f}
+                    listKey="name"
+                  />
+                  <EntryField
+                    translationNamespace="Biuroservis.form"
+                    formik={f}
+                    listKey="surname"
+                  />
+                </div>
                 <EntryField
                   translationNamespace="Biuroservis.form"
                   formik={f}
-                  listKey="surname"
+                  listKey="phoneNumber"
+                  types={{ phoneNumber: "tel" }}
                 />
-              </div>
-              <EntryField
-                translationNamespace="Biuroservis.form"
-                formik={f}
-                listKey="phoneNumber"
-                types={{ phoneNumber: "tel" }}
-              />
-              <Input
-                label="Wybrana usługa"
-                value={f.values.service}
-                onChange={() => {}}
-                rest={{ disabled: true }}
-                className="!text-zinc-400"
-              />
-              <TextArea
-                formik={f}
-                formKey="additionalInfo"
-                label="Dodatkowe informacje"
-                rows={5}
-              />
-              <div className="p-2">
-                <Button
-                  disabled={!(f.isValid && f.dirty)}
-                  className="w-full py-4"
-                  onClick={() => {}}
-                  text={t("form.button")}
+                <Input
+                  label="Wybrana usługa"
+                  value={f.values.service || ""}
+                  onChange={() => {}}
+                  rest={{ disabled: true }}
+                  className="!text-zinc-400"
                 />
-              </div>
-            </>
-          )}
-        </Formik>
-      </section>
-    </main>
-  );
+                <TextArea
+                  formik={f}
+                  formKey="additionalInfo"
+                  label="Dodatkowe informacje"
+                  rows={5}
+                />
+                <div className="p-2">
+                  <Button
+                    disabled={!(f.isValid && f.dirty)}
+                    className="w-full py-4"
+                    onClick={() => {}}
+                    text={t("form.button")}
+                  />
+                </div>
+              </>
+            )}
+          </Formik>
+        </section>
+      </main>
+    );
+
+  return null;
 }

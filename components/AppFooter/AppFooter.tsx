@@ -5,12 +5,12 @@ import { unstable_setRequestLocale } from "next-intl/server";
 export default function AppFooter({ locale }: { locale: string }) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("Navigation");
-  const t2 = useTranslations("Footer");
+  // const t2 = useTranslations("Footer");
   const t3 = useTranslations("Impressum");
 
   return (
     <footer className="w-full dark:bg-zinc-900 flex flex-col">
-      <section className="grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-5 md:w-3/4 m-auto mt-5 hidden">
+      {/* <section className="grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-5 md:w-3/4 m-auto mt-5 hidden">
         <section className="w-full dark:bg-zinc-900 rounded-md p-5">
           <h3 className="font-bold text-2xl">{t2("contact.heading")}</h3>
           <hr className="border-zinc-800 my-2" />
@@ -83,7 +83,7 @@ export default function AppFooter({ locale }: { locale: string }) {
             <span className="text-white">xxxxx xxxx</span>
           </p>
         </section>
-      </section>
+      </section> */}
 
       <hr className="border-zinc-800" />
 
@@ -114,7 +114,7 @@ export default function AppFooter({ locale }: { locale: string }) {
               {t("rental")}
             </Link>
 
-            <Link href={"/"} className="md:px-2">
+            <Link href={"/biuroservis/cleaning-services"} className="md:px-2">
               Visbro usługi sprzątające
             </Link>
           </div>

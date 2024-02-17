@@ -19,24 +19,8 @@ const socials = [
   "/socials/Instagram.png",
 ];
 
-// OPTIMIZE BACKGROUND IMAGES
-// https://stackoverflow.com/questions/74496858/how-to-change-next-image-according-to-screen-size
-
-// const images = [
-//   "/slider/p1.webp",
-//   "/slider/p2.png",
-//   "/slider/p3.avif",
-//   "/slider/p4.jpg",
-//   "/slider/p5.jpg",
-//   "/slider/p6.jpg",
-//   "/slider/p7.jpg",
-// ];
-
 const INTERVAL = 3000;
-export default function Slider({
-  images,
-}: //  images
-SliderProps) {
+export default function Slider({ images }: SliderProps) {
   const [currentImage, setCurrentImage] = useState<number>(0); // index of a number
 
   useEffect(() => {
@@ -139,7 +123,7 @@ SliderProps) {
             </Link>
             <Link
               href={"/job-offers"}
-              className="flex-1 bg-blue-800 text-white  text-center py-4 rounded-md"
+              className="flex-1 bg-zinc-950 text-white  text-center py-4 rounded-md"
             >
               {t("buttons.offers")}
             </Link>

@@ -1,11 +1,7 @@
-import { useTranslations } from "next-intl";
-
-export default function Biuroservis({ searchParams }: any) {
-  const t = useTranslations("Biuroservis");
-
+export default function Recrutation() {
   return (
     <article className="mt-5 border-t border-t-zinc-700">
-      <h1 className="text-3xl font-bold py-5">Sprawdź nasze inne usługi</h1>
+      <h1 className="text-3xl font-bold py-5">Rekrutacja</h1>
       <p className="text-zinc-300">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam non,
         labore voluptatum voluptas voluptates debitis et, veniam ipsam hic sunt
