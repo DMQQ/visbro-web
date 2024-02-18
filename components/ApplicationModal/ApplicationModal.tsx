@@ -193,7 +193,7 @@ export default function ApplicationModal() {
         <section className="flex flex-col justify-between flex-1">
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="flex-1 mt-5 overflow-y-auto max-h-[calc(100vh-18rem)] sm:max-h-[calc(100vh-25rem)]"
+            className="flex flex-col flex-1 mt-5 overflow-y-auto max-h-[calc(100vh-18rem)] sm:max-h-[calc(100vh-25rem)]"
           >
             {Object.keys(steps[step]).map((key) => (
               <EntryField
@@ -208,7 +208,7 @@ export default function ApplicationModal() {
               />
             ))}
           </form>
-          <div className="flex align-bottom mb-14">
+          <div className="flex align-bottom">
             <Button
               text={t2("buttons.back")}
               onClick={() => prevStep()}

@@ -52,7 +52,7 @@ export default async function OfferPage({
 }: any) {
   unstable_setRequestLocale(locale);
 
-  const data = await new Promise((res) => setTimeout(res, 2000));
+  const data = await new Promise((res) => setTimeout(res, 100));
 
   const t = getTranslations("JobOffers");
 

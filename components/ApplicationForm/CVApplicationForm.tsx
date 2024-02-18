@@ -52,26 +52,29 @@ export const EntryField = ({
     );
   }
 
-  if (typeof key !== "undefined" && key in (selects || {}))
+  if (typeof key !== "undefined" && key in (selects || {})) {
     return (
       <Select
         onBlur={formik.handleBlur(key)}
         label={t(`${key}.text`)}
         options={selects![key] as any}
-        selected={formik.values[key]}
-        onChange={(output: any) =>
+        onChange={(output: any) => {
           formik.setFieldValue(
             key,
             rest.multiSelect
               ? output!.map(({ value }: any) => value).join(", ")
               : output.value
-          )
+          );
+        }}
+        isMulti={rest.multiSelect}
+        error={
+          formik.touched[key] && formik.errors[key] && formik.values[key] === ""
+            ? formik.errors[key]
+            : ""
         }
-        isMulti={rest.multiSelect || false}
-        error={formik.errors[key]}
-        isError={!!formik.errors[key] && formik.touched[key]}
       />
     );
+  }
 
   if (checkboxs.includes(key)) {
     return (

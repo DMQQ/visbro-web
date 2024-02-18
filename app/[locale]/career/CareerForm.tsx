@@ -113,7 +113,7 @@ const Form = () => {
                 selects={{
                   languages: Object.entries(languages).map(([key, native]) => ({
                     label: native,
-                    value: key,
+                    value: native,
                   })),
                 }}
               />

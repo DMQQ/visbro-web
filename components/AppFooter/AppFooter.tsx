@@ -126,6 +126,15 @@ export default function AppFooter({ locale }: { locale: string }) {
       <section className="p-5">
         <p className="text-zinc-400 text-center">{t3("content")}</p>
       </section>
+
+      <hr className="border-zinc-800" />
+
+      <section className="p-5 text-zinc-600">
+        Free SVG Background by{" "}
+        <a target="_blank" href="https://bgjar.com">
+          BGJar
+        </a>
+      </section>
     </footer>
   );
 }

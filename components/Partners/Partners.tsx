@@ -50,10 +50,11 @@ export default function Partners() {
   }, [currentImage]);
 
   return (
-    <div className="w-full lg:w-2/3 m-auto mt-16 overflow-hidden">
+    <div className="w-full lg:w-3/4 m-auto mt-16 overflow-hidden">
       <div
         className="flex flex-row gap-5 transition-transform duration-200 ease-in-out"
         style={{
+          //   transform: `translateX(${currentImage * (160 + 20) * -1}px)`,
           transform: `translateX(${currentImage * (160 + 20) * -1}px)`,
         }}
       >

@@ -6,7 +6,6 @@ import SelectReact from "react-select";
 
 export default function Select(props: {
   options: { value: string; label: string }[];
-  selected: string;
   label: string;
   isMulti?: boolean;
   onBlur: any;
@@ -15,9 +14,11 @@ export default function Select(props: {
     | ((value: { value: string; label: string }[]) => void);
 
   error: string;
-  isError: boolean;
 }) {
   const id = useId();
+
+  const isError = !!props.error;
+
   return (
     <div className="p-2 w-full">
       <label
@@ -25,28 +26,32 @@ export default function Select(props: {
         className={clsx(
           "block mb-2 text-sm font-medium text-zinc-900 dark:text-white",
           {
-            "!text-red-600": props.isError,
+            "!text-red-600": isError,
           }
         )}
       >
         {props.label}
       </label>
       <SelectReact
+        // onFocus={props.onBlur}
         onBlur={props.onBlur}
-        onChange={(v) => props.onChange(v as any)}
+        onChange={(v) => {
+          props.onChange(v as any);
+        }}
         instanceId={id}
-        isSearchable
+        isSearchable={!!props.isMulti}
         id="languages-select"
         isMulti={props.isMulti}
+        blurInputOnSelect
         className={clsx("my-react-select-container !rounded-xl ", {
-          "react-select-error": props.isError,
+          "react-select-error": isError,
         })}
         classNamePrefix="my-react-select"
         placeholder={props.label}
         name={props.label}
         options={props.options}
       />
-      {props.isError && <p className="text-red-600 text-sm">{props.error}</p>}
+      {isError && <p className="text-red-600 text-sm">{props.error}</p>}
     </div>
   );
 }
