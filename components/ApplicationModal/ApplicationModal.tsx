@@ -2,6 +2,7 @@
 import { EntryField } from "@/components/ApplicationForm/CVApplicationForm";
 import Button from "@/components/ui/Button/Button";
 import { useRouter } from "@/navigation";
+import useFormSubmit from "@/utils/useFormSubmit";
 import useSelects from "@/utils/useSelects";
 import { useFormik } from "formik";
 import { useTranslations } from "next-intl";
@@ -9,6 +10,11 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import * as Yup from "yup";
+import AlertBox from "../AlertBox/AlertBox";
+import Input from "../ui/Input/Input";
+import DropFile from "../DropFile/DropFile";
+import axios from "axios";
+import { API } from "@/utils/constants";
 
 const initialValues = {
   dataProcessingConsent: false,
@@ -53,9 +59,10 @@ const steps = {
 
   civilState: {
     education: "",
-    dateOfBirth: "",
     hasOwnCar: false,
     civilState: "",
+    gender: "",
+    dateOfBirth: "",
   },
 
   addressAndContact: {
@@ -69,7 +76,9 @@ const steps = {
     emergencyContact: "",
   },
 
-  files: { documentId: "", driverLicense: "" },
+  files: {
+    // documentId: "", driverLicense: ""
+  },
 };
 
 export default function ApplicationModal() {
@@ -87,7 +96,7 @@ export default function ApplicationModal() {
         lastJobPosition: Yup.string().required(t("lastJobPosition.error")),
         education: Yup.string().required(t("education.error")),
         gender: Yup.string().required(t("gender.error")),
-        hasOwnCar: Yup.string().required(t("hasOwnCar.error")),
+        //hasOwnCar: Yup.boolean().required(t("hasOwnCar.error")),
         civilState: Yup.string().required(t("civilState.error")),
         workStart: Yup.string().required(t("workStart.error")),
         bankNumber: Yup.string().required(t("bankNumber.error")),
@@ -107,14 +116,48 @@ export default function ApplicationModal() {
     []
   );
 
+  const [idFile, setIdFile] = useState<File | null>(null);
+  const [driverLicense, setDriverLicense] = useState<File | null>(null);
+
+  const { handleSubmit, state } = useFormSubmit("/biuroservices/");
+
   const formik = useFormik({
     initialValues,
-    onSubmit() {},
+    async onSubmit(data: any) {
+      // await handleSubmit({
+      //   ...data,
+      //   offerId: 0,
+      //   idFile: {},
+      //   driverLicenseFile: {},
+      // });
+
+      const formData = new FormData();
+
+      Object.keys(data).forEach((key) => formData.append(key, data[key]));
+
+      formData.append("idFile", idFile!);
+      formData.append("driverLicenseFile", driverLicense!);
+
+      try {
+        const response = await axios.post(API + "/biuroservices/", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        });
+
+        console.log(response.status);
+      } catch (error) {
+        console.log(error);
+      }
+    },
     validationSchema: formValidationSchema,
     initialErrors: {
       name: t("name.error"),
       education: t("education.error"),
       workStart: t("workStart.error"),
+    },
+    initialTouched: {
+      hasOwnCar: true,
     },
   });
 
@@ -128,6 +171,10 @@ export default function ApplicationModal() {
     if (currentStepIndex + 1 < N) {
       setStep(stepsArray[currentStepIndex + 1]);
     }
+
+    if (formik.isValid && currentStepIndex === stepsArray.length - 1) {
+      formik.handleSubmit();
+    }
   }
   function prevStep() {
     if (currentStepIndex - 1 >= 0) {
@@ -140,7 +187,9 @@ export default function ApplicationModal() {
     const errors = Object.keys(formik.errors);
 
     for (let errorKey of errors) {
-      if (stepField.includes(errorKey)) return true;
+      if (stepField.includes(errorKey)) {
+        return true;
+      }
     }
     return false;
   })();
@@ -175,10 +224,10 @@ export default function ApplicationModal() {
     >
       <section
         tabIndex={11}
-        className="modal w-full sm:w-3/4 md:max-w-lg absolute sm:left-1/2 sm:top-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2 h-[100vh] sm:max-h-[calc(100vh-10rem)] bg-zinc-900 p-5 rounded-md flex flex-col"
+        className="modal overflow-y-auto w-full sm:w-3/4 md:max-w-lg absolute sm:left-1/2 sm:top-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2 h-[100vh] sm:max-h-[calc(100vh-10rem)] bg-zinc-900 p-5 rounded-md flex flex-col"
       >
         <div className="flex flex-row items-center justify-between">
-          <h2 className="text-white font-bold text-3xl px-4">
+          <h2 className="text-white font-bold text-3xl px-2">
             {t2("heading")}
           </h2>
           <button onClick={() => router.back()}>
@@ -186,15 +235,12 @@ export default function ApplicationModal() {
           </button>
         </div>
 
-        <p className="px-4 text-blue-500">
+        <p className="px-2 text-blue-500">
           {t2("step", { from: currentStepIndex + 1, to: stepsArray.length })}
         </p>
 
         <section className="flex flex-col justify-between flex-1">
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="flex flex-col flex-1 mt-5 overflow-y-auto max-h-[calc(100vh-18rem)] sm:max-h-[calc(100vh-25rem)]"
-          >
+          <div className="flex-1">
             {Object.keys(steps[step]).map((key) => (
               <EntryField
                 translationNamespace="ApplicationForm.form"
@@ -207,8 +253,35 @@ export default function ApplicationModal() {
                 files={["documentId", "driverLicense"]}
               />
             ))}
-          </form>
-          <div className="flex align-bottom">
+
+            {step === "files" && (
+              <div>
+                <DropFile
+                  multiple={false}
+                  onChange={(ev: any) => setIdFile(ev.target.files?.[0])}
+                  formats="PNG,JPG,GIF MAX 7MB"
+                  label={t(`documentId.text`)}
+                />
+                <DropFile
+                  multiple={false}
+                  formats="PNG,JPG,GIF MAX 7MB"
+                  onChange={(ev: any) => setDriverLicense(ev.target.files?.[0])}
+                  label={t(`driverLicense.text`)}
+                />
+              </div>
+            )}
+          </div>
+
+          {currentStepIndex === stepsArray.length - 1 && (
+            <AlertBox
+              translationsNamespace="FormResponses.POST"
+              variant={
+                !!state.error ? "error" : state.isSuccess ? "success" : "hidden"
+              }
+            />
+          )}
+
+          <div className="flex py-5">
             <Button
               text={t2("buttons.back")}
               onClick={() => prevStep()}

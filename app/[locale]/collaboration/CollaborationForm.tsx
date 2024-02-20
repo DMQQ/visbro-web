@@ -1,9 +1,11 @@
 "use client";
+import AlertBox from "@/components/AlertBox/AlertBox";
 import {
   EntryField,
   TextArea,
 } from "@/components/ApplicationForm/CVApplicationForm";
 import Button from "@/components/ui/Button/Button";
+import useFormSubmit from "@/utils/useFormSubmit";
 import { Formik } from "formik";
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
@@ -36,12 +38,18 @@ const Form = () => {
     });
   }, []);
 
+  const { handleSubmit, state } = useFormSubmit("/collaboration/");
+
+  const onSubmit = async (props: typeof initialFormValues) => {
+    await handleSubmit<typeof initialFormValues>(props);
+  };
+
   return (
     <article className="w-full md:w-2/3 lg:w-3/5 xl:w-1/3 p-5">
       <section className="dark:dark:bg-zinc-900 p-2 rounded-md w-full">
         <Formik
           validationSchema={contactFormValidationSchema}
-          onSubmit={() => {}}
+          onSubmit={onSubmit}
           initialValues={initialFormValues}
         >
           {(f: any) => (
@@ -56,7 +64,6 @@ const Form = () => {
                   formik={f}
                   listKey={"surname"}
                   translationNamespace="Collaboration.form"
-                  files={[]}
                 />
               </div>
 
@@ -93,9 +100,21 @@ const Form = () => {
                 rows={5}
               />
 
-              <div className="p-2">
+              <AlertBox
+                translationsNamespace="FormResponses.POST"
+                variant={
+                  !!state.error
+                    ? "error"
+                    : state.isSuccess
+                    ? "success"
+                    : "hidden"
+                }
+              />
+
+              <div className="px-2 mt-2">
                 <Button
-                  disabled={!(f.isValid && f.dirty)}
+                  buttonType="submit"
+                  disabled={!(f.isValid && f.dirty) && !state.isSuccess}
                   onClick={f.handleSubmit}
                   className={`py-3 w-full`}
                   text={t("submit")}

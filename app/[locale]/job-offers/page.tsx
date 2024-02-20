@@ -63,7 +63,7 @@ export default function JobOffers({ params: { locale } }: any) {
                   href={"/job-offers/offer/" + key}
                   className="p-2 bg-blue-900 rounded-md w-48 text-center hover:bg-blue-700 active:bg-blue-700"
                 >
-                  More details
+                  {t("buttons.card.apply")}
                 </Link>
               </div>
             </section>

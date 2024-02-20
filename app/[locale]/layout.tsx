@@ -49,9 +49,9 @@ const Body = ({
     className={`${inter.className} bg-white text-black dark:dark:bg-zinc-950 dark:text-white`}
     style={{
       backgroundImage: "url(/bg.svg)",
-      //backgroundImage: "url(/Meteor1.svg)",
-      backgroundSize: "contain",
-      backgroundRepeat: "no-repeat",
+      // backgroundImage: "url(/Meteor1.svg)",
+      backgroundSize: "cover",
+      // backgroundRepeat: "no-repeat",
       backgroundAttachment: "fixed",
     }}
   >

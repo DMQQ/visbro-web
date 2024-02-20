@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 export async function generateMetadata({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
@@ -28,11 +29,15 @@ export default function Gallery({ params: { locale } }: any) {
 
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {Array.from(new Array(12).keys()).map((key) => (
-            <img
+            <Image
+              width={400}
+              height={300}
+              quality={90}
+              priority={key < 6}
               key={key}
               src="/car-rental-concept-illustration_114360-9267.avif"
-              alt=""
-              className="w-full"
+              alt="Image of our company and it's work"
+              className="w-full rounded-md"
             />
           ))}
         </section>

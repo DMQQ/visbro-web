@@ -122,7 +122,7 @@
     "about": "O Nas",
     "collab": "Współpraca",
     "offers": "Oferty pracy",
-    "biuroservis": "Nasze usługi",
+    "biuroservis": "Usługi",
     "gallery": "Galeria",
     "contact": "Kontakt",
     "career": "Kariera w Visbro",
@@ -173,9 +173,11 @@
   "ApplicationForm": {
     "heading": "Formularz aplikacyjny",
     "step": "Etap {from} z  {to}",
+    "offerIdText": "Do oferty {id}",
     "buttons": {
       "next": "Dalej",
-      "back": "Cofnij"
+      "back": "Cofnij",
+      "openForm": "Wypełnij formularz"
     },
     "form": {
       "name": {
@@ -299,5 +301,17 @@
     "education": "Podstawowe;Zawodowe;Średnie;Wyższe;Tytuł Doktora",
     "civilState": "Żonaty;Rozwodnik;W związku nieformalnym;Wdowiec;Rodzic samotnie wychowujący dzieci;Singiel",
     "gender": "Kobieta;Mężczyzna;Inne"
+  },
+  "FormResponses": {
+    "POST": {
+      "success": {
+        "title": "Dziekujemy za zgłoszenie!",
+        "message": "Postaramy się odpowiedzieć jak najszybciej!"
+      },
+      "error": {
+        "title": "Coś poszło nie tak!",
+        "message": "Spróbuj ponownie lub odczekaj chwilę."
+      }
+    }
   }
 }

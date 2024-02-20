@@ -1,4 +1,5 @@
 "use client";
+import AlertBox from "@/components/AlertBox/AlertBox";
 import {
   EntryField,
   TabSelect,
@@ -6,6 +7,7 @@ import {
 } from "@/components/ApplicationForm/CVApplicationForm";
 import Button from "@/components/ui/Button/Button";
 import { languages } from "@/utils/languagesList";
+import useFormSubmit from "@/utils/useFormSubmit";
 import useSelects from "@/utils/useSelects";
 import { Formik } from "formik";
 import { useTranslations } from "next-intl";
@@ -38,7 +40,7 @@ const Form = () => {
     email: "",
     education: "",
     gender: "",
-    hasDriverLicenseCatB: false,
+    hasDriverLicenseCatB: "",
     civilState: "",
   };
 
@@ -53,12 +55,19 @@ const Form = () => {
     additionalInfo: "textarea",
   } as any;
 
+  const { handleSubmit, state } = useFormSubmit("/career/");
+
   return (
     <article className="w-full md:w-2/3 lg:w-3/5 xl:w-1/3 p-5 mt-10 ">
       <section className="dark:dark:bg-zinc-900 p-2 rounded-md w-full">
         <Formik
           validationSchema={contactFormValidationSchema}
-          onSubmit={() => {}}
+          onSubmit={(data) => {
+            handleSubmit({
+              ...data,
+              hasDriverLicenseCatB: data.hasDriverLicenseCatB === "Tak",
+            });
+          }}
           initialValues={{
             name: "",
             surname: "",
@@ -137,6 +146,17 @@ const Form = () => {
                 formik={f}
                 label={t("additionalInfo.text")}
                 rows={8}
+              />
+
+              <AlertBox
+                translationsNamespace="FormResponses.POST"
+                variant={
+                  !!state.error
+                    ? "error"
+                    : state.isSuccess
+                    ? "success"
+                    : "hidden"
+                }
               />
 
               <div className="p-2">

@@ -88,8 +88,8 @@ export default function AppFooter({ locale }: { locale: string }) {
       <hr className="border-zinc-800" />
 
       <section className="p-5 mb-5 text-zinc-400">
-        <nav className="grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-5 md:w-3/4 m-auto">
-          <div className="flex flex-col p-5 gap-5">
+        <nav className="grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-5 md:w-3/4 m-auto mt-5">
+          <div className="flex flex-col gap-5">
             <Link href={`/about-us`}>{t("about")}</Link>
 
             <Link href="/collaboration">{t("collab")}</Link>
@@ -97,7 +97,7 @@ export default function AppFooter({ locale }: { locale: string }) {
             <Link href="/job-offers">{t("offers")}</Link>
           </div>
 
-          <div className="flex flex-col p-5 gap-5">
+          <div className="flex flex-col gap-5">
             <Link href="/biuroservis">{t("biuroservis")}</Link>
 
             <Link href="/gallery">{t("gallery")}</Link>
@@ -105,17 +105,17 @@ export default function AppFooter({ locale }: { locale: string }) {
             <Link href="/contact">{t("contact")}</Link>
           </div>
 
-          <div className="flex flex-col p-5 gap-5">
+          <div className="flex flex-col gap-5">
             <Link href="/career" className="md:px-2">
               {t("career")}
             </Link>
 
-            <Link href="/visbro-car-rental" className="md:px-2">
+            <Link href="/biuroservis/visbro-car-rental" className="md:px-2">
               {t("rental")}
             </Link>
 
-            <Link href={"/biuroservis/cleaning-services"} className="md:px-2">
-              Visbro usługi sprzątające
+            <Link href={"/biuroservis"} className="md:px-2">
+              {t("biuroservis")}
             </Link>
           </div>
         </nav>
@@ -124,7 +124,12 @@ export default function AppFooter({ locale }: { locale: string }) {
       <hr className="border-zinc-800" />
 
       <section className="p-5">
-        <p className="text-zinc-400 text-center">{t3("content")}</p>
+        <p className="text-zinc-400 text-center">
+          {t3("content", {
+            accountNumber: "0000 0000 0000 0000",
+            taxNumber: "0000 0000 0000",
+          })}
+        </p>
       </section>
 
       <hr className="border-zinc-800" />

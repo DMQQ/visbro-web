@@ -55,6 +55,7 @@ export const EntryField = ({
   if (typeof key !== "undefined" && key in (selects || {})) {
     return (
       <Select
+        value={formik.values[key]}
         onBlur={formik.handleBlur(key)}
         label={t(`${key}.text`)}
         options={selects![key] as any}
@@ -82,6 +83,7 @@ export const EntryField = ({
         checked={formik.values[key] as boolean}
         label={t(`${key}.text`)}
         onChange={formik.handleChange(key)}
+        onBlur={formik.handleBlur(key)}
       />
     );
   }

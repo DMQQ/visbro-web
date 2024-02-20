@@ -4,10 +4,12 @@ export default function Checkbox(props: {
   checked: boolean;
   onChange: ChangeEventHandler<HTMLInputElement>;
   label: string;
+  onBlur: any;
 }) {
   return (
     <div className="flex items-center p-2 my-2">
       <input
+        onBlur={props.onBlur}
         id="default-checkbox"
         type="checkbox"
         onChange={props.onChange}

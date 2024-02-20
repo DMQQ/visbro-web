@@ -13,6 +13,11 @@
       "label": "Search Ads",
       "placeholder": "E.g., Courier job...",
       "button": "Search"
+    },
+    "buttons": {
+      "card": {
+        "apply": "Learn more"
+      }
     }
   },
   "Gallery": {

@@ -13,6 +13,8 @@ import Button from "@/components/ui/Button/Button";
 import { useTranslations } from "next-intl";
 
 import * as Yup from "yup";
+import AlertBox from "@/components/AlertBox/AlertBox";
+import useFormSubmit from "@/utils/useFormSubmit";
 
 export default function Modal() {
   const params = useSearchParams();
@@ -54,6 +56,8 @@ export default function Modal() {
 
   const router = useRouter();
 
+  const { handleSubmit, state } = useFormSubmit("/biuroservices/");
+
   if (params.get("modal") === "true")
     return (
       <main
@@ -66,7 +70,7 @@ export default function Modal() {
       >
         <section
           tabIndex={11}
-          className="modal w-full sm:w-3/4 md:max-w-lg absolute sm:left-1/2 sm:top-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2 h-[100vh] sm:max-h-[calc(100vh-10rem)] bg-zinc-900 p-5 rounded-md flex flex-col"
+          className="modal w-full overflow-y-auto sm:w-3/4 md:max-w-lg absolute sm:left-1/2 sm:top-1/2 sm:-translate-y-1/2 sm:-translate-x-1/2 h-[100vh] sm:max-h-[calc(100vh-10rem)] bg-zinc-900 p-5 rounded-md flex flex-col"
         >
           <div className="flex flex-row justify-between p-2 mb-5">
             <h2 className="font-bold text-xl">{t("form.heading")}</h2>
@@ -77,7 +81,7 @@ export default function Modal() {
           <Formik
             validationSchema={validationSchema}
             initialValues={initialValues}
-            onSubmit={() => {}}
+            onSubmit={handleSubmit}
           >
             {(f) => (
               <>
@@ -117,6 +121,17 @@ export default function Modal() {
                   formKey="additionalInfo"
                   label="Dodatkowe informacje"
                   rows={5}
+                />
+
+                <AlertBox
+                  translationsNamespace="FormResponses.POST"
+                  variant={
+                    !!state.error
+                      ? "error"
+                      : state.isSuccess
+                      ? "success"
+                      : "hidden"
+                  }
                 />
                 <div className="p-2">
                   <Button

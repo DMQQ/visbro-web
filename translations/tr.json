@@ -13,6 +13,11 @@
       "label": "İlan Ara",
       "placeholder": "Örn., Kurye işi...",
       "button": "Ara"
+    },
+    "buttons": {
+      "card": {
+        "apply": "Learn more"
+      }
     }
   },
   "Gallery": {

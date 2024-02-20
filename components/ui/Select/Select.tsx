@@ -9,6 +9,7 @@ export default function Select(props: {
   label: string;
   isMulti?: boolean;
   onBlur: any;
+  value: string;
   onChange:
     | ((value: { value: string; label: string }) => void)
     | ((value: { value: string; label: string }[]) => void);
@@ -33,6 +34,9 @@ export default function Select(props: {
         {props.label}
       </label>
       <SelectReact
+        defaultValue={
+          !!props.value ? { label: props.value, value: props.value } : undefined
+        }
         // onFocus={props.onBlur}
         onBlur={props.onBlur}
         onChange={(v) => {

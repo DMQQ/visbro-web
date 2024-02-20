@@ -38,7 +38,9 @@ export default function Ad() {
   return (
     <article className="w-full p-5 mt-32 flex justify-center items-center">
       <section className="w-full xl:w-3/4 flex flex-col">
-        <h3 className="m-auto text-4xl lg:text-6xl font-bold ">Nasza oferta</h3>
+        <h3 className="m-auto text-4xl lg:text-6xl font-bold ">
+          Usługi Visbro
+        </h3>
 
         {list.map((el, index) => (
           <div
@@ -66,7 +68,7 @@ export default function Ad() {
             >
               <h3
                 // bg-gradient-to-r from-blue-500 via-purple-500 to-purple-800 inline-block text-transparent bg-clip-text
-                className="font-bold uppercase text-3xl "
+                className="font-bold uppercase text-xl md:text-2xl lg:text-3xl "
               >
                 {el.heading}
               </h3>

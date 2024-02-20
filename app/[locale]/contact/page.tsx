@@ -7,6 +7,51 @@ import { useMemo } from "react";
 
 import { getTranslations } from "next-intl/server";
 
+const recurters = [
+  {
+    image: "/person_placeholder.jpg",
+    name: "Jan Kowalski",
+    position: "Rekruter",
+    contacts: ["+49 000 000 000", "Email@email.com", "Email.2@email.com"],
+    languages: ["pl", "en", "de"],
+  },
+  {
+    image: "/person_placeholder.jpg",
+    name: "Mariusz Kowalski",
+    position: "Rekruter",
+    contacts: ["+49 000 000 000", "Email@email.com", "Email.2@email.com"],
+    languages: ["de", "ua", "ru"],
+  },
+  {
+    image: "/person_placeholder.jpg",
+    name: "Jan Kowalski",
+    position: "Rekruter",
+    contacts: ["+49 000 000 000", "Email@email.com", "Email.2@email.com"],
+    languages: ["pl", "en", "de"],
+  },
+  {
+    image: "/person_placeholder.jpg",
+    name: "Jan Kowalski",
+    position: "Rekruter",
+    contacts: ["+49 000 000 000", "Email@email.com", "Email.2@email.com"],
+    languages: ["pl", "en", "de"],
+  },
+  {
+    image: "/person_placeholder.jpg",
+    name: "Jan Kowalski",
+    position: "Rekruter",
+    contacts: ["+49 000 000 000", "Email@email.com", "Email.2@email.com"],
+    languages: ["de", "en", "es"],
+  },
+  {
+    image: "/person_placeholder.jpg",
+    name: "Jan Kowalski",
+    position: "Rekruter",
+    contacts: ["+49 000 000 000", "Email@email.com", "Email.2@email.com"],
+    languages: ["ru", "ro", "tr"],
+  },
+];
+
 export async function generateMetadata({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Contact" });
@@ -37,44 +82,46 @@ export default function Contact({ params: { locale } }: any) {
         </h1>
         <p className="text-zinc-300 mt-2">{t("heading_helper")}</p>
 
-        <article className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-20">
-          {[0, 1, 2, 4, 5, 6].map((key) => (
-            <section
-              key={key}
-              className={`bg-zinc-900 p-5 rounded-md ${
-                key % 2 == 1 ? "xl:-translate-y-10" : ""
-              }`}
-            >
+        <article className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 mt-16">
+          {recurters.map((details, key) => (
+            <section key={key} className={`bg-zinc-900 p-5 rounded-md `}>
               <Image
                 width={140}
                 height={50}
-                src={"/person_placeholder.jpg"}
+                priority
+                src={details.image}
                 alt="Zdjęcie rekrutera"
-                className={`rounded-full m-auto mt-5 ${
-                  key === 1 ? "w-36" : "w-28"
-                }`}
+                className={`rounded-full m-auto`}
               />
 
-              <h2
-                className={`font-bold text-3xl text-center mt-2 ${
-                  key === 1 ? "text-blue-400" : "text-white"
-                }`}
-              >
-                Jan Kowalski
+              <h2 className={`font-bold text-3xl text-center mt-2`}>
+                {details.name}
               </h2>
-              <p className="text-blue-400 text-center">
-                {key === 1 ? "Właściciel" : "Rekruter"}
-              </p>
+              <p className="text-blue-400 text-center">{details.position}</p>
               <div className="flex flex-col gap-2 mt-5 text-center">
-                <a href="">Phone: +49 213 742 069</a>
-                <a href="">Email: Email@address.com</a>
-                <a href="">Email 2: email@gmail</a>
+                {details.contacts.map((value) => (
+                  <a href="#" key={value}>
+                    {value}
+                  </a>
+                ))}
+              </div>
+              <div className="flex gap-2 mt-2 justify-center">
+                {details.languages.map((locale) => (
+                  <Image
+                    key={locale}
+                    width={40}
+                    height={30}
+                    src={"/flags/" + locale + ".png"}
+                    alt={locale + " Flag"}
+                    className="w-8 rounded-sm"
+                  />
+                ))}
               </div>
             </section>
           ))}
         </article>
 
-        <h2 className="text-3xl lg:text-4xl font-bold  text-white mt-10">
+        <h2 className="text-3xl lg:text-4xl font-bold  text-white mt-16">
           {t("location_heading")}
         </h2>
         <p className="mb-5 text-zinc-300">

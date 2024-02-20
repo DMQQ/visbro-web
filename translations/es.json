@@ -12,6 +12,11 @@
       "label": "Buscar Anuncios",
       "placeholder": "Ej., trabajo de mensajero...",
       "button": "Buscar"
+    },
+    "buttons": {
+      "card": {
+        "apply": "Learn more"
+      }
     }
   },
   "Gallery": {
