@@ -1,3 +1,4 @@
+import { redirect } from "@/navigation";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -40,4 +41,8 @@ export const POST = async (req: NextRequest, { params }: any) => {
     },
     { status: 201 }
   );
+};
+
+export const GET = (req: NextRequest) => {
+  redirect("/");
 };

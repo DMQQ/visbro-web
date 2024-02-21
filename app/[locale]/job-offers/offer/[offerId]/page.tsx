@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 
   const params = [] as { locale: string; offerId: string }[];
 
-  for (let offer in jobOffers) {
+  for (let offer of jobOffers) {
     for (let locale in locales) {
       params.push({ locale, offerId: offer });
     }

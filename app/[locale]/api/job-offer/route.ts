@@ -1,3 +1,4 @@
+import { redirect } from "@/navigation";
 import axios from "axios";
 import { NextRequest } from "next/server";
 import * as z from "zod";
@@ -89,3 +90,7 @@ export const POST = async (req: NextRequest, { params }: any) => {
 //     data: [1, 2, 3, 4],
 //   });
 // };
+
+export const GET = (req: NextRequest) => {
+  redirect("/");
+};
