@@ -65,7 +65,7 @@ export default function Modal() {
   const router = useRouter();
 
   const { handleSubmit, state } = useFormSubmit((data) => {
-    return axios.post("/api/collaboration", data);
+    return axios.post("/api/services", data);
   });
 
   if (params.get("modal") === "true")
@@ -147,7 +147,7 @@ export default function Modal() {
                   <Button
                     disabled={!(f.isValid && f.dirty)}
                     className="w-full py-4"
-                    onClick={() => {}}
+                    onClick={f.handleSubmit}
                     text={t("form.button")}
                   />
                 </div>

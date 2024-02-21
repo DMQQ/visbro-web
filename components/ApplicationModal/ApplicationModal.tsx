@@ -81,7 +81,7 @@ const steps = {
   },
 };
 
-export default function ApplicationModal() {
+export default function ApplicationModal({ offerId }: { offerId: string }) {
   const t = useTranslations("ApplicationForm.form");
 
   const selects = useSelects();
@@ -123,11 +123,12 @@ export default function ApplicationModal() {
     const formData = new FormData();
 
     Object.keys(data).forEach((key) => formData.append(key, data[key]));
+    formData.append("offerId", offerId);
 
     formData.append("idFile", idFile!);
     formData.append("driverLicenseFile", driverLicense!);
 
-    return axios.post("/api/job-offer/", formData, {
+    return axios.post("/api/job-offer", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },

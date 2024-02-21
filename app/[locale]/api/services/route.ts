@@ -6,11 +6,11 @@ import * as z from "zod";
 const collabSchema = z.object({
   name: z.string().max(100),
   surname: z.string().max(100),
-  companyName: z.string().max(100),
-  jobPosition: z.string().max(100),
   email: z.string().email(),
-  phoneNumber: z.string().max(15).min(8),
-  message: z.string().optional(),
+  phoneNumber: z.string().min(8).max(15),
+  services: z.string().optional(),
+  car: z.string().optional(),
+  additionalInfo: z.string().max(256),
 });
 
 export const POST = async (req: NextRequest, { params }: any) => {

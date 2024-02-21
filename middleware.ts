@@ -1,11 +1,16 @@
 import createMiddleware from "next-intl/middleware";
 import { locales } from "./locales";
+import { NextRequest } from "next/server";
 
-export default createMiddleware({
-  locales: locales,
-  defaultLocale: "pl",
-  localePrefix: "always",
-});
+export default async function middleware(request: NextRequest) {
+  const intl = createMiddleware({
+    locales: locales,
+    defaultLocale: "pl",
+    localePrefix: "always",
+  });
+
+  return intl(request);
+}
 
 export const config = {
   matcher: [

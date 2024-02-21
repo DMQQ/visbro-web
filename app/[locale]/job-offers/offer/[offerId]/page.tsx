@@ -5,11 +5,14 @@ import axios from "axios";
 import { getTranslations } from "next-intl/server";
 import { locales } from "@/locales";
 import { useTranslations } from "next-intl";
+import { dummyJobData } from "@/dummyData";
 
 async function getOfferIds() {
   try {
-    const response = await axios.get("/offers");
-    return response.data.map((offer: any) => offer.id);
+    // const response = await axios.get("/offers");
+    // return response.data.map((offer: any) => offer.id);
+
+    return dummyJobData.map(({ offerId }) => offerId);
   } catch (error) {
     return ["0", "1", "2", "3"];
   }
@@ -30,13 +33,15 @@ export async function generateStaticParams() {
 }
 
 async function getOfferById(id: string, locale: string) {
-  const data = await axios.get("/posts/" + id, {
-    headers: {
-      language: locale,
-    },
-  });
+  // const data = await axios.get("/posts/" + id, {
+  //   headers: {
+  //     language: locale,
+  //   },
+  // });
 
-  return data.data;
+  const data = dummyJobData.find((d) => d.offerId === id);
+
+  return data;
 }
 
 export async function generateMetadata({ params: { locale } }: any) {
@@ -48,11 +53,11 @@ export async function generateMetadata({ params: { locale } }: any) {
 
 export default async function OfferPage({
   searchParams,
-  params: { locale },
+  params: { locale, offerId },
 }: any) {
   unstable_setRequestLocale(locale);
 
-  const data = await new Promise((res) => setTimeout(res, 100));
+  const data = await getOfferById(offerId, locale);
 
   const t = getTranslations("JobOffers");
 
@@ -66,12 +71,12 @@ export default async function OfferPage({
         }}
       >
         <section className="flex-2 p-5 rounded-lg h-auto">
-          <h1 className="font-bold text-6xl my-5 mb-10">Offer title</h1>
+          <h1 className="font-bold text-6xl my-5 mb-10">{data?.name}</h1>
 
           <article className="p-2 mt-5">
             <h2 className="font-bold text-xl">Wymagania</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-3 p-2">
-              <li>🏠 Remote/On-site</li>
+              {/* <li>🏠 Remote/On-site</li>
               <li>💵 $25/h</li>
               <li>⏱️ Full-time/Part-time</li>
               <li>👅 English/Polish/German</li>
@@ -79,44 +84,28 @@ export default async function OfferPage({
               <li>🚗 Work car</li>
               <li>🍉 Fruit thursdays</li>
               <li>🏥 Health care included</li>
-              <li>Much moree ....</li>
+              <li>Much moree ....</li> */}
+              {[...data!.benefits, ...data!.benefits].map((benefit, index) => (
+                <li className="mt-2" key={index}>
+                  🍊 {benefit}
+                </li>
+              ))}
             </ul>
           </article>
 
           <div className="p-2 mt-5">
             <h2 className="font-bold text-xl">Position description</h2>
 
-            <p className="p-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              autem voluptatum aliquam? Ipsum autem quaerat a iusto consectetur
-              quidem officiis eligendi necessitatibus minus, aspernatur, nobis
-              laboriosam quam adipisci perspiciatis accusamus?
-            </p>
-            <p className="p-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              autem voluptatum aliquam? Ipsum autem quaerat a iusto consectetur
-              quidem officiis eligendi necessitatibus minus, aspernatur, nobis
-              laboriosam quam adipisci perspiciatis accusamus?
-            </p>
-            <p className="p-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              autem voluptatum aliquam? Ipsum autem quaerat a iusto consectetur
-              quidem officiis eligendi necessitatibus minus, aspernatur, nobis
-              laboriosam quam adipisci perspiciatis accusamus?
-            </p>
-            <p className="p-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              autem voluptatum aliquam? Ipsum autem quaerat a iusto consectetur
-              quidem officiis eligendi necessitatibus minus, aspernatur, nobis
-              laboriosam quam adipisci perspiciatis accusamus?
-            </p>
+            <p className="p-2">{data?.content}</p>
+            <p className="p-2">{data?.content}</p>
+            <p className="p-2">{data?.content}</p>
           </div>
 
           <div className="mt-5">
             <h2 className="font-bold text-xl">Work images</h2>
 
             <section className="grid grid-cols-2 gap-2 p-2">
-              {[0, 1, 2, 3].map((key) => (
+              {[0, 1].map((key) => (
                 <img
                   src="/car-rental-concept-illustration_114360-9267.avif"
                   key={key}
@@ -130,7 +119,7 @@ export default async function OfferPage({
         <ApplicationPanel />
       </article>
 
-      {searchParams.modal === "true" && <ApplicationModal />}
+      {searchParams.modal === "true" && <ApplicationModal offerId={offerId} />}
     </main>
   );
 }
