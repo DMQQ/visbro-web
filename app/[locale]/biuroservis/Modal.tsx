@@ -15,11 +15,13 @@ import { useTranslations } from "next-intl";
 import * as Yup from "yup";
 import AlertBox from "@/components/AlertBox/AlertBox";
 import useFormSubmit from "@/utils/useFormSubmit";
+import axios from "axios";
 
 export default function Modal() {
   const params = useSearchParams();
 
   const service = params.get("service");
+  const type = params.get("type");
 
   useEffect(() => {
     if (document) {
@@ -39,7 +41,13 @@ export default function Modal() {
     phoneNumber: "",
     name: "",
     surname: "",
-    service: service,
+
+    ...(type === "services" && { service }),
+
+    ...(type === "car-rental" && {
+      car: "",
+    }),
+
     additionalInfo: "",
   };
 
@@ -56,7 +64,9 @@ export default function Modal() {
 
   const router = useRouter();
 
-  const { handleSubmit, state } = useFormSubmit("/biuroservices/");
+  const { handleSubmit, state } = useFormSubmit((data) => {
+    return axios.post("/api/collaboration", data);
+  });
 
   if (params.get("modal") === "true")
     return (

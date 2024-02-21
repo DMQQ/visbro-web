@@ -9,6 +9,7 @@ import Button from "@/components/ui/Button/Button";
 import { languages } from "@/utils/languagesList";
 import useFormSubmit from "@/utils/useFormSubmit";
 import useSelects from "@/utils/useSelects";
+import axios from "axios";
 import { Formik } from "formik";
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
@@ -55,7 +56,9 @@ const Form = () => {
     additionalInfo: "textarea",
   } as any;
 
-  const { handleSubmit, state } = useFormSubmit("/career/");
+  const { handleSubmit, state } = useFormSubmit((data) => {
+    return axios.post("/api/career", data);
+  });
 
   return (
     <article className="w-full md:w-2/3 lg:w-3/5 xl:w-1/3 p-5 mt-10 ">

@@ -1,9 +1,11 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { useState } from "react";
 import { API } from "./constants";
 import { useRouter } from "@/navigation";
 
-export default function useFormSubmit(route: `/${string}`) {
+export default function useFormSubmit(
+  fetcher: <T>(data: any) => Promise<AxiosResponse<any, T>>
+) {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
@@ -11,16 +13,12 @@ export default function useFormSubmit(route: `/${string}`) {
 
   const router = useRouter();
 
-  const handleSubmit = async function <T extends {}>(props: T): Promise<void> {
+  const handleSubmit = async function <T extends {}>(data: T): Promise<void> {
     try {
       setIsSuccess(false);
       setError("");
       setLoading(true);
-      const response = await axios.post(API + route, props, {
-        headers: {
-          locale: "",
-        },
-      });
+      const response = await fetcher(data);
 
       setIsSuccess(true);
       setMessage(response.data.message);

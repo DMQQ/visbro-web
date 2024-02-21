@@ -85,6 +85,23 @@
       "socials": "Ne Găsiți și Pe",
       "why_us": "De Ce Visbro?"
     },
+    "ad": {
+      "recruting": {
+        "heading": "Viitorul tău începe la Visbro Personal Solution!",
+        "subheading": "Soluții personalizate de talent: Unde Visbro te conectează cu potrivirea perfectă pentru fiecare rol!",
+        "content": "Deblochează-ți potențialul în carieră! 🚀 Alătură-te echipei noastre de elită la Visbro Personal Solution, unde oportunitățile se întâlnesc cu talentul. Ne specializăm în conectarea indivizilor excepționali cu companii de top din diverse industrii. Indiferent dacă ești un profesionist experimentat sau o stea în ascensiune, lasă-ne să îți ghidăm parcursul în carieră. Crește-ți succesul cu soluții personalizate de recrutare, îndrumare de specialitate și o rețea care deschide uși. Job-ul visurilor tale te așteaptă - Aplică acum și lasă ca Visbro să fie poarta ta către excelență! 🌟 #OportunitățiDeCarieră #AlăturăteNoi #DeblocheazăPotențialulTău"
+      },
+      "cleaning": {
+        "heading": "Ridică-ți spațiul: Visbro - Soluții de curățenie transformative!",
+        "subheading": "Excelență imaculată, de fiecare dată: Visbro asigură un luciu care vorbește de la sine.",
+        "content": "Descoperă experiența de curățenie de neegalat cu [Numele Companiei de Curățenie]. Echipa noastră dedicată se angajează să ofere soluții de curățenie transformative adaptate nevoilor tale unice. De la sanctuare rezidențiale la spații comerciale, garantăm o excelență imaculată, asigurându-ne că mediul tău reflectă standardele imaculate pe care le meriți. Alege [Numele Companiei de Curățenie] pentru o curățenie strălucitoare care spune mult despre angajamentul tău pentru un spațiu proaspăt și primitor. Ridică-ți împrejurimile cu serviciile noastre meticuloase de curățenie astăzi!"
+      },
+      "legal": {
+        "heading": "Visbro - Aliații tăi de încredere în probleme legale!",
+        "subheading": "Consultanță de specialitate, pledoarie de neegalat: [Numele Filialei Serviciilor Legale ale Companiei] asigură liniștea ta legală.",
+        "content": "Asigură-ți încrederea legală cu [Numele Filialei Serviciilor Legale ale Companiei]. Echipa noastră experimentată stă alături de tine ca aliat de încredere, oferind consultanță de specialitate și pledoarie de neegalat în toate problemele legale. Indiferent dacă navighezi prin complicații corporative sau cauți sprijin legal personal, suntem aici să te ghidăm. [Numele Filialei Serviciilor Legale ale Companiei] se angajează să asigure liniștea ta legală, oferind soluții personalizate aliniate cu cerințele tale unice. Asociază-te cu noi pentru un sprijin ferm și experimentează asigurarea de a avea o echipă legală dedicată alături de tine. Călătoria ta legală începe aici!"
+      }
+    },
     "text": {
       "short_about": "\nBine ați venit la Visbro Personal Solution UG, unde nevoile tale de resurse umane întâlnesc soluții inovatoare. Pasunea noastră este să combinăm talentele excepționale cu companiile care caută nu doar angajați, ci mai ales membri ai echipei. Ne concentrăm pe personalizare, calitate și transparență în fiecare aspect al colaborării noastre.\n",
       "why_us": "\nCu Visbro, procesul de recrutare încetează să fie o provocare. Oferim suport în fiecare etapă - de la găsirea candidatului ideal, până la cazarea și rezolvarea formalităților. Oferta noastră cuprinde o gamă largă de servicii, adaptată la nevoile individuale ale fiecărui client.\n\nSpecialitatea noastră constă în furnizarea de specialiști de înaltă calitate în diferite domenii. Indiferent dacă aveți nevoie de șoferi, personal de curățenie, lucrători agricoli sau experți IT, Visbro este soluția ta. Alăturați-vă nouă și să construim succesul împreună!\n\n"
@@ -289,5 +306,17 @@
     "education": "Primar;Vocațional;Liceu;Învățământ superior;Doctorat",
     "civilState": "Căsătorit;Divorțat;Într-o relație informală;Văduv;Părinte singur;Singur",
     "gender": "Femeie;Bărbat;Alt gen"
+  },
+  "FormResponses": {
+    "POST": {
+      "success": {
+        "title": "Mulțumim pentru trimiterea ta!",
+        "message": "Vom încerca să răspundem cât mai curând posibil!"
+      },
+      "error": {
+        "title": "Ceva nu a mers bine!",
+        "message": "Te rugăm să încerci din nou sau să aștepți un moment."
+      }
+    }
   }
 }

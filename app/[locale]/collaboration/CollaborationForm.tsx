@@ -6,6 +6,7 @@ import {
 } from "@/components/ApplicationForm/CVApplicationForm";
 import Button from "@/components/ui/Button/Button";
 import useFormSubmit from "@/utils/useFormSubmit";
+import axios from "axios";
 import { Formik } from "formik";
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
@@ -38,7 +39,11 @@ const Form = () => {
     });
   }, []);
 
-  const { handleSubmit, state } = useFormSubmit("/collaboration/");
+  const { handleSubmit, state } = useFormSubmit((data) => {
+    return axios.post("/api/collaboration", data, {
+      headers: { locale: "pl" },
+    });
+  });
 
   const onSubmit = async (props: typeof initialFormValues) => {
     await handleSubmit<typeof initialFormValues>(props);

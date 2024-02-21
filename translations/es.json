@@ -84,7 +84,25 @@
       "top3": "Top 4 Ofertas",
       "trusted_us": "Confían en Nosotros",
       "socials": "También Puedes Encontrarnos en",
-      "why_us": "¿Por qué Visbro?"
+      "why_us": "¿Por qué Visbro?",
+      "services": ""
+    },
+    "ad": {
+      "recruting": {
+        "heading": "¡Tu futuro comienza en Visbro Personal Solution!",
+        "subheading": "Soluciones de talento personalizadas: Donde Visbro te conecta con el ajuste perfecto para cada rol!",
+        "content": "¡Desbloquea tu potencial profesional! 🚀 Únete a nuestro equipo de élite en Visbro Personal Solution, donde las oportunidades se encuentran con el talento. Nos especializamos en conectar a individuos excepcionales con empresas de primer nivel en diversas industrias. Ya seas un profesional experimentado o una estrella en ascenso, permítenos guiar tu trayectoria profesional. Eleva tu éxito con soluciones de reclutamiento personalizadas, orientación experta y una red que abre puertas. Tu trabajo soñado te espera: ¡Aplica ahora y deja que Visbro sea tu puerta a la excelencia! 🌟 #OportunidadesLaborales #ÚneteANosotros #DesbloqueaTuPotencial"
+      },
+      "cleaning": {
+        "heading": "Eleva tu espacio: ¡Visbro - Soluciones de limpieza transformadoras!",
+        "subheading": "Excelencia impecable, en cada momento: ¡Visbro garantiza un brillo que habla por sí mismo.",
+        "content": "Descubre la experiencia de limpieza inigualable con [Nombre de la Empresa de Limpieza]. Nuestro equipo dedicado se compromete a ofrecer soluciones de limpieza transformadoras adaptadas a tus necesidades únicas. Desde santuarios residenciales hasta espacios comerciales, garantizamos excelencia impecable, asegurando que tu entorno refleje los estándares prístinos que mereces. Elige [Nombre de la Empresa de Limpieza] para una limpieza brillante que habla por sí misma sobre tu compromiso con un espacio fresco y acogedor. Eleva tus alrededores con nuestros servicios de limpieza meticulosos hoy mismo!"
+      },
+      "legal": {
+        "heading": "Visbro - Tu aliado de confianza en asuntos legales!",
+        "subheading": "Consejo experto, defensa inigualable: [Nombre de la Sucursal de Servicios Legales de la Empresa] garantiza tu tranquilidad legal.",
+        "content": "Asegura tu confianza legal con [Nombre de la Sucursal de Servicios Legales de la Empresa]. Nuestro equipo experimentado se erige como tu aliado de confianza, brindando asesoramiento experto y defensa inigualable en todos los asuntos legales. Ya sea que estés navegando por complejidades corporativas o buscando apoyo legal personal, estamos aquí para guiarte. [Nombre de la Sucursal de Servicios Legales de la Empresa] se compromete a garantizar tu tranquilidad legal, ofreciendo soluciones personalizadas que se alinean con tus requisitos únicos. Asóciate con nosotros para un apoyo constante y experimenta la seguridad de contar con un equipo legal dedicado a tu lado. ¡Tu viaje legal comienza aquí!"
+      }
     },
     "text": {
       "short_about": "\nBienvenido a Visbro Personal Solution UG, donde tus necesidades de recursos humanos encuentran soluciones innovadoras. Nuestra pasión es conectar talentos excepcionales con empresas que buscan no solo empleados, sino sobre todo jugadores de equipo. Priorizamos la personalización, la calidad y la transparencia en cada aspecto de nuestra colaboración.\n",
@@ -291,5 +309,17 @@
     "education": "Primaria;Vocacional;Secundaria;Educación Superior;Doctorado",
     "civilState": "Casado;Divorciado;En una relación informal;Viudo;Padre/Madre soltero;Soltero",
     "gender": "Mujer;Hombre;Otro"
+  },
+  "FormResponses": {
+    "POST": {
+      "success": {
+        "title": "¡Gracias por tu envío!",
+        "message": "Intentaremos responder tan pronto como sea posible."
+      },
+      "error": {
+        "title": "¡Algo salió mal!",
+        "message": "Por favor, inténtalo de nuevo o espera un momento."
+      }
+    }
   }
 }

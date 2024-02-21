@@ -66,6 +66,7 @@ const Tile = (props: { heading: string; content: string }) => {
           query: {
             modal: "true",
             service: props.heading.split(".")[1],
+            type: "services",
           },
         }}
         className="bg-blue-800 w-full px-5 text-center py-3 rounded-md sm:w-52"

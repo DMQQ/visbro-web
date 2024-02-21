@@ -57,20 +57,19 @@ export default function ChangeLanguage() {
       {open && (
         <div
           aria-label="menu-list"
-          className="absolute right-12 translate-x-5 top-10 rounded-md bg-zinc-950"
+          className="absolute right-12 translate-x-10 top-10 rounded-lg bg-zinc-950"
         >
-          <ul className=" text-zinc-300 w-8 overflow-hidden">
+          <ul className=" text-zinc-300 w-12 overflow-hidden">
             {localesWithFlags.map(([locale, flag]) => (
-              <li key={locale} className="p-2 mb-1">
+              <li key={locale} className="p-2">
                 <Link href={"/"} locale={locale} className="flex items-center">
                   <Image
-                    width={15}
-                    height={10}
+                    width={35}
+                    height={20}
                     src={flag}
                     alt={locale + " flag"}
-                    className="w-4"
+                    className="w-10 rounded-md"
                   />
-                  {/* {locale} */}
                 </Link>
               </li>
             ))}

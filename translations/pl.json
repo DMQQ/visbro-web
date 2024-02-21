@@ -87,6 +87,23 @@
       "socials": "Znajdziesz nas również na",
       "why_us": "Dlaczego Visbro?"
     },
+    "ad": {
+      "recruting": {
+        "heading": "Twoja przyszłość zaczyna się w Visbro Personal Solution!",
+        "subheading": "Spersonalizowane rozwiązania dotyczące talentów: Gdzie Visbro łączy Cię z idealnym dopasowaniem do każdej roli!",
+        "content": "Odblokuj swój potencjał zawodowy! 🚀 Dołącz do naszego elitarnej drużyny w Visbro Personal Solution, gdzie możliwości spotykają się z talentem. Specjalizujemy się w łączeniu wyjątkowych jednostek z firmami najwyższej klasy z różnych branż. Bez względu na to, czy jesteś doświadczonym profesjonałem, czy wschodzącą gwiazdą, pozwól nam poprowadzić Twoją ścieżkę kariery. Podnieś swoje sukcesy dzięki spersonalizowanym rozwiązaniom rekrutacyjnym, fachowym doradztwu i sieci, która otwiera drzwi. Twoja wymarzona praca czeka - Aplikuj teraz i pozwól Visbro być Twoją bramą do doskonałości! 🌟 #MozliwosciKariery #DołączDoNas #OdblokujSwojPotencjal"
+      },
+      "cleaning": {
+        "heading": "Podnieś swój obszar: Visbro - Transformacyjne Rozwiązania Czystości!",
+        "subheading": "Bez skazy doskonałość za każdym razem: Visbro zapewnia połysk, który przemawia głośno.",
+        "content": "Odkryj niezrównane doświadczenie czystości z [Nazwa Firmy Sprzątającej]. Nasz oddany zespół zobowiązuje się dostarczać transformacyjne rozwiązania czystości dostosowane do twoich unikalnych potrzeb. Od mieszkań po przestrzenie komercyjne gwarantujemy bez skazy doskonałość, zapewniając, że twoje otoczenie odzwierciedla nieskazitelne standardy, jakie zasługujesz. Wybierz [Nazwa Firmy Sprzątającej] dla błyszczącej czystości, która wiele mówi o Twoim zaangażowaniu w świeże, przyjemne miejsce. Podnieś swoje otoczenie dzięki naszym skrupulatnym usługom sprzątania już dziś!"
+      },
+      "legal": {
+        "heading": "Visbro - Twój zaufany sojusznik w sprawach prawnych!",
+        "subheading": "Zaawansowane doradztwo, niezrównana adwokatura: [Nazwa Filii Firmy Prawnej] zapewnia Twoje spokojne sumienie prawne.",
+        "content": "Zabezpiecz pewność prawną z [Nazwa Filii Firmy Prawnej]. Nasz doświadczony zespół staje się Twoim zaufanym sojusznikiem, zapewniając zaawansowane doradztwo i niezrównaną adwokaturę we wszystkich sprawach prawnych. Niezależnie od tego, czy poruszasz się w zawiłościach korporacyjnych, czy szukasz wsparcia prawnego osobistego, jesteśmy tutaj, aby Cię poprowadzić. [Nazwa Filii Firmy Prawnej] zobowiązuje się zapewnić Twoje spokojne sumienie prawne, oferując dostosowane rozwiązania zgodne z Twoimi unikalnymi potrzebami. Współpracuj z nami dla niezłomnego wsparcia i poczuj pewność mając dedykowany zespół prawniczy u boku. Twoja prawna podróż zaczyna się tutaj!"
+      }
+    },
     "text": {
       "short_about": "Witaj w Visbro Personal Solution UG, gdzie Twoje potrzeby HR\n    spotykają innowacyjne rozwiązania. Naszą pasją jest łączenie\n            wyjątkowych talentów z firmami, które szukają nie tylko pracowników,\n            ale przede wszystkim zespołowców.\nStawiamy na personalizację, jakość i przejrzystość w każdym aspekcie naszej współpracy.",
       "why_us": "\nZ Visbro proces rekrutacji przestaje być wyzwaniem. Zapewniamy wsparcie na\nkażdym etapie - od znalezienia idealnego kandydata, po jego zakwaterowanie i\nzałatwienie formalności. Nasza oferta to szeroki wachlarz usług, dopasowany do\nindywidualnych potrzeb każdego klienta.\nNasza specjalność to dostarczanie wysokiej klasy specjalistów w różnych dziedzinach.\nNiezależnie od tego, czy potrzebujesz kierowców, personelu sprzątającego,\npracowników rolnych czy ekspertów IT, Visbro jest Twoim rozwiązaniem. Dołącz do\nnas i zbudujmy sukces razem!\n"

@@ -10,32 +10,41 @@ import { getTranslations } from "next-intl/server";
 const recurters = [
   {
     image: "/person_placeholder.jpg",
-    name: "Jan Kowalski",
-    position: "Rekruter",
-    contacts: ["+49 000 000 000", "Email@email.com", "Email.2@email.com"],
+    name: "Kaja Zimoch",
+    position: "Recruiter",
+    contacts: [
+      "+49 1577 2264941",
+      "Kaja.zimoch@visbro.de ",
+      "Biuro.rekrutacja@visbro.de ",
+    ],
+    languages: ["pl", "de"],
+  },
+  {
+    image: "/person_placeholder.jpg",
+    name: "Elena Lungu",
+    position: "Recruiter",
+    contacts: [
+      "+49 1577 2264940",
+      "Birou.recrutare@visbro.de",
+      "Elena.lungu@visbro.de ",
+    ],
+    languages: ["de", "en"],
+  },
+  {
+    image: "/person_placeholder.jpg",
+    name: "Michał Kotwick",
+    position: "Manager",
+    contacts: ["+49 174 2606102", "Michał.kotwicki@visbro.de"],
     languages: ["pl", "en", "de"],
   },
   {
     image: "/person_placeholder.jpg",
-    name: "Mariusz Kowalski",
-    position: "Rekruter",
-    contacts: ["+49 000 000 000", "Email@email.com", "Email.2@email.com"],
-    languages: ["de", "ua", "ru"],
-  },
-  {
-    image: "/person_placeholder.jpg",
-    name: "Jan Kowalski",
-    position: "Rekruter",
-    contacts: ["+49 000 000 000", "Email@email.com", "Email.2@email.com"],
+    name: "Kamil Czarnecki",
+    position: "",
+    contacts: ["01520 8941615", "kamil.czarnecki@visbro.de"],
     languages: ["pl", "en", "de"],
   },
-  {
-    image: "/person_placeholder.jpg",
-    name: "Jan Kowalski",
-    position: "Rekruter",
-    contacts: ["+49 000 000 000", "Email@email.com", "Email.2@email.com"],
-    languages: ["pl", "en", "de"],
-  },
+
   {
     image: "/person_placeholder.jpg",
     name: "Jan Kowalski",

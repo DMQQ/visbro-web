@@ -26,7 +26,7 @@
   },
   "Career": {
     "heading": "Karriere bei Visbro Personal Solution",
-    "content": "Wir laden Sie ein, dem Visbro-Team beizutreten! Entdecken Sie unsere aktuellen Stellenangebote unten und werden Sie Teil unseres dynamischen Teams. Wenn Sie eine Idee haben, die Sie in unser Unternehmen einbringen möchten, füllen Sie bitte das Kontaktformular aus und teilen Sie sie mit uns!",
+    "content": "Wir laden Sie ein, das Visbro-Team zu verstärken! Entdecken Sie unsere aktuellen Stellenangebote unten und werden Sie Teil unseres dynamischen Teams. Wenn Sie eine Idee haben, die Sie in unser Unternehmen einbringen möchten, füllen Sie bitte das Kontaktformular aus und teilen Sie sie uns mit!    ",
     "form": {
       "name": {
         "text": "Name",
@@ -73,7 +73,7 @@
   },
   "About": {
     "heading": "Über Visbro",
-    "content": "\nDie Vision von Visbro Personal Solution UG seit unserer Gründung im Jahr 2021\nist die Schaffung eines Raums, in dem die Rekrutierung nicht nur ein Prozess ist, sondern eine Gelegenheit\nzum Aufbau dauerhafter Beziehungen. Unser Hauptsitz in Leipzig ist der Ort, an dem\ndie Idee entstand, neue Standards in der HR-Branche zu setzen, und seitdem\narbeiten wir unermüdlich an ihrer Umsetzung. Unsere HR-Dienstleistungen, basierend auf\nindividuellem Ansatz und höchsten Qualitätsstandards, resultieren nicht nur aus unserem Wissen\nund unserer Erfahrung, sondern auch aus dem Zuhören der Bedürfnisse unserer Kunden. Mitarbeiterquartiere\nin verschiedenen Regionen Deutschlands sind Teil unserer Strategie und betonen unser Engagement für die Bereitstellung von\nstabilen Arbeits- und Lebensbedingungen für die Mitarbeiter. Unser Team von talentierten und\nerfahrenen Spezialisten arbeitet mit Leidenschaft und Engagement, um sicherzustellen,\ndass unseren Kunden der höchste Servicestandard geboten wird, was sich in der Effektivität\nund dem Erfolg jeder Zusammenarbeit niederschlägt.\n\n"
+    "content": "Seit unserer Gründung im Jahr 2021 ist es die Vision der Visbro Personal Solutions UG, einen Raum zu schaffen, in dem Personalbeschaffung nicht nur ein Prozess ist, sondern eine Chance, dauerhafte Beziehungen aufzubauen. An unserem Hauptsitz in Leipzig wurde die Idee geboren, neue Maßstäbe in der HR-Branche zu setzen, und seither arbeiten wir unermüdlich daran, diese zu erreichen. Unser Angebot an Personaldienstleistungen, dass auf einer individuellen Herangehensweise und höchsten Qualitätsstandards basiert, ist nicht nur das Ergebnis unseres Wissens und unserer Erfahrung, sondern auch des Eingehens auf die Bedürfnisse unserer Kunden. Die Unterbringung von Mitarbeitern in verschiedenen Regionen Deutschlands ist Teil unserer Strategie und unterstreicht unser Engagement, stabile Arbeits- und Lebensbedingungen für Mitarbeiter zu schaffen. Unser Team aus talentierten und erfahrenen Spezialisten arbeitet mit Leidenschaft und Hingabe, um unseren Kunden ein Höchstmaß an Service zu bieten, was sich in Effizienz und Erfolg in jeder Zusammenarbeit niederschlägt.    "
   },
   "Home": {
     "buttons": {
@@ -84,11 +84,29 @@
       "top3": "Top 4 Angebote",
       "trusted_us": "Sie haben uns vertraut",
       "socials": "Sie finden uns auch auf",
-      "why_us": "Warum Visbro?"
+      "why_us": "Warum Visbro?",
+      "services": ""
+    },
+    "ad": {
+      "recruting": {
+        "heading": "Deine Zukunft beginnt bei Visbro Personal Solution!",
+        "subheading": "Maßgeschneiderte Talentlösungen: Wo Visbro dich mit dem perfekten Match für jede Rolle verbindet!",
+        "content": "Entfalte dein Karrierepotenzial! 🚀 Schließe dich unserem Elite-Team bei Visbro Personal Solution an, wo Chancen auf Talent treffen. Wir haben uns darauf spezialisiert, außergewöhnliche Einzelpersonen mit erstklassigen Unternehmen aus verschiedenen Branchen zu verbinden. Egal, ob du ein erfahrener Profi oder ein aufstrebender Stern bist, lass uns deinen Karriereweg navigieren. Steigere deinen Erfolg mit personalisierten Rekrutierungslösungen, fachkundiger Beratung und einem Netzwerk, das Türen öffnet. Dein Traumjob wartet - Bewirb dich jetzt und lass Visbro dein Tor zur Exzellenz sein! 🌟 #Karrierechancen #SchließDichUnsAn #EntfalteDeinPotenzial"
+      },
+      "cleaning": {
+        "heading": "Erhöhe deinen Raum: Visbro - Transformative Reinigungslösungen!",
+        "subheading": "Makellose Exzellenz, jedes Mal: Visbro sorgt für einen Glanz, der Bände spricht.",
+        "content": "Entdecke das beispiellose Sauberkeitserlebnis mit [Name des Reinigungsunternehmens]. Unser engagiertes Team verpflichtet sich dazu, transformative Reinigungslösungen anzubieten, die auf deine einzigartigen Bedürfnisse zugeschnitten sind. Vom Wohnraum bis zu kommerziellen Räumen garantieren wir makellose Exzellenz und stellen sicher, dass deine Umgebung die makellosen Standards widerspiegelt, die du verdienst. Wähle [Name des Reinigungsunternehmens] für eine glänzende Sauberkeit, die viel über dein Engagement für einen frischen, einladenden Raum aussagt. Erhöhe deine Umgebung mit unseren akribischen Reinigungsdienstleistungen noch heute!"
+      },
+      "legal": {
+        "heading": "Visbro - Dein vertrauenswürdiger Verbündeter in rechtlichen Angelegenheiten!",
+        "subheading": "Expertenrat, unübertroffene Interessenvertretung: [Name des Rechtsdienstleistungsunternehmens] sichert dein rechtliches Wohlbefinden.",
+        "content": "Sichere dir rechtliches Vertrauen mit [Name des Rechtsdienstleistungsunternehmens]. Unser erfahrenes Team steht als dein vertrauenswürdiger Verbündeter bereit und bietet Expertenrat und unübertroffene Interessenvertretung in allen rechtlichen Angelegenheiten. Ob du komplexe Unternehmensangelegenheiten navigierst oder persönliche rechtliche Unterstützung suchst, wir sind hier, um dich zu führen. [Name des Rechtsdienstleistungsunternehmens] verpflichtet sich, dein rechtliches Wohlbefinden zu gewährleisten, und bietet maßgeschneiderte Lösungen, die sich an deine einzigartigen Anforderungen anpassen. Arbeite mit uns zusammen für eine stetige Unterstützung und erlebe die Sicherheit, ein engagiertes Rechtsteam an deiner Seite zu haben. Deine rechtliche Reise beginnt hier!"
+      }
     },
     "text": {
-      "short_about": "Willkommen bei Visbro Personal Solution UG, wo Ihre HR-Bedürfnisse\n            auf innovative Lösungen treffen. Unsere Leidenschaft ist es, außergewöhnliche Talente mit Unternehmen zu verbinden, die nicht nur nach Mitarbeitern suchen,\n            sondern vor allem nach Teammitgliedern.\n",
-      "why_us": "\n Wir setzen auf Personalisierung, Qualität und Transparenz in jeder Phase unserer Zusammenarbeit.\n\nMit Visbro hört der Rekrutierungsprozess auf, eine Herausforderung zu sein. \n\n Wir bieten Unterstützung in jeder Phase - vom Finden des perfekten Kandidaten bis zur Unterbringung und Erledigung der Formalitäten. Unser Angebot umfasst eine Vielzahl von Dienstleistungen, die auf die individuellen Bedürfnisse jedes Kunden zugeschnitten sind.\n\nUnsere Spezialität ist die Bereitstellung erstklassiger Fachleute in verschiedenen Bereichen. Egal, ob Sie Fahrer, Reinigungspersonal, Landarbeiter oder IT-Experten benötigen, Visbro ist Ihre Lösung. Treten Sie ein und lassen Sie uns gemeinsam Erfolg aufbauen!\n"
+      "short_about": "Willkommen bei Visbro Personal Solutions UG, wo Ihr Personalbedarf auf innovative Lösungen trifft. Unsere Leidenschaft ist es, außergewöhnliche Talente mit Unternehmen zusammenzubringen, die nicht nur Mitarbeiter, sondern auch Teammitglieder suchen. Wir konzentrieren uns auf Personalisierung, Qualität und Transparenz in jedem Aspekt unserer Zusammenarbeit.",
+      "why_us": "Mit Visbro hört der Rekrutierungsprozess auf, eine Herausforderung zu sein. Wir bieten Unterstützung in jeder Phase - von der Suche nach dem idealen Kandidaten über die Unterbringung bis hin zur Erledigung der Formalitäten. Unser Angebot umfasst eine breite Palette von Dienstleistungen, die auf die individuellen Bedürfnisse eines jeden Kunden zugeschnitten sind. Wir sind darauf spezialisiert, hochwertige Fachkräfte für verschiedene Bereiche zu vermitteln. Ob Sie nun Fahrer, Reinigungspersonal, Landarbeiter oder IT-Experten benötigen, Visbro ist Ihre Lösung. Kommen Sie zu uns und lassen Sie uns gemeinsam Erfolg haben!"
     }
   },
   "Rental": {
@@ -166,7 +184,7 @@
       },
       "submit": "Senden"
     },
-    "content": "Bei Visbro Personal Solution UG wissen wir, dass eine effektive Zusammenarbeit entscheidend ist\nfür den Erfolg jedes Unternehmens. Seit über einem Jahr unterstützen wir Unternehmer\nim ganzen Land dabei, starke und effiziente Teams aufzubauen und ihre\nstrategischen Geschäftsziele zu erreichen. Unsere HR-Dienstleistungen basieren auf einem tiefen\nVerständnis der Bedürfnisse unserer Kunden und bieten umfassende Unterstützung bei der\nPersonalführung.\nAls erfahrenes Team von Spezialisten sind wir bereit, Sie in allen Aspekten des\nPersonalmanagements zu unterstützen - von der Rekrutierung und Auswahl über die Schulung und Entwicklung von Mitarbeitern bis hin zur Leistungssteigerung und Talentbindung.\nUnser Ansatz basiert auf Zusammenarbeit und partnerschaftlichem Denken, das\nsich in dauerhaften und fruchtbaren Geschäftsbeziehungen niederschlägt.\nWir ermutigen Sie, das unten stehende Kontaktformular zu nutzen, damit wir\nbesprechen können, wie wir die Entwicklung Ihres Unternehmens unterstützen und zu\nIhren Geschäftszielen beitragen können.\n\n"
+    "content": "Bei Visbro Personal Solution UG wissen wir, dass eine effektive Zusammenarbeit der Schlüssel zum Erfolg eines jeden Unternehmens ist. Seit über einem Jahr helfen wir Unternehmern im ganzen Land, starke, effektive Teams aufzubauen und ihre strategischen Geschäftsziele zu erreichen. Unsere Personaldienstleistungen basieren auf einem tiefen Verständnis für die Bedürfnisse unserer Kunden und bieten umfassende Unterstützung beim Personalmanagement. <br></br> <br></br>  Als erfahrenes Team von Spezialisten sind wir bereit, Sie in allen Aspekten des Personalmanagements zu unterstützen - von der Rekrutierung und Auswahl bis hin zu Mitarbeiterschulung und -entwicklung, Leistungsmanagement und Talentbindung. <br></br> <br></br> Unser Ansatz basiert auf Zusammenarbeit und einem partnerschaftlichen Vorgehen, das zu nachhaltigen und produktiven Geschäftsbeziehungen führt. Nutzen Sie das unten stehende Kontaktformular, um mit uns zu besprechen, wie wir Sie bei der Entwicklung Ihres Unternehmens und der Erreichung Ihrer Ziele unterstützen können."
   },
 
   "ApplicationForm": {
@@ -298,5 +316,17 @@
     "education": "Grundschule;Berufsausbildung;Mittelschule;Hochschule;Doktortitel",
     "civilState": "Verheiratet;Geschieden;In informeller Beziehung;Verwitwet;Alleinerziehender Elternteil;Single",
     "gender": "Frau;Mann;Andere"
+  },
+  "FormResponses": {
+    "POST": {
+      "success": {
+        "title": "Vielen Dank für Ihre Anmeldung!",
+        "message": "Wir werden versuchen, so schnell wie möglich zu antworten!"
+      },
+      "error": {
+        "title": "Etwas ist schief gelaufen!",
+        "message": "Versuchen Sie es erneut oder warten Sie einen Moment."
+      }
+    }
   }
 }

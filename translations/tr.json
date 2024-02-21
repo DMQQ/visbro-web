@@ -87,6 +87,23 @@
       "socials": "Bizi Ayrıca Şurada Bulabilirsiniz",
       "why_us": "Neden Visbro?"
     },
+    "ad": {
+      "recruting": {
+        "heading": "Geleceğin Visbro Personal Solution'da başlıyor!",
+        "subheading": "Özel Yetenek Çözümleri: Visbro, Her Rol İçin Mükemmel Uyumu Seninle Buluşturuyor!",
+        "content": "Kariyer potansiyelini açığa çıkar! 🚀 Visbro Personal Solution'daki elit ekibimize katıl, burada fırsatlar yetenekle buluşur. Sıradışı bireyleri çeşitli sektörlerdeki üst düzey şirketlerle buluşturmakta uzmanız. Tecrübeli bir profesyonel veya yükselen bir yıldız olun, kariyer yolculuğunuzu bizimle yönlendirin. Kişiselleştirilmiş işe alım çözümleri, uzman rehberlik ve kapıları açan bir ağ ile başarı seviyenizi yükseltin. Hayalinizdeki iş sizi bekliyor - Şimdi başvurun ve Visbro'nun mükemmelliğe giden kapınız olmasına izin verin! 🌟 #KariyerFırsatları #BizeKatılın #PotansiyeliniziAçığaÇıkarın"
+      },
+      "cleaning": {
+        "heading": "Alanınızı Yükseltin: Visbro - Dönüştürücü Temizlik Çözümleri!",
+        "subheading": "Her Zaman Lekesiz Mükemmellik: Visbro, Konuşan Bir Parlaklık Garantisi Veriyor.",
+        "content": "Eşsiz temizlik deneyimini [Temizlik Şirketi Adı] ile keşfedin. Bağlı bir ekibimiz, benzersiz ihtiyaçlarınıza uygun dönüştürücü temizlik çözümleri sunmaya adamıştır. Konut kutsallarından ticari alanlara kadar, lekesiz mükemmelliği garanti ediyoruz, çevrenizin hak ettiği kusursuz standartları yansıtarak. [Temizlik Şirketi Adı]'ı seçin, ferah ve davetkar bir alan için taahhütünüzü yansıtan parıltılı temizlik için. Çevrenizi bugün detaylı temizlik hizmetlerimizle yükseltin!"
+      },
+      "legal": {
+        "heading": "Visbro - Hukuki Konularda Güvenilir Müttefikiniz!",
+        "subheading": "Uzman Danışmanlık, Eşsiz Savunma: [Şirket Şubesinin Hukuk Hizmetleri], Hukuki Huzurunuzu Sağlıyor.",
+        "content": "[Şirket Şubesinin Hukuk Hizmetleri] ile hukuki güveni sağlayın. Deneyimli ekibimiz, uzman danışmanlık ve hukuki konularda eşsiz savunma sağlayarak güvenilir bir müttefikiniz oluyor. Kurumsal karmaşıklıkları aşmak veya kişisel hukuki destek arayışında olun, sizi yönlendirmek için buradayız. [Şirket Şubesinin Hukuk Hizmetleri], benzersiz ihtiyaçlarınıza uygun özel çözümler sunarak hukuki huzurunuzu sağlama taahhüdünde bulunuyor. Sizi yanınızda bir hukuk ekibine sahip olmanın güvencesini yaşamaya davet ediyoruz. Hukuki yolculuğunuz burada başlıyor!"
+      }
+    },
     "text": {
       "short_about": "\nVisbro Personal Solution UG'ye hoş geldiniz, burada İK ihtiyaçlarınız yenilikçi çözümlerle buluşuyor. Tutku, olağanüstü yetenekleri şirketlerle buluşturmak, sadece çalışanları değil, her şeyden önce takım oyuncularını arayan şirketlerle bağlantı kurmaktır. İşbirliğimizin her yönünde kişiselleştirme, kalite ve şeffaflığı öncelikli kılıyoruz.\n",
       "why_us": "\nVisbro ile işe alım süreci bir zorluk olmaktan çıkıyor. Mükemmel adayı bulmaktan, konaklamalarını sağlamaya ve formaliteleri halletmeye kadar her aşamada destek sağlıyoruz. Teklifimiz, her müşterinin bireysel ihtiyaçlarına uygun geniş bir hizmet yelpazesini kapsar. \nUzmanlık alanımız, çeşitli alanlarda üst düzey profesyoneller sunmaktadır. Sürücüler, temizlik personeli, tarım işçileri veya IT uzmanlarına ihtiyacınız olsun, Visbro çözümünüzdür. Bize katılın ve birlikte başarı inşa edelim!\n\n"
@@ -292,5 +309,17 @@
     "education": "İlkokul;Mesleki;Ortaokul;Yükseköğrenim;Doktora",
     "civilState": "Evli;Boşanmış;Resmi olmayan ilişkide;Dul;Tek ebeveyn;Bekar",
     "gender": "Kadın;Erkek;Diğer"
+  },
+  "FormResponses": {
+    "POST": {
+      "success": {
+        "title": "Başvurunuz için teşekkür ederiz!",
+        "message": "En kısa sürede cevaplamaya çalışacağız!"
+      },
+      "error": {
+        "title": "Bir şeyler yanlış gitti!",
+        "message": "Lütfen tekrar deneyin veya bir süre bekleyin."
+      }
+    }
   }
 }

@@ -59,7 +59,7 @@ export default async function OfferPage({
   return (
     <main className={`w-full h-full min-h-screen`}>
       <article
-        className="flex flex-col md:flex-row mx-auto lg:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg sm:mt-32"
+        className="flex flex-col md:flex-row mx-auto lg:w-11/12 xl:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg sm:mt-32"
         style={{
           //   marginTop: "8rem",
           marginBottom: "4rem",

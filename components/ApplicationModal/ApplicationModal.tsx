@@ -23,11 +23,11 @@ const initialValues = {
   phoneNumber: "",
   dateOfBirth: "",
   lastJobPosition: "",
-  education: "", // podstawowe, zawodowe (jakie), średnie, wyższe, doktorat?
+  education: "",
   gender: "",
   age: "",
   hasOwnCar: false,
-  civilState: "", // żonaty, rozwodnik, w związku nieformalnym, wdowiec, rodzic samotnie wychowujący dzieci.
+  civilState: "",
   workStart: "",
   bankName: "",
   bankNumber: "",
@@ -119,36 +119,25 @@ export default function ApplicationModal() {
   const [idFile, setIdFile] = useState<File | null>(null);
   const [driverLicense, setDriverLicense] = useState<File | null>(null);
 
-  const { handleSubmit, state } = useFormSubmit("/biuroservices/");
+  const { handleSubmit, state } = useFormSubmit((data) => {
+    const formData = new FormData();
+
+    Object.keys(data).forEach((key) => formData.append(key, data[key]));
+
+    formData.append("idFile", idFile!);
+    formData.append("driverLicenseFile", driverLicense!);
+
+    return axios.post("/api/job-offer/", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+  });
 
   const formik = useFormik({
     initialValues,
-    async onSubmit(data: any) {
-      // await handleSubmit({
-      //   ...data,
-      //   offerId: 0,
-      //   idFile: {},
-      //   driverLicenseFile: {},
-      // });
-
-      const formData = new FormData();
-
-      Object.keys(data).forEach((key) => formData.append(key, data[key]));
-
-      formData.append("idFile", idFile!);
-      formData.append("driverLicenseFile", driverLicense!);
-
-      try {
-        const response = await axios.post(API + "/biuroservices/", formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
-
-        console.log(response.status);
-      } catch (error) {
-        console.log(error);
-      }
+    async onSubmit(data) {
+      handleSubmit(data);
     },
     validationSchema: formValidationSchema,
     initialErrors: {
@@ -191,8 +180,21 @@ export default function ApplicationModal() {
         return true;
       }
     }
+
+    if (
+      step === "files" &&
+      (idFile === null ||
+        idFile === undefined ||
+        driverLicense === null ||
+        driverLicense === undefined)
+    ) {
+      return true;
+    }
+
     return false;
   })();
+
+  const params = useSearchParams();
 
   useEffect(() => {
     if (document) {
@@ -205,13 +207,11 @@ export default function ApplicationModal() {
       document.body.style.position = "";
       document.body.style.top = ``;
     };
-  }, []);
+  }, [params.get("modal")]);
 
   const router = useRouter();
 
   const t2 = useTranslations("ApplicationForm");
-
-  const params = useSearchParams();
 
   return (
     <main
@@ -262,6 +262,7 @@ export default function ApplicationModal() {
                   formats="PNG,JPG,GIF MAX 7MB"
                   label={t(`documentId.text`)}
                 />
+
                 <DropFile
                   multiple={false}
                   formats="PNG,JPG,GIF MAX 7MB"

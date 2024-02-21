@@ -87,6 +87,23 @@
       "socials": "You Can Also Find Us On",
       "why_us": "Why Visbro?"
     },
+    "ad": {
+      "recruting": {
+        "heading": "Your Future starts at Visbro Personal Solution!",
+        "subheading": "Tailored Talent Solutions: Where Visbro Connects You with the Perfect Fit for Every Role!",
+        "content": "Unlock Your Career Potential! 🚀 Join our elite team at Visbro Personal Solution, where opportunities meet talent. We specialize in connecting exceptional individuals with top-tier companies across industries. Whether you're a seasoned professional or a rising star, let us navigate your career journey. Elevate your success with personalized recruitment solutions, expert guidance, and a network that opens doors. Your dream job awaits – Apply now and let Visbro be your gateway to excellence! 🌟 #CareerOpportunities #JoinUs #UnlockYourPotential"
+      },
+      "cleaning": {
+        "heading": "Elevate Your Space: Visbro - Transformative Cleaning Solutions!",
+        "subheading": "Spotless Excellence, Every Time: Visbro Ensures a Shine That Speaks Volumes.",
+        "content": "Discover the unparalleled cleanliness experience with [Cleaning Company Name]. Our dedicated team is committed to delivering transformative cleaning solutions tailored to your unique needs. From residential sanctuaries to commercial spaces, we guarantee spotless excellence, ensuring your environment reflects the pristine standards you deserve. Choose [Cleaning Company Name] for a sparkling clean that speaks volumes about your commitment to a fresh, inviting space. Elevate your surroundings with our meticulous cleaning services today!"
+      },
+      "legal": {
+        "heading": "Visbro Your Trusted Ally in Legal Matters!",
+        "subheading": "Expert Counsel, Unmatched Advocacy: [Company Branch Legal Services] Ensures Your Legal Peace of Mind.",
+        "content": "Secure legal confidence with [Company Branch Legal Services]. Our seasoned team stands as your trusted ally, providing expert counsel and unmatched advocacy in all legal matters. Whether you're navigating corporate complexities or seeking personal legal support, we're here to guide you. [Company Branch Legal Services] is committed to ensuring your legal peace of mind, offering tailored solutions that align with your unique requirements. Partner with us for steadfast support and experience the assurance of having a dedicated legal team by your side. Your legal journey begins here!"
+      }
+    },
     "text": {
       "short_about": "\nWelcome to Visbro Personal Solution UG, where your HR needs meet innovative solutions. Our passion is connecting exceptional talents with companies that seek not only employees but above all team players. We prioritize personalization, quality, and transparency in every aspect of our collaboration.\n",
       "why_us": "\nWith Visbro, the recruitment process ceases to be a challenge. We provide support at every stage - from finding the perfect candidate to their accommodation and handling formalities. Our offer encompasses a wide range of services tailored to the individual needs of each client. \nOur specialty lies in delivering top-notch professionals in various fields. Whether you need drivers, cleaning staff, agricultural workers, or IT experts, Visbro is your solution. Join us and let's build success together!\n\n"
@@ -292,5 +309,17 @@
     "education": "Elementary;Vocational;High School;Higher Education;Doctoral Degree",
     "civilState": "Married;Divorced;In an informal relationship;Widowed;Single parent;Single",
     "gender": "Female;Male;Other"
+  },
+  "FormResponses": {
+    "POST": {
+      "success": {
+        "title": "Thank you for your submission!",
+        "message": "We will try to respond as soon as possible!"
+      },
+      "error": {
+        "title": "Something went wrong!",
+        "message": "Please try again or wait a moment."
+      }
+    }
   }
 }
