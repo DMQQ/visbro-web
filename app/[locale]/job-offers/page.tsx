@@ -58,14 +58,19 @@ export default async function JobOffers({ params: { locale } }: any) {
             className="mt-3 flex flex-col md:flex-row gap-3 rounded-xl bg-zinc-900  p-4 transition duration-200"
           >
             <Image
+              quality={100}
               priority
-              width={300}
+              width={200}
               height={200}
-              src="/car-rental-concept-illustration_114360-9267.avif"
+              src={
+                index % 2 === 0
+                  ? "/home_tiles/Warehouse.jpg"
+                  : "/home_tiles/Amazon.jpg"
+              }
               alt="offer thumbnail"
-              className=" w-full sm:w-52 rounded-md object-cover"
+              className=" w-full md:w-52 max-h-52 sm:h-40 rounded-md object-cover flex-1"
             />
-            <section className="flex flex-col">
+            <section className="flex flex-col flex-[3]">
               <h2 className="font-bold text-xl">{name}</h2>
               <p className="text-zinc-400">{content}</p>
 

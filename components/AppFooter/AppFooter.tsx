@@ -123,13 +123,27 @@ export default function AppFooter({ locale }: { locale: string }) {
 
       <hr className="border-zinc-800" />
 
-      <section className="p-5">
-        <p className="text-zinc-400 text-center">
-          {t3("content", {
-            accountNumber: "0000 0000 0000 0000",
-            taxNumber: "0000 0000 0000",
-          })}
-        </p>
+      <section className="p-5 w-full md:w-3/4 m-auto">
+        {/* Adresse Franz-Flemming-Straße 43A • 04179 • Leipzig . Steuernummer IN WARTUNG
+Amtsgericht Leipzig USt-IdNr. IN WARTUNG .Website www.visbro.de Bank TARGO BANK
+SWIFT/BIC CMCIDEDD IBAN DE26 3002 0900 5390 8207 79 Bank TARGO BANK
+Kontoinhaber Kamil Wojciech Czarnecki Bankkonto DE26 3002 0900 5390 8207 79 */}
+
+        <div className="text-zinc-400 grid-cols-1 grid md:grid-cols-2 text-left gap-5">
+          <p>
+            Adresse Franz-Flemming-Straße 43A • 04179 • Leipzig Steuernummer IN
+            WARTUNG
+          </p>
+          <p>Amtsgericht Leipzig USt-IdNr. IN WARTUNG</p>
+          <p>Website www.visbro.de</p>
+          <p>
+            Bank TARGO BANK SWIFT/BIC CMCIDEDD IBAN DE26 3002 0900 5390 8207 79
+          </p>
+          <p>
+            Bank TARGO BANK Kontoinhaber Kamil Wojciech Czarnecki Bankkonto DE26
+            3002 0900 5390 8207 79
+          </p>
+        </div>
       </section>
 
       <hr className="border-zinc-800" />

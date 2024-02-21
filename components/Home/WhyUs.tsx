@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import why_us from "@/public/why_us.webp";
+import why_us from "@/public/Specjalisci2.png";
 
 export default function WhyUs() {
   const t = useTranslations("Home");

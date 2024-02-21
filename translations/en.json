@@ -88,6 +88,7 @@
       "why_us": "Why Visbro?"
     },
     "ad": {
+      "heading": "Visbro services",
       "recruting": {
         "heading": "Your Future starts at Visbro Personal Solution!",
         "subheading": "Tailored Talent Solutions: Where Visbro Connects You with the Perfect Fit for Every Role!",
@@ -192,7 +193,8 @@
     "step": "Step {from} out of {to}",
     "buttons": {
       "next": "Continue",
-      "back": "Back"
+      "back": "Back",
+      "openForm": "Fill out the form"
     },
     "form": {
       "name": {

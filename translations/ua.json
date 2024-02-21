@@ -87,6 +87,7 @@
       "why_us": "Чому Visbro?"
     },
     "ad": {
+      "heading": "Сервіси Visbro",
       "recruting": {
         "heading": "Твоє майбутнє починається в Visbro Personal Solution!",
         "subheading": "Індивідуальні рішення в галузі талантів: Де Visbro з'єднує тебе з ідеальним підбором для кожної ролі!",
@@ -191,7 +192,8 @@
     "step": "Крок {from} із {to}",
     "buttons": {
       "next": "Продовжити",
-      "back": "Назад"
+      "back": "Назад",
+      "openForm": "Заповніть форму"
     },
     "form": {
       "name": {

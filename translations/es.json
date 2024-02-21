@@ -88,6 +88,7 @@
       "services": ""
     },
     "ad": {
+      "heading": "Servicios Visbro",
       "recruting": {
         "heading": "¡Tu futuro comienza en Visbro Personal Solution!",
         "subheading": "Soluciones de talento personalizadas: Donde Visbro te conecta con el ajuste perfecto para cada rol!",
@@ -192,7 +193,8 @@
     "step": "Paso {from} de {to}",
     "buttons": {
       "next": "Continuar",
-      "back": "Atrás"
+      "back": "Atrás",
+      "openForm": "Rellenar el formulario"
     },
     "form": {
       "name": {

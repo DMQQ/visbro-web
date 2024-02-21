@@ -86,6 +86,7 @@
       "why_us": "De Ce Visbro?"
     },
     "ad": {
+      "heading": "Servicii Visbro",
       "recruting": {
         "heading": "Viitorul tău începe la Visbro Personal Solution!",
         "subheading": "Soluții personalizate de talent: Unde Visbro te conectează cu potrivirea perfectă pentru fiecare rol!",
@@ -189,7 +190,8 @@
     "step": "Pasul {from} din {to}",
     "buttons": {
       "next": "Continuă",
-      "back": "Înapoi"
+      "back": "Înapoi",
+      "openForm": "Completați formularul"
     },
     "form": {
       "name": {

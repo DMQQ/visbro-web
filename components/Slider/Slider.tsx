@@ -5,9 +5,6 @@ import { useTranslations } from "next-intl";
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 
-import tile1 from "@/public/home_tiles/app-development-illustration_52683-47743.avif";
-import tile2 from "@/public/home_tiles/car-rental-concept-illustration_114360-9267.avif";
-
 interface SliderProps {
   images: StaticImageData[];
 }
@@ -17,6 +14,13 @@ const socials = [
   "/socials/Youtube.png",
   "/socials/Facebook.png",
   "/socials/Instagram.png",
+];
+
+const socialLinks = [
+  "https://www.tiktok.com/@visbro.personal.s?_t=8k2Ttg57UZM&_r=1",
+  "#",
+  "https://www.facebook.com/profile.php?id=61556830941642",
+  "#",
 ];
 
 const INTERVAL = 3000;
@@ -48,7 +52,7 @@ export default function Slider({ images }: SliderProps) {
           <div className="w-screen h-screen relative" key={index}>
             <Image
               // priority
-              quality={95}
+              quality={100}
               width={1200}
               height={800} // ? troche psuje performance
               placeholder="blur"
@@ -61,17 +65,24 @@ export default function Slider({ images }: SliderProps) {
         ))}
       </div>
 
-      <section className="absolute hidden xl:flex right-0 top-1/2 -translate-y-2/3 z-20 p-2 gap-2 flex-col">
-        {socials.map((social) => (
-          <a href="#" key={social} className="cursor-pointer">
-            <Image
+      <section className="absolute hidden xl:flex right-0 top-1/2 -translate-y-2/3  p-2 gap-2 flex-col z-50">
+        {socials.map((social, index) => (
+          <a
+            href={socialLinks[index]}
+            key={social}
+            className="cursor-pointer"
+            target="_blank"
+            rel="nofollow"
+          >
+            {/* <Image
               priority
               src={social}
               width={30}
               height={30}
               alt={"social"}
               className="w-auto h-auto"
-            />
+            /> */}
+            <img src={social} alt={social} className="w-10" />
           </a>
         ))}
       </section>
@@ -81,15 +92,20 @@ export default function Slider({ images }: SliderProps) {
         className="absolute w-full h-full flex items-center justify-center flex-col-reverse lg:flex-row"
       >
         <section className="hidden lg:grid grid-cols-2 md:grid-cols-2 gap-3 justify-center px-5 mb-5 flex-1 lg:flex-[3] xl:flex-[2]">
-          {[1, 2, 3, 4].map((key) => (
-            <Image
-              priority={false}
-              key={key}
-              src={key % 3 === 0 ? tile1 : tile2}
-              alt="Work image"
-              className="object-fit "
-            />
-          ))}
+          {["Cleaner.jpg", "Gastro.jpg", "Amazon.jpg", "LKW3.jpg"].map(
+            (src) => (
+              <Image
+                quality={100}
+                width={300}
+                height={200}
+                priority
+                key={src}
+                src={"/home_tiles/" + src}
+                alt="Work image"
+                className="object-cover h-72 w-full"
+              />
+            )
+          )}
         </section>
 
         <section className="w-full relative top-1/2 -translate-y-[50vh] lg:top-0 lg:-translate-y-2 p-5 md:w-10/12 lg:w-4/5 z-40 xl:w-1/2 flex flex-col justify-center items-center flex-[3]">
@@ -102,15 +118,21 @@ export default function Slider({ images }: SliderProps) {
 
           <div className="mt-5 flex z-50 xl:hidden xs:gap-5 gap-3 justify-center flex-row w-full">
             {socials.map((social, index) => (
-              <a href="#" key={index}>
-                <Image
+              <a
+                href={socialLinks[index]}
+                key={index}
+                target="_blank"
+                rel="nofollow"
+              >
+                {/* <Image
                   priority
                   src={social}
                   width={40}
                   height={30}
                   alt={"social"}
                   className="w-auto h-auto"
-                />
+                /> */}
+                <img src={social} alt={"social"} className="h-auto w-10" />
               </a>
             ))}
           </div>

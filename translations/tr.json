@@ -88,6 +88,7 @@
       "why_us": "Neden Visbro?"
     },
     "ad": {
+      "heading": "Visbro Hizmetleri",
       "recruting": {
         "heading": "Geleceğin Visbro Personal Solution'da başlıyor!",
         "subheading": "Özel Yetenek Çözümleri: Visbro, Her Rol İçin Mükemmel Uyumu Seninle Buluşturuyor!",
@@ -192,7 +193,8 @@
     "step": "{from} adımı {to} dışında",
     "buttons": {
       "next": "Devam",
-      "back": "Geri"
+      "back": "Geri",
+      "openForm": "Formu doldur"
     },
     "form": {
       "name": {

@@ -50,9 +50,9 @@ const Body = ({
     style={{
       backgroundImage: "url(/bg.svg)",
       // backgroundImage: "url(/Meteor1.svg)",
-      backgroundSize: "cover",
+      backgroundSize: "contain",
       // backgroundRepeat: "no-repeat",
-      backgroundAttachment: "fixed",
+      //  backgroundAttachment: "fixed",
     }}
   >
     <AppHeader />

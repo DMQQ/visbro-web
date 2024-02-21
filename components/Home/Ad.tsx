@@ -12,7 +12,7 @@ export default function Ad() {
     <article className="w-full p-5 mt-32 flex justify-center items-center">
       <section className="w-full xl:w-3/4 flex flex-col">
         <h3 className="m-auto text-4xl lg:text-6xl font-bold ">
-          Usługi Visbro
+          {t("heading")}
         </h3>
 
         {keys.map((el, index) => (

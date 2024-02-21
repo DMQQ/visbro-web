@@ -6,6 +6,7 @@ import { getTranslations } from "next-intl/server";
 import { locales } from "@/locales";
 import { useTranslations } from "next-intl";
 import { dummyJobData } from "@/dummyData";
+import { off } from "process";
 
 async function getOfferIds() {
   try {
@@ -116,7 +117,7 @@ export default async function OfferPage({
             </section>
           </div>
         </section>
-        <ApplicationPanel />
+        <ApplicationPanel offerId={offerId} />
       </article>
 
       {searchParams.modal === "true" && <ApplicationModal offerId={offerId} />}
