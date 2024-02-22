@@ -77,10 +77,11 @@
   "Home": {
     "buttons": {
       "learn_more": "Află mai mult",
-      "offers": "Verifică Ofertele de Muncă"
+      "offers": "Verifică Ofertele de Muncă",
+      "offer": "Mergi la ofertă"
     },
     "headings": {
-      "top3": "Top 4 Oferte",
+      "top3": "Top Oferte",
       "trusted_us": "Ne-au Încredințat",
       "socials": "Ne Găsiți și Pe",
       "why_us": "De Ce Visbro?"

@@ -79,10 +79,11 @@
     "buttons": {
       "learn_more": "Bize Daha Fazla Hakında Bilgi Ver",
       "offers": "İş Tekliflerini Kontrol Et",
-      "card": "Tam Açıklamayı Görüntüle"
+      "card": "Tam Açıklamayı Görüntüle",
+      "offer": "Tekliflere git"
     },
     "headings": {
-      "top3": "En İyi 4 Teklif",
+      "top3": "En İyi Teklif",
       "trusted_us": "Bize Güvendiler",
       "socials": "Bizi Ayrıca Şurada Bulabilirsiniz",
       "why_us": "Neden Visbro?"

@@ -78,10 +78,11 @@
   "Home": {
     "buttons": {
       "learn_more": "Erfahren Sie mehr",
-      "offers": "Jobangebote prüfen"
+      "offers": "Jobangebote prüfen",
+      "offer": "Zur Angebot gehen"
     },
     "headings": {
-      "top3": "Top 4 Angebote",
+      "top3": "Top Angebote",
       "trusted_us": "Sie haben uns vertraut",
       "socials": "Sie finden uns auch auf",
       "why_us": "Warum Visbro?",

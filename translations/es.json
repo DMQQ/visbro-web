@@ -78,10 +78,11 @@
     "buttons": {
       "learn_more": "Más sobre nosotros",
       "offers": "Ver Ofertas de Trabajo",
-      "card": "Ver descripción completa"
+      "card": "Ver descripción completa",
+      "offer": "Ir a la oferta"
     },
     "headings": {
-      "top3": "Top 4 Ofertas",
+      "top3": "Top Ofertas",
       "trusted_us": "Confían en Nosotros",
       "socials": "También Puedes Encontrarnos en",
       "why_us": "¿Por qué Visbro?",

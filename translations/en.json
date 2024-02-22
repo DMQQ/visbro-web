@@ -79,10 +79,11 @@
     "buttons": {
       "learn_more": "More about us",
       "offers": "Check Job Offers",
-      "card": "View full description"
+      "card": "View full description",
+      "offer": "Go to the offer"
     },
     "headings": {
-      "top3": "Top 4 Offers",
+      "top3": "Top Offers",
       "trusted_us": "They Trusted Us",
       "socials": "You Can Also Find Us On",
       "why_us": "Why Visbro?"

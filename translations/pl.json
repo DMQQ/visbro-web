@@ -79,7 +79,8 @@
   "Home": {
     "buttons": {
       "learn_more": "Dowiedź się więcej",
-      "offers": "Sprawdź oferty pracy"
+      "offers": "Sprawdź oferty pracy",
+      "offer": "Przejdź do oferty"
     },
     "headings": {
       "top3": "Najpopularniejsze oferty",
@@ -285,7 +286,7 @@
     }
   },
   "Biuroservis": {
-    "heading": "Nasze usługi",
+    "heading": "Usługi",
     "heading_helper": "Dowiedź się więcej",
     "form": {
       "heading": "Formularz usługowy",
