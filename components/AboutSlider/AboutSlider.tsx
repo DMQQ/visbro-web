@@ -4,13 +4,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import img1 from "@/public/slider/AmazonDriver.jpg";
-import img2 from "@/public/slider/Farm.jpg";
 import img3 from "@/public/slider/FarmField.jpg";
 import img4 from "@/public/slider/Forklift.jpg";
 import img5 from "@/public/slider/Gastro2.jpg";
 import img6 from "@/public/slider/Warehouse.png";
 
-const defaultImages = [img1, img2, img3, img4, img5, img6];
+const defaultImages = [img1, img3, img4, img5, img6];
 
 export default function AboutSlider() {
   const [currentImage, setCurrentImage] = useState<number>(0); // index of a number

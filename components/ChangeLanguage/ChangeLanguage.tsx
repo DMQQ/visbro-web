@@ -30,9 +30,7 @@ export default function ChangeLanguage() {
         className="bg-zinc-950 p-2 rounded-md flex"
         type="button"
       >
-        <Image
-          width={20}
-          height={10}
+        <img
           src={"/flags/" + locale + ".png"}
           alt=""
           className="w-4 mr-2 text-xs"
@@ -63,9 +61,7 @@ export default function ChangeLanguage() {
             {localesWithFlags.map(([locale, flag]) => (
               <li key={locale} className="p-2">
                 <Link href={"/"} locale={locale} className="flex items-center">
-                  <Image
-                    width={35}
-                    height={20}
+                  <img
                     src={flag}
                     alt={locale + " flag"}
                     className="w-10 rounded-md"

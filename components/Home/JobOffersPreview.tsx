@@ -1,8 +1,11 @@
+import { dummyJobData } from "@/dummyData";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-export default function JobOffersPreview(props: { data: any[] }) {
+export default function JobOffersPreview(props: {
+  data: (typeof dummyJobData)[0][];
+}) {
   const t = useTranslations("Home");
   return (
     <article className="w-full p-5 mt-32 flex justify-center items-center">
@@ -14,29 +17,42 @@ export default function JobOffersPreview(props: { data: any[] }) {
         <div
           className="grid gap-5 mt-16"
           style={{
-            gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
           }}
         >
-          {props.data.map((key) => (
+          {props.data.map((offer) => (
             <section
-              key={key}
-              className="dark:bg-zinc-950  w-full p-4 rounded-2xl flex flex-col"
+              key={offer.name}
+              style={{ borderWidth: 0.5 }}
+              className="dark:bg-zinc-950 flex-shrink w-full p-4 rounded-2xl flex flex-col border-zinc-900"
             >
               <Image
                 width={300}
                 height={200}
-                src="/car-rental-concept-illustration_114360-9267.avif"
+                src="/slider/Forklift.jpg"
                 alt="offer image"
                 className="w-full rounded-md"
               />
-              <h3 className="mt-2 text-lg">Placeholder</h3>
-              <p className="text-zinc-400 mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eius
-                assumenda,
-              </p>
-              <span className="text-zinc-400 mt-1">$20/h </span>
-              <Link href={"/job-offers/0"} className="mt-2" about="">
-                {t("buttons.learn_more")}
+              <div className="flex-1">
+                <h3 className="mt-2 text-lg">{offer.name}</h3>
+                <p className="text-zinc-300 mt-2">
+                  {offer.content.slice(0, 100)}
+                </p>
+                {/* <span className="text-zinc-300 mt-1">$20</span> */}
+                <ul className="mt-2">
+                  {offer.benefits.map((benefit) => (
+                    <li key={benefit} className="text-zinc-300">
+                      💵 {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Link
+                href={"/job-offers/offer/" + offer.offerId}
+                className="mt-5 bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800 text-blue-100 text-md p-2 py-3 text-center rounded-md ho"
+                about={`Job offer ${offer.name}`}
+              >
+                {t("buttons.offer")}
               </Link>
             </section>
           ))}

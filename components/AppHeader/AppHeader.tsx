@@ -45,18 +45,18 @@ const NavigationList = (props: { dismiss: () => void }) => {
             key={link.path}
             className={`p-5 font-bold text-2xl ${
               pathname.startsWith(link.path)
-                ? "border-l-4 border-l-blue-400 bg-blue-200 bg-opacity-10"
+                ? "border-l-4 border-l-blue-400 bg-blue-300 bg-opacity-10"
                 : ""
             }`}
           >
             <Link
               href={link.path}
-              className={clsx("text-white", {
-                "text-blue-400": pathname.startsWith(link.path),
+              className={clsx("text-white ", {
+                "!text-blue-400": pathname.startsWith(link.path),
               })}
               onClick={() => props.dismiss()}
             >
-              <span>{t(link.text)}</span>
+              {t(link.text)}
             </Link>
           </li>
         ))}
@@ -89,14 +89,7 @@ export default function AppHeader() {
           onClick={() => setIsOpenNavigation(false)}
           className="font-bold text-2xl flex items-center mr-2"
         >
-          <Image
-            priority
-            alt="logo"
-            src={"/logo_placeholder.ico"}
-            width={30}
-            height={30}
-            style={{ marginRight: 5 }}
-          />
+          <img alt="logo" src={"/logo_placeholder.ico"} className="w-7 mr-2" />
           Visbro
         </Link>
 
@@ -115,7 +108,7 @@ export default function AppHeader() {
               >
                 <Link
                   href={link.path}
-                  className={clsx("text-white text-md", {
+                  className={clsx("text-white text-md uppercase", {
                     "!text-blue-400": pathname.startsWith(link.path),
                   })}
                 >

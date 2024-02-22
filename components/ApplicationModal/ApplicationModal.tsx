@@ -14,7 +14,6 @@ import AlertBox from "../AlertBox/AlertBox";
 import Input from "../ui/Input/Input";
 import DropFile from "../DropFile/DropFile";
 import axios from "axios";
-import { API } from "@/utils/constants";
 
 const initialValues = {
   dataProcessingConsent: false,
@@ -25,7 +24,6 @@ const initialValues = {
   lastJobPosition: "",
   education: "",
   gender: "",
-  age: "",
   hasOwnCar: false,
   civilState: "",
   workStart: "",
@@ -45,7 +43,6 @@ const types = {
   mailAddress: "email",
   bankNumber: "number",
   dateOfBirth: "date",
-  age: "number",
 } as any;
 
 const steps = {
