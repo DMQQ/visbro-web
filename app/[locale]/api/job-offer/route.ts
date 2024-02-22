@@ -1,10 +1,10 @@
 import { redirect } from "@/navigation";
 import axios from "axios";
+import { File } from "buffer";
 import { NextRequest } from "next/server";
 import * as z from "zod";
 
 const collabSchema = z.object({
-  dataProcessingConsent: z.boolean(),
   name: z.string().max(100),
   surname: z.string().max(100),
   phoneNumber: z.string().max(15).min(8),
@@ -12,12 +12,11 @@ const collabSchema = z.object({
   lastJobPosition: z.string().max(100),
   education: z.string().max(15),
   gender: z.string().max(15),
-  // age: z.string(),
   hasOwnCar: z.boolean(),
   civilState: z.string().max(25),
   workStart: z.string().max(100),
   bankName: z.string().max(50),
-  bankNumber: z.string().max(20).min(10),
+  bankNumber: z.string().max(20),
   bankCode: z.string().max(10),
   address: z.string().max(100),
   mailAddress: z.string().max(100),
@@ -27,6 +26,21 @@ const collabSchema = z.object({
   offerId: z.string(),
 });
 
+async function postFile(file: Blob, recordId: number) {
+  const formdata = new FormData();
+  formdata.append("file", file);
+  const response = await fetch(
+    process.env.BASE_API_URL + `/OfferApplications/records/${recordId}/files`,
+    {
+      body: formdata,
+      method: "POST",
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    }
+  );
+}
+
 export const POST = async (req: NextRequest, { params }: any) => {
   const data = await req.formData();
 
@@ -34,6 +48,7 @@ export const POST = async (req: NextRequest, { params }: any) => {
 
   data.forEach((value, key) => {
     if (key === "idFile" || key === "driverLicenseFile") return;
+    if (key === "dataProcessingConsent" || key === "age") return;
 
     let finalV = value.toString() as string | boolean;
     if (value === "true" || value === "false") finalV = Boolean(value);
@@ -43,6 +58,9 @@ export const POST = async (req: NextRequest, { params }: any) => {
   const res = collabSchema.safeParse(finalData);
 
   const offerId = finalData.offerId;
+
+  if (!data.get("dataProcessingConsent"))
+    return Response.json({ error: "Consent not permited" }, { status: 400 });
 
   if (!res.success)
     return Response.json(
@@ -56,7 +74,31 @@ export const POST = async (req: NextRequest, { params }: any) => {
       { status: 400 }
     );
 
-  // insert to ninox and notify via email
+  try {
+    await axios.post(
+      process.env.BASE_API_URL + "/OfferApplication/records",
+      [
+        {
+          fields: {
+            ...finalData,
+            offerId,
+          },
+        },
+      ],
+      {
+        headers: {
+          Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        },
+      }
+    );
+  } catch (error) {
+    return Response.json(
+      {
+        message: "Could not proceed request",
+      },
+      { status: 400 }
+    );
+  }
 
   return Response.json(
     {

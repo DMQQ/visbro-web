@@ -1,4 +1,5 @@
 import { redirect } from "@/navigation";
+import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -30,6 +31,25 @@ export const POST = async (req: NextRequest, { params }: any) => {
       },
       { status: 400 }
     );
+
+  try {
+    await axios.post(
+      process.env.BASE_API_URL + "/Services/records",
+      [{ fields: data }],
+      {
+        headers: {
+          Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        },
+      }
+    );
+  } catch (error) {
+    return Response.json(
+      {
+        message: "Could not proceed request",
+      },
+      { status: 400 }
+    );
+  }
 
   // send data to ninox and mail it
 

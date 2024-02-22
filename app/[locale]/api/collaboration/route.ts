@@ -1,6 +1,6 @@
 import { redirect } from "@/navigation";
-import type { NextApiRequest, NextApiResponse } from "next";
-import { NextRequest, NextResponse } from "next/server";
+import axios from "axios";
+import { NextRequest } from "next/server";
 
 import * as z from "zod";
 
@@ -31,7 +31,24 @@ export const POST = async (req: NextRequest, { params }: any) => {
       { status: 400 }
     );
 
-  // send data to ninox and mail it
+  try {
+    await axios.post(
+      process.env.BASE_API_URL + "/collaboration/records",
+      [{ fields: data }],
+      {
+        headers: {
+          Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        },
+      }
+    );
+  } catch (error) {
+    return Response.json(
+      {
+        message: "Could not proceed request",
+      },
+      { status: 400 }
+    );
+  }
 
   return Response.json(
     {
@@ -43,3 +60,5 @@ export const POST = async (req: NextRequest, { params }: any) => {
 export const GET = (req: NextRequest) => {
   redirect("/");
 };
+
+/// DZIAŁA
