@@ -4,7 +4,7 @@ import { Link, usePathname } from "@/navigation";
 import clsx from "clsx";
 
 const subRoutes = [
-  { route: "/services", text: "Usługi" },
+  { route: "/", text: "Usługi" },
   { route: "/recrutation", text: "Rekrutacja" },
   { route: "/housing", text: "Kwatery pracownicze" },
   { route: "/cleaning-services", text: "Usługi sprzątające" },

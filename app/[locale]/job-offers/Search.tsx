@@ -7,7 +7,7 @@ export default function Search() {
   const [text, setText] = useState("");
   const t = useTranslations("JobOffers");
   return (
-    <header className="mb-5">
+    <header className="my-10">
       <h2 className="text-md font-medium py-2">{t("search.label")}</h2>
       <div className="flex flex-row gap-2">
         <input
@@ -16,11 +16,11 @@ export default function Search() {
           onChange={({ target }) => setText(target.value)}
           className="dark:bg-zinc-800 border-2 border-zinc-700 rounded-md w-full p-2 outline-none focus:border-blue-600"
         />
-        <button className="bg-blue-900 px-5 py-3 rounded-md hover:bg-blue-700 active:bg-blue-800">
+        <button className=" px-5 py-3 rounded-md bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800">
           {t("search.button")}
         </button>
       </div>
-      <div className="flex flex-row gap-2 py-5 overflow-x-scroll sm:overflow-hidden">
+      {/* <div className="flex flex-row gap-2 py-5 overflow-x-scroll sm:overflow-hidden">
         {["Frankfurt", "Lipsk", "Berlin", "Monachium", "More"].map((filter) => (
           <button
             key={filter}
@@ -29,7 +29,7 @@ export default function Search() {
             {filter}
           </button>
         ))}
-      </div>
+      </div> */}
     </header>
   );
 }

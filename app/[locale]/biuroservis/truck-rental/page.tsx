@@ -57,10 +57,14 @@ export default function CarRental({ params: { locale } }: any) {
             <h3 className="mt-2 text-lg">Car to rent</h3>
             <p className="text-zinc-500 mt-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eius
-              assumenda,
+              assumenda, Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Ab eius assumenda,
             </p>
             <span className="text-zinc-500 mt-1">$20/h </span>
-            <Link href={"/job-offers"} className="mt-2">
+            <Link
+              href={"/job-offers"}
+              className="mt-5 bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800 text-blue-100 text-md p-2 py-3 text-center rounded-md ho"
+            >
               Learn more
             </Link>
           </section>

@@ -42,7 +42,7 @@ export default function Modal() {
     name: "",
     surname: "",
 
-    ...(type === "services" && { service }),
+    ...(type === "services" && { services: service }),
 
     ...(type === "car-rental" && {
       car: "",
@@ -121,7 +121,7 @@ export default function Modal() {
                 />
                 <Input
                   label="Wybrana usługa"
-                  value={f.values.service || ""}
+                  value={f.values.services || ""}
                   onChange={() => {}}
                   rest={{ disabled: true }}
                   className="!text-zinc-400"

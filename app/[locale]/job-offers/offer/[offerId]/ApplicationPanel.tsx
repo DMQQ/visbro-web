@@ -19,7 +19,7 @@ export default function ApplicationPanel(props: { offerId: string }) {
 
         <Button
           text={t("buttons.openForm")}
-          className="w-full mt-5"
+          className="w-full mt-5 py-3  bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800 text-blue-100"
           onClick={() => router.push(pathname + "?modal=true")}
         />
       </div>

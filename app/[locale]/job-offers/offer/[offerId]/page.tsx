@@ -4,18 +4,23 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import axios from "axios";
 import { getTranslations } from "next-intl/server";
 import { locales } from "@/locales";
-import { useTranslations } from "next-intl";
 import { dummyJobData } from "@/dummyData";
-import { off } from "process";
 
 async function getOfferIds() {
   try {
-    // const response = await axios.get("/offers");
-    // return response.data.map((offer: any) => offer.id);
+    const response = await axios.get(
+      process.env.BASE_API_URL + "/collaboration/query",
 
-    return dummyJobData.map(({ offerId }) => offerId);
+      {
+        headers: {
+          Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        },
+      }
+    );
+
+    return response.data.map((field: any) => ({ offerId: field.id }));
   } catch (error) {
-    return ["0", "1", "2", "3"];
+    return dummyJobData.map(({ offerId }) => offerId);
   }
 }
 
@@ -34,15 +39,20 @@ export async function generateStaticParams() {
 }
 
 async function getOfferById(id: string, locale: string) {
-  // const data = await axios.get("/posts/" + id, {
-  //   headers: {
-  //     language: locale,
-  //   },
-  // });
+  try {
+    const res = await axios.get(
+      process.env.BASE_API_URL + "/JobOffers/records/" + id,
+      {
+        headers: {
+          Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        },
+      }
+    );
 
-  const data = dummyJobData.find((d) => d.offerId === id);
-
-  return data;
+    return res.data.fields;
+  } catch (error) {
+    return dummyJobData.find((d) => d.offerId === id);
+  }
 }
 
 export async function generateMetadata({ params: { locale } }: any) {
@@ -60,24 +70,18 @@ export default async function OfferPage({
 
   const data = await getOfferById(offerId, locale);
 
-  const t = getTranslations("JobOffers");
+  //const t = getTranslations("JobOffers");
 
   return (
-    <main className={`w-full h-full min-h-screen`}>
-      <article
-        className="flex flex-col md:flex-row mx-auto lg:w-11/12 xl:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg sm:mt-32"
-        style={{
-          //   marginTop: "8rem",
-          marginBottom: "4rem",
-        }}
-      >
+    <main className={`w-full h-full min-h-screen pb-16`}>
+      <article className="flex flex-col md:flex-row mx-auto lg:w-11/12 xl:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg sm:mt-32">
         <section className="flex-2 p-5 rounded-lg h-auto">
           <h1 className="font-bold text-6xl my-5 mb-10">{data?.name}</h1>
 
           <article className="p-2 mt-5">
             <h2 className="font-bold text-xl">Wymagania</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-3 p-2">
-              {/* <li>🏠 Remote/On-site</li>
+              <li>🏠 Remote/On-site</li>
               <li>💵 $25/h</li>
               <li>⏱️ Full-time/Part-time</li>
               <li>👅 English/Polish/German</li>
@@ -85,12 +89,12 @@ export default async function OfferPage({
               <li>🚗 Work car</li>
               <li>🍉 Fruit thursdays</li>
               <li>🏥 Health care included</li>
-              <li>Much moree ....</li> */}
-              {[...data!.benefits, ...data!.benefits].map((benefit, index) => (
+              <li>Much moree ....</li>
+              {/* {[...data!.benefits, ...data!.benefits].map((benefit, index) => (
                 <li className="mt-2" key={index}>
                   🍊 {benefit}
                 </li>
-              ))}
+              ))} */}
             </ul>
           </article>
 

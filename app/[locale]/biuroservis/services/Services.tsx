@@ -23,13 +23,12 @@ const content =
     .split("\n")
     .map((service) => service.split(":"));
 
-export default function Services({ searchParams, params: { locale } }: any) {
-  unstable_setRequestLocale(locale);
+export default function Services({ params: { locale } }: any) {
   return (
     <>
-      <article className="mt-5 border-t border-t-zinc-700">
-        <h1 className="text-3xl font-bold py-5">Usługi</h1>
-        <p className="text-zinc-300">
+      <article className=" mt-5 border-t border-t-zinc-700 ">
+        {/* <h1 className="text-3xl font-bold py-5">Usługi</h1> */}
+        <p className="text-zinc-300 mt-5">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam non,
           labore voluptatum voluptas voluptates debitis et, veniam ipsam hic
           sunt quia perspiciatis libero recusandae consequatur dolores? Maxime

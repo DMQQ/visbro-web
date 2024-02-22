@@ -11,14 +11,21 @@ const recurters = [
   {
     image: "/workers/Kamil.png",
     name: "Kamil Czarnecki",
-    position: "",
-    contacts: ["01520 8941615", "kamil.czarnecki@visbro.de"],
+    position: "Ceo/Dyrektor",
+    contacts: ["+49 01520 8941615", "kamil.czarnecki@visbro.de"],
     languages: ["de", "en", "pl"],
+  },
+  {
+    image: "/workers/Michał.png",
+    name: "Michał Kotwicki",
+    position: "Menager",
+    contacts: ["+49 174 2606102", "Michał.kotwicki@visbro.de"],
+    languages: ["pl", "en"],
   },
   {
     image: "/workers/Kaja.png",
     name: "Kaja Zimoch",
-    position: "",
+    position: "Rekruter",
     contacts: [
       "+49 1577 2264941",
       "Kaja.zimoch@visbro.de ",
@@ -29,20 +36,13 @@ const recurters = [
   {
     image: "/workers/Elena.png",
     name: "Elena Lungu",
-    position: "",
+    position: "Rekruter",
     contacts: [
       "+49 1577 2264940",
       "Birou.recrutare@visbro.de",
       "Elena.lungu@visbro.de ",
     ],
     languages: ["ru", "ro", "de", "en"],
-  },
-  {
-    image: "/workers/Michał.png",
-    name: "Michał Kotwicki",
-    position: "",
-    contacts: ["+49 174 2606102", "Michał.kotwicki@visbro.de"],
-    languages: ["pl", "en"],
   },
 ];
 
@@ -52,6 +52,7 @@ export async function generateMetadata({ params: { locale } }: any) {
 
   return {
     title: t("heading"),
+    content: "Contact with Visbro Personal Solution +49 1520 8941615",
   };
 }
 
@@ -83,23 +84,34 @@ export default function Contact({ params: { locale } }: any) {
               className={`bg-zinc-900 rounded-md flex flex-col`}
             >
               <Image
-                width={140}
-                height={140}
+                width={144}
+                height={144}
                 priority
                 src={details.image}
                 alt="Zdjęcie rekrutera"
                 className={`rounded-full m-auto w-36 h-36 mt-5 object-cover`}
               />
 
-              <div className="px-5 pb-5 py-2 flex flex-col flex-1">
-                <div className="flex-1 ">
+              <div className="px-5 pb-5 py-2 flex flex-col  flex-1">
+                <div className="flex-1 items-center flex flex-col ">
                   <h2 className={`font-bold text-2xl text-center`}>
                     {details.name}
                   </h2>
-                  {/* <p className="text-blue-400 text-center">{details.position}</p> */}
+                  <p
+                    style={{
+                      letterSpacing: 0.5,
+                    }}
+                    className=" text-center text-zinc-300 font-medium mt-2 bg-zinc-800 px-3 p-1 rounded-full text-sm"
+                  >
+                    {details.position}
+                  </p>
                   <div className="flex flex-col mt-2 justify-center text-zinc-300 flex-wrap">
-                    {details.contacts.map((value) => (
-                      <a href="#" key={value} className="text-center mb-2">
+                    {details.contacts.map((value, index) => (
+                      <a
+                        href={index === 0 ? `tel:${value}` : `mailto:${value}`}
+                        key={value}
+                        className="text-center mb-2"
+                      >
                         {value}
                       </a>
                     ))}
@@ -131,14 +143,6 @@ export default function Contact({ params: { locale } }: any) {
         </p>
 
         <Map zoom={15} position={[51.349860469934505, 12.3051689]}></Map>
-
-        <h2 className="text-3xl lg:text-4xl font-bold  text-white my-5 mt-10">
-          {t("phone_heading")}
-        </h2>
-        <p className="text-xl text-zinc-300 mb-5">
-          {t("open_hours")} 9:00-17:30
-        </p>
-        <a href="tel:+49 000 0000 000">{t("heading")} +49 1520 8941615</a>
       </article>
     </PageWrapper>
   );

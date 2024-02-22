@@ -1,14 +1,11 @@
 import { Link } from "@/navigation";
 import Search from "./Search";
 import PageWrapper from "@/components/ui/PageWrapper/PageWrapper";
-import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 import { getTranslations } from "next-intl/server";
-import Image from "next/image";
+import NextImage from "next/image";
 import axios from "axios";
-import { use } from "react";
-import { off } from "process";
 import { dummyJobData } from "@/dummyData";
 
 export async function generateMetadata({ params: { locale } }: any) {
@@ -23,14 +20,23 @@ export async function generateMetadata({ params: { locale } }: any) {
 async function fetchOffers(locale: string) {
   "use server";
   try {
-    // const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    const res = await axios.get(
+      process.env.BASE_API_URL + "/JobOffers/records",
+      {
+        headers: {
+          Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        },
+      }
+    );
 
-    // return await response.json();
-
-    return dummyJobData;
+    return res.data.map((field: any) => {
+      return {
+        offerId: field.id,
+        ...(field?.fields || {}),
+      };
+    });
   } catch (error) {
-    console.log(error);
-    return [];
+    return dummyJobData;
   }
 }
 
@@ -52,39 +58,39 @@ export default async function JobOffers({ params: { locale } }: any) {
 
         <Search />
 
-        {offers.map(({ name, content, benefits, offerId }, index) => (
+        {offers.map(({ name, content, benefits, offerId, image }, index) => (
           <article
             key={index}
-            className="mt-3 flex flex-col md:flex-row gap-3 rounded-xl bg-zinc-900  p-4 transition duration-200"
+            className="mb-5 flex flex-col md:flex-row gap-3 rounded-xl bg-zinc-950 border border-zinc-900 hover:bg-zinc-900 p-4 transition duration-200"
           >
-            <Image
-              quality={100}
+            <NextImage
               priority
-              width={200}
-              height={200}
-              src={
-                index % 2 === 0
-                  ? "/home_tiles/Warehouse.jpg"
-                  : "/home_tiles/Amazon.jpg"
-              }
+              width={150}
+              height={100}
+              src={`/${locale}/api/images/${offerId}/${image}`}
               alt="offer thumbnail"
               className=" w-full md:w-52 max-h-52 sm:h-40 rounded-md object-cover flex-1"
             />
-            <section className="flex flex-col flex-[3]">
-              <h2 className="font-bold text-xl">{name}</h2>
+            <section className="flex flex-col flex-[4]">
+              <h2 className="font-bold text-2xl">{name}</h2>
               <p className="text-zinc-400">{content}</p>
 
-              <div className="flex flex-row justify-between flex-1 items-end">
-                <ul>
-                  {benefits?.map((b: string) => (
-                    <li key={b} className="text-white text-sm ">
-                      💵 {b}
-                    </li>
-                  ))}
+              <div className="flex flex-col sm:flex-row justify-between flex-1 items-end">
+                <ul className="flex mt-2 sm:mt-0 flex-row sm:flex-col">
+                  {["Fruit thursdays", "Pizza Mondays", "$50/h"].map(
+                    (b: string) => (
+                      <li
+                        key={b}
+                        className="text-white text-sm text-center sm:text-left"
+                      >
+                        💵 {b}
+                      </li>
+                    )
+                  )}
                 </ul>
                 <Link
                   href={"/job-offers/offer/" + offerId}
-                  className="p-2 bg-blue-900 rounded-md w-48 text-center hover:bg-blue-700 active:bg-blue-700"
+                  className="p-2 bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800 rounded-md text-blue-100 sm:!w-48 text-center  mt-5 sm:mt-0 w-full py-3"
                 >
                   {t("buttons.card.apply")}
                 </Link>

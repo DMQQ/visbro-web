@@ -3,6 +3,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import Form from "./CareerForm";
 
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 export async function generateMetadata({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
@@ -27,22 +28,24 @@ export default function Career({ params: { locale } }: any) {
         <p className="text-zinc-300 text-md sm:text-lg ">{t("content")}</p>
 
         <div className="grid grid-cols-2 gap-5 mt-5">
-          <img
-            src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
-            alt=""
-          />
-          <img
-            src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
-            alt=""
-          />
-          <img
-            src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
-            alt=""
-          />
-          <img
-            src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
-            alt=""
-          />
+          {[
+            "/slider/Delivery.jpg",
+            "/home_tiles/Cleaner.jpg",
+            "/home_tiles/Gastro.jpg",
+            "/home_tiles/Warehouse.jpg",
+          ].map((image) => (
+            <div key={image} className="w-full">
+              <Image
+                quality={100}
+                priority
+                alt="Decorative image"
+                src={image}
+                width={200}
+                height={100}
+                className="object-cover w-full h-56"
+              />
+            </div>
+          ))}
         </div>
       </section>
       <Form />
