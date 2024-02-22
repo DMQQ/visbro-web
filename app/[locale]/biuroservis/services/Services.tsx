@@ -61,7 +61,7 @@ const Tile = (props: { heading: string; content: string }) => {
 
       <Link
         href={{
-          pathname: "/biuroservis/services",
+          pathname: "/biuroservis",
           query: {
             modal: "true",
             service: props.heading.split(".")[1],
