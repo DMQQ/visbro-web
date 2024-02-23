@@ -46,9 +46,9 @@ export default function Ad() {
                 {t(`${el}.heading`)}
               </h3>
 
-              <p className="text-zinc-500 mt-2">{t(`${el}.subheading`)}</p>
+              <p className="text-zinc-300 mt-2">{t(`${el}.subheading`)}</p>
 
-              <p className="text-zinc-300 mt-5">{t(`${el}.content`)}</p>
+              <p className="text-zinc-100 mt-5">{t(`${el}.content`)}</p>
             </div>
           </div>
         ))}

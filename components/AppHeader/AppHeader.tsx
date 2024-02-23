@@ -125,7 +125,14 @@ export default function AppHeader() {
 
           <ChangeLanguage />
 
-          <button onClick={onToggleModal} className="lg:hidden ml-5">
+          <button
+            onClick={onToggleModal}
+            className="lg:hidden ml-5"
+            aria-label={
+              isOpenNavigation ? "Close Navigation" : "Open Navigation"
+            }
+            aria-expanded={isOpenNavigation}
+          >
             {isOpenNavigation ? (
               <RxCross1 color="#fff" size={25} />
             ) : (

@@ -3,7 +3,6 @@ import { locales } from "@/locales";
 import { Link } from "@/navigation";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 
 function getFlagEmoji(countryCode: any) {
   return "/flags/" + countryCode + ".png";
@@ -22,18 +21,20 @@ export default function ChangeLanguage() {
   const locale = path.split("/")[1] || "ro";
 
   return (
-    <div className="relative">
+    <div className="relative" aria-label="language-menu" id="language-menu">
       <button
-        role="menu"
+        role="link"
         onClick={() => setIsOpen((p) => !p)}
-        aria-label="language change button"
         className="bg-zinc-950 p-2 rounded-md flex"
         type="button"
+        aria-expanded={open}
+        aria-controls="language-menu"
       >
         <img
           src={"/flags/" + locale + ".png"}
-          alt="Selected language"
+          alt={"Selected language " + locale}
           className="w-4 mr-2 text-xs"
+          aria-roledescription="Currently selected language on page"
         />
         <svg
           className="w-2.5 h-2.5 ms-3"
