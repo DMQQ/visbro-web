@@ -23,10 +23,10 @@ export default function Slider({ images }: SliderProps) {
         className="absolute w-full h-full flex items-center justify-center flex-col-reverse lg:flex-row-reverse"
       >
         <section className="hidden lg:grid grid-cols-2 md:grid-cols-2 gap-3 justify-center px-5 mb-5 flex-1 lg:flex-[2] xl:flex-[2]">
-          {["Recruting.jpg", "Gastro.jpg", "Amazon.jpg", "Interview.jpg"].map(
+          {["Gastro.jpg", "Tiles.jpg", "Delivery.jpg", "Amazon.jpg"].map(
             (src) => (
               <Image
-                quality={100}
+                quality={"100"}
                 width={300}
                 height={200}
                 priority
