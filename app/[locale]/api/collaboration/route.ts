@@ -1,8 +1,9 @@
 import { redirect } from "@/navigation";
 import axios from "axios";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 import * as z from "zod";
+import { limiter } from "../config/limiter";
 
 const collabSchema = z.object({
   name: z.string().max(100),
@@ -15,6 +16,20 @@ const collabSchema = z.object({
 });
 
 export const POST = async (req: NextRequest, { params }: any) => {
+  const remaining = await limiter.removeTokens(1);
+
+  const origin = req.headers.get("origin");
+
+  if (remaining < 0)
+    return new NextResponse("Too Many Requests", {
+      status: 429,
+      statusText: "Too Many Requests",
+      headers: {
+        "Access-Control-Allow-Origin": origin || "*",
+        "Content-type": "text/plain",
+      },
+    });
+
   const data = await req.json();
 
   const res = collabSchema.safeParse(data);
