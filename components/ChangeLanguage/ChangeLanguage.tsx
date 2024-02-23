@@ -19,7 +19,7 @@ export default function ChangeLanguage() {
 
   const path = usePathname();
 
-  const locale = path.split("/")[1] || "en";
+  const locale = path.split("/")[1] || "ro";
 
   return (
     <div className="relative">
@@ -32,7 +32,7 @@ export default function ChangeLanguage() {
       >
         <img
           src={"/flags/" + locale + ".png"}
-          alt=""
+          alt="Selected language"
           className="w-4 mr-2 text-xs"
         />
         <svg
@@ -64,7 +64,7 @@ export default function ChangeLanguage() {
                   <img
                     src={flag}
                     alt={locale + " flag"}
-                    className="w-10 rounded-md"
+                    className="w-9 rounded-sm"
                   />
                 </Link>
               </li>

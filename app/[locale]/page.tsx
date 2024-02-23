@@ -15,7 +15,6 @@ import Ad from "@/components/Home/Ad";
 import JobOffersPreview from "@/components/Home/JobOffersPreview";
 import PartnersList from "@/components/Home/PartnersList";
 import WhyUs from "@/components/Home/WhyUs";
-import { dummyJobData } from "@/dummyData";
 
 export async function generateMetadata({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
@@ -27,14 +26,9 @@ export async function generateMetadata({ params: { locale } }: any) {
   };
 }
 
-async function fetchBestOffers() {
-  return dummyJobData.slice(0, 4);
-}
-
 export default async function Home({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
-
-  const offers = await fetchBestOffers();
+  //const offers = await fetchBestOffers();
 
   return (
     <main className="w-full">
@@ -44,7 +38,7 @@ export default async function Home({ params: { locale } }: any) {
 
       <Ad />
 
-      <JobOffersPreview data={offers} />
+      <JobOffersPreview locale={locale} />
       <PartnersList />
     </main>
   );

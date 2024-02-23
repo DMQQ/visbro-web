@@ -1,6 +1,13 @@
 import { NextRequest } from "next/server";
 
-export const GET = async (req: NextRequest, { params }: any) => {
+export const GET = async (
+  req: NextRequest,
+  {
+    params,
+  }: {
+    params: { params: [number, string] };
+  }
+) => {
   let [recordId, url] = params.params;
 
   if (url === undefined || url === "" || recordId === undefined)
@@ -24,6 +31,6 @@ export const GET = async (req: NextRequest, { params }: any) => {
 
     return new Response(blob, { status: 200, statusText: "OK", headers });
   } catch (error) {
-    return Response.json("", { status: 404 });
+    return Response.json("Image not found", { status: 404 });
   }
 };

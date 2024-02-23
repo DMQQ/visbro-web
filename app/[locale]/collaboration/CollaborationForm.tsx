@@ -119,7 +119,7 @@ const Form = () => {
               <div className="px-2 mt-2">
                 <Button
                   buttonType="submit"
-                  disabled={!(f.isValid && f.dirty) && !state.isSuccess}
+                  disabled={!(f.isValid && f.dirty) || state.isSuccess}
                   onClick={f.handleSubmit}
                   className={`py-3 w-full`}
                   text={t("submit")}

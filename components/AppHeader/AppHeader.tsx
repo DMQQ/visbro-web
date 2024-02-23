@@ -3,9 +3,9 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/navigation";
 import { useState } from "react";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
-import Image from "next/image";
 import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";
 import clsx from "clsx";
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 const links = [
   { path: "/collaboration", text: "collab" },
@@ -40,26 +40,31 @@ const NavigationList = (props: { dismiss: () => void }) => {
       className={`flex fixed top-0 left-0 w-full h-screen justify-center items-center bg-zinc-900`}
     >
       <ul className="h-3/4 w-full flex flex-col">
-        {links.map((link) => (
-          <li
-            key={link.path}
-            className={`p-5 font-bold text-2xl ${
-              pathname.startsWith(link.path)
-                ? "border-l-4 border-l-blue-400 bg-blue-300 bg-opacity-10"
-                : ""
-            }`}
-          >
-            <Link
-              href={link.path}
-              className={clsx("text-white ", {
-                "!text-blue-400": pathname.startsWith(link.path),
-              })}
-              onClick={() => props.dismiss()}
+        <div className="flex-1">
+          {links.map((link) => (
+            <li
+              key={link.path}
+              className={`p-5 font-bold text-2xl ${
+                pathname.startsWith(link.path)
+                  ? "border-l-4 border-l-blue-400 bg-blue-300 bg-opacity-10"
+                  : ""
+              }`}
             >
-              {t(link.text)}
-            </Link>
-          </li>
-        ))}
+              <Link
+                href={link.path}
+                className={clsx("text-white ", {
+                  "!text-blue-400": pathname.startsWith(link.path),
+                })}
+                onClick={() => props.dismiss()}
+              >
+                {t(link.text)}
+              </Link>
+            </li>
+          ))}
+        </div>
+        <div className="p-5">
+          <SocialMedia />
+        </div>
       </ul>
     </nav>
   );
@@ -108,7 +113,7 @@ export default function AppHeader() {
               >
                 <Link
                   href={link.path}
-                  className={clsx("text-white text-md uppercase", {
+                  className={clsx("text-white text-sm xl:!text-md uppercase", {
                     "!text-blue-400": pathname.startsWith(link.path),
                   })}
                 >

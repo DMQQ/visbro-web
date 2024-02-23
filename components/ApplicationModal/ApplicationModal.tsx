@@ -159,7 +159,11 @@ export default function ApplicationModal({ offerId }: { offerId: string }) {
       setStep(stepsArray[currentStepIndex + 1]);
     }
 
-    if (formik.isValid && currentStepIndex === stepsArray.length - 1) {
+    if (
+      formik.isValid &&
+      currentStepIndex === stepsArray.length - 1 &&
+      !state.isSuccess
+    ) {
       formik.handleSubmit();
     }
   }
@@ -288,7 +292,7 @@ export default function ApplicationModal({ offerId }: { offerId: string }) {
               type="text"
             />
             <Button
-              disabled={isError}
+              disabled={isError || (step === "files" && state.isSuccess)}
               text={t2("buttons.next")}
               onClick={() => nextStep()}
               className="w-full py-4 flex-[3]"

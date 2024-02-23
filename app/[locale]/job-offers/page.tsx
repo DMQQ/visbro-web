@@ -67,13 +67,23 @@ export default async function JobOffers({ params: { locale } }: any) {
               priority
               width={150}
               height={100}
-              src={`/${locale}/api/images/${offerId}/${image}`}
+              src={
+                image
+                  ? `/${locale}/api/images/${offerId}/${image}`
+                  : "/slider/Forklift.jpg"
+              }
               alt="offer thumbnail"
               className=" w-full md:w-52 max-h-52 sm:h-40 rounded-md object-cover flex-1"
             />
             <section className="flex flex-col flex-[4]">
-              <h2 className="font-bold text-2xl">{name}</h2>
-              <p className="text-zinc-400">{content}</p>
+              <h2 className="font-bold text-xl smtext-2xl">{name}</h2>
+              <p className="text-zinc-400  block sm:hidden">
+                {content.slice(0, 125)}
+              </p>
+
+              <p className="text-zinc-400 hidden sm:block">
+                {content.slice(0, 300)}
+              </p>
 
               <div className="flex flex-col sm:flex-row justify-between flex-1 items-end">
                 <ul className="flex mt-2 sm:mt-0 flex-row sm:flex-col">

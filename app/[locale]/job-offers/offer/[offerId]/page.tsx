@@ -76,11 +76,11 @@ export default async function OfferPage({
     <main className={`w-full h-full min-h-screen pb-16`}>
       <article className="flex flex-col md:flex-row mx-auto lg:w-11/12 xl:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg sm:mt-32">
         <section className="flex-2 p-5 rounded-lg h-auto">
-          <h1 className="font-bold text-6xl my-5 mb-10">{data?.name}</h1>
+          <h1 className="font-bold text-5xl my-5 mb-10">{data?.name}</h1>
 
           <article className="p-2 mt-5">
             <h2 className="font-bold text-xl">Wymagania</h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-3 p-2">
+            <ul className="grid grid-cols-1 sm:grid-cols-3 mt-2">
               <li>🏠 Remote/On-site</li>
               <li>💵 $25/h</li>
               <li>⏱️ Full-time/Part-time</li>
@@ -98,18 +98,18 @@ export default async function OfferPage({
             </ul>
           </article>
 
-          <div className="p-2 mt-5">
+          <div className="mt-5">
             <h2 className="font-bold text-xl">Position description</h2>
 
-            <p className="p-2">{data?.content}</p>
-            <p className="p-2">{data?.content}</p>
-            <p className="p-2">{data?.content}</p>
+            <p className="mt-2">{data?.content}</p>
+            <p className="mt-2">{data?.content}</p>
+            <p className="mt-2">{data?.content}</p>
           </div>
 
-          <div className="mt-5">
+          <div className="mt-10">
             <h2 className="font-bold text-xl">Work images</h2>
 
-            <section className="grid grid-cols-2 gap-2 p-2">
+            <section className="grid grid-cols-2 gap-2 mt-2">
               {[0, 1].map((key) => (
                 <img
                   src="/car-rental-concept-illustration_114360-9267.avif"

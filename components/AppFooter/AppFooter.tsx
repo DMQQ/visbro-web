@@ -2,8 +2,7 @@ import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function AppFooter({ locale }: { locale: string }) {
-  unstable_setRequestLocale(locale);
+export default function AppFooter() {
   const t = useTranslations("Navigation");
   // const t2 = useTranslations("Footer");
   const t3 = useTranslations("Impressum");

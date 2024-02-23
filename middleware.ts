@@ -9,13 +9,20 @@ export default async function middleware(request: NextRequest) {
     localePrefix: "always",
   });
 
+  const regexp = /^http:\/\/localhost:3000\/pl\/api\/.+$/;
+  const isApiUrl = regexp.test(request.url);
+
+  if (isApiUrl) {
+    console.log(request.url);
+  }
+
   return intl(request);
 }
 
 export const config = {
   matcher: [
     "/",
-    "/(de|en|ro|ru|pl|tr|ar|ua|es)/:path*",
+    "/(de|en|ro|ru|pl|tr|ua|es)/:path*",
     "/((?!_next|_vercel|.*\\..*).*)",
   ],
 };

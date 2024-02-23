@@ -39,6 +39,8 @@ async function postFile(file: Blob, recordId: number) {
       },
     }
   );
+
+  return await response.json();
 }
 
 export const POST = async (req: NextRequest, { params }: any) => {

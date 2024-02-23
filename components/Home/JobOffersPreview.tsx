@@ -1,12 +1,34 @@
-import { dummyJobData } from "@/dummyData";
 import { Link } from "@/navigation";
-import { useTranslations } from "next-intl";
+import axios from "axios";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
-export default function JobOffersPreview(props: {
-  data: (typeof dummyJobData)[0][];
-}) {
-  const t = useTranslations("Home");
+async function fetchBestOffers() {
+  "use server";
+  try {
+    const res = await axios.get(
+      process.env.BASE_API_URL + "/JobOffers/records",
+      {
+        headers: {
+          Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        },
+      }
+    );
+
+    return res.data.slice(0, 4).map((field: any) => ({
+      offerId: field.id,
+      ...field.fields,
+    }));
+  } catch (error) {
+    return [];
+  }
+}
+
+export default async function JobOffersPreview(props: { locale: string }) {
+  const t = await getTranslations("Home");
+
+  const offers = await fetchBestOffers();
+
   return (
     <article className="w-full p-5 mt-32 flex justify-center items-center">
       <section className="w-full lg:w-3/4 ">
@@ -20,27 +42,43 @@ export default function JobOffersPreview(props: {
             gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
           }}
         >
-          {props.data.map((offer) => (
+          {offers.map((offer: any) => (
             <section
               key={offer.name}
               style={{ borderWidth: 0.5 }}
               className="dark:bg-zinc-950 flex-shrink w-full p-4 rounded-2xl flex flex-col border-zinc-900"
             >
               <Image
+                priority={false}
                 width={300}
                 height={200}
-                src="/slider/Forklift.jpg"
+                src={
+                  offer.image
+                    ? `/${props.locale}/api/images/${offer.offerId}/${offer.image}`
+                    : "/slider/Forklift.jpg"
+                }
                 alt="offer image"
-                className="w-full rounded-md"
+                className="w-full rounded-md max-h-52 sm:max-h-48 object-cover"
               />
               <div className="flex-1">
-                <h3 className="mt-2 text-lg">{offer.name}</h3>
+                <h3 className="mt-2 text-lg  font-bold">{offer.name}</h3>
                 <p className="text-zinc-300 mt-2">
                   {offer.content.slice(0, 100)}
                 </p>
                 {/* <span className="text-zinc-300 mt-1">$20</span> */}
                 <ul className="mt-2">
-                  {offer.benefits.map((benefit) => (
+                  {/* {offer.benefits.map((benefit) => (
+                    <li key={benefit} className="text-zinc-300">
+                      💵 {benefit}
+                    </li>
+                  ))} */}
+
+                  {[
+                    "🤾MultiSport",
+                    "🏥Medical Help",
+                    "$45/h",
+                    "30days of vacations",
+                  ].map((benefit) => (
                     <li key={benefit} className="text-zinc-300">
                       💵 {benefit}
                     </li>

@@ -30,36 +30,24 @@ function RootLayout({
   const messages = useMessages();
 
   return (
-    <html lang={params.locale || "en"} className="dark ">
+    <html lang={params.locale} className="dark ">
       <NextIntlClientProvider locale={params.locale} messages={messages}>
-        <Body locale={params.locale}>{children}</Body>
+        <body
+          className={`${inter.className} bg-white text-black dark:dark:bg-zinc-950 dark:text-white`}
+          style={{
+            backgroundImage: "url(/bg.svg)",
+
+            backgroundSize: "contain",
+          }}
+        >
+          <AppHeader />
+          <main className="mt-16">{children}</main>
+
+          <AppFooter />
+        </body>
       </NextIntlClientProvider>
     </html>
   );
 }
-
-const Body = ({
-  children,
-  locale,
-}: {
-  children: ReactNode;
-  locale: string;
-}) => (
-  <body
-    className={`${inter.className} bg-white text-black dark:dark:bg-zinc-950 dark:text-white`}
-    style={{
-      backgroundImage: "url(/bg.svg)",
-      // backgroundImage: "url(/Meteor1.svg)",
-      backgroundSize: "contain",
-      // backgroundRepeat: "no-repeat",
-      //  backgroundAttachment: "fixed",
-    }}
-  >
-    <AppHeader />
-    <main className="mt-16">{children}</main>
-
-    <AppFooter locale={locale} />
-  </body>
-);
 
 export default RootLayout;

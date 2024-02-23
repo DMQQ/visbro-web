@@ -145,7 +145,7 @@ export default function Modal() {
                 />
                 <div className="p-2">
                   <Button
-                    disabled={!(f.isValid && f.dirty)}
+                    disabled={!(f.isValid && f.dirty) || state.isSuccess}
                     className="w-full py-4"
                     onClick={f.handleSubmit}
                     text={t("form.button")}
