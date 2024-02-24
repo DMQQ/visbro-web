@@ -17,23 +17,29 @@ export default function Navigation() {
   return (
     <nav className="flex justify-center w-full rounded-md">
       <ul className="w-full flex flex-col md:flex-row justify-between">
-        {subRoutes.map((link) => (
-          <li
-            key={link.route}
-            className={clsx("p-2", {
-              "border-b-2 border-b-blue-400": pathname.includes(link.route),
-            })}
-          >
-            <Link
-              href={"/biuroservis" + link.route}
-              className={clsx("text-white text-md", {
-                "!text-blue-400": pathname.includes(link.route),
+        {subRoutes.map((link) => {
+          const isActive =
+            link.route === "/"
+              ? pathname.endsWith("biuroservis")
+              : pathname.includes(link.route);
+          return (
+            <li
+              key={link.route}
+              className={clsx("p-2", {
+                "border-b-2 border-b-blue-400": isActive,
               })}
             >
-              <span>{link.text}</span>
-            </Link>
-          </li>
-        ))}
+              <Link
+                href={"/biuroservis" + link.route}
+                className={clsx("text-white text-md", {
+                  "!text-blue-400": isActive,
+                })}
+              >
+                {link.text}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

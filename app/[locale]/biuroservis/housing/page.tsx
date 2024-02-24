@@ -21,7 +21,7 @@ export default function Housing({ params: { locale } }: any) {
             pathname: "/biuroservis/housing",
             query: {
               modal: "true",
-              service: "find-location",
+              service: "find location",
               type: "housing",
             },
           }}

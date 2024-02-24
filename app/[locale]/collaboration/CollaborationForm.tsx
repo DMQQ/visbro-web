@@ -118,6 +118,7 @@ const Form = () => {
 
               <div className="px-2 mt-2">
                 <Button
+                  loading={state.loading}
                   buttonType="submit"
                   disabled={!(f.isValid && f.dirty) || state.isSuccess}
                   onClick={f.handleSubmit}

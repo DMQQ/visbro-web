@@ -30,7 +30,7 @@ export async function generateStaticParams() {
   const params = [] as { locale: string; offerId: string }[];
 
   for (let offer of jobOffers) {
-    for (let locale in locales) {
+    for (let locale of locales) {
       params.push({ locale, offerId: offer });
     }
   }
@@ -73,10 +73,12 @@ export default async function OfferPage({
   //const t = getTranslations("JobOffers");
 
   return (
-    <main className={`w-full h-full min-h-screen pb-16`}>
+    <main className={`w-full h-full min-h-screen sm:pb-16`}>
       <article className="flex flex-col md:flex-row mx-auto lg:w-11/12 xl:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg sm:mt-32">
         <section className="flex-2 p-5 rounded-lg h-auto">
-          <h1 className="font-bold text-5xl my-5 mb-10">{data?.name}</h1>
+          <h1 className="font-bold text-xl md:text-2xl xl:text-4xl my-5 mb-10 text-wrap break-words">
+            {data?.name}
+          </h1>
 
           <article className="p-2 mt-5">
             <h2 className="font-bold text-xl">Wymagania</h2>

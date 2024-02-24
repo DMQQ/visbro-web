@@ -164,6 +164,7 @@ const Form = () => {
 
               <div className="p-2">
                 <Button
+                  loading={state.loading}
                   disabled={!(f.isValid && f.dirty) || state.isSuccess}
                   onClick={f.handleSubmit}
                   className={`py-3 w-full`}

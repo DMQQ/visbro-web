@@ -13,7 +13,6 @@ export default async function middleware(request: NextRequest) {
   const isApiUrl = regexp.test(request.url);
 
   if (isApiUrl) {
-    console.log(request.url);
   }
 
   return intl(request);

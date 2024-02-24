@@ -41,7 +41,15 @@ async function postFile(file: Blob, recordId: number) {
     }
   );
 
-  return await response.json();
+  return response.status;
+}
+
+async function postFilesAsync(files: Blob[], recordId: number) {
+  const promises = await Promise.all(
+    files.map((file) => postFile(file, recordId))
+  );
+
+  return promises.every((status) => status === 201 || status === 201);
 }
 
 export const POST = async (req: NextRequest, { params }: any) => {
@@ -123,31 +131,6 @@ export const POST = async (req: NextRequest, { params }: any) => {
     { status: 201 }
   );
 };
-
-// export const GET = async () => {
-// try {
-//   const NINOX_AUTH_TOKEN = process.env.NINOX_AUTH_TOKEN || "";
-//   const response = await fetch("NINOX FUTURE API", {
-//     headers: {
-//       Authorization: "Bearer " + NINOX_AUTH_TOKEN,
-//     },
-//     next: { revalidate: 1000 * 60 },
-//   });
-
-//   //   const data = await response.json();
-
-//   return Response.json({ data }, { status: 200 });
-// } catch (error) {
-//   return Response.json(
-//     { data: [], message: "Network error" },
-//     { status: 200 }
-//   );
-// }
-
-//   return Response.json({
-//     data: [1, 2, 3, 4],
-//   });
-// };
 
 export const GET = (req: NextRequest) => {
   redirect("/");

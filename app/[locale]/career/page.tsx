@@ -30,7 +30,7 @@ export default function Career({ params: { locale } }: any) {
         <div className="grid grid-cols-2 gap-5 mt-5">
           {[
             "/slider/Delivery.jpg",
-            "/home_tiles/Cleaner.jpg",
+            "/home/cleaning.jpg",
             "/home_tiles/Gastro.jpg",
             "/home_tiles/Warehouse.jpg",
           ].map((image) => (

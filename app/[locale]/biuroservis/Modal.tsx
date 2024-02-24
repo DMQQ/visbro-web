@@ -145,6 +145,7 @@ export default function Modal() {
                 />
                 <div className="p-2">
                   <Button
+                    loading={state.loading}
                     disabled={!(f.isValid && f.dirty) || state.isSuccess}
                     className="w-full py-4"
                     onClick={f.handleSubmit}

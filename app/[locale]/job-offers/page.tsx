@@ -56,7 +56,7 @@ export default async function JobOffers({ params: { locale } }: any) {
           <p className="text-zinc-300 mt-2">Lorem ipsum dolor sit amet?</p>
         </div>
 
-        <Search />
+        {/* <Search /> */}
 
         {offers.map(({ name, content, benefits, offerId, image }, index) => (
           <article
@@ -99,6 +99,7 @@ export default async function JobOffers({ params: { locale } }: any) {
                   )}
                 </ul>
                 <Link
+                  locale={locale}
                   href={"/job-offers/offer/" + offerId}
                   className="p-2 bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800 rounded-md text-blue-100 sm:!w-48 text-center  mt-5 sm:mt-0 w-full py-3"
                 >

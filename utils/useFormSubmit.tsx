@@ -23,7 +23,6 @@ export default function useFormSubmit(
       setMessage(response.data.message);
     } catch (error: any) {
       setError(error.message);
-      console.log(error);
     } finally {
       setLoading(false);
     }

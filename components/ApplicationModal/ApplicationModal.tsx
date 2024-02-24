@@ -11,7 +11,6 @@ import { useEffect, useMemo, useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import * as Yup from "yup";
 import AlertBox from "../AlertBox/AlertBox";
-import Input from "../ui/Input/Input";
 import DropFile from "../DropFile/DropFile";
 import axios from "axios";
 
@@ -292,6 +291,7 @@ export default function ApplicationModal({ offerId }: { offerId: string }) {
               type="text"
             />
             <Button
+              loading={state.loading}
               disabled={isError || (step === "files" && state.isSuccess)}
               text={t2("buttons.next")}
               onClick={() => nextStep()}

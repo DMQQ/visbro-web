@@ -1,11 +1,11 @@
+"use client";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 export default function AppFooter() {
   const t = useTranslations("Navigation");
   // const t2 = useTranslations("Footer");
-  const t3 = useTranslations("Impressum");
 
   return (
     <footer className="w-full dark:bg-zinc-900 flex flex-col">

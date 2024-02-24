@@ -66,9 +66,7 @@ export const POST = async (req: NextRequest, { params }: any) => {
         },
       }
     );
-    console.log(res.data);
   } catch (error) {
-    console.log(error);
     return Response.json({ message: "Error" }, { status: 400 });
   }
 

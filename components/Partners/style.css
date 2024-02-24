@@ -1,6 +1,6 @@
 .image-container {
   animation: slide 10s linear infinite;
-  animation-delay: 2s;
+  animation-delay: 5s;
   /* Adjust animation duration as needed */
 }
 
