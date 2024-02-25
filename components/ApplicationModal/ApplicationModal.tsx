@@ -124,8 +124,6 @@ export default function ApplicationModal({ offerId }: { offerId: string }) {
     formData.append("idFile", idFile!);
     formData.append("driverLicenseFile", driverLicense!);
 
-    console.log(idFile, driverLicense);
-
     return axios.post("/api/job-offer", formData);
   });
 

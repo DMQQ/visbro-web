@@ -122,16 +122,11 @@ export const POST = async (req: NextRequest, { params }: any) => {
 
     const recordId = res.data[0].id as number; // TO GIT
 
-    console.log(data.get("idFile"), data.get("driverLicenseFile"));
-
     await postFilesAsync(
       [data.get("idFile")! as Blob, data.get("driverLicenseFile")! as Blob],
       recordId
     );
-
-    console.log("all good");
   } catch (error) {
-    console.log(error);
     return Response.json(
       {
         message: "Could not proceed request",
