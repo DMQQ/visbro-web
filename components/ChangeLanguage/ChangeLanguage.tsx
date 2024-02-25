@@ -1,7 +1,6 @@
-"use client";
 import { locales } from "@/locales";
 import { Link } from "@/navigation";
-import { useState } from "react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 function getFlagEmoji(countryCode: any) {
@@ -14,23 +13,26 @@ const localesWithFlags = locales.map((locale) => [
 ]);
 
 export default function ChangeLanguage() {
-  const [open, setIsOpen] = useState(false);
-
   const path = usePathname();
 
   const locale = path.split("/")[1] || "ro";
 
   return (
-    <div className="relative" aria-label="language-menu" id="language-menu">
+    <div
+      className="relative group"
+      aria-label="language-menu"
+      id="language-menu"
+    >
       <button
         role="link"
-        onClick={() => setIsOpen((p) => !p)}
-        className="bg-zinc-950 p-2 rounded-md flex"
+        className="bg-zinc-950 hover:bg-zinc-900 p-2 rounded-md flex"
         type="button"
-        aria-expanded={open}
         aria-controls="language-menu"
       >
-        <img
+        <Image
+          width={16}
+          height={10}
+          priority
           src={"/flags/" + locale + ".png"}
           alt={"Selected language " + locale}
           className="w-4 mr-2 text-xs"
@@ -53,26 +55,31 @@ export default function ChangeLanguage() {
         </svg>
       </button>
 
-      {open && (
-        <div
-          aria-label="menu-list"
-          className="absolute right-12 translate-x-10 top-10 rounded-lg bg-zinc-950"
-        >
-          <ul className=" text-zinc-300 w-12 overflow-hidden">
-            {localesWithFlags.map(([locale, flag]) => (
-              <li key={locale} className="p-2">
-                <Link href={"/"} locale={locale} className="flex items-center">
-                  <img
-                    src={flag}
-                    alt={locale + " flag"}
-                    className="w-9 rounded-sm"
-                  />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div
+        aria-label="menu-list"
+        className="absolute hidden group-hover:block right-12 translate-x-10 top-5 rounded-lg bg-zinc-950"
+      >
+        <ul className=" text-zinc-300 w-12 overflow-hidden">
+          {localesWithFlags.map(([locale, flag]) => (
+            <li key={locale} className="p-2">
+              <Link
+                hrefLang={locale}
+                href={"/"}
+                locale={locale}
+                className="flex items-center"
+              >
+                <Image
+                  width={30}
+                  height={20}
+                  src={flag}
+                  alt={locale + " flag"}
+                  className="w-9 rounded-sm"
+                />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

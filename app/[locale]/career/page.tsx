@@ -38,7 +38,7 @@ export default function Career({ params: { locale } }: any) {
               <Image
                 quality={100}
                 priority
-                alt="Decorative image"
+                alt="Field images"
                 src={image}
                 width={200}
                 height={100}

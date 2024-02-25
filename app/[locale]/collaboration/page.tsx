@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import Form from "./CollaborationForm";
 
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { Suspense } from "react";
 
 export async function generateMetadata({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
@@ -9,6 +10,9 @@ export async function generateMetadata({ params: { locale } }: any) {
 
   return {
     title: t("title"),
+    description: t.rich("content", {
+      br: () => "",
+    }),
   };
 }
 
@@ -27,6 +31,7 @@ export default function Collaboration({ params: { locale } }: any) {
           })}
         </p>
       </section>
+
       <Form />
     </main>
   );

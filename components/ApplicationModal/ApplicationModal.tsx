@@ -124,11 +124,9 @@ export default function ApplicationModal({ offerId }: { offerId: string }) {
     formData.append("idFile", idFile!);
     formData.append("driverLicenseFile", driverLicense!);
 
-    return axios.post("/api/job-offer", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+    console.log(idFile, driverLicense);
+
+    return axios.post("/api/job-offer", formData);
   });
 
   const formik = useFormik({
@@ -160,8 +158,8 @@ export default function ApplicationModal({ offerId }: { offerId: string }) {
 
     if (
       formik.isValid &&
-      currentStepIndex === stepsArray.length - 1 &&
-      !state.isSuccess
+      currentStepIndex === stepsArray.length - 1
+      //  && !state.isSuccess
     ) {
       formik.handleSubmit();
     }

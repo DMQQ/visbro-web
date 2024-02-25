@@ -30,18 +30,22 @@ const collabSchema = z.object({
 async function postFile(file: Blob, recordId: number) {
   const formdata = new FormData();
   formdata.append("file", file);
-  const response = await fetch(
-    process.env.BASE_API_URL + `/OfferApplications/records/${recordId}/files`,
-    {
-      body: formdata,
-      method: "POST",
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    }
-  );
 
-  return response.status;
+  try {
+    const res = await axios.post(
+      process.env.BASE_API_URL + `/OfferApplication/records/${recordId}/files`,
+      formdata,
+      {
+        headers: {
+          Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        },
+      }
+    );
+
+    return res.status;
+  } catch (error) {
+    throw new Error("Image not uploaded");
+  }
 }
 
 async function postFilesAsync(files: Blob[], recordId: number) {
@@ -99,7 +103,7 @@ export const POST = async (req: NextRequest, { params }: any) => {
     );
 
   try {
-    await axios.post(
+    const res = await axios.post(
       process.env.BASE_API_URL + "/OfferApplication/records",
       [
         {
@@ -115,7 +119,19 @@ export const POST = async (req: NextRequest, { params }: any) => {
         },
       }
     );
+
+    const recordId = res.data[0].id as number; // TO GIT
+
+    console.log(data.get("idFile"), data.get("driverLicenseFile"));
+
+    await postFilesAsync(
+      [data.get("idFile")! as Blob, data.get("driverLicenseFile")! as Blob],
+      recordId
+    );
+
+    console.log("all good");
   } catch (error) {
+    console.log(error);
     return Response.json(
       {
         message: "Could not proceed request",

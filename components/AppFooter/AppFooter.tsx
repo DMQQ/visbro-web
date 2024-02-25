@@ -1,7 +1,6 @@
 "use client";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 export default function AppFooter() {
   const t = useTranslations("Navigation");
@@ -139,11 +138,18 @@ Kontoinhaber Kamil Wojciech Czarnecki Bankkonto DE26 3002 0900 5390 8207 79 */}
 
       <hr className="border-zinc-800" />
 
-      <section className="p-5 text-zinc-600">
-        Free SVG Background by{" "}
-        <a target="_blank" href="https://bgjar.com">
-          BGJar
-        </a>
+      <section className="p-5 text-zinc-600 flex justify-between">
+        <div>
+          Free SVG Background by{" "}
+          <a target="_blank" href="https://bgjar.com">
+            BGJar
+          </a>
+        </div>
+        <div>
+          <a href="https://github.com/DMQQ" target="_blank" rel="nofollow">
+            2024 By DMQ
+          </a>
+        </div>
       </section>
     </footer>
   );

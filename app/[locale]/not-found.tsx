@@ -1,6 +1,13 @@
 import { Link } from "@/navigation";
 import { unstable_setRequestLocale } from "next-intl/server";
 
+export function generateMetadata() {
+  return {
+    title: "Page not found (404) - Visbro Personal Solution UG",
+    description: "Oops! Page not found. Please check the URL.",
+  };
+}
+
 export default function Error404() {
   unstable_setRequestLocale("en");
   return (

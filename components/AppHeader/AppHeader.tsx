@@ -6,6 +6,7 @@ import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";
 import clsx from "clsx";
 import SocialMedia from "../SocialMedia/SocialMedia";
+import Image from "next/image";
 
 const links = [
   { path: "/collaboration", text: "collab" },
@@ -94,7 +95,14 @@ export default function AppHeader() {
           onClick={() => setIsOpenNavigation(false)}
           className="font-bold text-2xl flex items-center mr-2"
         >
-          <img alt="logo" src={"/logo_placeholder.ico"} className="w-7 mr-2" />
+          <Image
+            priority
+            width={30}
+            height={20}
+            alt="logo"
+            src={"/logo_placeholder.ico"}
+            className="w-7 mr-2"
+          />
           Visbro
         </Link>
 
@@ -113,9 +121,12 @@ export default function AppHeader() {
               >
                 <Link
                   href={link.path}
-                  className={clsx("text-white text-sm xl:!text-md uppercase", {
-                    "!text-blue-400": pathname.startsWith(link.path),
-                  })}
+                  className={clsx(
+                    "text-white text-sm xl:!text-md uppercase hover:text-blue-300",
+                    {
+                      "!text-blue-400": pathname.startsWith(link.path),
+                    }
+                  )}
                 >
                   {t(link.text)}
                 </Link>
