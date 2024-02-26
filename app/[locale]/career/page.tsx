@@ -32,7 +32,7 @@ export default function Career({ params: { locale } }: any) {
             "/slider/Delivery.jpg",
             "/home/cleaning.jpg",
             "/home_tiles/Gastro.jpg",
-            "/home_tiles/Warehouse.jpg",
+            "/home_tiles/Tiles.jpg",
           ].map((image) => (
             <div key={image} className="w-full">
               <Image
