@@ -32,7 +32,7 @@ export default function BackgroundImages({
             src={images.image}
             srcSet={images.srcset}
             alt="Background image"
-            loading={index === 0 || index === 1 ? "eager" : "lazy"}
+            // loading={index === 0 || index === 1 ? "eager" : "lazy"}
             className="w-screen h-screen object-cover"
             sizes="
             (max-width: 450px) 450px,   
