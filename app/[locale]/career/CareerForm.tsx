@@ -17,19 +17,35 @@ import * as Yup from "yup";
 
 const Form = () => {
   const t = useTranslations("Career.form");
+  const tErr = useTranslations("Forms");
   const contactFormValidationSchema = useMemo(() => {
     return Yup.object().shape({
-      name: Yup.string().required(t("name.error")),
-      surname: Yup.string().required(t("surname.error")),
-      email: Yup.string().email().required(t("email.error")),
-      education: Yup.string().required(t("education.error")),
-      gender: Yup.string().required(t("gender.error")),
-      languages: Yup.string().required(t("languages.error")),
+      name: Yup.string()
+        .required(t("name.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
+      surname: Yup.string()
+        .required(t("surname.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
+      email: Yup.string()
+        .email()
+        .required(t("email.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
+      education: Yup.string()
+        .required(t("education.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
+      gender: Yup.string()
+        .required(t("gender.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
+      languages: Yup.string()
+        .required(t("languages.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
       hasDriverLicenseCatB: Yup.string().required(
         t("hasDriverLicenseCatB.error")
       ),
 
-      civilState: Yup.string().required(t("civilState.error")),
+      civilState: Yup.string()
+        .required(t("civilState.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
       additionalInfo: Yup.string()
         .min(200)
         .max(1000)

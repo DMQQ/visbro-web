@@ -1,20 +1,37 @@
 import Slider from "@/components/Slider/Slider";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-import img1 from "@/public/slider/AmazonDriver.jpg";
-import img2 from "@/public/slider/Delivery.jpg";
-import img3 from "@/public/slider/FarmField.jpg";
-import img4 from "@/public/slider/Forklift.jpg";
-import img5 from "@/public/slider/Gastro2.jpg";
-import img6 from "@/public/slider/Warehouse.png";
-
-const defaultImages = [img1, img2, img3, img4, img5, img6];
-
 import { getTranslations } from "next-intl/server";
 import Ad from "@/components/Home/Ad";
 import JobOffersPreview from "@/components/Home/JobOffersPreview";
 import PartnersList from "@/components/Home/PartnersList";
 import WhyUs from "@/components/Home/WhyUs";
+
+const BREAKPOINTS = ["1200w", "800w", "450w"];
+const images = [
+  [
+    "AmazonDriver.webp",
+    "AmazonDriver-screen-md.webp",
+    "AmazonDriver-screen-sm.webp",
+  ],
+  ["Delivery.webp", "Delivery-screen-md.webp", "Delivery-screen-sm.webp"],
+  ["Farm.webp", "Farm-screen-md.webp", "Farm-screen-sm.webp"],
+  ["FarmField.webp", "FarmField-screen-md.webp", "FarmField-screen-sm.webp"],
+  ["Forklift.webp", "FarmField-screen-md.webp", "FarmField-screen-sm.webp"],
+  ["Gastro2.webp", "Gastro2-screen-md.webp", "Gastro2-screen-sm.webp"],
+  ["Warehouse.webp", "Warehouse-screen-md.webp", "Warehouse-screen-sm.webp"],
+].map((srcs) => {
+  let srcset = "";
+
+  for (let i = srcs.length - 1; i >= 0; i--) {
+    srcset += "/slider/" + srcs[i] + " " + BREAKPOINTS[i] + ", \n";
+  }
+
+  return {
+    image: srcs[0],
+    srcset: srcset,
+  };
+});
 
 export async function generateMetadata({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
@@ -28,11 +45,10 @@ export async function generateMetadata({ params: { locale } }: any) {
 
 export default async function Home({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
-  //const offers = await fetchBestOffers();
 
   return (
     <main className="w-full">
-      <Slider images={defaultImages} />
+      <Slider images={images} />
 
       <WhyUs />
 

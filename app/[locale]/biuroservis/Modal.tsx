@@ -52,14 +52,24 @@ export default function Modal() {
   };
 
   const t = useTranslations("Biuroservis");
+  const tErr = useTranslations("Forms");
 
   const validationSchema = Yup.object().shape({
-    email: Yup.string().required(t("form.email.error")),
-    phoneNumber: Yup.string().required(t("form.phoneNumber.error")),
-    name: Yup.string().required(t("form.name.error")),
-    surname: Yup.string().required(t("form.surname.error")),
-
-    additionalInfo: Yup.string().required(t("form.additionalInfo.error")),
+    email: Yup.string()
+      .required(t("form.email.error"))
+      .max(50, tErr("length", { min: 0, max: 50 })),
+    phoneNumber: Yup.string()
+      .required(t("form.phoneNumber.error"))
+      .max(50, tErr("length", { min: 0, max: 15 })),
+    name: Yup.string()
+      .required(t("form.name.error"))
+      .max(50, tErr("length", { min: 0, max: 50 })),
+    surname: Yup.string()
+      .required(t("form.surname.error"))
+      .max(50, tErr("length", { min: 0, max: 50 })),
+    additionalInfo: Yup.string()
+      .required(t("form.additionalInfo.error"))
+      .max(1000, tErr("length", { min: 0, max: 1000 })),
   });
 
   const router = useRouter();

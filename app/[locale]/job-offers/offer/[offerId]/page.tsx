@@ -2,7 +2,6 @@ import ApplicationModal from "@/components/ApplicationModal/ApplicationModal";
 import ApplicationPanel from "./ApplicationPanel";
 import { unstable_setRequestLocale } from "next-intl/server";
 import axios from "axios";
-import { getTranslations } from "next-intl/server";
 import { locales } from "@/locales";
 import { dummyJobData } from "@/dummyData";
 
@@ -40,7 +39,7 @@ export async function generateStaticParams() {
 
 async function getOfferById(id: string, locale: string) {
   try {
-    const res = await axios.get(
+    const res = await fetch(
       process.env.BASE_API_URL + "/JobOffers/records/" + id,
       {
         headers: {
@@ -49,16 +48,22 @@ async function getOfferById(id: string, locale: string) {
       }
     );
 
-    return res.data.fields;
+    const data = await res.json();
+
+    return data.fields;
   } catch (error) {
     return dummyJobData.find((d) => d.offerId === id);
   }
 }
 
-export async function generateMetadata({ params: { locale } }: any) {
+export async function generateMetadata({ params: { locale, offerId } }: any) {
   unstable_setRequestLocale(locale);
+
+  const data = await getOfferById(offerId, locale);
+
   return {
-    title: "Job Offer ",
+    title: data?.name + "- Visbro Personal Solution",
+    description: data?.content,
   };
 }
 
@@ -76,12 +81,12 @@ export default async function OfferPage({
     <main className={`w-full h-full min-h-screen sm:pb-16`}>
       <article className="flex flex-col md:flex-row mx-auto lg:w-11/12 xl:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg sm:mt-32">
         <section className="flex-2 p-5 rounded-lg h-auto">
-          <h1 className="font-bold text-xl md:text-2xl xl:text-4xl my-5 mb-10 text-wrap break-words">
+          <h1 className="font-bold text-2xl md:text-3xl xl:text-5xl my-5 mb-10 text-wrap break-words">
             {data?.name}
           </h1>
 
           <article className="p-2 mt-5">
-            <h2 className="font-bold text-xl">Wymagania</h2>
+            <h2 className="font-bold text-md">Wymagania</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-3 mt-2">
               <li>🏠 Remote/On-site</li>
               <li>💵 $25/h</li>
@@ -101,7 +106,7 @@ export default async function OfferPage({
           </article>
 
           <div className="mt-5">
-            <h2 className="font-bold text-xl">Position description</h2>
+            <h2 className="font-bold text-md">Position description</h2>
 
             <p className="mt-2">{data?.content}</p>
             <p className="mt-2">{data?.content}</p>
@@ -109,7 +114,7 @@ export default async function OfferPage({
           </div>
 
           <div className="mt-10">
-            <h2 className="font-bold text-xl">Work images</h2>
+            <h2 className="font-bold text-md">Work images</h2>
 
             <section className="grid grid-cols-2 gap-2 mt-2">
               {[0, 1].map((key) => (
@@ -126,7 +131,9 @@ export default async function OfferPage({
         <ApplicationPanel offerId={offerId} />
       </article>
 
-      {searchParams.modal === "true" && <ApplicationModal offerId={offerId} />}
+      {searchParams.modal === "true" && (
+        <ApplicationModal offerTitle={data?.name} offerId={offerId} />
+      )}
     </main>
   );
 }

@@ -325,5 +325,8 @@
         "message": "Lütfen tekrar deneyin veya bir süre bekleyin."
       }
     }
+  },
+  "Forms": {
+    "length": "Alan en az {min} karakter olmalı ve en fazla {max} karakter olmalıdır."
   }
 }

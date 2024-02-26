@@ -322,5 +322,8 @@
         "message": "Te rugăm să încerci din nou sau să aștepți un moment."
       }
     }
+  },
+  "Forms": {
+    "length": "Câmpul ar trebui să aibă cel puțin {min} caractere și cel mult {max}."
   }
 }

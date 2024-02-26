@@ -7,6 +7,7 @@ import { getTranslations } from "next-intl/server";
 import NextImage from "next/image";
 import axios from "axios";
 import { dummyJobData } from "@/dummyData";
+import { JobOfferNinox, TJobOffer } from "@/types";
 
 export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations({ locale, namespace: "JobOffers" });
@@ -17,10 +18,10 @@ export async function generateMetadata({ params: { locale } }: any) {
   };
 }
 
-async function fetchOffers(locale: string) {
+async function fetchOffers() {
   "use server";
   try {
-    const res = await axios.get(
+    const res = await axios.get<JobOfferNinox[]>(
       process.env.BASE_API_URL + "/JobOffers/records",
       {
         headers: {
@@ -36,7 +37,7 @@ async function fetchOffers(locale: string) {
       };
     });
   } catch (error) {
-    return dummyJobData;
+    return [];
   }
 }
 
@@ -44,7 +45,7 @@ export default async function JobOffers({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const t = await getTranslations("JobOffers");
 
-  const offers = (await fetchOffers(locale)) as any[];
+  const offers = (await fetchOffers()) as TJobOffer[];
 
   return (
     <PageWrapper>

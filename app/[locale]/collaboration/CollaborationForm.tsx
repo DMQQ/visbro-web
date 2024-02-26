@@ -24,18 +24,30 @@ const initialFormValues = {
 
 const Form = () => {
   const t = useTranslations("Collaboration.form");
+  const tErr = useTranslations("Forms");
 
   const contactFormValidationSchema = useMemo(() => {
     return Yup.object().shape({
-      name: Yup.string().required(t("name.error")),
-      surname: Yup.string().required(t("surname.error")),
-      companyName: Yup.string().required(t("companyName.error")),
-      jobPosition: Yup.string().required(t("jobPosition.error")),
-      phoneNumber: Yup.string().required(t("phoneNumber.error")),
+      name: Yup.string()
+        .required(t("name.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
+      surname: Yup.string()
+        .required(t("surname.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
+      companyName: Yup.string()
+        .required(t("companyName.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
+      jobPosition: Yup.string()
+        .required(t("jobPosition.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
+      phoneNumber: Yup.string()
+        .required(t("phoneNumber.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
       email: Yup.string()
         .email(t("email.errorFormat"))
-        .required(t("email.error")),
-      message: Yup.string(),
+        .required(t("email.error"))
+        .max(50, tErr("length", { min: 0, max: 50 })),
+      message: Yup.string().max(1000, tErr("length", { min: 0, max: 1000 })),
     });
   }, []);
 

@@ -40,7 +40,6 @@ const checkboxs = ["dataProcessingConsent", "hasOwnCar"];
 const types = {
   phoneNumber: "tel",
   mailAddress: "email",
-  bankNumber: "number",
   dateOfBirth: "date",
 } as any;
 
@@ -77,33 +76,69 @@ const steps = {
   },
 };
 
-export default function ApplicationModal({ offerId }: { offerId: string }) {
+export default function ApplicationModal({
+  offerId,
+  offerTitle,
+}: {
+  offerId: string;
+  offerTitle: string;
+}) {
   const t = useTranslations("ApplicationForm.form");
+  const tErr = useTranslations("Forms");
 
   const selects = useSelects();
 
   const formValidationSchema = useMemo(
     () =>
       Yup.object().shape({
-        name: Yup.string().required(t("name.error")),
-        surname: Yup.string().required(t("surname.error")),
-        phoneNumber: Yup.string().required(t("phoneNumber.error")),
+        name: Yup.string()
+          .required(t("name.error"))
+          .max(50, tErr("length", { min: 0, max: 50 })),
+        surname: Yup.string()
+          .required(t("surname.error"))
+          .max(50, tErr("length", { min: 0, max: 50 })),
+        phoneNumber: Yup.string()
+          .required(t("phoneNumber.error"))
+          .max(50, tErr("length", { min: 0, max: 50 }))
+          .min(5),
         dateOfBirth: Yup.string().required(t("dateOfBirth.error")),
-        lastJobPosition: Yup.string().required(t("lastJobPosition.error")),
-        education: Yup.string().required(t("education.error")),
-        gender: Yup.string().required(t("gender.error")),
+        lastJobPosition: Yup.string()
+          .required(t("lastJobPosition.error"))
+          .max(50, tErr("length", { min: 0, max: 50 })),
+        education: Yup.string()
+          .required(t("education.error"))
+          .max(50, tErr("length", { min: 0, max: 50 })),
+        gender: Yup.string()
+          .required(t("gender.error"))
+          .max(50, tErr("length", { min: 0, max: 50 })),
         //hasOwnCar: Yup.boolean().required(t("hasOwnCar.error")),
-        civilState: Yup.string().required(t("civilState.error")),
+        civilState: Yup.string()
+          .required(t("civilState.error"))
+          .max(50, tErr("length", { min: 0, max: 50 })),
         workStart: Yup.string().required(t("workStart.error")),
-        bankNumber: Yup.string().required(t("bankNumber.error")),
-        bankName: Yup.string().required(t("bankName.error")),
-        bankCode: Yup.string().required(t("bankCode.error")),
-        address: Yup.string().required(t("address.error")),
-        currentAddress: Yup.string().required(t("currentAddress.error")),
+        bankNumber: Yup.string()
+          .required(t("bankNumber.error"))
+          .max(20, tErr("length", { min: 0, max: 20 }))
+          .min(10),
+        bankName: Yup.string()
+          .required(t("bankName.error"))
+          .max(50, tErr("length", { min: 0, max: 50 })),
+        bankCode: Yup.string()
+          .required(t("bankCode.error"))
+          .max(10, tErr("length", { min: 0, max: 50 })),
+        address: Yup.string()
+          .required(t("address.error"))
+          .max(100, tErr("length", { min: 0, max: 100 })),
+        currentAddress: Yup.string()
+          .required(t("currentAddress.error"))
+          .max(100),
         mailAddress: Yup.string()
           .email(t("mailAddress.errorFormat"))
-          .required(t("mailAddress.error")),
-        emergencyContact: Yup.string().required(t("emergencyContact.error")),
+          .required(t("mailAddress.error"))
+          .max(100),
+        emergencyContact: Yup.string()
+          .required(t("emergencyContact.error"))
+          .max(100),
         dataProcessingConsent: Yup.boolean().oneOf(
           [true],
           t("dataProcessingConsent.error")
@@ -119,7 +154,7 @@ export default function ApplicationModal({ offerId }: { offerId: string }) {
     const formData = new FormData();
 
     Object.keys(data).forEach((key) => formData.append(key, data[key]));
-    formData.append("offerId", offerId);
+    formData.append("offerId", offerTitle); // Id doesnt mean anything in ninox since it displays rows (sorted?) so name of the offer will bring more sense
 
     formData.append("idFile", idFile!);
     formData.append("driverLicenseFile", driverLicense!);

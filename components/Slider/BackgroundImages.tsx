@@ -1,5 +1,4 @@
 "use client";
-import { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 
 const INTERVAL = 3500;
@@ -7,7 +6,7 @@ const INTERVAL = 3500;
 export default function BackgroundImages({
   images,
 }: {
-  images: StaticImageData[];
+  images: { image: string; srcset: string }[];
 }) {
   const [currentImage, setCurrentImage] = useState<number>(0); // index of a number
 
@@ -26,13 +25,20 @@ export default function BackgroundImages({
         transform: `translateX(-${currentImage * 100}vw)`,
       }}
     >
-      {images.map((image, index) => (
+      {images.map((images, index) => (
         <div className="w-screen h-screen relative" key={index}>
           <img
-            fetchPriority={index === 0 || index === 1 ? "high" : "low"}
-            src={image.src}
+            fetchPriority={index === 0 ? "high" : "low"}
+            src={images.image}
+            srcSet={images.srcset}
             alt="Background image"
+            loading={index === 0 || index === 1 ? "eager" : "lazy"}
             className="w-screen h-screen object-cover"
+            sizes="
+            (max-width: 450px) 450px,   
+            (max-width: 800px) 800px,   
+            1200px  
+            "
           />
         </div>
       ))}

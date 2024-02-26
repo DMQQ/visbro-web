@@ -1,14 +1,10 @@
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import BackgroundImages from "./BackgroundImages";
 import SocialMedia from "../SocialMedia/SocialMedia";
 
-interface SliderProps {
-  images: StaticImageData[];
-}
-
-export default function Slider({ images }: SliderProps) {
+export default function Slider({ images }: any) {
   const t = useTranslations("Home");
 
   return (

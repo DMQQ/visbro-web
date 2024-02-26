@@ -333,5 +333,8 @@
         "message": "Spróbuj ponownie lub odczekaj chwilę."
       }
     }
+  },
+  "Forms": {
+    "length": "Pole powinno mieć co najmniej {min} znaków i maksymalnie {max}"
   }
 }

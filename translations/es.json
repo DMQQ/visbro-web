@@ -325,5 +325,8 @@
         "message": "Por favor, inténtalo de nuevo o espera un momento."
       }
     }
+  },
+  "Forms": {
+    "length": "El campo debe tener al menos {min} caracteres y como máximo {max} caracteres."
   }
 }

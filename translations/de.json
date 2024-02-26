@@ -332,5 +332,8 @@
         "message": "Versuchen Sie es erneut oder warten Sie einen Moment."
       }
     }
+  },
+  "Forms": {
+    "length": "Das Feld sollte mindestens {min} Zeichen und höchstens {max} Zeichen haben."
   }
 }

@@ -5,71 +5,9 @@ import { useState } from "react";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";
 import clsx from "clsx";
-import SocialMedia from "../SocialMedia/SocialMedia";
 import Image from "next/image";
-
-const links = [
-  { path: "/collaboration", text: "collab" },
-  { path: "/about-us", text: "about" },
-  {
-    path: "/job-offers",
-    text: "offers",
-  },
-  { path: "/career", text: "career" },
-  {
-    path: "/contact",
-    text: "contact",
-  },
-  {
-    path: "/gallery",
-    text: "gallery",
-  },
-  {
-    path: "/biuroservis",
-    text: "biuroservis",
-  },
-] as const;
-
-const NavigationList = (props: { dismiss: () => void }) => {
-  const t = useTranslations("Navigation");
-
-  const pathname = usePathname();
-
-  return (
-    <nav
-      style={{ zIndex: 100 }}
-      className={`flex fixed top-0 left-0 w-full h-screen justify-center items-center bg-zinc-900`}
-    >
-      <ul className="h-3/4 w-full flex flex-col">
-        <div className="flex-1">
-          {links.map((link) => (
-            <li
-              key={link.path}
-              className={`p-5 font-bold text-2xl ${
-                pathname.startsWith(link.path)
-                  ? "border-l-4 border-l-blue-400 bg-blue-300 bg-opacity-10"
-                  : ""
-              }`}
-            >
-              <Link
-                href={link.path}
-                className={clsx("text-white ", {
-                  "!text-blue-400": pathname.startsWith(link.path),
-                })}
-                onClick={() => props.dismiss()}
-              >
-                {t(link.text)}
-              </Link>
-            </li>
-          ))}
-        </div>
-        <div className="p-5">
-          <SocialMedia />
-        </div>
-      </ul>
-    </nav>
-  );
-};
+import { links } from "./links";
+import NavigationList from "./MobileNav";
 
 export default function AppHeader() {
   const [isOpenNavigation, setIsOpenNavigation] = useState(false);

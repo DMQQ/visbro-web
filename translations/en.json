@@ -324,6 +324,9 @@
         "title": "Something went wrong!",
         "message": "Please try again or wait a moment."
       }
+    },
+    "Forms": {
+      "length": "Field should be at least {min} characters and {max} at most"
     }
   }
 }
