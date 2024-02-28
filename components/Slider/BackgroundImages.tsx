@@ -35,9 +35,9 @@ export default function BackgroundImages({
             // loading={index === 0 || index === 1 ? "eager" : "lazy"}
             className="w-screen h-screen object-cover"
             sizes="
-            (max-width: 450px) 450px,   
-            (max-width: 800px) 800px,   
-            1200px  
+            (max-width: 450px) 100vw,   
+            (max-width: 800px) 100vw,   
+            100vw
             "
           />
         </div>

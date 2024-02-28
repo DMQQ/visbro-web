@@ -7,7 +7,7 @@ import JobOffersPreview from "@/components/Home/JobOffersPreview";
 import PartnersList from "@/components/Home/PartnersList";
 import WhyUs from "@/components/Home/WhyUs";
 
-const BREAKPOINTS = ["1200w", "800w", "450w"];
+const BREAKPOINTS = ["1200w", "800w", "400w"];
 const images = [
   [
     "AmazonDriver.webp",
@@ -17,7 +17,7 @@ const images = [
   ["Delivery.webp", "Delivery-screen-md.webp", "Delivery-screen-sm.webp"],
   ["Farm.webp", "Farm-screen-md.webp", "Farm-screen-sm.webp"],
   ["FarmField.webp", "FarmField-screen-md.webp", "FarmField-screen-sm.webp"],
-  ["Forklift.webp", "Forklift-screen-md", "Forklift-screen-sm.webp"],
+  ["Forklift.webp", "Forklift-screen-md.webp", "Forklift-screen-sm.webp"],
   ["Gastro2.webp", "Gastro2-screen-md.webp", "Gastro2-screen-sm.webp"],
   ["Warehouse.webp", "Warehouse-screen-md.webp", "Warehouse-screen-sm.webp"],
 ].map((srcs) => {
