@@ -55,15 +55,15 @@ export default function CarTile({ car }: { car: (typeof cars)[0] }) {
             }px)`,
           }}
         >
-          {car.images.map((img) => (
+          {car.images.map((img, index) => (
             <div
               //    style={{ width: width - 32 }} // width of the tile minus padding
               key={img}
               className="w-full relative flex-shrink-0"
             >
               <Image
-                quality={95}
-                priority
+                quality={100}
+                priority={index === 0}
                 width={300}
                 height={200}
                 alt={car.name + " image"}

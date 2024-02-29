@@ -21,9 +21,9 @@ export default function Layout({
   const t = useTranslations("Biuroservis");
   return (
     <>
-      <PageWrapper>
-        <article className="p-5 rounded-md w-full md:w-3/4 xl:w-2/3 m-auto">
-          <div className="mb-5">
+      <PageWrapper style="mb-5">
+        <article className="sm:p-5 rounded-md w-full md:w-3/4 xl:w-2/3 m-auto">
+          <div className="mb-5 p-5 sm:p-0">
             <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold ">
               {t("heading")}
             </h1>
