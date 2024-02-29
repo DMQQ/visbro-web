@@ -13,7 +13,7 @@ export default function DropFile(props: DropFileProps) {
   return (
     <div className="p-2">
       <label
-        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white rtl:text-lg"
         htmlFor="file_input"
       >
         {props.label}

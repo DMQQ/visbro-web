@@ -15,7 +15,7 @@ const localesWithFlags = locales.map((locale) => [
 export default function ChangeLanguage() {
   const path = usePathname();
 
-  const locale = path.split("/")[1] || "ro";
+  const locale = path.split("/")[1] || "pl";
 
   return (
     <div

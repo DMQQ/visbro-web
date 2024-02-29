@@ -35,20 +35,24 @@ export default function Ad() {
             />
             <div
               className={clsx("flex-1", {
-                "md:pr-5": index % 2 === 0,
-                "md:pl-5": index % 2 === 1,
+                "md:pe-5": index % 2 === 0,
+                "md:ps-5": index % 2 === 1,
               })}
             >
               <h3
                 // bg-gradient-to-r from-blue-500 via-purple-500 to-purple-800 inline-block text-transparent bg-clip-text
-                className="font-bold uppercase text-xl md:text-2xl lg:text-3xl "
+                className="font-bold uppercase text-xl md:text-2xl lg:text-3xl lg:rtl:text-4xl"
               >
                 {t(`${el}.heading`)}
               </h3>
 
-              <p className="text-zinc-300 mt-2">{t(`${el}.subheading`)}</p>
+              <p className="text-zinc-300 mt-2 rtl:text-lg">
+                {t(`${el}.subheading`)}
+              </p>
 
-              <p className="text-zinc-100 mt-5">{t(`${el}.content`)}</p>
+              <p className="text-zinc-100 mt-5 rtl:text-xl">
+                {t(`${el}.content`)}
+              </p>
             </div>
           </div>
         ))}

@@ -25,7 +25,7 @@ export default function Select(props: {
       <label
         htmlFor={`${props.label}_input`}
         className={clsx(
-          "block mb-2 text-sm font-medium text-zinc-900 dark:text-white",
+          "block mb-2 text-sm font-medium text-zinc-900 dark:text-white rtl:text-lg",
           {
             "!text-red-600": isError,
           }
@@ -55,7 +55,9 @@ export default function Select(props: {
         name={props.label}
         options={props.options}
       />
-      {isError && <p className="text-red-600 text-sm">{props.error}</p>}
+      {isError && (
+        <p className="text-red-600 text-sm rtl:text-base">{props.error}</p>
+      )}
     </div>
   );
 }

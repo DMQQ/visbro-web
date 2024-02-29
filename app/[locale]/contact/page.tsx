@@ -9,21 +9,21 @@ import { getTranslations } from "next-intl/server";
 
 const recurters = [
   {
-    image: "/workers/Kamil.png",
+    image: "/workers/Kamil.webp",
     name: "Kamil Czarnecki",
     position: "Ceo/Dyrektor",
     contacts: ["+49 01520 8941615", "kamil.czarnecki@visbro.de"],
     languages: ["de", "en", "pl"],
   },
   {
-    image: "/workers/Michał.png",
+    image: "/workers/Michał.webp",
     name: "Michał Kotwicki",
     position: "Menager",
     contacts: ["+49 174 2606102", "Michał.kotwicki@visbro.de"],
     languages: ["pl", "en"],
   },
   {
-    image: "/workers/Kaja.png",
+    image: "/workers/Kaja.webp",
     name: "Kaja Zimoch",
     position: "Rekruter",
     contacts: [
@@ -34,7 +34,7 @@ const recurters = [
     languages: ["de", "en", "pl"],
   },
   {
-    image: "/workers/Elena.png",
+    image: "/workers/Elena.webp",
     name: "Elena Lungu",
     position: "Rekruter",
     contacts: [

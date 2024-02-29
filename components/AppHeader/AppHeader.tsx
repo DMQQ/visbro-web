@@ -35,13 +35,12 @@ export default function AppHeader() {
         >
           <Image
             priority
-            width={30}
-            height={20}
+            width={200}
+            height={100}
             alt="logo"
-            src={"/logo_placeholder.ico"}
-            className="w-7 mr-2"
+            src={"/logo.png"}
+            className="w-36 h-10 object-cover"
           />
-          Visbro
         </Link>
 
         <nav className="flex justify-end w-11/12 xl:w-3/4">
@@ -60,7 +59,7 @@ export default function AppHeader() {
                 <Link
                   href={link.path}
                   className={clsx(
-                    "text-white text-sm xl:!text-md uppercase hover:text-blue-300",
+                    "text-white text-sm xl:!text-md uppercase hover:text-blue-300 rtl:text-lg",
                     {
                       "!text-blue-400": pathname.startsWith(link.path),
                     }

@@ -2,10 +2,10 @@ import clsx from "clsx";
 import Image from "next/image";
 
 const socials = [
-  "/socials/TikTok.png",
-  "/socials/Youtube.png",
-  "/socials/Facebook.png",
-  "/socials/Instagram.png",
+  "/socials/TikTok.webp",
+  "/socials/Youtube.webp",
+  "/socials/Facebook.webp",
+  "/socials/Instagram.webp",
 ];
 
 const socialLinks = [

@@ -8,6 +8,7 @@ import img3 from "@/public/slider/FarmField.jpg";
 import img4 from "@/public/slider/Forklift.jpg";
 import img5 from "@/public/slider/Gastro2.jpg";
 import img6 from "@/public/slider/Warehouse.png";
+import { usePathname } from "next/navigation";
 
 const defaultImages = [img1, img3, img4, img5, img6];
 
@@ -24,12 +25,18 @@ export default function AboutSlider() {
     return () => clearInterval(intv);
   }, []);
 
+  const path = usePathname();
+
+  const locale = path.split("/")[1] || "pl";
+
+  const DIRECTION = locale === "ar" ? 1 : -1;
+
   return (
     <div className="w-full mt-10 overflow-hidden">
       <div
         className="w-full relative flex flex-row gap-5 transition duration-200 ease-in-out"
         style={{
-          transform: `translateX(${currentImage * 31.25 * -1}rem)`,
+          transform: `translateX(${currentImage * 31.25 * DIRECTION}rem)`,
         }}
       >
         {defaultImages.map((src, index) => (

@@ -25,7 +25,7 @@ export default function Collaboration({ params: { locale } }: any) {
         <h1 className="text-4xl lg:text-6xl font-bold pb-5  text-white ">
           {t("title")}
         </h1>
-        <p className="text-zinc-300 text-md sm:text-lg">
+        <p className="text-zinc-300 text-md sm:text-lg rtl:text-xl">
           {t.rich("content", {
             br: () => <br className="my-2" />,
           })}

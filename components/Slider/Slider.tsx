@@ -19,12 +19,12 @@ export default function Slider({ images }: any) {
         className="absolute w-full h-full flex items-center justify-center flex-col-reverse lg:flex-row-reverse"
       >
         <section className="hidden lg:grid grid-cols-2 md:grid-cols-2 gap-2 justify-center px-5 mb-5 flex-1 lg:flex-[2] xl:flex-[2]">
-          {["Gastro.jpg", "Tiles.jpg", "Delivery.jpg", "Amazon.jpg"].map(
+          {["Gastro.webp", "Tiles.webp", "Delivery.webp", "Amazon.webp"].map(
             (src) => (
               <Image
                 quality={"100"}
                 width={300}
-                height={200}
+                height={288}
                 priority
                 key={src}
                 src={"/home_tiles/" + src}
@@ -44,7 +44,7 @@ export default function Slider({ images }: any) {
             })}
           </h1>
 
-          <p className="w-full mt-5 max-w-screen-md text-md sm:!text-xl 2xl:w-3/4 text-zinc-300">
+          <p className="w-full mt-5 max-w-screen-md text-md sm:!text-xl 2xl:w-3/4 text-zinc-300 rtl:text-xl">
             {t("text.short_about")}
           </p>
 

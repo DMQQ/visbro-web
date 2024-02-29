@@ -86,7 +86,7 @@ export default function AppFooter() {
       <hr className="border-zinc-800" />
 
       <section className="p-5 mb-5 text-zinc-400">
-        <nav className="grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-5 md:w-3/4 m-auto mt-5">
+        <nav className="grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-5 md:w-3/4 m-auto mt-5 rtl:text-lg">
           <div className="flex flex-col gap-5">
             <Link href={`/about-us`}>{t("about")}</Link>
 

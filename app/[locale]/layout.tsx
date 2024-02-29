@@ -30,7 +30,11 @@ function RootLayout({
   const messages = useMessages();
 
   return (
-    <html lang={params.locale} className="dark ">
+    <html
+      lang={params.locale}
+      className="dark "
+      dir={params.locale === "ar" ? "rtl" : "ltr"}
+    >
       <NextIntlClientProvider locale={params.locale} messages={messages}>
         <body
           className={`${inter.className} bg-white text-black dark:dark:bg-zinc-950 dark:text-white`}

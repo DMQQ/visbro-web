@@ -14,6 +14,34 @@ export async function generateMetadata({ params: { locale } }: any) {
   };
 }
 
+const images = [
+  "/gallery/2.JPG",
+  "/gallery/3.JPG",
+  "/gallery/4.jpg",
+  "/gallery/5.jpg",
+  "/gallery/6.jpg",
+  "/gallery/7.jpg",
+  "/gallery/8.jpg",
+  "/gallery/9.jpg",
+  "/gallery/1.JPG",
+  "/gallery/10.jpg",
+  "/gallery/11.jpg",
+  "/gallery/12.jpg",
+  "/gallery/13.jpg",
+  "/gallery/14.jpg",
+  "/gallery/15.jpg",
+  "/gallery/16.jpg",
+  "/gallery/17.jpg",
+  "/gallery/18.jpg",
+  "/gallery/19.jpg",
+  "/gallery/21.jpg",
+  "/gallery/22.jpg",
+  "/gallery/23.jpg",
+  "/gallery/24.jpg",
+  "/gallery/25.jpg",
+  "/gallery/26.jpg",
+];
+
 export default function Gallery({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("Gallery");
@@ -28,16 +56,16 @@ export default function Gallery({ params: { locale } }: any) {
         </div>
 
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {Array.from(new Array(12).keys()).map((key) => (
+          {images.map((src, key) => (
             <Image
               width={400}
-              height={300}
+              height={400}
               quality={90}
               priority={key < 6}
               key={key}
-              src="/car-rental-concept-illustration_114360-9267.avif"
+              src={src}
               alt="Image of our company and it's work"
-              className="w-full rounded-md"
+              className="w-full h-full rounded-md object-cover"
             />
           ))}
         </section>

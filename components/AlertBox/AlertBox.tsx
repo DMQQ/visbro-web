@@ -34,7 +34,7 @@ export default function AlertBox(props: {
           <div className="py-1">
             <svg
               className={
-                "fill-current h-6 w-6  mr-4 " + textColor[props.variant]
+                "fill-current h-6 w-6  me-4 " + textColor[props.variant]
               }
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -43,10 +43,14 @@ export default function AlertBox(props: {
             </svg>
           </div>
           <div>
-            <p className={"text-md mb-2 " + textColor[props.variant]}>
+            <p
+              className={"text-md rtl:text-xl mb-2 " + textColor[props.variant]}
+            >
               {title}
             </p>
-            <p className={"text-sm " + textColor[props.variant]}>{message}</p>
+            <p className={"text-sm rtl:text-lg " + textColor[props.variant]}>
+              {message}
+            </p>
           </div>
         </div>
       </div>

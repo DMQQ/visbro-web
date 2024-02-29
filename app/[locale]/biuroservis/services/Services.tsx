@@ -1,5 +1,4 @@
 import { Link } from "@/navigation";
-import { unstable_setRequestLocale } from "next-intl/server";
 
 const content =
   `1. Pomoc w Uzyskaniu Kindergeld: Zapewniamy wsparcie w kompleksowym procesie aplikowania o Kindergeld, w tym wypełnianiu wniosków i zarządzaniu wymaganą dokumentacją.
@@ -8,8 +7,8 @@ const content =
 4. Ubezpieczenia zdrowotne oraz plany emerytalne: Zapewniamy doradztwo i pomoc w kwestiach związanych z niemieckim systemem ubezpieczeń zdrowotnych.
 5. Usługi Ubezpieczeniowe: Oferujemy wsparcie w wyborze i zarządzaniu polisami ubezpieczeniowymi.
 6. Doradztwo Kredytowe: Świadczymy usługi doradztwa w zakresie aplikacji o kredyt, w tym analizę ofert i pomoc w procesie aplikacyjnym.
-7. Załatwianie Spraw Bankowych: Pomagamy w otwieraniu i zarządzaniu kontami bankowymi, dostosowując usługi do indywidualnych potrzeb klientów.
-8. Wsparcie w Procesie Meldunku: Oferujemy pomoc w załatwieniu formalności związanych z meldunkiem, w tym umawianie spotkań i zarządzanie dokumentacją.
+7. Wsparcie w Sprawach Bankowych: Pomagamy w otwieraniu i zarządzaniu kontami bankowymi, dostosowując usługi do indywidualnych potrzeb klientów.
+8. Wsparcie w Procesie Meldunku: Oferujemy pomoc w formalnościach związanych z meldunkiem, w tym umawianie spotkań i zarządzanie dokumentacją.
 9. Rejestracja Samochodu: Zapewniamy kompleksową pomoc w procesie rejestracji pojazdów.
 10. Pomoc w Uzyskaniu Wohngeld: Świadczymy usługi doradztwa i wsparcia w procesie aplikowania o Wohngeld.
 11. Wsparcie w Uzyskaniu Bürgergeld: Pomagamy w procesie ubiegania się o Bürgergeld, zapewniając wsparcie na każdym etapie.
@@ -25,26 +24,13 @@ const content =
 
 export default function Services({ params: { locale } }: any) {
   return (
-    <>
-      <article className=" mt-5 border-t border-t-zinc-700 ">
-        {/* <h1 className="text-3xl font-bold py-5">Usługi</h1> */}
-        <p className="text-zinc-300 mt-5">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam non,
-          labore voluptatum voluptas voluptates debitis et, veniam ipsam hic
-          sunt quia perspiciatis libero recusandae consequatur dolores? Maxime
-          laudantium accusantium quas! Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Totam non, labore voluptatum voluptas voluptates
-          debitis et, veniam ipsam hic sunt quia perspiciatis libero recusandae
-          consequatur dolores? Maxime laudantium accusantium quas!
-        </p>
-
-        <section className="flex flex-col w-full gap-5 mt-5">
-          {content.map(([heading, content], index) => (
-            <Tile content={content} heading={heading} key={index} />
-          ))}
-        </section>
-      </article>
-    </>
+    <article className=" mt-5 border-t border-t-zinc-700 ">
+      <section className="flex flex-col w-full gap-5 mt-5">
+        {content.map(([heading, content], index) => (
+          <Tile content={content} heading={heading} key={index} />
+        ))}
+      </section>
+    </article>
   );
 }
 

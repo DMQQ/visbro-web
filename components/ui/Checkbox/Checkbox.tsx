@@ -18,7 +18,7 @@ export default function Checkbox(props: {
       />
       <label
         htmlFor="default-checkbox"
-        className="ms-2 text-sm font-medium text-zinc-900 dark:text-white"
+        className="ms-2 text-sm font-medium text-zinc-900 dark:text-white rtl:text-base"
       >
         {props.label}
       </label>

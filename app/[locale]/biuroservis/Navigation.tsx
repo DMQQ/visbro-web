@@ -4,7 +4,7 @@ import { Link, usePathname } from "@/navigation";
 import clsx from "clsx";
 
 const subRoutes = [
-  { route: "/", text: "Usługi" },
+  { route: "/", text: "Biuroservice" },
   { route: "/recrutation", text: "Rekrutacja" },
   { route: "/housing", text: "Kwatery pracownicze" },
   { route: "/cleaning-services", text: "Usługi sprzątające" },
@@ -25,7 +25,7 @@ export default function Navigation() {
           return (
             <li
               key={link.route}
-              className={clsx("p-2", {
+              className={clsx("p-2 uppercase text-sm", {
                 "border-b-2 border-b-blue-400": isActive,
               })}
             >

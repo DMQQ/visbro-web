@@ -31,10 +31,13 @@ export default function Input(props: InputProps) {
     <div className="p-2 w-full">
       <label
         htmlFor={props.id}
-        className={clsx("block mb-2 text-sm font-medium  dark:text-white", {
-          "!text-red-600": !!props.error,
-          [props.className as string]: !!props.className,
-        })}
+        className={clsx(
+          "block mb-2 text-sm font-medium  dark:text-white rtl:text-lg",
+          {
+            "!text-red-600": !!props.error,
+            [props.className as string]: !!props.className,
+          }
+        )}
       >
         {props.label}
       </label>
@@ -57,7 +60,9 @@ export default function Input(props: InputProps) {
         {...props.rest}
       />
       {isError && (
-        <p className="mt-0.5 text-sm  dark:text-red-600">{props.error}</p>
+        <p className="mt-0.5 text-sm rtl:text-base  dark:text-red-600">
+          {props.error}
+        </p>
       )}
     </div>
   );

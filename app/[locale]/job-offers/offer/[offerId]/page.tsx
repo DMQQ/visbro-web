@@ -89,7 +89,7 @@ export default async function OfferPage({
           }
         )}
       >
-        <section className="flex-2 p-5 rounded-lg h-auto">
+        <section className="flex-[3] p-5 rounded-lg h-auto">
           <h1 className="font-bold text-2xl md:text-3xl xl:text-5xl my-5 mb-10 text-wrap break-words">
             {data?.name}
           </h1>
@@ -118,11 +118,9 @@ export default async function OfferPage({
             <h2 className="font-bold text-md">Position description</h2>
 
             <p className="mt-2">{data?.content}</p>
-            <p className="mt-2">{data?.content}</p>
-            <p className="mt-2">{data?.content}</p>
           </div>
 
-          <div className="mt-10">
+          {/* <div className="mt-10">
             <h2 className="font-bold text-md">Work images</h2>
 
             <section className="grid grid-cols-2 gap-2 mt-2">
@@ -135,7 +133,7 @@ export default async function OfferPage({
                 />
               ))}
             </section>
-          </div>
+          </div> */}
         </section>
         <ApplicationPanel offerId={offerId} />
       </article>

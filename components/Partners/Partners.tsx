@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 const partners = [
   "allegro.jpg",
@@ -31,6 +31,10 @@ const N = 1;
 export default function Partners() {
   const [currentImage, setCurrentImage] = useState<number>(0); // index of a number
 
+  const path = usePathname();
+
+  const locale = path.split("/")[1];
+
   useEffect(() => {
     let intv = setInterval(() => {
       const numOfImagesInRow = Math.trunc(
@@ -50,25 +54,29 @@ export default function Partners() {
     return () => clearInterval(intv);
   }, [currentImage]);
 
+  const DIRECTION = locale === "ar" ? 1 : -1;
+
+  const TILE_WIDTH = 160;
+  const TILE_PADDING = 20;
+
   return (
     <div className="w-full lg:w-3/4 m-auto mt-16 overflow-hidden">
       <div
         // image-container
         className=" flex flex-row gap-5 transition-transform duration-200 linear"
         style={{
-          transform: `translateX(${currentImage * (160 + 20) * -1}px)`,
+          transform: `translateX(${
+            currentImage * (TILE_WIDTH + TILE_PADDING) * DIRECTION
+          }px)`,
           // transform: `translateX(${currentImage * (160 + 20) * -1}px)`,
         }}
       >
         {partners.map((partner) => (
           <div key={partner} className="w-40 h-40 flex-shrink-0 relative">
-            <Image
+            <img
               alt={partner}
               src={"/partners/logo/" + partner}
-              fill
               className="select-none w-auto h-auto"
-              sizes="160px"
-              quality={75}
             />
           </div>
         ))}

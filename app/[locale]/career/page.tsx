@@ -25,14 +25,16 @@ export default function Career({ params: { locale } }: any) {
         <h1 className="text-4xl lg:text-6xl font-bold pb-5 text-white ">
           {t("heading")}
         </h1>
-        <p className="text-zinc-300 text-md sm:text-lg ">{t("content")}</p>
+        <p className="text-zinc-300 text-md sm:text-lg rtl:text-xl">
+          {t("content")}
+        </p>
 
         <div className="grid grid-cols-2 gap-5 mt-5">
           {[
             "/slider/Delivery.jpg",
             "/home/cleaning.jpg",
-            "/home_tiles/Gastro.jpg",
-            "/home_tiles/Tiles.jpg",
+            "/home_tiles/Gastro.webp",
+            "/home_tiles/Tiles.webp",
           ].map((image) => (
             <div key={image} className="w-full">
               <Image
