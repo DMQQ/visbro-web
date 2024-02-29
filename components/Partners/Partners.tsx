@@ -75,8 +75,8 @@ export default function Partners() {
         {partners.map((partner) => (
           <div key={partner} className="w-40 h-40 flex-shrink-0 relative">
             <Image
-              width={160}
-              height={160}
+              quality={80}
+              fill
               alt={partner}
               src={"/partners/logo/" + partner}
               className="select-none w-auto h-auto"
