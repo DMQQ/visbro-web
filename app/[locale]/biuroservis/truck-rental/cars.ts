@@ -1,0 +1,115 @@
+const baseUrl = "/rental";
+
+export const cars = [
+  {
+    name: "Volvo FH 500 XL / ACC / Klima postojowa / Xenon / Pełny serwis",
+    spec: {
+      brand: "Volvo",
+      prodYear: 2016,
+      power: "500KM",
+      gearbox: "automatic",
+      fuelType: "diesel",
+      co2: "6 g/km",
+    },
+    images: [
+      `${baseUrl}/volvo/side-front.png`,
+      `${baseUrl}/volvo/front.png`,
+      `${baseUrl}/volvo/back.png`,
+      `${baseUrl}/volvo/back-side.png`,
+      `${baseUrl}/volvo/inside.png`,
+    ],
+  },
+  {
+    name: "Iveco",
+    spec: {
+      brand: "Iveco",
+      prodYear: 2018,
+      power: "180KM",
+      gearbox: "",
+      fuelType: "",
+      cc: "2998 cm3",
+      mileage: "158 000 km",
+    },
+    images: [
+      `${baseUrl}/iveco/side-front.png`,
+      `${baseUrl}/iveco/front.png`,
+      `${baseUrl}/iveco/side.png`,
+      `${baseUrl}/iveco/back.png`,
+    ],
+  },
+  {
+    name: "Peugeot Boxer L4H2",
+    spec: {
+      brand: "Peugeot",
+      prodYear: 2012,
+      power: "131KM",
+      gearbox: "manual",
+      fuelType: "diesel",
+      cc: "2198 cm3",
+      mileage: "280 000 km",
+      type: "Furgon",
+    },
+    images: [
+      `${baseUrl}/peugeot/side-front.png`,
+      `${baseUrl}/peugeot/back-side.png`,
+      `${baseUrl}/peugeot/back.png`,
+    ],
+  },
+  {
+    name: "VW Crafter",
+    spec: {
+      brand: "Volkswagen",
+      prodYear: 2024,
+      power: "140KM",
+      gearbox: "manual",
+      fuelType: "diesel",
+      cc: "1968 cm3",
+      mileage: "280 000 km",
+      type: "Minivan",
+      drive: "fwd",
+    },
+    images: [
+      `${baseUrl}/vw-crafter/side-front.png`,
+      `${baseUrl}/vw-crafter/side-front-2.png`,
+      `${baseUrl}/vw-crafter/inside.png`,
+      `${baseUrl}/vw-crafter/radio.png`,
+    ],
+  },
+  {
+    name: "Fiat Ducatol 4H2 GEN 3",
+    spec: {
+      brand: "Fiat",
+      prodYear: 2014,
+      power: "140KM",
+      gearbox: "manual",
+      fuelType: "diesel",
+      cc: "1956 cm3",
+      mileage: "285 000 km",
+      type: "Minivan",
+    },
+    images: [
+      `${baseUrl}/ducatol4h2/front.png`,
+      `${baseUrl}/ducatol4h2/front-side.png`,
+      `${baseUrl}/ducatol4h2/inside-side.png`,
+      `${baseUrl}/ducatol4h2/inside.png`,
+    ],
+  },
+  {
+    name: "Scania R410",
+    spec: {
+      brand: "Scania",
+      prodYear: 2017,
+      power: "410KM",
+      gearbox: "automatic",
+      fuelType: "diesel",
+      cc: "13 000 cm3",
+      mileage: "600 000 km",
+    },
+    images: [
+      `${baseUrl}/scania-r410/front.png`,
+      `${baseUrl}/scania-r410/front-side.png`,
+      `${baseUrl}/scania-r410/inside-side.png`,
+      `${baseUrl}/scania-r410/inside.png`,
+    ],
+  },
+];
