@@ -115,7 +115,9 @@
   "Rental": {
     "header_title": "Visbro wypożyczalnia samochodów",
     "header_helper": "Sprawdź naszą ofertę!",
-    "car_options": "Samochody dostawcze;Samochody ciężarowe"
+    "car_options": "Samochody dostawcze;Samochody ciężarowe",
+    "contact": "Skontakuj się z nami!",
+    "content": "Odkryj, jak Visbro może stać się kluczowym elementem Twojego biznesowego\n        sukcesu! Jesteśmy gotowi sprostać wszystkim Twoim potrzebom związanym z\n        flotą aut dostawczych oraz ciężarowych, a nasze wsparcie pomoże Ci\n        zredukować koszty i zoptymalizować działanie Twojej firmy.\n        Specjalizujemy się w wynajmie długoterminowym, co oznacza, że nie tylko\n        dostarczamy pojazdy, ale również budujemy trwałe relacje partnerskie.\n        Dzięki naszemu doświadczeniu i zaangażowaniu jesteśmy idealnym partnerem\n        biznesowym, który zapewni Ci nie tylko flotę pojazdów, ale także pełne\n        wsparcie i profesjonalną obsługę."
   },
   "Footer": {
     "contact": {
@@ -146,7 +148,14 @@
     "gallery": "Galeria",
     "contact": "Kontakt",
     "career": "Kariera w Visbro",
-    "rental": "TruckRental"
+    "rental": "TruckRental",
+    "services": {
+      "biuroservice": "Biuroservice",
+      "recruitment": "Rekrutacja",
+      "housing": "Kwatery pracownicze",
+      "cleaning-services": "Usługi sprzątające",
+      "car-rental": "Visbro wypożyczalnia samochodów"
+    }
   },
   "Collaboration": {
     "title": "Podejmij z nami współpracę",
@@ -336,5 +345,20 @@
   },
   "Forms": {
     "length": "Pole powinno mieć co najmniej {min} znaków i maksymalnie {max}"
+  },
+  "Recruitment": {
+    "heading": "Rekrutacja",
+    "content": "Zajmujemy się rekrutacją pracowników do różnorodnych sektorów, zarówno\n        na stanowiska tymczasowe, jak i stałe. Naszym priorytetem jest\n        zapewnienie Ci optymalnej liczby kwalifikowanych pracowników, dokładnie\n        wtedy, gdy ich potrzebujesz, gwarantując przy tym płynność procesu bez\n        niepotrzebnych przeszkód. Oferujemy Ci nasze wszechstronne wsparcie i\n        jesteśmy zawsze do Twojej dyspozycji – pomożemy Ci rozwijać Twój biznes\n        i sprawimy, że dotychczasowe wyzwania związane z personelem odejdą w\n        niepamięć. <br /> <br /> W naszej ofercie znajdziesz również programy\n        szkoleniowe, dzięki którym nowi pracownicy szybko zaaklimatyzują się w\n        Twojej firmie, co znacząco przyspieszy ich efektywność i integrację z\n        zespołem. Zapraszamy do kontaktu, aby dowiedzieć się więcej o tym, jak\n        możemy wspólnie przyczynić się do sukcesu Twojego przedsiębiorstwa. Z\n        nami, Twój rozwój jest w dobrych rękach.",
+    "button": "Zadzwoń do nas!"
+  },
+  "Housing": {
+    "heading": "Kwatery pracownicze",
+    "content": "Zapraszamy do skorzystania z naszych kwater pracowniczych, które są\n        idealnym rozwiązaniem dla członków Twojego zespołu. Nasze mieszkania w\n        Niemczech Wschodnich są nie tylko w pełni wyposażone, ale także\n        zaprojektowane z ogromną starannością. Regularne sprzątanie gwarantuje\n        utrzymanie czystości i komfortu dla wszystkich mieszkańców. Niezależnie\n        od lokalizacji Twojej działalności w Niemczech, z nami możesz być\n        pewien, że zapewnimy Ci natychmiastowe wsparcie w zakresie\n        zakwaterowania. Dzięki współpracy z naszymi partnerami biznesowymi mamy\n        możliwość organizacji mieszkań na terenie całego kraju, zapewniając\n        elastyczność i wygodę Twojemu zespołowi. Jeśli chcesz zobaczyć, jak\n        prezentują się nasze mieszkania, zapraszamy do obejrzenia galerii zdjęć\n        dostępnej na naszej stronie internetowej. Wybierz nasze kwatery\n        pracownicze i zapewnij swojemu zespołowi idealne warunki do pracy i\n        relaksu!",
+    "button": "Zadzwoń do nas!"
+  },
+  "Cleaning": {
+    "heading": "Usługi sprzątające",
+    "content": "Visbro oferuje również profesjonalne usługi sprzątające w sektorze\n        prywatnym oraz firmowym . Nasz doświadczony personel który dysponuje\n        wszystkimi niezbędnymi narzędziami jest w stanie sprostać wszystkim\n        wymaganiom . Naszym priorytetem jest zapewnie ci najwyższej jakości\n        wykonywanych usług spersonalizowanych specjalnie dla ciebie lub twojej\n        firmy.",
+    "button": "Zadzwoń do nas!"
   }
 }

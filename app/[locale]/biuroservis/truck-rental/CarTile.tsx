@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function CarTile({ car }: { car: (typeof cars)[0] }) {
   const [currentImage, setCurrentImage] = useState<number>(0);
@@ -32,6 +33,8 @@ export default function CarTile({ car }: { car: (typeof cars)[0] }) {
 
   const buttonClassName =
     "bg-zinc-950 absolute z-50 rounded-full w-8 h-8 flex justify-center items-center";
+
+  const t = useTranslations("Rental");
 
   return (
     <section
@@ -62,7 +65,7 @@ export default function CarTile({ car }: { car: (typeof cars)[0] }) {
               className="w-full relative flex-shrink-0"
             >
               <Image
-                quality={100}
+                quality={90}
                 priority={index === 0}
                 width={300}
                 height={200}
@@ -81,9 +84,9 @@ export default function CarTile({ car }: { car: (typeof cars)[0] }) {
           <MdNavigateNext />
         </button>
       </div>
-      <h3 className="mt-2 text-xl font-bold">{car.name}</h3>
+      <h3 className="text-xl font-bold mt-5">{car.name}</h3>
 
-      <ul className="grid grid-cols-2 mt-2 text-zinc-200 flex-1">
+      <ul className="grid grid-cols-2 mt-5 text-zinc-200 flex-1">
         {Object.entries(car.spec).map(([key, value]) => (
           <li key={key}>{value}</li>
         ))}
@@ -93,7 +96,7 @@ export default function CarTile({ car }: { car: (typeof cars)[0] }) {
         className="mt-5 bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800 text-blue-100 text-md p-2 py-3 text-center rounded-md "
         href="tel:+49 1520 8941615"
       >
-        Skontaktuj się z nami
+        {t("contact")}
       </a>
     </section>
   );

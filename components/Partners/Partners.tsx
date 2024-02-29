@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 const partners = [
@@ -73,7 +74,9 @@ export default function Partners() {
       >
         {partners.map((partner) => (
           <div key={partner} className="w-40 h-40 flex-shrink-0 relative">
-            <img
+            <Image
+              width={160}
+              height={160}
               alt={partner}
               src={"/partners/logo/" + partner}
               className="select-none w-auto h-auto"

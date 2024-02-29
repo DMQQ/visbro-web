@@ -36,17 +36,7 @@ export default function CarRental({ params: { locale } }: any) {
         <p className="text-zinc-400">{t("header_helper")}</p>
       </div>
 
-      <p className="text-zinc-200 mb-5 p-2">
-        Odkryj, jak Visbro może stać się kluczowym elementem Twojego biznesowego
-        sukcesu! Jesteśmy gotowi sprostać wszystkim Twoim potrzebom związanym z
-        flotą aut dostawczych oraz ciężarowych, a nasze wsparcie pomoże Ci
-        zredukować koszty i zoptymalizować działanie Twojej firmy.
-        Specjalizujemy się w wynajmie długoterminowym, co oznacza, że nie tylko
-        dostarczamy pojazdy, ale również budujemy trwałe relacje partnerskie.
-        Dzięki naszemu doświadczeniu i zaangażowaniu jesteśmy idealnym partnerem
-        biznesowym, który zapewni Ci nie tylko flotę pojazdów, ale także pełne
-        wsparcie i profesjonalną obsługę.
-      </p>
+      <p className="text-zinc-200 mb-5 p-2">{t("content")}</p>
 
       <article className="w-full grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-3">
         {cars.map((car) => (

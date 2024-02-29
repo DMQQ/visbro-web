@@ -115,7 +115,9 @@
   "Rental": {
     "header_title": "Alquiler de Autos Visbro",
     "header_helper": "¡Consulta nuestra oferta!",
-    "car_options": "Furgonetas de Entrega;Camiones"
+    "car_options": "Furgonetas de Entrega;Camiones",
+    "contact": "Contáctanos",
+    "content": "¡Descubre cómo Visbro puede convertirse en un elemento clave para el éxito de tu negocio! Estamos listos para satisfacer todas tus necesidades relacionadas con flotas de vehículos de entrega y carga, y nuestro apoyo te ayudará a reducir costos y optimizar las operaciones de tu empresa. Nos especializamos en alquiler a largo plazo, lo que significa que no solo proporcionamos vehículos, sino que también construimos relaciones duraderas. Con nuestra experiencia y compromiso, somos el socio comercial ideal que te ofrecerá no solo una flota de vehículos, sino también un soporte completo y un servicio profesional."
   },
   "Footer": {
     "contact": {
@@ -146,7 +148,14 @@
     "gallery": "Galería",
     "contact": "Contacto",
     "career": "Carrera en Visbro",
-    "rental": "Alquiler de Camiones"
+    "rental": "Alquiler de Camiones",
+    "services": {
+      "biuroservice": "Servicio de oficina",
+      "recruitment": "Reclutamiento",
+      "housing": "Viviendas para trabajadores",
+      "cleaning-services": "Servicios de limpieza",
+      "car-rental": "Alquiler de coches de Visbro"
+    }
   },
   "Collaboration": {
     "title": "Colabora con Nosotros",
@@ -328,5 +337,20 @@
   },
   "Forms": {
     "length": "El campo debe tener al menos {min} caracteres y como máximo {max} caracteres."
+  },
+  "Recruitment": {
+    "heading": "Reclutamiento",
+    "content": "Nos especializamos en reclutar empleados para diversos sectores, tanto para posiciones temporales como permanentes. Nuestra prioridad es proporcionarte un número óptimo de trabajadores calificados exactamente cuando los necesitas, asegurando un proceso sin inconvenientes innecesarios. Te ofrecemos nuestro apoyo versátil y estamos siempre a tu disposición; te ayudaremos a hacer crecer tu negocio y nos aseguraremos de que los desafíos relacionados con el personal sean cosa del pasado. <br /> <br /> En nuestra oferta también encontrarás programas de formación para que los nuevos empleados se adapten rápidamente a tu empresa, mejorando significativamente su eficiencia e integración con el equipo. No dudes en contactarnos para obtener más información sobre cómo podemos contribuir juntos al éxito de tu empresa. Con nosotros, tu desarrollo está en buenas manos.",
+    "button": "¡Llámanos!"
+  },
+  "Housing": {
+    "heading": "Alojamiento para empleados",
+    "content": "Siéntete libre de aprovechar nuestros alojamientos para empleados, que son una solución ideal para los miembros de tu equipo. Nuestros apartamentos en el este de Alemania no solo están completamente equipados, sino que también están diseñados con meticulosidad. La limpieza regular garantiza la limpieza y comodidad para todos los residentes. Independientemente de la ubicación de tu negocio en Alemania, puedes estar seguro de que te proporcionaremos un apoyo inmediato en cuanto al alojamiento. A través de la colaboración con nuestros socios comerciales, tenemos la capacidad de organizar alojamientos a nivel nacional, asegurando flexibilidad y comodidad para tu equipo. Si deseas ver cómo son nuestros apartamentos, no dudes en consultar la galería de fotos en nuestro sitio web. ¡Elige nuestros alojamientos para empleados y proporciona a tu equipo condiciones ideales para trabajar y relajarse!",
+    "button": "¡Llámanos!"
+  },
+  "Cleaning": {
+    "heading": "Servicios de limpieza",
+    "content": "Visbro también ofrece servicios de limpieza profesionales tanto en el sector privado como en el empresarial. Nuestro personal experimentado, equipado con todas las herramientas necesarias, puede cumplir con todos tus requisitos. Nuestra prioridad es proporcionarte servicios de limpieza de alta calidad y personalizados especialmente para ti o tu empresa.",
+    "button": "¡Llámanos!"
   }
 }

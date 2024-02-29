@@ -51,7 +51,7 @@ const Form = () => {
         .max(1000)
         .required(t("additionalInfo.error")),
     });
-  }, []);
+  }, [t, tErr]);
 
   const initialFormValues = {
     email: "",

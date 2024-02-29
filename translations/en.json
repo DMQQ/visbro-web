@@ -115,7 +115,9 @@
   "Rental": {
     "header_title": "Visbro Car Rental",
     "header_helper": "Check out our offer!",
-    "car_options": "Delivery Vans;Trucks"
+    "car_options": "Delivery Vans;Trucks",
+    "contact": "Contact with us!",
+    "content": "Discover how Visbro can become a key element of your business success! We are ready to meet all your needs related to delivery and freight vehicle fleets, and our support will help you reduce costs and optimize your company's operations. We specialize in long-term leasing, which means that we not only provide vehicles but also build lasting partnerships. With our experience and commitment, we are the ideal business partner that will offer you not only a vehicle fleet but also complete support and professional service."
   },
   "Footer": {
     "contact": {
@@ -146,7 +148,14 @@
     "gallery": "Gallery",
     "contact": "Contact",
     "career": "Career at Visbro",
-    "rental": "TruckRental"
+    "rental": "TruckRental",
+    "services": {
+      "biuroservice": "Biuroservice",
+      "recruitment": "Recruitment",
+      "housing": "Housing for workers",
+      "cleaning-services": "Cleaning Services",
+      "car-rental": "Visbro Car Rental"
+    }
   },
   "Collaboration": {
     "title": "Collaborate with Us",
@@ -324,9 +333,24 @@
         "title": "Something went wrong!",
         "message": "Please try again or wait a moment."
       }
-    },
-    "Forms": {
-      "length": "Field should be at least {min} characters and {max} at most"
     }
+  },
+  "Forms": {
+    "length": "Field should be at least {min} characters and {max} at most"
+  },
+  "Recruitment": {
+    "heading": "Recruitment",
+    "content": "We specialize in recruiting employees for various sectors, both for temporary and permanent positions. Our priority is to provide you with an optimal number of qualified workers exactly when you need them, ensuring a smooth process without unnecessary obstacles. We offer you our versatile support and are always at your disposal – we will help you grow your business and ensure that the challenges related to personnel become a thing of the past. <br /> <br /> In our offer, you will also find training programs through which new employees will quickly acclimate to your company, significantly enhancing their efficiency and integration with the team. Feel free to contact us to learn more about how we can contribute together to the success of your business. With us, your development is in good hands.",
+    "button": "Call us!"
+  },
+  "Housing": {
+    "heading": "Employee Accommodations",
+    "content": "Feel free to take advantage of our employee accommodations, which are an ideal solution for your team members. Our apartments in Eastern Germany are not only fully equipped but also meticulously designed. Regular cleaning ensures cleanliness and comfort for all residents. Regardless of the location of your business in Germany, you can be sure that we will provide you with immediate accommodation support. Through collaboration with our business partners, we have the ability to organize accommodations nationwide, ensuring flexibility and convenience for your team. If you want to see how our apartments look, feel free to check the photo gallery on our website. Choose our employee accommodations and provide your team with ideal conditions for work and relaxation!",
+    "button": "Call us!"
+  },
+  "Cleaning": {
+    "heading": "Cleaning Services",
+    "content": "Visbro also offers professional cleaning services in both the private and corporate sectors. Our experienced staff, equipped with all the necessary tools, can meet all your requirements. Our priority is to provide you with high-quality, personalized cleaning services tailored to you or your company.",
+    "button": "Call us!"
   }
 }

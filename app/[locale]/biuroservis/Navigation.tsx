@@ -2,17 +2,20 @@
 
 import { Link, usePathname } from "@/navigation";
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 
 const subRoutes = [
-  { route: "/", text: "Biuroservice" },
-  { route: "/recrutation", text: "Rekrutacja" },
-  { route: "/housing", text: "Kwatery pracownicze" },
-  { route: "/cleaning-services", text: "Usługi sprzątające" },
-  { route: "/truck-rental", text: "Wypożyczalnia samochodów" },
+  { route: "/", text: "biuroservice" },
+  { route: "/recrutation", text: "recruitment" },
+  { route: "/housing", text: "housing" },
+  { route: "/cleaning-services", text: "cleaning-services" },
+  { route: "/truck-rental", text: "car-rental" },
 ];
 
 export default function Navigation() {
   const pathname = usePathname();
+
+  const t = useTranslations("Navigation.services");
 
   return (
     <nav className="flex justify-center w-full rounded-md">
@@ -35,7 +38,7 @@ export default function Navigation() {
                   "!text-blue-400": isActive,
                 })}
               >
-                {link.text}
+                {t(link.text)}
               </Link>
             </li>
           );

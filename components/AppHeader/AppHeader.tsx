@@ -75,7 +75,7 @@ export default function AppHeader() {
 
           <button
             onClick={onToggleModal}
-            className="lg:hidden ml-5"
+            className="lg:hidden ms-5"
             aria-label={
               isOpenNavigation ? "Close Navigation" : "Open Navigation"
             }

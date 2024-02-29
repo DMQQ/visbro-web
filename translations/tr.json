@@ -115,7 +115,9 @@
   "Rental": {
     "header_title": "Visbro Araç Kiralama",
     "header_helper": "Teklifimize göz atın!",
-    "car_options": "Teslimat Kamyonları;Kamyonlar"
+    "car_options": "Teslimat Kamyonları;Kamyonlar",
+    "contact": "Bizimle iletişime geçin",
+    "content": "Visbro'nun işinizin başarısında kilit bir unsur haline gelme şeklini keşfedin! Teslimat ve yük araç filolarınızla ilgili tüm ihtiyaçlarınıza karşılık vermek için hazırız ve desteğimiz işletmenizin maliyetlerini azaltmanıza ve operasyonlarınızı optimize etmenize yardımcı olacaktır. Uzun vadeli kiralama konusunda uzmanız, bu da sadece araçları sağlamakla kalmayıp aynı zamanda uzun vadeli iş ortaklıkları kurmamız anlamına gelir. Deneyimimiz ve bağlılığımızla, size sadece bir araç filosu değil, aynı zamanda tam destek ve profesyonel hizmet sunacak ideal bir iş ortağıyız."
   },
   "Footer": {
     "contact": {
@@ -146,7 +148,14 @@
     "gallery": "Galeri",
     "contact": "İletişim",
     "career": "Visbro'da Kariyer",
-    "rental": "Kiralık Kamyon"
+    "rental": "Kiralık Kamyon",
+    "services": {
+      "biuroservice": "Ofis Hizmeti",
+      "recruitment": "İstihdam",
+      "housing": "İşçi Konaklama",
+      "cleaning-services": "Temizlik Hizmetleri",
+      "car-rental": "Visbro Araç Kiralama"
+    }
   },
   "Collaboration": {
     "title": "Bizimle İşbirliği Yapın",
@@ -328,5 +337,20 @@
   },
   "Forms": {
     "length": "Alan en az {min} karakter olmalı ve en fazla {max} karakter olmalıdır."
+  },
+  "Recruitment": {
+    "heading": "İstihdam",
+    "content": "Çeşitli sektörler için hem geçici hem de kalıcı pozisyonlar için çalışanları işe alma konusunda uzmanız. Önceliğimiz, ihtiyacınız olduğu anda size optimal sayıda nitelikli çalışan sağlamak, böylece gereksiz engeller olmadan sorunsuz bir süreç yaşamanızı sağlamaktır. Size çok yönlü destek sunuyor ve her zaman hizmetinizdeyiz - işinizi büyütmenize yardımcı olacak ve personelle ilgili zorlukların geçmişte kalmasını sağlayacağız. <br /> <br /> Teklifimizde, yeni çalışanların şirketinize hızlı bir şekilde uyum sağlamalarını sağlayacak eğitim programları da bulacaksınız, bu da onların etkinliklerini ve takıma entegrasyonlarını önemli ölçüde artıracaktır. İşletmenizin başarısına birlikte nasıl katkıda bulunabileceğimiz hakkında daha fazla bilgi almak için bize her zaman ulaşabilirsiniz. Bizimle, gelişiminiz güvenli ellerde.",
+    "button": "Bizi Ara!"
+  },
+  "Housing": {
+    "heading": "Çalışan Konaklama",
+    "content": "Ekibiniz için ideal bir çözüm olan çalışan konaklamalarımızdan gönül rahatlığıyla faydalanın. Doğu Almanya'daki dairelerimiz sadece tam donanımlı olmakla kalmayıp aynı zamanda özenle tasarlanmıştır. Düzenli temizlik, tüm sakinler için temizlik ve konforu garanti eder. Almanya'daki işyerinizin konumundan bağımsız olarak, size anında konaklama desteği sağlayacağımızdan emin olabilirsiniz. İş ortaklarımızla işbirliği yaparak ülke genelinde konaklamaları düzenleme yeteneğimiz var, bu da ekibiniz için esneklik ve rahatlık sağlar. Dairelerimizin nasıl göründüğünü görmek istiyorsanız, web sitemizdeki fotoğraf galerisine göz atabilirsiniz. Çalışan konaklamalarımızı seçin ve ekibinize çalışma ve dinlenme için ideal koşulları sağlayın!",
+    "button": "Bizi Ara!"
+  },
+  "Cleaning": {
+    "heading": "Temizlik Hizmetleri",
+    "content": "Visbro ayrıca özel ve kurumsal sektörde profesyonel temizlik hizmetleri sunmaktadır. Deneyimli personelimiz, gerekli tüm araçlarla donatılmış olarak, tüm taleplerinize cevap verebilir. Size veya şirketinize özel olarak uyarlanmış yüksek kaliteli temizlik hizmetleri sunmak önceliğimizdir.",
+    "button": "Bizi Ara!"
   }
 }

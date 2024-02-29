@@ -115,7 +115,9 @@
   "Rental": {
     "header_title": "Visbro Autovermietung",
     "header_helper": "Schauen Sie sich unser Angebot an!",
-    "car_options": "Lieferwagen;Lastwagen"
+    "car_options": "Lieferwagen;Lastwagen",
+    "contact": "Kontaktiere uns",
+    "content": "Entdecken Sie, wie Visbro zu einem Schlüsselelement Ihres geschäftlichen Erfolgs werden kann! Wir sind bereit, all Ihren Bedürfnissen im Zusammenhang mit Liefer- und Frachtfahrzeugflotten gerecht zu werden, und unsere Unterstützung wird Ihnen helfen, Kosten zu reduzieren und den Betrieb Ihres Unternehmens zu optimieren. Wir sind auf Langzeitmieten spezialisiert, was bedeutet, dass wir nicht nur Fahrzeuge liefern, sondern auch langfristige Partnerschaften aufbauen. Mit unserer Erfahrung und unserem Engagement sind wir der ideale Geschäftspartner, der Ihnen nicht nur eine Fahrzeugflotte, sondern auch umfassende Unterstützung und professionellen Service bieten wird."
   },
   "Footer": {
     "contact": {
@@ -146,7 +148,14 @@
     "gallery": "Galerie",
     "contact": "Kontakt",
     "career": "Karriere bei Visbro",
-    "rental": "TruckRental"
+    "rental": "TruckRental",
+    "services": {
+      "biuroservice": "Büroservice",
+      "recruitment": "Rekrutierung",
+      "housing": "Unterkünfte für Mitarbeiter",
+      "cleaning-services": "Reinigungsdienstleistungen",
+      "car-rental": "Visbro Autovermietung"
+    }
   },
   "Collaboration": {
     "title": "Arbeiten Sie mit uns zusammen",
@@ -335,5 +344,20 @@
   },
   "Forms": {
     "length": "Das Feld sollte mindestens {min} Zeichen und höchstens {max} Zeichen haben."
+  },
+  "Recruitment": {
+    "heading": "Personalbeschaffung",
+    "content": "Wir sind auf die Rekrutierung von Mitarbeitern für verschiedene Branchen spezialisiert, sowohl für temporäre als auch dauerhafte Positionen. Unsere Priorität ist es, Ihnen genau dann eine optimale Anzahl qualifizierter Mitarbeiter zur Verfügung zu stellen, wenn Sie sie benötigen, und dabei einen reibungslosen Prozess ohne unnötige Hindernisse zu gewährleisten. Wir bieten Ihnen unsere vielseitige Unterstützung an und stehen Ihnen immer zur Verfügung. Wir werden Ihnen helfen, Ihr Geschäft zu entwickeln und sicherstellen, dass die mit dem Personal verbundenen Herausforderungen der Vergangenheit angehören. <br /> <br /> In unserem Angebot finden Sie auch Schulungsprogramme, durch die sich neue Mitarbeiter schnell in Ihrem Unternehmen einleben und ihre Effizienz sowie Integration in das Team erheblich verbessern können. Kontaktieren Sie uns, um mehr darüber zu erfahren, wie wir gemeinsam zum Erfolg Ihres Unternehmens beitragen können. Mit uns befindet sich Ihre Entwicklung in guten Händen.",
+    "button": "Rufen Sie uns an!"
+  },
+  "Housing": {
+    "heading": "Unterkunft für Mitarbeiter",
+    "content": "Nutzen Sie gerne unsere Mitarbeiterunterkünfte, die eine ideale Lösung für Ihre Teammitglieder darstellen. Unsere Wohnungen in Ostdeutschland sind nicht nur voll ausgestattet, sondern auch sorgfältig gestaltet. Regelmäßige Reinigung gewährleistet Sauberkeit und Komfort für alle Bewohner. Unabhängig vom Standort Ihres Unternehmens in Deutschland können Sie sicher sein, dass wir Ihnen sofortige Unterstützung bei der Unterkunft bieten werden. Durch die Zusammenarbeit mit unseren Geschäftspartnern haben wir die Möglichkeit, bundesweit Unterkünfte zu organisieren und damit Flexibilität und Bequemlichkeit für Ihr Team zu gewährleisten. Wenn Sie sehen möchten, wie unsere Wohnungen aussehen, schauen Sie sich gerne die Fotogalerie auf unserer Website an. Wählen Sie unsere Mitarbeiterunterkünfte und bieten Sie Ihrem Team ideale Bedingungen für Arbeit und Entspannung!",
+    "button": "Rufen Sie uns an!"
+  },
+  "Cleaning": {
+    "heading": "Reinigungsdienstleistungen",
+    "content": "Visbro bietet auch professionelle Reinigungsdienstleistungen im privaten und Unternehmensbereich an. Unser erfahrenes Personal, ausgestattet mit allen notwendigen Werkzeugen, kann allen Ihren Anforderungen gerecht werden. Unsere Priorität ist es, Ihnen hochwertige, auf Sie oder Ihr Unternehmen zugeschnittene Reinigungsdienstleistungen anzubieten.",
+    "button": "Rufen Sie uns an!"
   }
 }

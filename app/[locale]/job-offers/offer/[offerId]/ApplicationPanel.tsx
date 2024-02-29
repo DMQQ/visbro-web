@@ -13,9 +13,9 @@ export default function ApplicationPanel(props: { offerId: string }) {
     <section className="flex-1 p-2 dark:bg-zinc-900 min-w-72 border-l border-l-zinc-800">
       <div className="p-4">
         <h2 className="font-bold text-xl">{t("heading")}</h2>
-        <p className="text-zinc-300 text-xs">
+        {/* <p className="text-zinc-300 text-xs">
           {t("offerIdText", { id: "xx" })}
-        </p>
+        </p> */}
 
         <Button
           text={t("buttons.openForm")}

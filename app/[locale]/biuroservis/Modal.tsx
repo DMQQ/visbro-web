@@ -34,19 +34,14 @@ export default function Modal() {
       document.body.style.position = "";
       document.body.style.top = ``;
     };
-  }, []);
+  }, [params]);
 
   const initialValues = {
     email: "",
     phoneNumber: "",
     name: "",
     surname: "",
-
-    ...(type === "services" && { services: service }),
-
-    ...(type === "car-rental" && {
-      car: "",
-    }),
+    services: service,
 
     additionalInfo: "",
   };

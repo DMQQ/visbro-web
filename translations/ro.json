@@ -113,7 +113,9 @@
   "Rental": {
     "header_title": "Închiriere Mașini Visbro",
     "header_helper": "Verificați oferta noastră!",
-    "car_options": "Furgonete de Livrare;Camioane"
+    "car_options": "Furgonete de Livrare;Camioane",
+    "contact": "Contactați-ne",
+    "content": "Descoperă cum Visbro poate deveni un element cheie pentru succesul afacerii tale! Suntem pregătiți să satisfacem toate nevoile tale legate de flotele de vehicule de livrare și marfă, iar sprijinul nostru te va ajuta să reduci costurile și să optimizezi operațiunile companiei tale. Ne specializăm în închirieri pe termen lung, ceea ce înseamnă că nu furnizăm doar vehicule, ci construim și relații de parteneriat durabile. Cu experiența și angajamentul nostru, suntem partenerul de afaceri ideal care îți va oferi nu doar o flotă de vehicule, ci și suport complet și servicii profesionale."
   },
   "Footer": {
     "contact": {
@@ -144,7 +146,14 @@
     "gallery": "Galerie",
     "contact": "Contact",
     "career": "Carieră la Visbro",
-    "rental": "Închiriere Camioane"
+    "rental": "Închiriere Camioane",
+    "services": {
+      "biuroservice": "Servicii de birou",
+      "recruitment": "Recrutare",
+      "housing": "Cazare pentru muncitori",
+      "cleaning-services": "Servicii de curățenie",
+      "car-rental": "Închiriere auto Visbro"
+    }
   },
   "Collaboration": {
     "title": "Colaborează cu Noi",
@@ -325,5 +334,20 @@
   },
   "Forms": {
     "length": "Câmpul ar trebui să aibă cel puțin {min} caractere și cel mult {max}."
+  },
+  "Recruitment": {
+    "heading": "Recrutare",
+    "content": "Ne specializăm în recrutarea angajaților pentru diverse sectoare, atât pentru poziții temporare, cât și permanente. Prioritatea noastră este să vă furnizăm un număr optim de angajați calificați exact atunci când aveți nevoie de ei, asigurând un proces fără obstacole inutile. Vă oferim suportul nostru versatil și suntem întotdeauna la dispoziția dvs. - vă vom ajuta să vă dezvoltați afacerea și să asigurăm că provocările legate de personal devin un lucru al trecutului. <br /> <br /> În oferta noastră, veți găsi și programe de formare prin care noii angajați se vor adapta rapid la compania dvs., îmbunătățind semnificativ eficiența și integrarea lor în echipă. Nu ezitați să ne contactați pentru a afla mai multe despre cum putem contribui împreună la succesul afacerii dvs. Cu noi, dezvoltarea dvs. este în mâini bune.",
+    "button": "Sună-ne!"
+  },
+  "Housing": {
+    "heading": "Cazare pentru Angajați",
+    "content": "Nu ezitați să profitați de cazările noastre pentru angajați, care reprezintă o soluție ideală pentru membrii echipei dvs. Apartamentele noastre din Germania de Est nu sunt doar complet utilate, ci și proiectate cu mare grijă. Curățenia regulată asigură curățenie și confort pentru toți locuitorii. Indiferent de locația afacerii dvs. în Germania, puteți fi sigur că vă vom oferi sprijin imediat în ceea ce privește cazarea. Prin colaborarea cu partenerii noștri de afaceri, avem capacitatea de a organiza cazări la nivel național, asigurând flexibilitate și confort pentru echipa dvs. Dacă doriți să vedeți cum arată apartamentele noastre, vă invităm să verificați galeria de fotografii de pe site-ul nostru. Alegeți cazarea pentru angajați și oferiți echipei dvs. condiții ideale pentru muncă și relaxare!",
+    "button": "Sună-ne!"
+  },
+  "Cleaning": {
+    "heading": "Servicii de Curățenie",
+    "content": "Visbro oferă, de asemenea, servicii profesionale de curățenie atât în sectorul privat, cât și în cel corporativ. Personalul nostru experimentat, echipat cu toate instrumentele necesare, poate satisface toate cerințele dvs. Prioritatea noastră este să vă furnizăm servicii de curățenie de înaltă calitate, personalizate special pentru dvs. sau compania dvs.",
+    "button": "Sună-ne!"
   }
 }
