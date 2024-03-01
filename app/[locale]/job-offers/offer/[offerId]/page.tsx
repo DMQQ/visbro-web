@@ -11,6 +11,9 @@ async function getOfferIds() {
       process.env.BASE_API_URL + "/collaboration/query",
 
       {
+        next: {
+          revalidate: 3600,
+        },
         headers: {
           Authorization: "Bearer " + process.env.AUTH_TOKEN,
         },
@@ -48,6 +51,9 @@ async function getOfferById(id: string, locale: string) {
       {
         headers: {
           Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        },
+        next: {
+          revalidate: 3600,
         },
       }
     );

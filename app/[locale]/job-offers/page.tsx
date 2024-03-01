@@ -19,16 +19,18 @@ export async function generateMetadata({ params: { locale } }: any) {
 async function fetchOffers(locale: string) {
   "use server";
   try {
-    const res = await axios.get<JobOfferNinox[]>(
-      process.env.BASE_API_URL + `/JobOffers/records`,
-      {
-        headers: {
-          Authorization: "Bearer " + process.env.AUTH_TOKEN,
-        },
-      }
-    );
+    const res = await fetch(process.env.BASE_API_URL + `/JobOffers/records`, {
+      headers: {
+        Authorization: "Bearer " + process.env.AUTH_TOKEN,
+      },
+      next: {
+        revalidate: 3600,
+      },
+    });
 
-    return res.data.map((field: any) => {
+    const data = await res.json();
+
+    return data.map((field: any) => {
       return {
         offerId: field.id,
         ...(field?.fields || {}),
