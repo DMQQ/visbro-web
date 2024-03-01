@@ -18,7 +18,7 @@ export default function Navigation() {
   const t = useTranslations("Navigation.services");
 
   return (
-    <nav className="flex justify-center w-full rounded-md">
+    <nav className="flex justify-center w-full ">
       <ul className="w-full flex flex-col md:flex-row justify-between">
         {subRoutes.map((link) => {
           const isActive =

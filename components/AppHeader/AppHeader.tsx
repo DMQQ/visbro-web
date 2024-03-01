@@ -26,7 +26,7 @@ export default function AppHeader() {
     <>
       <header
         style={{ zIndex: 101 }}
-        className="fixed top-0 dark:bg-zinc-900 w-full p-5 md:pl-5 md:pr-3 md:p-7 flex justify-between items-center shadow-lg"
+        className="fixed top-0 dark:bg-zinc-900 w-full p-2 px-5 flex justify-between items-center shadow-lg"
       >
         <Link
           href="/"
@@ -39,7 +39,7 @@ export default function AppHeader() {
             height={100}
             alt="logo"
             src={"/logo.png"}
-            className="w-36 h-10 object-cover"
+            className="w-52 object-cover"
           />
         </Link>
 

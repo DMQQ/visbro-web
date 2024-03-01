@@ -32,7 +32,7 @@ export default function CarTile({ car }: { car: (typeof cars)[0] }) {
   }, []);
 
   const buttonClassName =
-    "bg-zinc-950 absolute z-50 rounded-full w-8 h-8 flex justify-center items-center";
+    "bg-zinc-950 absolute z-50 rounded-full w-8 h-8 flex justify-center items-center -translate-y-1/2";
 
   const t = useTranslations("Rental");
 
@@ -45,7 +45,7 @@ export default function CarTile({ car }: { car: (typeof cars)[0] }) {
       <div className="relative w-full overflow-hidden">
         <button
           onClick={() => prev()}
-          className={`${buttonClassName} top-1/2 left-1 -translate-y-[1/2]`}
+          className={`${buttonClassName} top-1/2 left-1 `}
         >
           <MdNavigateBefore size={25} color="white" />
         </button>
@@ -79,7 +79,7 @@ export default function CarTile({ car }: { car: (typeof cars)[0] }) {
 
         <button
           onClick={() => next()}
-          className={`${buttonClassName} top-1/2 right-1 -translate-y-[1/2]`}
+          className={`${buttonClassName} top-1/2 right-1 `}
         >
           <MdNavigateNext />
         </button>

@@ -1,5 +1,9 @@
 export const links = [
   { path: "/collaboration", text: "collab" },
+  {
+    path: "/biuroservis",
+    text: "biuroservis",
+  },
   { path: "/about-us", text: "about" },
   {
     path: "/job-offers",
@@ -13,9 +17,5 @@ export const links = [
   {
     path: "/gallery",
     text: "gallery",
-  },
-  {
-    path: "/biuroservis",
-    text: "biuroservis",
   },
 ] as const;

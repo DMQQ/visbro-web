@@ -29,10 +29,10 @@ export default function Career({ params: { locale } }: any) {
           {t("content")}
         </p>
 
-        <div className="grid grid-cols-2 gap-5 mt-5">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mt-5">
           {[
             "/slider/Delivery.jpg",
-            "/home/cleaning.jpg",
+            "/home/cleaningCut.jpg",
             "/home_tiles/Gastro.webp",
             "/home_tiles/Tiles.webp",
           ].map((image) => (
@@ -44,7 +44,7 @@ export default function Career({ params: { locale } }: any) {
                 src={image}
                 width={200}
                 height={100}
-                className="object-cover w-full h-56"
+                className="object-cover w-full h-52 sm:h-32"
               />
             </div>
           ))}

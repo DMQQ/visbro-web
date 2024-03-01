@@ -75,7 +75,6 @@ export default function Contact({ params: { locale } }: any) {
         <h1 className="text-4xl lg:text-6xl font-bold  text-white mt-16">
           {t("heading")}
         </h1>
-        <p className="text-zinc-300 mt-2">{t("heading_helper")}</p>
 
         <article className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-5 mt-16">
           {recurters.map((details, key) => (

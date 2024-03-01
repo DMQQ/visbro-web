@@ -1,6 +1,16 @@
-import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import Image from "next/image";
+
+export async function generateMetadata({ params: { locale } }: any) {
+  unstable_setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "Cleaning" });
+
+  return {
+    title: t("heading"),
+    description: t("content"),
+  };
+}
 
 export default function CleaningServices({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
@@ -8,33 +18,35 @@ export default function CleaningServices({ params: { locale } }: any) {
   const t = useTranslations("Cleaning");
 
   return (
-    <article className="mt-5 border-t border-t-zinc-700">
-      <h1 className="text-3xl font-bold py-5">{t("heading")}</h1>
-      <p className="text-zinc-300 mb-5">{t("content")}</p>
+    <article className="mt-5 border-t border-t-zinc-700 flex flex-col lg:flex-row gap-5">
+      <div className="flex-1 flex flex-col">
+        <h1 className="text-5xl font-bold py-5">{t("heading")}</h1>
+        <p className="text-zinc-200 mb-5 text-lg flex-1 rtl:text-xl">
+          {t("content")}
+        </p>
 
-      <div className="my-5">
-        <a
-          href="tel:+49 1520 8941615"
-          className=" bg-blue-900 rounded-md px-4 py-3 text-center w-full md:max-w-40"
-        >
-          {t("button")}
-        </a>
+        <div className=" w-full flex">
+          <a
+            href="tel:+49 1520 8941615"
+            className=" bg-blue-900 hover:bg-blue-950 transition-colors rounded-md px-4 py-4 text-center w-full"
+          >
+            {t("button")}
+          </a>
+        </div>
       </div>
-
-      {/* <div className="mt-5 bg-blue-900 rounded-md px-4 py-3 text-center w-full md:max-w-40">
-        <Link
-          href={{
-            pathname: "/biuroservis/cleaning-services",
-            query: {
-              modal: "true",
-              service: "cleaning-services",
-              type: "cleaning-services",
-            },
-          }}
-        >
-          Napisz do nas
-        </Link>
-      </div> */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 flex-1 mt-5">
+        {["/4.png", "/home/cleaning.jpg"].map((src) => (
+          <Image
+            priority
+            key={src}
+            alt="Bh"
+            width={300}
+            height={200}
+            src={src}
+            className="object-cover w-full h-full"
+          />
+        ))}
+      </div>
     </article>
   );
 }

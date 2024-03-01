@@ -1,4 +1,5 @@
 import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 
 const content =
   `1. Pomoc w Uzyskaniu Kindergeld: Zapewniamy wsparcie w kompleksowym procesie aplikowania o Kindergeld, w tym wypełnianiu wniosków i zarządzaniu wymaganą dokumentacją.
@@ -23,6 +24,8 @@ const content =
     .map((service) => service.split(":"));
 
 export default function Services({ params: { locale } }: any) {
+  const t = useTranslations("Biuroservis");
+
   return (
     <article className=" mt-5 border-t border-t-zinc-700 ">
       <section className="flex flex-col w-full gap-5 mt-5">

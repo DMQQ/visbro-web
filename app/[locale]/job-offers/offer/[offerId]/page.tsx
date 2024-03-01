@@ -44,7 +44,7 @@ export async function generateStaticParams() {
 async function getOfferById(id: string, locale: string) {
   try {
     const res = await fetch(
-      process.env.BASE_API_URL + "/JobOffers/records/" + id,
+      process.env.BASE_API_URL + `/JobOffers/records/${id}`,
       {
         headers: {
           Authorization: "Bearer " + process.env.AUTH_TOKEN,

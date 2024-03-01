@@ -26,7 +26,7 @@
   },
   "Career": {
     "heading": "Kariera w Visbro Personal Solution",
-    "content": "\nZapraszamy Cię do dołączenia do zespołu Visbro! Odkryj nasze aktualne\noferty pracy poniżej i dołącz do naszej dynamicznej drużyny. Jeśli masz\npomysł, który chciałbyś wnieść do naszej firmy, wypełnij formularz\nkontaktowy i podziel się nim z nami!\n",
+    "content": "Jeżeli jesteś osobą pełną kreatywności, wyróżniającą się wybitnymi zdolnościami komunikacyjnymi i organizacyjnymi, a także nie boisz się żadnych wyzwań, dodatkowo posługujesz się językami obcymi, to mamy dla Ciebie wyjątkową propozycję! Dołącz do naszego zespołu Visbro i rozpocznij budowanie swojej kariery w środowisku, gdzie na pierwszym miejscu stawiamy współpracę, lojalność i zaufanie. Oferujemy pracę, która może i nie należy do najłatwiejszych, ale z pewnością jest dobrze wynagradzana i daje ogromną satysfakcję. Jeśli czujesz, że to propozycja dla Ciebie, nie zwlekaj! Pokaż nam swoje zaangażowanie i kreatywność, a my damy Ci szansę na rozwój i realizację zawodowych ambicji w naszym dynamicznym zespole. Visbro to miejsce, gdzie każdy dzień przynosi nowe wyzwania, a Ty masz szansę stać się ich częścią. Zachęcamy do reagowania i dołączenia do nas!     Do zakładki kariera w visbro\n",
     "form": {
       "name": {
         "text": "Imię",
@@ -154,7 +154,7 @@
       "recruitment": "Rekrutacja",
       "housing": "Kwatery pracownicze",
       "cleaning-services": "Usługi sprzątające",
-      "car-rental": "Visbro wypożyczalnia samochodów"
+      "car-rental": "Wypożyczalnia samochodów"
     }
   },
   "Collaboration": {
@@ -353,7 +353,7 @@
   },
   "Housing": {
     "heading": "Kwatery pracownicze",
-    "content": "Zapraszamy do skorzystania z naszych kwater pracowniczych, które są\n        idealnym rozwiązaniem dla członków Twojego zespołu. Nasze mieszkania w\n        Niemczech Wschodnich są nie tylko w pełni wyposażone, ale także\n        zaprojektowane z ogromną starannością. Regularne sprzątanie gwarantuje\n        utrzymanie czystości i komfortu dla wszystkich mieszkańców. Niezależnie\n        od lokalizacji Twojej działalności w Niemczech, z nami możesz być\n        pewien, że zapewnimy Ci natychmiastowe wsparcie w zakresie\n        zakwaterowania. Dzięki współpracy z naszymi partnerami biznesowymi mamy\n        możliwość organizacji mieszkań na terenie całego kraju, zapewniając\n        elastyczność i wygodę Twojemu zespołowi. Jeśli chcesz zobaczyć, jak\n        prezentują się nasze mieszkania, zapraszamy do obejrzenia galerii zdjęć\n        dostępnej na naszej stronie internetowej. Wybierz nasze kwatery\n        pracownicze i zapewnij swojemu zespołowi idealne warunki do pracy i\n        relaksu!",
+    "content": "Zapraszamy do skorzystania z naszych kwater pracowniczych, które są\n        idealnym rozwiązaniem dla członków Twojego zespołu. Nasze mieszkania w\n        Niemczech Wschodnich są nie tylko w pełni wyposażone, ale także\n        zaprojektowane z ogromną starannością. Regularne sprzątanie gwarantuje\n        utrzymanie czystości i komfortu dla wszystkich mieszkańców. Niezależnie\n        od lokalizacji Twojej działalności w Niemczech, z nami możesz być\n        pewien, że zapewnimy Ci natychmiastowe wsparcie w zakresie\n        zakwaterowania. <br></br> <br></br> Dzięki współpracy z naszymi partnerami biznesowymi mamy\n        możliwość organizacji mieszkań na terenie całego kraju, zapewniając\n        elastyczność i wygodę Twojemu zespołowi. Jeśli chcesz zobaczyć, jak\n        prezentują się nasze mieszkania, zapraszamy do obejrzenia galerii zdjęć\n        dostępnej na naszej stronie internetowej. Wybierz nasze kwatery\n        pracownicze i zapewnij swojemu zespołowi idealne warunki do pracy i\n        relaksu!",
     "button": "Zadzwoń do nas!"
   },
   "Cleaning": {

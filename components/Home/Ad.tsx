@@ -4,7 +4,11 @@ import Image from "next/image";
 
 export default function Ad() {
   const keys = ["recruting", "cleaning", "legal"];
-  const images = ["/home/people.jpg", "/home/cleaning.jpg", "/home/legal.jpg"];
+  const images = [
+    "/home/people.jpg",
+    "/home/cleaningCut.jpg",
+    "/home/legalCut.jpg",
+  ];
 
   const t = useTranslations("Home.ad");
 
