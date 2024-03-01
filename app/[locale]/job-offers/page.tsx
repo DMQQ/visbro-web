@@ -52,7 +52,6 @@ export default async function JobOffers({ params: { locale } }: any) {
           <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold ">
             {t("heading")}
           </h1>
-          <p className="text-zinc-300 mt-2">Lorem ipsum dolor sit amet?</p>
         </div>
 
         {/* <Search /> */}
