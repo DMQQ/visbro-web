@@ -27,8 +27,9 @@ export default function Recrutation({ params: { locale } }: any) {
         </p>
         <div className="w-full flex">
           <a
+            data-tel="+49 1520 8941615"
             href="tel:+49 1520 8941615"
-            className=" bg-blue-900 rounded-md px-4 py-4 text-center w-full "
+            className=" bg-blue-900 rounded-md px-4 py-4 text-center w-full tooltip"
           >
             {t("button")}
           </a>

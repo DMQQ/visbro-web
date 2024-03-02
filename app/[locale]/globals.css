@@ -52,3 +52,28 @@ img {
     transform: translateX(calc(17 * 180px * -1)) scale(1.01); /* Slight scaling to hide the teleportation */
   }
 }
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover::before {
+  content: attr(data-tel);
+  background-color: #000000;
+  color: #ffffff;
+
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  position: absolute;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  font-size: 14px;
+  transform: translateX(-50%);
+  white-space: nowrap; /* Prevent line breaks in the tooltip */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.2s ease-in-out;
+}
+
+.tooltip:hover::before {
+  opacity: 1; /* Show the tooltip on hover */
+}

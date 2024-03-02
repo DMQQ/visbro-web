@@ -28,7 +28,7 @@ export const cars = [
       gearbox: "manual",
       fuelType: "diesel",
       cc: "2998 cm3",
-      mileage: "158 000 km",
+      //  mileage: "158 000 km",
     },
     images: [
       `${baseUrl}/iveco/front.png`,
@@ -46,7 +46,7 @@ export const cars = [
       gearbox: "manual",
       fuelType: "diesel",
       cc: "2198 cm3",
-      mileage: "280 000 km",
+      //  mileage: "280 000 km",
       type: "Furgon",
     },
     images: [
@@ -64,7 +64,7 @@ export const cars = [
       gearbox: "manual",
       fuelType: "diesel",
       cc: "1968 cm3",
-      mileage: "280 000 km",
+      //  mileage: "280 000 km",
       type: "Minivan",
       drive: "fwd",
     },
@@ -84,7 +84,7 @@ export const cars = [
       gearbox: "manual",
       fuelType: "diesel",
       cc: "1956 cm3",
-      mileage: "285 000 km",
+      //  mileage: "285 000 km",
       type: "Minivan",
     },
     images: [
@@ -103,7 +103,7 @@ export const cars = [
       gearbox: "automatic",
       fuelType: "diesel",
       cc: "13 000 cm3",
-      mileage: "600 000 km",
+      //  mileage: "600 000 km",
     },
     images: [
       `${baseUrl}/scania-r410/front-side.png`,

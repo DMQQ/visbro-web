@@ -93,7 +93,8 @@ export default function CarTile({ car }: { car: (typeof cars)[0] }) {
       </ul>
 
       <a
-        className="mt-5 bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800 text-blue-100 text-md p-2 py-3 text-center rounded-md "
+        data-tel="+49 1520 8941615"
+        className="mt-5 bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800 text-blue-100 text-md p-2 py-3 text-center rounded-md tooltip"
         href="tel:+49 1520 8941615"
       >
         {t("contact")}
