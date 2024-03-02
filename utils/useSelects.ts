@@ -11,9 +11,10 @@ export default function useSelects() {
       education: t("education").split(";").map(parse),
       civilState: t("civilState").split(";").map(parse),
       gender: t("gender").split(";").map(parse),
+      driverLicense: t("driverLicense").split(";"),
     }),
     []
   );
 
-  return selects;
+  return selects as any;
 }

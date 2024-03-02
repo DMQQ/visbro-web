@@ -330,7 +330,8 @@
   "Selects": {
     "education": "Podstawowe;Zawodowe;Średnie;Wyższe;Tytuł Doktora",
     "civilState": "Żonaty;Rozwodnik;W związku nieformalnym;Wdowiec;Rodzic samotnie wychowujący dzieci;Singiel",
-    "gender": "Kobieta;Mężczyzna;Inne"
+    "gender": "Kobieta;Mężczyzna;Inne",
+    "driverLicense": "Tak;Nie"
   },
   "FormResponses": {
     "POST": {

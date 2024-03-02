@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import AppHeader from "@/components/AppHeader/AppHeader";
@@ -6,14 +5,20 @@ import AppFooter from "@/components/AppFooter/AppFooter";
 import { ReactNode } from "react";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { locales } from "@/locales";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Visbro Personal Solution",
-  description: "",
-};
+export async function generateMetadata({ params: { locale } }: any) {
+  unstable_setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "Home" });
+
+  return {
+    title: "Visbro Personal Solution UG",
+    description: t("text.short_about"),
+  };
+}
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

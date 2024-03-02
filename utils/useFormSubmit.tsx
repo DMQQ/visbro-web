@@ -12,6 +12,13 @@ export default function useFormSubmit(
 
   const router = useRouter();
 
+  function reset() {
+    setError("");
+    setLoading(false);
+    setMessage("");
+    setIsSuccess(false);
+  }
+
   const handleSubmit = async function <T extends {}>(data: T): Promise<void> {
     try {
       setIsSuccess(false);
@@ -28,5 +35,5 @@ export default function useFormSubmit(
     }
   };
 
-  return { handleSubmit, state: { loading, error, message, isSuccess } };
+  return { handleSubmit, reset, state: { loading, error, message, isSuccess } };
 }

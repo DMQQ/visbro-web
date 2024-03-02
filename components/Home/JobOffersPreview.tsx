@@ -1,21 +1,22 @@
 import { Link } from "@/navigation";
-import axios from "axios";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
 async function fetchBestOffers() {
   "use server";
   try {
-    const res = await axios.get(
-      process.env.BASE_API_URL + "/JobOffers/records",
-      {
-        headers: {
-          Authorization: "Bearer " + process.env.AUTH_TOKEN,
-        },
-      }
-    );
+    const res = await fetch(process.env.BASE_API_URL + "/JobOffers/records", {
+      headers: {
+        Authorization: "Bearer " + process.env.AUTH_TOKEN,
+      },
+      next: {
+        revalidate: 3600,
+      },
+    });
 
-    return res.data.slice(0, 4).map((field: any) => ({
+    const data = await res.json();
+
+    return data.slice(0, 4).map((field: any) => ({
       offerId: field.id,
       ...field.fields,
     }));
@@ -65,22 +66,11 @@ export default async function JobOffersPreview(props: { locale: string }) {
                 <p className="text-zinc-300 mt-2">
                   {offer.content.slice(0, 100)}
                 </p>
-                {/* <span className="text-zinc-300 mt-1">$20</span> */}
-                <ul className="mt-2">
-                  {/* {offer.benefits.map((benefit) => (
-                    <li key={benefit} className="text-zinc-300">
-                      💵 {benefit}
-                    </li>
-                  ))} */}
 
-                  {[
-                    "🤾MultiSport",
-                    "🏥Medical Help",
-                    "$45/h",
-                    "30days of vacations",
-                  ].map((benefit) => (
+                <ul className="mt-2">
+                  {offer.benefits.split(";").map((benefit: string) => (
                     <li key={benefit} className="text-zinc-300">
-                      💵 {benefit}
+                      {benefit}
                     </li>
                   ))}
                 </ul>

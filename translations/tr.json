@@ -322,7 +322,8 @@
   "Selects": {
     "education": "İlkokul;Mesleki;Ortaokul;Yükseköğrenim;Doktora",
     "civilState": "Evli;Boşanmış;Resmi olmayan ilişkide;Dul;Tek ebeveyn;Bekar",
-    "gender": "Kadın;Erkek;Diğer"
+    "gender": "Kadın;Erkek;Diğer",
+    "driverLicense": "Evet; Hayır"
   },
   "FormResponses": {
     "POST": {

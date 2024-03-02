@@ -4,7 +4,7 @@ import {
   TextArea,
 } from "@/components/ApplicationForm/CVApplicationForm";
 import Input from "@/components/ui/Input/Input";
-import { Formik } from "formik";
+import { Formik, useFormik } from "formik";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "@/navigation";
 import { useEffect } from "react";
@@ -69,9 +69,24 @@ export default function Modal() {
 
   const router = useRouter();
 
-  const { handleSubmit, state } = useFormSubmit((data) => {
+  const { handleSubmit, state, reset } = useFormSubmit((data) => {
     return axios.post("/api/services", data);
   });
+
+  const f = useFormik({
+    initialValues: {
+      ...initialValues,
+      services: service,
+    },
+    onSubmit: handleSubmit,
+    validationSchema: validationSchema,
+    enableReinitialize: true,
+  });
+
+  useEffect(() => {
+    f.resetForm();
+    reset();
+  }, [params.get("modal")]);
 
   if (params.get("modal") === "true")
     return (
@@ -93,73 +108,61 @@ export default function Modal() {
               <RxCross1 color="#fff" size={25} />
             </button>
           </div>
-          <Formik
-            validationSchema={validationSchema}
-            initialValues={initialValues}
-            onSubmit={handleSubmit}
-          >
-            {(f) => (
-              <>
-                <EntryField
-                  translationNamespace="Biuroservis.form"
-                  formik={f}
-                  listKey="email"
-                  types={{ email: "email" }}
-                />
-                <div className="flex flex-col sm:flex-row">
-                  <EntryField
-                    translationNamespace="Biuroservis.form"
-                    formik={f}
-                    listKey="name"
-                  />
-                  <EntryField
-                    translationNamespace="Biuroservis.form"
-                    formik={f}
-                    listKey="surname"
-                  />
-                </div>
-                <EntryField
-                  translationNamespace="Biuroservis.form"
-                  formik={f}
-                  listKey="phoneNumber"
-                  types={{ phoneNumber: "tel" }}
-                />
-                <Input
-                  label="Wybrana usługa"
-                  value={f.values.services || ""}
-                  onChange={() => {}}
-                  rest={{ disabled: true }}
-                  className="!text-zinc-400"
-                />
-                <TextArea
-                  formik={f}
-                  formKey="additionalInfo"
-                  label="Dodatkowe informacje"
-                  rows={5}
-                />
 
-                <AlertBox
-                  translationsNamespace="FormResponses.POST"
-                  variant={
-                    !!state.error
-                      ? "error"
-                      : state.isSuccess
-                      ? "success"
-                      : "hidden"
-                  }
-                />
-                <div className="p-2">
-                  <Button
-                    loading={state.loading}
-                    disabled={!(f.isValid && f.dirty) || state.isSuccess}
-                    className="w-full py-4"
-                    onClick={f.handleSubmit}
-                    text={t("form.button")}
-                  />
-                </div>
-              </>
-            )}
-          </Formik>
+          <>
+            <Input
+              label=""
+              value={f.values.services || ""}
+              onChange={() => {}}
+              rest={{ disabled: true }}
+              className="!text-zinc-400"
+            />
+            <EntryField
+              translationNamespace="Biuroservis.form"
+              formik={f}
+              listKey="email"
+              types={{ email: "email" }}
+            />
+            <div className="flex flex-col sm:flex-row">
+              <EntryField
+                translationNamespace="Biuroservis.form"
+                formik={f}
+                listKey="name"
+              />
+              <EntryField
+                translationNamespace="Biuroservis.form"
+                formik={f}
+                listKey="surname"
+              />
+            </div>
+            <EntryField
+              translationNamespace="Biuroservis.form"
+              formik={f}
+              listKey="phoneNumber"
+              types={{ phoneNumber: "tel" }}
+            />
+            <TextArea
+              formik={f}
+              formKey="additionalInfo"
+              label="Dodatkowe informacje"
+              rows={5}
+            />
+            <AlertBox
+              translationsNamespace="FormResponses.POST"
+              variant={
+                !!state.error ? "error" : state.isSuccess ? "success" : "hidden"
+              }
+            />
+            <div className="p-2">
+              <Button
+                loading={state.loading}
+                disabled={!(f.isValid && f.dirty) || state.isSuccess}
+                className="w-full py-4"
+                onClick={f.handleSubmit}
+                text={t("form.button")}
+              />
+            </div>
+          </>
         </section>
       </main>
     );

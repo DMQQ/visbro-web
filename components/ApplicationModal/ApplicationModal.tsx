@@ -125,7 +125,7 @@ export default function ApplicationModal({
           .max(50, tErr("length", { min: 0, max: 50 })),
         bankCode: Yup.string()
           .required(t("bankCode.error"))
-          .max(10, tErr("length", { min: 0, max: 50 })),
+          .max(10, tErr("length", { min: 0, max: 10 })),
         address: Yup.string()
           .required(t("address.error"))
           .max(100, tErr("length", { min: 0, max: 100 })),

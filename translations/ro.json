@@ -319,7 +319,8 @@
   "Selects": {
     "education": "Primar;Vocațional;Liceu;Învățământ superior;Doctorat",
     "civilState": "Căsătorit;Divorțat;Într-o relație informală;Văduv;Părinte singur;Singur",
-    "gender": "Femeie;Bărbat;Alt gen"
+    "gender": "Femeie;Bărbat;Alt gen",
+    "driverLicense": "Da; Nu"
   },
   "FormResponses": {
     "POST": {

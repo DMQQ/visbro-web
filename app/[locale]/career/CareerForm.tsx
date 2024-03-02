@@ -154,7 +154,7 @@ const Form = () => {
               />
 
               <TabSelect
-                options={["Tak", "Nie"]}
+                options={selects.driverLicense}
                 label={t("hasDriverLicenseCatB.text")}
                 formik={f}
                 formKey="hasDriverLicenseCatB"

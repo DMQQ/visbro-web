@@ -1,11 +1,9 @@
 import { Link } from "@/navigation";
 import PageWrapper from "@/components/ui/PageWrapper/PageWrapper";
 import { unstable_setRequestLocale } from "next-intl/server";
-
 import { getTranslations } from "next-intl/server";
 import NextImage from "next/image";
-import axios from "axios";
-import { JobOfferNinox, TJobOffer } from "@/types";
+import { TJobOffer } from "@/types";
 
 export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations({ locale, namespace: "JobOffers" });
@@ -87,16 +85,14 @@ export default async function JobOffers({ params: { locale } }: any) {
 
               <div className="flex flex-col sm:flex-row justify-between flex-1 items-end">
                 <ul className="flex mt-2 sm:mt-0 flex-row sm:flex-col">
-                  {["Fruit thursdays", "Pizza Mondays", "$50/h"].map(
-                    (b: string) => (
-                      <li
-                        key={b}
-                        className="text-white text-sm text-center sm:text-left"
-                      >
-                        💵 {b}
-                      </li>
-                    )
-                  )}
+                  {benefits.split(";").map((b: string) => (
+                    <li
+                      key={b}
+                      className="text-white text-sm text-center sm:text-left"
+                    >
+                      {b}
+                    </li>
+                  ))}
                 </ul>
                 <Link
                   locale={locale}

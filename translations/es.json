@@ -323,7 +323,8 @@
   "Selects": {
     "education": "Primaria;Vocacional;Secundaria;Educación Superior;Doctorado",
     "civilState": "Casado;Divorciado;En una relación informal;Viudo;Padre/Madre soltero;Soltero",
-    "gender": "Mujer;Hombre;Otro"
+    "gender": "Mujer;Hombre;Otro",
+    "driverLicense": "Sí; No"
   },
   "FormResponses": {
     "POST": {
