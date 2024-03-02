@@ -36,19 +36,22 @@ export default function Recrutation({ params: { locale } }: any) {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-5 mt-5 flex-1">
-        {["/gallery/6.jpg", "/gallery/7.jpg", "/gallery/8.jpg", "/4.png"].map(
-          (src) => (
-            <Image
-              priority
-              key={src}
-              alt="Bh"
-              width={300}
-              height={200}
-              src={src}
-              className="object-cover w-full h-full 2xl:max-h-[19rem]"
-            />
-          )
-        )}
+        {[
+          "/home_tiles/Tiles.webp",
+          "/home_tiles/Amazon.webp",
+          "/slider/Forklift.jpg",
+          "/slider/Warehouse.webp",
+        ].map((src) => (
+          <Image
+            priority
+            key={src}
+            alt="decoration"
+            width={300}
+            height={200}
+            src={src}
+            className="object-cover w-full h-full 2xl:max-h-[19rem]"
+          />
+        ))}
       </div>
     </article>
   );
