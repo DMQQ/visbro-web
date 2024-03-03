@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import Image from "next/image";
@@ -36,21 +37,26 @@ export default function Housing({ params: { locale } }: any) {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 mt-5 flex-1">
+      <div className="grid grid-cols-1 md:grid-cols-1 md:grid-rows-2 2xl:grid-cols-2 gap-5 mt-5 flex-1">
         {[
           "/gallery/6.jpg",
           "/gallery/7.jpg",
           "/gallery/8.jpg",
           "/gallery/9.jpg",
-        ].map((src) => (
+        ].map((src, index) => (
           <Image
             priority
             key={src}
             alt="Bh"
-            width={300}
-            height={200}
+            width={500}
+            height={500}
             src={src}
-            className="object-cover w-full h-full max-h-72 2xl:max-h-[19rem]"
+            className={clsx(
+              "object-cover w-full h-full max-h-80 2xl:max-h-[22rem] 2xl:flex",
+              {
+                hidden: index % 2 === 1,
+              }
+            )}
           />
         ))}
       </div>

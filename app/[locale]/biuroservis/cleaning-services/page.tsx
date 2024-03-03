@@ -35,7 +35,7 @@ export default function CleaningServices({ params: { locale } }: any) {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 flex-1 mt-5">
+      <div className="grid grid-cols-2 gap-5 lg:grid-cols-1 2xl:grid-cols-2 flex-1 mt-5">
         {["/4.png", "/home/cleaning.jpg"].map((src) => (
           <Image
             priority
@@ -44,7 +44,7 @@ export default function CleaningServices({ params: { locale } }: any) {
             width={300}
             height={200}
             src={src}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full lg:max-h-52 2xl:max-h-full"
           />
         ))}
       </div>

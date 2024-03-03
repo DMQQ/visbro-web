@@ -8,7 +8,7 @@ import clsx from "clsx";
 async function getOfferIds() {
   try {
     const response = await fetch(
-      process.env.BASE_API_URL + "/collaboration/query",
+      process.env.BASE_API_URL + "/JobOffers/records",
 
       {
         next: {
@@ -24,20 +24,20 @@ async function getOfferIds() {
 
     const data = await response.json();
 
-    return data.map((field: any) => ({ offerId: field.id }));
+    return data.map((field: any) => field.id);
   } catch (error) {
-    return dummyJobData.map(({ offerId }) => offerId);
+    return [];
   }
 }
 
 export async function generateStaticParams() {
-  const jobOffers = await getOfferIds();
+  const jobOffers = (await getOfferIds()) as number[];
 
   const params = [] as { locale: string; offerId: string }[];
 
   for (let offer of jobOffers) {
     for (let locale of locales) {
-      params.push({ locale, offerId: offer });
+      params.push({ locale, offerId: offer.toString() });
     }
   }
 
@@ -72,7 +72,7 @@ export async function generateMetadata({ params: { locale, offerId } }: any) {
   const data = await getOfferById(offerId, locale);
 
   return {
-    title: (data?.name || "Not found") + "- Visbro Personal Solution",
+    title: (data?.name || "Not found") + " - Visbro Personal Solution",
     description: data?.content,
   };
 }
@@ -100,46 +100,22 @@ export default async function OfferPage({
             {data?.name}
           </h1>
 
-          <article className="p-2 mt-5">
-            <h2 className="font-bold text-md">Wymagania</h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-3 mt-2">
-              <li>🏠 Remote/On-site</li>
-              <li>💵 $25/h</li>
-              <li>⏱️ Full-time/Part-time</li>
-              <li>👅 English/Polish/German</li>
-              <li>🏠 Housing included</li>
-              <li>🚗 Work car</li>
-              <li>🍉 Fruit thursdays</li>
-              <li>🏥 Health care included</li>
-              <li>Much moree ....</li>
-              {/* {[...data!.benefits, ...data!.benefits].map((benefit, index) => (
-                <li className="mt-2" key={index}>
-                  🍊 {benefit}
-                </li>
-              ))} */}
+          <article className="mt-5">
+            <h2 className="font-bold text-md">Benefity</h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
+              {(data?.benefits?.split(";") as string[]).map(
+                (benefit, index) => (
+                  <li key={benefit + index}>{benefit}</li>
+                )
+              )}
             </ul>
           </article>
 
           <div className="mt-5">
-            <h2 className="font-bold text-md">Position description</h2>
+            <h2 className="font-bold text-md">Opis</h2>
 
-            <p className="mt-2">{data?.content}</p>
+            <p className="mt-2 text-lg">{data?.content}</p>
           </div>
-
-          {/* <div className="mt-10">
-            <h2 className="font-bold text-md">Work images</h2>
-
-            <section className="grid grid-cols-2 gap-2 mt-2">
-              {[0, 1].map((key) => (
-                <img
-                  src="/car-rental-concept-illustration_114360-9267.avif"
-                  key={key}
-                  alt="placeholder"
-                  className="rounded-md"
-                />
-              ))}
-            </section>
-          </div> */}
         </section>
         <ApplicationPanel offerId={offerId} />
       </article>
