@@ -23,9 +23,7 @@ export default function Housing({ params: { locale } }: any) {
       <div className="flex-1 flex flex-col">
         <h1 className="text-5xl font-bold py-5">{t("heading")}</h1>
         <p className="text-zinc-300 mb-5 text-lg flex-1 rtl:text-xl">
-          {t.rich("content", {
-            br: () => <br />,
-          })}
+          {t("content")}
         </p>
         <div className="w-full flex">
           <a

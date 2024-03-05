@@ -22,9 +22,7 @@ export default function Recrutation({ params: { locale } }: any) {
       <div className="flex-1 flex flex-col">
         <h1 className="text-5xl font-bold py-5">{t("heading")}</h1>
         <p className="text-zinc-300 mb-5 flex-1 text-lg rtl:text-xl">
-          {t.rich("content", {
-            br: () => <br />,
-          })}
+          {t.rich("content")}
         </p>
         <div className="w-full flex">
           <a
