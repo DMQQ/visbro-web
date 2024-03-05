@@ -1,5 +1,3 @@
-"use server";
-
 import axios from "axios";
 
 type Tables =
@@ -16,7 +14,6 @@ export async function uploadFile(
     recordId: string | number;
   }
 ): Promise<boolean> {
-  "use server";
   const formdata = new FormData();
   formdata.append("file", file);
 
@@ -44,7 +41,6 @@ export async function postData<T>(
     table: Tables;
   }
 ) {
-  "use server";
   const res = await axios.post(
     process.env.BASE_API_URL + `/${destination.table}/records`,
     [
