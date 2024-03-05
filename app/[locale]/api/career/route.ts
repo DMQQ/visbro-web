@@ -20,8 +20,6 @@ async function postData<T>(
     table: Tables;
   }
 ) {
-  console.log("where log");
-
   const res = await axios.post(
     process.env.BASE_API_URL + `/${destination.table}/records`,
     [
@@ -42,7 +40,7 @@ async function postData<T>(
 }
 
 async function uploadFile(
-  file: Blob,
+  file: any,
   destination: {
     table: Tables;
     recordId: string | number;
@@ -113,7 +111,7 @@ export const POST = async (req: NextRequest, { params }: any) => {
     if (key !== "cv") data[key] = res.data[key];
   });
 
-  const file = res.data.cv as Blob;
+  const file = res.data.cv as any;
 
   if (!res.success) {
     return Response.json(
