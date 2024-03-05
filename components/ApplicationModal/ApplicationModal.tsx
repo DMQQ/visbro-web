@@ -119,7 +119,7 @@ export default function ApplicationModal({
         bankNumber: Yup.string()
           .required(t("bankNumber.error"))
           .max(20, tErr("length", { min: 0, max: 20 }))
-          .min(10),
+          .min(10, tErr("length", { min: 10, max: 20 })),
         bankName: Yup.string()
           .required(t("bankName.error"))
           .max(50, tErr("length", { min: 0, max: 50 })),
@@ -150,6 +150,7 @@ export default function ApplicationModal({
   const [idFile, setIdFile] = useState<File[]>([]);
   const [driverLicense, setDriverLicense] = useState<File[]>([]);
   const [CVFile, setCVFile] = useState<File | null>(null);
+  const [selfie, setSelfie] = useState<File | null>(null);
 
   const { handleSubmit, state } = useFormSubmit((data) => {
     const formData = new FormData();
@@ -162,6 +163,7 @@ export default function ApplicationModal({
     formData.append("driverLicenseFileFront", driverLicense[0]);
     formData.append("driverLicenseFileBack", driverLicense[1]);
     formData.append("CVFile", CVFile!);
+    formData.append("Selfie", selfie!);
 
     return axios.post("/api/job-offer", formData);
   });
@@ -222,7 +224,9 @@ export default function ApplicationModal({
       (idFile.length < 2 ||
         driverLicense.length < 2 ||
         CVFile === undefined ||
-        CVFile == null)
+        CVFile == null ||
+        selfie === undefined ||
+        selfie == null)
     ) {
       return true;
     }
@@ -316,6 +320,13 @@ export default function ApplicationModal({
                     setDriverLicense([...ev.target.files]?.slice(0, 2))
                   }
                   label={t(`driverLicense.text`)}
+                />
+
+                <DropFile
+                  multiple={false}
+                  formats="PNG,JPG,PDF,DOC,DOCX etc"
+                  onChange={(ev: any) => setSelfie(ev.target.files?.[0])}
+                  label={"Selfie"}
                 />
                 <DropFile
                   hideImagePreview

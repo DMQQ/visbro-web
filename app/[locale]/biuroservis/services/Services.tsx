@@ -20,6 +20,7 @@ export default function Services({ params: { locale } }: any) {
 }
 
 const Tile = (props: { heading: string; content: string }) => {
+  const t = useTranslations("Biuroservis");
   return (
     <details className="p-5 rounded-md bg-zinc-950 flex flex-col items-start hover:bg-zinc-800 transition duration-200">
       <summary className="cursor-pointer">
@@ -41,7 +42,7 @@ const Tile = (props: { heading: string; content: string }) => {
         }}
         className="bg-blue-800 w-full px-5 text-center py-3 rounded-md sm:w-52"
       >
-        Apply
+        {t("form.button")}
       </Link>
     </details>
   );

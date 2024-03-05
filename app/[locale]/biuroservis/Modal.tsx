@@ -144,7 +144,7 @@ export default function Modal() {
             <TextArea
               formik={f}
               formKey="additionalInfo"
-              label="Dodatkowe informacje"
+              label={t("form.additionalInfo.text")}
               rows={5}
             />
             <AlertBox

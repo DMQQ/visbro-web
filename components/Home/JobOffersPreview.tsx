@@ -47,7 +47,7 @@ export default async function JobOffersPreview(props: { locale: string }) {
             gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
           }}
         >
-          {offers.map((offer: any) => (
+          {offers.map((offer: any, index) => (
             <section
               key={offer.name}
               style={{ borderWidth: 0.5 }}

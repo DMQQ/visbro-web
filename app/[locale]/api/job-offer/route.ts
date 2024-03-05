@@ -94,6 +94,7 @@ const fileKeys = [
   "driverLicenseFileFront",
   "driverLicenseFileBack",
   "CVFile",
+  "Selfie",
 ];
 
 const keysToOmit = [...fileKeys, "age", "dataProcessingConsent"];

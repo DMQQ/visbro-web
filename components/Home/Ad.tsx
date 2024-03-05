@@ -21,7 +21,7 @@ export default function Ad() {
 
         {keys.map((el, index) => (
           <div
-            key={index}
+            key={el[index]}
             className={clsx(
               "div flex flex-col-reverse md:flex-row mt-16 bg-zinc-950 md:p-5 rounded-2xl",
               {

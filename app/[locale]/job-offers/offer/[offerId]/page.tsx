@@ -91,76 +91,80 @@ export default async function OfferPage({
   });
 
   return (
-    <main className={`w-full h-full min-h-screen sm:pb-16`}>
-      <article
-        className={clsx(
-          "flex flex-col md:flex-row mx-auto lg:w-11/12 xl:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg sm:mt-32",
-          {
-            hidden: data === undefined,
-          }
-        )}
-      >
-        <section className="flex-[3] p-5 rounded-lg h-auto">
-          <h1 className="font-bold text-2xl md:text-3xl xl:text-5xl my-5 mb-10 text-wrap break-words">
-            {data?.name}
-          </h1>
+    <>
+      <main className={`w-full h-full min-h-screen sm:pb-16`}>
+        <article
+          className={clsx(
+            "flex flex-col md:flex-row mx-auto lg:w-11/12 xl:w-4/6 gap-5 dark:bg-zinc-900 rounded-lg sm:mt-32",
+            {
+              hidden: data === undefined,
+            }
+          )}
+        >
+          <section className="flex-[3] p-5 rounded-lg h-auto">
+            <h1 className="font-bold text-2xl md:text-3xl xl:text-5xl my-5 mb-10 text-wrap break-words">
+              {data?.name}
+            </h1>
 
-          <article className="mt-5">
-            <h2 className="font-bold text-md">{t("requirements")}</h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
-              {(data?.requirements?.split(";") as string[])?.map(
-                (benefit, index) => (
-                  <li key={benefit + index}>{benefit}</li>
-                )
-              )}
-            </ul>
-          </article>
+            <article className="mt-5">
+              <h2 className="font-bold text-md">{t("requirements")}</h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
+                {(data?.requirements?.split(";") as string[])?.map(
+                  (req, index) => (
+                    <li key={req + index}>{req}</li>
+                  )
+                )}
+              </ul>
+            </article>
 
-          <article className="mt-5">
-            <h2 className="font-bold text-md">{t("responsibilities")}</h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
-              {(data?.responsibilities?.split(";") as string[])?.map(
-                (benefit, index) => (
-                  <li key={benefit + index}>{benefit}</li>
-                )
-              )}
-            </ul>
-          </article>
+            <article className="mt-5">
+              <h2 className="font-bold text-md">{t("responsibilities")}</h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
+                {(data?.responsibilities?.split(";") as string[])?.map(
+                  (res, index) => (
+                    <li key={res + index}>{res}</li>
+                  )
+                )}
+              </ul>
+            </article>
 
-          <article className="mt-5">
-            <h2 className="font-bold text-md">{t("benefits")}</h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
-              {(data?.benefits?.split(";") as string[])?.map(
-                (benefit, index) => (
-                  <li key={benefit + index}>{benefit}</li>
-                )
-              )}
-            </ul>
-          </article>
+            <article className="mt-5">
+              <h2 className="font-bold text-md">{t("benefits")}</h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
+                {(data?.benefits?.split(";") as string[])?.map(
+                  (benefit, index) => (
+                    <li key={benefit + index}>{benefit}</li>
+                  )
+                )}
+              </ul>
+            </article>
 
-          <div className="mt-5">
-            <h2 className="font-bold text-md">{t("description")}</h2>
+            <div className="mt-5">
+              <h2 className="font-bold text-md">{t("description")}</h2>
 
-            <p className="mt-2 text-lg">{data?.content}</p>
-          </div>
-        </section>
-        <ApplicationPanel offerId={offerId} />
-      </article>
+              <p className="mt-2 text-lg">{data?.content}</p>
+            </div>
+          </section>
+          <ApplicationPanel offerId={offerId} />
+        </article>
 
-      <article
-        className={clsx("hidden h-[50vh] w-full items-center justify-center", {
-          "!flex flex-col": data === undefined,
-        })}
-      >
-        <h1 className="text-5xl font-bold">Offer not found</h1>
-      </article>
-
+        <article
+          className={clsx(
+            "hidden h-[50vh] w-full items-center justify-center",
+            {
+              "!flex flex-col": data === undefined,
+            }
+          )}
+        >
+          <h1 className="text-5xl font-bold">Offer not found</h1>
+        </article>
+      </main>
       {searchParams.modal === "true" && (
         <ApplicationModal
           offerTitle={data?.name}
           offerId={offerId + " - " + data?.name}
         />
       )}
-    </main>
+    </>
   );
 }

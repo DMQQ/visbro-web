@@ -69,6 +69,8 @@ export default function ChangeLanguage() {
                 className="flex items-center"
               >
                 <Image
+                  priority={false}
+                  fetchPriority="low"
                   width={30}
                   height={20}
                   src={flag}
