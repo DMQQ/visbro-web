@@ -2,7 +2,7 @@ import { redirect } from "@/navigation";
 import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 
-import * as zfd from "zod-form-data";
+import * as zfd from "zod-form-data"; // Przyczyna problemu z buildem na ubuntu
 import * as z from "zod";
 
 import { limiter } from "../config/limiter";
@@ -87,7 +87,7 @@ const careerSchema = z.object({
   education: z.string(),
   gender: z.string(),
   languages: z.string(),
-  hasDriverLicenseCatB: z.boolean(),
+  hasDriverLicenseCatB: z.string(),
   civilState: z.string(),
   additionalInfo: z.string().min(200).max(1000),
 });
@@ -109,23 +109,24 @@ export const POST = async (req: NextRequest, { params }: any) => {
 
   const formData = await req.formData();
 
-  const res = careerSchema.safeParse(formData) as {
+  let data = {} as {
+    [key: string]: string;
+  };
+
+  formData.forEach((value, key) => {
+    if (key === "cv") return;
+    data[key] = value.toString();
+  });
+
+  const res = careerSchema.safeParse(data) as {
     success: boolean;
     error: any;
     data: any;
   };
 
-  let data = {} as {
-    [key: string]: string;
-  };
+  const file = formData.get("cv");
 
-  Object.keys(res?.data).forEach((key) => {
-    if (key !== "cv") data[key] = res.data[key];
-  });
-
-  const file = res.data.cv as any;
-
-  if (!res.success) {
+  if (!res.success || !res.data) {
     return Response.json(
       {
         message: "Invalid data",
