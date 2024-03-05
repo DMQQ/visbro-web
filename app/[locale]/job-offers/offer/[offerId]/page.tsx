@@ -1,9 +1,10 @@
 import ApplicationModal from "@/components/ApplicationModal/ApplicationModal";
 import ApplicationPanel from "./ApplicationPanel";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { locales } from "@/locales";
-import { dummyJobData } from "@/dummyData";
 import clsx from "clsx";
+import { TJobOffer } from "@/types";
+import { notFound } from "next/navigation";
 
 async function getOfferIds() {
   try {
@@ -44,7 +45,7 @@ export async function generateStaticParams() {
   return params;
 }
 
-async function getOfferById(id: string, locale: string) {
+async function getOfferById(id: string, locale: string): Promise<TJobOffer> {
   try {
     const res = await fetch(
       process.env.BASE_API_URL + `/JobOffers/records/${id}`,
@@ -62,7 +63,7 @@ async function getOfferById(id: string, locale: string) {
 
     return data.fields;
   } catch (error) {
-    return dummyJobData.find((d) => d.offerId === id);
+    notFound();
   }
 }
 
@@ -84,6 +85,10 @@ export default async function OfferPage({
   unstable_setRequestLocale(locale);
 
   const data = await getOfferById(offerId, locale);
+  const t = await getTranslations({
+    locale,
+    namespace: "JobOfferDetails.headings",
+  });
 
   return (
     <main className={`w-full h-full min-h-screen sm:pb-16`}>
@@ -101,9 +106,31 @@ export default async function OfferPage({
           </h1>
 
           <article className="mt-5">
-            <h2 className="font-bold text-md">Benefity</h2>
+            <h2 className="font-bold text-md">{t("requirements")}</h2>
             <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
-              {(data?.benefits?.split(";") as string[]).map(
+              {(data?.requirements?.split(";") as string[])?.map(
+                (benefit, index) => (
+                  <li key={benefit + index}>{benefit}</li>
+                )
+              )}
+            </ul>
+          </article>
+
+          <article className="mt-5">
+            <h2 className="font-bold text-md">{t("responsibilities")}</h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
+              {(data?.responsibilities?.split(";") as string[])?.map(
+                (benefit, index) => (
+                  <li key={benefit + index}>{benefit}</li>
+                )
+              )}
+            </ul>
+          </article>
+
+          <article className="mt-5">
+            <h2 className="font-bold text-md">{t("benefits")}</h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
+              {(data?.benefits?.split(";") as string[])?.map(
                 (benefit, index) => (
                   <li key={benefit + index}>{benefit}</li>
                 )
@@ -112,7 +139,7 @@ export default async function OfferPage({
           </article>
 
           <div className="mt-5">
-            <h2 className="font-bold text-md">Opis</h2>
+            <h2 className="font-bold text-md">{t("description")}</h2>
 
             <p className="mt-2 text-lg">{data?.content}</p>
           </div>
@@ -129,7 +156,10 @@ export default async function OfferPage({
       </article>
 
       {searchParams.modal === "true" && (
-        <ApplicationModal offerTitle={data?.name} offerId={offerId} />
+        <ApplicationModal
+          offerTitle={data?.name}
+          offerId={offerId + " - " + data?.name}
+        />
       )}
     </main>
   );

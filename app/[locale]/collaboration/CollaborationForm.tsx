@@ -4,12 +4,13 @@ import {
   EntryField,
   TextArea,
 } from "@/components/ApplicationForm/CVApplicationForm";
+import DropFile from "@/components/DropFile/DropFile";
 import Button from "@/components/ui/Button/Button";
 import useFormSubmit from "@/utils/useFormSubmit";
 import axios from "axios";
 import { Formik } from "formik";
 import { useTranslations } from "next-intl";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import * as Yup from "yup";
 
 const initialFormValues = {
@@ -42,7 +43,7 @@ const Form = () => {
         .max(50, tErr("length", { min: 0, max: 50 })),
       phoneNumber: Yup.string()
         .required(t("phoneNumber.error"))
-        .max(50, tErr("length", { min: 0, max: 50 })),
+        .max(16, tErr("length", { min: 0, max: 16 })),
       email: Yup.string()
         .email(t("email.errorFormat"))
         .required(t("email.error"))
@@ -51,14 +52,22 @@ const Form = () => {
     });
   }, []);
 
+  const [CVFile, setCVFile] = useState<File | null>(null);
+
   const { handleSubmit, state } = useFormSubmit((data) => {
     return axios.post("/api/collaboration", data, {
       headers: { locale: "pl" },
     });
   });
 
-  const onSubmit = async (props: typeof initialFormValues) => {
-    await handleSubmit<typeof initialFormValues>(props);
+  const onSubmit = async (props: any) => {
+    const formData = new FormData();
+
+    Object.keys(props).forEach((key) => formData.append(key, props[key]));
+
+    formData.append("cv", CVFile!);
+
+    await handleSubmit(formData);
   };
 
   return (
@@ -109,6 +118,13 @@ const Form = () => {
                 listKey={"phoneNumber"}
                 translationNamespace="Collaboration.form"
               />
+              <DropFile
+                hideImagePreview
+                multiple={false}
+                onChange={(ev: any) => setCVFile(ev.target.files?.[0])}
+                formats="DOCX, DOC, PDF, PNG, JPG etc"
+                label={"CV (Curriculum Vitae)"}
+              />
 
               <TextArea
                 formik={f}
@@ -132,7 +148,9 @@ const Form = () => {
                 <Button
                   loading={state.loading}
                   buttonType="submit"
-                  disabled={!(f.isValid && f.dirty) || state.isSuccess}
+                  disabled={
+                    !(f.isValid && f.dirty) || state.isSuccess || !CVFile
+                  }
                   onClick={f.handleSubmit}
                   className={`py-3 w-full`}
                   text={t("submit")}

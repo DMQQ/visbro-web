@@ -20,6 +20,7 @@ export const GET = async (
         headers: {
           Authorization: "Bearer " + process.env.AUTH_TOKEN,
         },
+        cache: "force-cache",
       }
     );
 

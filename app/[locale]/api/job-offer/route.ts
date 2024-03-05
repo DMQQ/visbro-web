@@ -1,9 +1,8 @@
 import { redirect } from "@/navigation";
-import axios from "axios";
-import { File } from "buffer";
 import { NextRequest, NextResponse } from "next/server";
 import * as z from "zod";
 import { limiter } from "../config/limiter";
+import { postData, uploadFile } from "@/utils/ninox";
 
 const collabSchema = z.object({
   name: z.string().max(100),
@@ -27,33 +26,27 @@ const collabSchema = z.object({
   offerId: z.string(),
 });
 
-async function postFile(file: Blob, recordId: number) {
-  const formdata = new FormData();
-  formdata.append("file", file);
+const fileKeys = [
+  "idFileFront",
+  "idFileBack",
+  "driverLicenseFileFront",
+  "driverLicenseFileBack",
+  "CVFile",
+];
 
-  try {
-    const res = await axios.post(
-      process.env.BASE_API_URL + `/OfferApplication/records/${recordId}/files`,
-      formdata,
-      {
-        headers: {
-          Authorization: "Bearer " + process.env.AUTH_TOKEN,
-        },
-      }
-    );
-
-    return res.status;
-  } catch (error) {
-    throw new Error("Image not uploaded");
-  }
-}
+const keysToOmit = [...fileKeys, "age", "dataProcessingConsent"];
 
 async function postFilesAsync(files: Blob[], recordId: number) {
   const promises = await Promise.all(
-    files.map((file) => postFile(file, recordId))
+    files.map((file) =>
+      uploadFile(file, {
+        recordId,
+        table: "OfferApplication",
+      })
+    )
   );
 
-  return promises.every((status) => status === 201 || status === 201);
+  return promises.every((status) => status);
 }
 
 export const POST = async (req: NextRequest, { params }: any) => {
@@ -75,8 +68,7 @@ export const POST = async (req: NextRequest, { params }: any) => {
   const finalData = {} as any;
 
   data.forEach((value, key) => {
-    if (key === "idFile" || key === "driverLicenseFile") return;
-    if (key === "dataProcessingConsent" || key === "age") return;
+    if (keysToOmit.includes(key)) return;
 
     let finalV = value.toString() as string | boolean;
     if (value === "true" || value === "false") finalV = Boolean(value);
@@ -103,29 +95,16 @@ export const POST = async (req: NextRequest, { params }: any) => {
     );
 
   try {
-    const res = await axios.post(
-      process.env.BASE_API_URL + "/OfferApplication/records",
-      [
-        {
-          fields: {
-            ...finalData,
-            offerId,
-          },
-        },
-      ],
+    const recordId = await postData(
       {
-        headers: {
-          Authorization: "Bearer " + process.env.AUTH_TOKEN,
-        },
-      }
+        ...finalData,
+        offerId,
+      },
+      { table: "OfferApplication" }
     );
 
-    const recordId = res.data[0].id as number; // TO GIT
-
-    await postFilesAsync(
-      [data.get("idFile")! as Blob, data.get("driverLicenseFile")! as Blob],
-      recordId
-    );
+    const files: Blob[] = fileKeys.map((key) => data.get(key) as Blob);
+    await postFilesAsync(files, recordId);
   } catch (error) {
     return Response.json(
       {

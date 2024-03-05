@@ -13,6 +13,9 @@ export type TJobOffer = {
   benefits: string;
   offerId: string;
   image: string;
+  lang: string;
+  requirements: string;
+  responsibilities: string;
 };
 
 export type JobOfferNinox = NinoxResponse<TJobOffer>;
