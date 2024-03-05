@@ -284,6 +284,13 @@
       "dataProcessingConsent": {
         "text": "Kişisel Veri İşleme İzni",
         "error": "Veri işleme izni seçilmelidir"
+      },
+      "documentId": {
+        "text": "Kimlik Fotoğrafları (Ön ve Arka)",
+        "error": "Fotoğraf yok"
+      },
+      "driverLicense": {
+        "text": "Sürücü Ehliyeti (Ön ve Arka)"
       }
     }
   },
@@ -354,5 +361,13 @@
     "heading": "Temizlik Hizmetleri",
     "content": "Visbro ayrıca özel ve kurumsal sektörde profesyonel temizlik hizmetleri sunmaktadır. Deneyimli personelimiz, gerekli tüm araçlarla donatılmış olarak, tüm taleplerinize cevap verebilir. Size veya şirketinize özel olarak uyarlanmış yüksek kaliteli temizlik hizmetleri sunmak önceliğimizdir.",
     "button": "Bizi Ara!"
+  },
+  "JobOfferDetails": {
+    "headings": {
+      "requirements": "Gereksinimler",
+      "responsibilities": "Sorumluluklar",
+      "benefits": "Avantajlar",
+      "description": "Açıklama"
+    }
   }
 }

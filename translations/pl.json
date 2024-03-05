@@ -287,11 +287,11 @@
         "error": "Zgoda na przetwarzanie danych musi być zaznaczona"
       },
       "documentId": {
-        "text": "Zdjęcia dowodu",
+        "text": "Zdjęcia dowodu (Przód i Tył)",
         "error": "Brak zdjęć"
       },
       "driverLicense": {
-        "text": "Prawo jazdy"
+        "text": "Prawo jazdy (Przód i Tył)"
       }
     }
   },
@@ -362,5 +362,13 @@
     "heading": "Usługi sprzątające",
     "content": "Visbro oferuje również profesjonalne usługi sprzątające w sektorze\n        prywatnym oraz firmowym . Nasz doświadczony personel który dysponuje\n        wszystkimi niezbędnymi narzędziami jest w stanie sprostać wszystkim\n        wymaganiom . Naszym priorytetem jest zapewnie ci najwyższej jakości\n        wykonywanych usług spersonalizowanych specjalnie dla ciebie lub twojej\n        firmy.",
     "button": "Zadzwoń do nas!"
+  },
+  "JobOfferDetails": {
+    "headings": {
+      "requirements": "Wymagania",
+      "responsibilities": "Obowiązki",
+      "benefits": "Benefity",
+      "description": "Opis"
+    }
   }
 }

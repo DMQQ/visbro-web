@@ -281,6 +281,13 @@
       "dataProcessingConsent": {
         "text": "Consent pentru Prelucrarea Datelor Personale",
         "error": "Trebuie selectat consimțământul pentru prelucrarea datelor"
+      },
+      "documentId": {
+        "text": "Fotografii buletin (Față și Spate)",
+        "error": "Fără fotografii"
+      },
+      "driverLicense": {
+        "text": "Permis de conducere (Față și Spate)"
       }
     }
   },
@@ -351,5 +358,13 @@
     "heading": "Servicii de Curățenie",
     "content": "Visbro oferă, de asemenea, servicii profesionale de curățenie atât în sectorul privat, cât și în cel corporativ. Personalul nostru experimentat, echipat cu toate instrumentele necesare, poate satisface toate cerințele dvs. Prioritatea noastră este să vă furnizăm servicii de curățenie de înaltă calitate, personalizate special pentru dvs. sau compania dvs.",
     "button": "Sună-ne!"
+  },
+  "JobOfferDetails": {
+    "headings": {
+      "requirements": "Cerințe",
+      "responsibilities": "Responsabilități",
+      "benefits": "Beneficii",
+      "description": "Descriere"
+    }
   }
 }

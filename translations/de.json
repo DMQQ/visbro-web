@@ -285,12 +285,13 @@
         "text": "Einwilligung zur Verarbeitung personenbezogener Daten",
         "error": "Die Einwilligung zur Datenverarbeitung muss ausgewählt sein"
       },
+
       "documentId": {
-        "text": "Fotos Ihres Personalausweises",
-        "error": ""
+        "text": "Ausweisfotos (Vorder- und Rückseite)",
+        "error": "Keine Fotos vorhanden"
       },
       "driverLicense": {
-        "text": "Führerscheinfotos"
+        "text": "Führerschein (Vorder- und Rückseite)"
       }
     }
   },
@@ -362,5 +363,13 @@
     "heading": "Reinigungsdienstleistungen",
     "content": "Visbro bietet auch professionelle Reinigungsdienstleistungen im privaten und Unternehmensbereich an. Unser erfahrenes Personal, ausgestattet mit allen notwendigen Werkzeugen, kann allen Ihren Anforderungen gerecht werden. Unsere Priorität ist es, Ihnen hochwertige, auf Sie oder Ihr Unternehmen zugeschnittene Reinigungsdienstleistungen anzubieten.",
     "button": "Rufen Sie uns an!"
+  },
+  "JobOfferDetails": {
+    "headings": {
+      "requirements": "Anforderungen",
+      "responsibilities": "Verantwortlichkeiten",
+      "benefits": "Vorteile",
+      "description": "Beschreibung"
+    }
   }
 }

@@ -284,6 +284,13 @@
       "dataProcessingConsent": {
         "text": "Consentimiento para el Procesamiento de Datos Personales",
         "error": "Debe seleccionarse el consentimiento para el procesamiento de datos"
+      },
+      "documentId": {
+        "text": "Fotos de identificación (anverso y reverso)",
+        "error": "Sin fotos"
+      },
+      "driverLicense": {
+        "text": "Licencia de conducir (anverso y reverso)"
       }
     }
   },
@@ -355,5 +362,13 @@
     "heading": "Servicios de limpieza",
     "content": "Visbro también ofrece servicios de limpieza profesionales tanto en el sector privado como en el empresarial. Nuestro personal experimentado, equipado con todas las herramientas necesarias, puede cumplir con todos tus requisitos. Nuestra prioridad es proporcionarte servicios de limpieza de alta calidad y personalizados especialmente para ti o tu empresa.",
     "button": "¡Llámanos!"
+  },
+  "JobOfferDetails": {
+    "headings": {
+      "requirements": "Requisitos",
+      "responsibilities": "Responsabilidades",
+      "benefits": "Beneficios",
+      "description": "Descripción"
+    }
   }
 }

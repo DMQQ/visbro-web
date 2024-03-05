@@ -284,6 +284,13 @@
       "dataProcessingConsent": {
         "text": "Consent for Personal Data Processing",
         "error": "Consent for data processing must be selected"
+      },
+      "documentId": {
+        "text": "ID Photos (Front and Back)",
+        "error": "No photos available"
+      },
+      "driverLicense": {
+        "text": "Driver's License (Front and Back)"
       }
     }
   },
@@ -355,5 +362,13 @@
     "heading": "Cleaning Services",
     "content": "Visbro also offers professional cleaning services in both the private and corporate sectors. Our experienced staff, equipped with all the necessary tools, can meet all your requirements. Our priority is to provide you with high-quality, personalized cleaning services tailored to you or your company.",
     "button": "Call us!"
+  },
+  "JobOfferDetails": {
+    "headings": {
+      "requirements": "Requirements",
+      "responsibilities": "Responsibilities",
+      "benefits": "Benefits",
+      "description": "Description"
+    }
   }
 }
