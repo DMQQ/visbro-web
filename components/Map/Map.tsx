@@ -21,10 +21,10 @@ export default function Map(props: any) {
       />
       <Marker
         autoPan
-        alt="Franz-Flemming-Straße, 04179 Leipzig, Niemcy"
+        alt="Franz-Flemming-Straße, 43a 04179 Leipzig, Deutchland"
         position={position}
       >
-        <Popup>Franz-Flemming-Straße, 04179 Leipzig, Niemcy</Popup>
+        <Popup>Franz-Flemming-Straße, 43a 04179 Leipzig, Deutchland</Popup>
       </Marker>
     </MapContainer>
   );

@@ -2,6 +2,11 @@
   "Contact": {
     "heading": "Contact",
     "heading_helper": "Aveți întrebări? Scrieți recrutorilor noștri!",
+    "positions": {
+      "ceo": "Director",
+      "recruiter": "Recruiter",
+      "manager": "Manager"
+    },
     "location_heading": "Locație",
     "phone_heading": "Telefon Sediu Central",
     "open_hours": "Deschis"
@@ -24,7 +29,7 @@
     "heading_helper": "Fotografii de la locul nostru de muncă și companie"
   },
   "Career": {
-    "heading": "Carieră la Visbro Personal Solution",
+    "heading": "Carieră la Visbro Personal Solutions",
     "content": "Dacă ești o persoană plină de creativitate, distinsă prin abilități de comunicare și organizare remarcabile, și nu te temi de nicio provocare, iar în plus, vorbești limbi străine, atunci avem o propunere specială pentru tine! Alătură-te echipei noastre Visbro și începe să-ți construiești cariera într-un mediu în care punem pe primul loc colaborarea, loialitatea și încrederea. Oferim un loc de muncă care poate să nu fie cel mai ușor, dar cu siguranță este bine plătit și oferă o satisfacție imensă. Dacă simți că aceasta este o oportunitate potrivită pentru tine, nu ezita! Arată-ne angajamentul și creativitatea ta, iar noi îți vom oferi șansa de dezvoltare și realizare a ambițiilor profesionale în echipa noastră dinamică. Visbro este un loc în care fiecare zi aduce noi provocări, iar tu ai șansa să faci parte din ele. Te încurajăm să răspunzi și să te alături nouă! Vizitează secțiunea de cariere pe site-ul Visbro.\n",
     "form": {
       "name": {
@@ -194,7 +199,7 @@
       },
       "submit": "Trimite"
     },
-    "content": "\nLa Visbro Personal Solution UG, știm că colaborarea eficientă este cheia succesului oricărei afaceri. De peste un an, ajutăm antreprenorii din întreaga țară să construiască echipe puternice și eficiente și să-și atingă obiectivele strategice de afaceri. Serviciile noastre HR se bazează pe o înțelegere profundă a nevoilor clienților noștri și asigură suport cuprinzător în gestionarea personalului.\n <br></br> <br></br>\nCa echipă experimentată de specialiști, suntem pregătiți să vă sprijinim în toate aspectele gestionării resurselor umane - de la recrutare și selecție, până la formare și dezvoltare a angajaților, gestionarea performanței și retenția talentelor. Abordarea noastră se bazează pe colaborare și o abordare partenerială, care se traduce în relații de afaceri durabile și productive.\n <br></br> <br></br>\nVă încurajăm să utilizați formularul de contact de mai jos pentru a discuta cum vă putem sprijini dezvoltarea afacerii și contribui la atingerea obiectivelor dvs. de afaceri.\n\n"
+    "content": "\nLa Visbro Personal Solutions UG, știm că colaborarea eficientă este cheia succesului oricărei afaceri. De peste un an, ajutăm antreprenorii din întreaga țară să construiască echipe puternice și eficiente și să-și atingă obiectivele strategice de afaceri. Serviciile noastre HR se bazează pe o înțelegere profundă a nevoilor clienților noștri și asigură suport cuprinzător în gestionarea personalului.\n <br></br> <br></br>\nCa echipă experimentată de specialiști, suntem pregătiți să vă sprijinim în toate aspectele gestionării resurselor umane - de la recrutare și selecție, până la formare și dezvoltare a angajaților, gestionarea performanței și retenția talentelor. Abordarea noastră se bazează pe colaborare și o abordare partenerială, care se traduce în relații de afaceri durabile și productive.\n <br></br> <br></br>\nVă încurajăm să utilizați formularul de contact de mai jos pentru a discuta cum vă putem sprijini dezvoltarea afacerii și contribui la atingerea obiectivelor dvs. de afaceri.\n\n"
   },
   "ApplicationForm": {
     "heading": "Formular de Aplicare",
@@ -346,7 +351,7 @@
   },
   "Recruitment": {
     "heading": "Recrutare",
-    "content": "Ne specializăm în recrutarea angajaților pentru diverse sectoare, atât pentru poziții temporare, cât și permanente. Prioritatea noastră este să vă furnizăm un număr optim de angajați calificați exact atunci când aveți nevoie de ei, asigurând un proces fără obstacole inutile. Vă oferim suportul nostru versatil și suntem întotdeauna la dispoziția dvs. - vă vom ajuta să vă dezvoltați afacerea și să asigurăm că provocările legate de personal devin un lucru al trecutului. <br /> <br /> În oferta noastră, veți găsi și programe de formare prin care noii angajați se vor adapta rapid la compania dvs., îmbunătățind semnificativ eficiența și integrarea lor în echipă. Nu ezitați să ne contactați pentru a afla mai multe despre cum putem contribui împreună la succesul afacerii dvs. Cu noi, dezvoltarea dvs. este în mâini bune.",
+    "content": "Ne specializăm în recrutarea angajaților pentru diverse sectoare, atât pentru poziții temporare, cât și permanente. Prioritatea noastră este să vă furnizăm un număr optim de angajați calificați exact atunci când aveți nevoie de ei, asigurând un proces fără obstacole inutile. Vă oferim suportul nostru versatil și suntem întotdeauna la dispoziția dvs. - vă vom ajuta să vă dezvoltați afacerea și să asigurăm că provocările legate de personal devin un lucru al trecutului. În oferta noastră, veți găsi și programe de formare prin care noii angajați se vor adapta rapid la compania dvs., îmbunătățind semnificativ eficiența și integrarea lor în echipă. Nu ezitați să ne contactați pentru a afla mai multe despre cum putem contribui împreună la succesul afacerii dvs. Cu noi, dezvoltarea dvs. este în mâini bune.",
     "button": "Sună-ne!"
   },
   "Housing": {

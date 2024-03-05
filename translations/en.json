@@ -2,7 +2,11 @@
   "Contact": {
     "heading": "Contact",
     "heading_helper": "Have questions? Write to our recruiters!",
-
+    "positions": {
+      "ceo": "Director",
+      "recruiter": "Recruiter",
+      "manager": "Manager"
+    },
     "location_heading": "Location",
     "phone_heading": "Headquarters Phone",
     "open_hours": "Open"
@@ -25,7 +29,7 @@
     "heading_helper": "Photos from our work and company"
   },
   "Career": {
-    "heading": "Career at Visbro Personal Solution",
+    "heading": "Career at Visbro Personal Solutions",
     "content": "If you are a person full of creativity, distinguished by outstanding communication and organizational skills, and you are not afraid of any challenges, additionally, if you are proficient in foreign languages, then we have a special proposition for you! Join our Visbro team and start building your career in an environment where we prioritize collaboration, loyalty, and trust. We offer a job that may not be the easiest, but it is certainly well-rewarded and provides immense satisfaction. If you feel that this is the right opportunity for you, don't hesitate! Show us your commitment and creativity, and we will give you the opportunity for development and the realization of professional ambitions in our dynamic team. Visbro is a place where every day brings new challenges, and you have the chance to be a part of them. We encourage you to respond and join us! Visit the careers section on Visbro's website.\n",
     "form": {
       "name": {
@@ -196,7 +200,7 @@
       },
       "submit": "Submit"
     },
-    "content": "\nAt Visbro Personal Solution UG, we understand that effective collaboration is key to the success of any business. For over a year, we have been helping entrepreneurs across the country build strong and efficient teams and achieve their strategic business goals. Our HR services are based on a deep understanding of our clients' needs and provide comprehensive support in personnel management. <br></br><br></br>\nAs an experienced team of specialists, we are ready to support you in all aspects of human resource management - from recruitment and selection, through employee training and development, to performance management and talent retention. Our approach is based on collaboration and a partnership approach, which translates into lasting and fruitful business relationships.\nWe encourage you to use the contact form below so that we can discuss how we can support the development of your business and contribute to achieving your business goals.\n"
+    "content": "\nAt Visbro Personal Solutions UG, we understand that effective collaboration is key to the success of any business. For over a year, we have been helping entrepreneurs across the country build strong and efficient teams and achieve their strategic business goals. Our HR services are based on a deep understanding of our clients' needs and provide comprehensive support in personnel management. <br></br><br></br>\nAs an experienced team of specialists, we are ready to support you in all aspects of human resource management - from recruitment and selection, through employee training and development, to performance management and talent retention. Our approach is based on collaboration and a partnership approach, which translates into lasting and fruitful business relationships.\nWe encourage you to use the contact form below so that we can discuss how we can support the development of your business and contribute to achieving your business goals.\n"
   },
 
   "ApplicationForm": {
@@ -350,7 +354,7 @@
   },
   "Recruitment": {
     "heading": "Recruitment",
-    "content": "We specialize in recruiting employees for various sectors, both for temporary and permanent positions. Our priority is to provide you with an optimal number of qualified workers exactly when you need them, ensuring a smooth process without unnecessary obstacles. We offer you our versatile support and are always at your disposal – we will help you grow your business and ensure that the challenges related to personnel become a thing of the past. <br /> <br /> In our offer, you will also find training programs through which new employees will quickly acclimate to your company, significantly enhancing their efficiency and integration with the team. Feel free to contact us to learn more about how we can contribute together to the success of your business. With us, your development is in good hands.",
+    "content": "We specialize in recruiting employees for various sectors, both for temporary and permanent positions. Our priority is to provide you with an optimal number of qualified workers exactly when you need them, ensuring a smooth process without unnecessary obstacles. We offer you our versatile support and are always at your disposal – we will help you grow your business and ensure that the challenges related to personnel become a thing of the past. In our offer, you will also find training programs through which new employees will quickly acclimate to your company, significantly enhancing their efficiency and integration with the team. Feel free to contact us to learn more about how we can contribute together to the success of your business. With us, your development is in good hands.",
     "button": "Call us!"
   },
   "Housing": {

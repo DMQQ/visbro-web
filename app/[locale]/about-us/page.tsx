@@ -25,7 +25,7 @@ export default function AboutUs({ params: { locale } }: any) {
           <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-bold ">
             {t("heading")}
           </h1>
-          <p className="text-zinc-300 mt-2">Visbro Personal Solution</p>
+          <p className="text-zinc-300 mt-2">Visbro Personal Solutions</p>
         </div>
 
         <section className="flex flex-col bg-zinc-950">

@@ -2,6 +2,11 @@
   "Contact": {
     "heading": "Contacto",
     "heading_helper": "¿Tienes preguntas? ¡Escríbenos a nuestros reclutadores!",
+    "positions": {
+      "ceo": "Director",
+      "recruiter": "Reclutador",
+      "manager": "Gerente"
+    },
     "location_heading": "Ubicación",
     "phone_heading": "Teléfono de la Sede Principal",
     "open_hours": "Abierto"
@@ -24,7 +29,7 @@
     "heading_helper": "Fotos de nuestro trabajo y empresa"
   },
   "Career": {
-    "heading": "Carrera en Visbro Personal Solution",
+    "heading": "Carrera en Visbro Personal Solutions",
     "content": "Si eres una persona llena de creatividad, destacada por habilidades de comunicación y organización excepcionales, y no temes a ningún desafío, además, si también dominas idiomas extranjeros, ¡tenemos una propuesta especial para ti! Únete a nuestro equipo en Visbro y comienza a construir tu carrera en un entorno donde priorizamos la colaboración, lealtad y confianza. Ofrecemos un trabajo que puede que no sea el más fácil, pero sin duda está bien remunerado y brinda una enorme satisfacción. Si sientes que esta es la oportunidad adecuada para ti, ¡no dudes! Muéstranos tu compromiso y creatividad, y te daremos la oportunidad de desarrollo y realización de ambiciones profesionales en nuestro equipo dinámico. Visbro es un lugar donde cada día trae nuevos desafíos, y tienes la oportunidad de ser parte de ellos. ¡Te animamos a responder y unirte a nosotros! Visita la sección de carreras en el sitio web de Visbro.\n",
     "form": {
       "name": {
@@ -196,7 +201,7 @@
       },
       "submit": "Enviar"
     },
-    "content": "\nEn Visbro Personal Solution UG, entendemos que la colaboración efectiva es clave para el éxito de cualquier negocio. Durante más de un año, hemos estado ayudando a empresarios de todo el país a construir equipos fuertes y eficientes y alcanzar sus objetivos estratégicos. Nuestros servicios de recursos humanos se basan en una comprensión profunda de las necesidades de nuestros clientes y brindan un apoyo integral en la gestión de personal. <br></br><br></br>\nComo un equipo experimentado de especialistas, estamos listos para apoyarte en todos los aspectos de la gestión de recursos humanos, desde la selección y contratación, pasando por la capacitación y desarrollo de empleados, hasta la gestión del rendimiento y la retención de talento. Nuestro enfoque se basa en la colaboración y un enfoque de asociación, lo que se traduce en relaciones comerciales duraderas y fructíferas.\nTe animamos a utilizar el formulario de contacto a continuación para que podamos discutir cómo podemos apoyar el desarrollo de tu negocio y contribuir a alcanzar tus objetivos comerciales.\n"
+    "content": "\nEn Visbro Personal Solutions UG, entendemos que la colaboración efectiva es clave para el éxito de cualquier negocio. Durante más de un año, hemos estado ayudando a empresarios de todo el país a construir equipos fuertes y eficientes y alcanzar sus objetivos estratégicos. Nuestros servicios de recursos humanos se basan en una comprensión profunda de las necesidades de nuestros clientes y brindan un apoyo integral en la gestión de personal. \nComo un equipo experimentado de especialistas, estamos listos para apoyarte en todos los aspectos de la gestión de recursos humanos, desde la selección y contratación, pasando por la capacitación y desarrollo de empleados, hasta la gestión del rendimiento y la retención de talento. Nuestro enfoque se basa en la colaboración y un enfoque de asociación, lo que se traduce en relaciones comerciales duraderas y fructíferas.\nTe animamos a utilizar el formulario de contacto a continuación para que podamos discutir cómo podemos apoyar el desarrollo de tu negocio y contribuir a alcanzar tus objetivos comerciales.\n"
   },
 
   "ApplicationForm": {

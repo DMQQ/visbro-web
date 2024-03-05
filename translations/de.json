@@ -2,7 +2,11 @@
   "Contact": {
     "heading": "Kontakt",
     "heading_helper": "Haben Sie Fragen? Schreiben Sie unseren Recruitern!",
-
+    "positions": {
+      "ceo": "Geschäftsführer",
+      "recruiter": "Personalvermittler",
+      "manager": "Manager"
+    },
     "location_heading": "Standort",
     "phone_heading": "Telefon für die Zentrale",
     "open_hours": "Geöffnet"
@@ -25,7 +29,7 @@
     "heading_helper": "Fotos von unserer Arbeit und dem Unternehmen"
   },
   "Career": {
-    "heading": "Karriere bei Visbro Personal Solution",
+    "heading": "Karriere bei Visbro Personal Solutions",
     "content": "Wenn Sie eine Person voller Kreativität sind, sich durch herausragende Kommunikations- und Organisationsfähigkeiten auszeichnen und keine Angst vor Herausforderungen haben, außerdem Fremdsprachen beherrschen, dann haben wir ein besonderes Angebot für Sie! Treten Sie unserem Team bei Visbro bei und beginnen Sie den Aufbau Ihrer Karriere in einer Umgebung, in der Zusammenarbeit, Loyalität und Vertrauen an erster Stelle stehen. Wir bieten eine Arbeit, die vielleicht nicht zu den einfachsten gehört, aber sicherlich gut entlohnt wird und immense Zufriedenheit bietet. Wenn Sie das Gefühl haben, dass dies das Richtige für Sie ist, zögern Sie nicht! Zeigen Sie uns Ihr Engagement und Ihre Kreativität, und wir geben Ihnen die Möglichkeit zur Entwicklung und zur Verwirklichung Ihrer beruflichen Ambitionen in unserem dynamischen Team. Visbro ist ein Ort, an dem jeder Tag neue Herausforderungen mit sich bringt, und Sie haben die Chance, ein Teil davon zu werden. Wir ermutigen Sie, zu reagieren und sich uns anzuschließen! Besuchen Sie den Karrierebereich auf der Visbro-Website.\n",
     "form": {
       "name": {
@@ -72,7 +76,7 @@
     }
   },
   "About": {
-    "heading": "Über Visbro",
+    "heading": "ÜBER UNS",
     "content": "Seit unserer Gründung im Jahr 2021 ist es die Vision der Visbro Personal Solutions UG, einen Raum zu schaffen, in dem Personalbeschaffung nicht nur ein Prozess ist, sondern eine Chance, dauerhafte Beziehungen aufzubauen. An unserem Hauptsitz in Leipzig wurde die Idee geboren, neue Maßstäbe in der HR-Branche zu setzen, und seither arbeiten wir unermüdlich daran, diese zu erreichen. Unser Angebot an Personaldienstleistungen, dass auf einer individuellen Herangehensweise und höchsten Qualitätsstandards basiert, ist nicht nur das Ergebnis unseres Wissens und unserer Erfahrung, sondern auch des Eingehens auf die Bedürfnisse unserer Kunden. Die Unterbringung von Mitarbeitern in verschiedenen Regionen Deutschlands ist Teil unserer Strategie und unterstreicht unser Engagement, stabile Arbeits- und Lebensbedingungen für Mitarbeiter zu schaffen. Unser Team aus talentierten und erfahrenen Spezialisten arbeitet mit Leidenschaft und Hingabe, um unseren Kunden ein Höchstmaß an Service zu bieten, was sich in Effizienz und Erfolg in jeder Zusammenarbeit niederschlägt.    "
   },
   "Home": {
@@ -144,7 +148,7 @@
     "about": "Überuns",
     "collab": "Zusammenarbeit",
     "offers": "Jobangebote",
-    "biuroservis": "Bürodienstleistungen",
+    "biuroservis": "Dienstleistungen",
     "gallery": "Galerie",
     "contact": "Kontakt",
     "career": "Karriere bei Visbro",
@@ -196,7 +200,7 @@
       },
       "submit": "Senden"
     },
-    "content": "Bei Visbro Personal Solution UG wissen wir, dass eine effektive Zusammenarbeit der Schlüssel zum Erfolg eines jeden Unternehmens ist. Seit über einem Jahr helfen wir Unternehmern im ganzen Land, starke, effektive Teams aufzubauen und ihre strategischen Geschäftsziele zu erreichen. Unsere Personaldienstleistungen basieren auf einem tiefen Verständnis für die Bedürfnisse unserer Kunden und bieten umfassende Unterstützung beim Personalmanagement. <br></br> <br></br>  Als erfahrenes Team von Spezialisten sind wir bereit, Sie in allen Aspekten des Personalmanagements zu unterstützen - von der Rekrutierung und Auswahl bis hin zu Mitarbeiterschulung und -entwicklung, Leistungsmanagement und Talentbindung. <br></br> <br></br> Unser Ansatz basiert auf Zusammenarbeit und einem partnerschaftlichen Vorgehen, das zu nachhaltigen und produktiven Geschäftsbeziehungen führt. Nutzen Sie das unten stehende Kontaktformular, um mit uns zu besprechen, wie wir Sie bei der Entwicklung Ihres Unternehmens und der Erreichung Ihrer Ziele unterstützen können."
+    "content": "Bei Visbro Personal Solutions UG wissen wir, dass eine effektive Zusammenarbeit der Schlüssel zum Erfolg eines jeden Unternehmens ist. Seit über einem Jahr helfen wir Unternehmern im ganzen Land, starke, effektive Teams aufzubauen und ihre strategischen Geschäftsziele zu erreichen. Unsere Personaldienstleistungen basieren auf einem tiefen Verständnis für die Bedürfnisse unserer Kunden und bieten umfassende Unterstützung beim Personalmanagement. <br></br> <br></br>  Als erfahrenes Team von Spezialisten sind wir bereit, Sie in allen Aspekten des Personalmanagements zu unterstützen - von der Rekrutierung und Auswahl bis hin zu Mitarbeiterschulung und -entwicklung, Leistungsmanagement und Talentbindung. <br></br> <br></br> Unser Ansatz basiert auf Zusammenarbeit und einem partnerschaftlichen Vorgehen, das zu nachhaltigen und produktiven Geschäftsbeziehungen führt. Nutzen Sie das unten stehende Kontaktformular, um mit uns zu besprechen, wie wir Sie bei der Entwicklung Ihres Unternehmens und der Erreichung Ihrer Ziele unterstützen können."
   },
 
   "ApplicationForm": {
@@ -351,7 +355,7 @@
   },
   "Recruitment": {
     "heading": "Personalbeschaffung",
-    "content": "Wir sind auf die Rekrutierung von Mitarbeitern für verschiedene Branchen spezialisiert, sowohl für temporäre als auch dauerhafte Positionen. Unsere Priorität ist es, Ihnen genau dann eine optimale Anzahl qualifizierter Mitarbeiter zur Verfügung zu stellen, wenn Sie sie benötigen, und dabei einen reibungslosen Prozess ohne unnötige Hindernisse zu gewährleisten. Wir bieten Ihnen unsere vielseitige Unterstützung an und stehen Ihnen immer zur Verfügung. Wir werden Ihnen helfen, Ihr Geschäft zu entwickeln und sicherstellen, dass die mit dem Personal verbundenen Herausforderungen der Vergangenheit angehören. <br /> <br /> In unserem Angebot finden Sie auch Schulungsprogramme, durch die sich neue Mitarbeiter schnell in Ihrem Unternehmen einleben und ihre Effizienz sowie Integration in das Team erheblich verbessern können. Kontaktieren Sie uns, um mehr darüber zu erfahren, wie wir gemeinsam zum Erfolg Ihres Unternehmens beitragen können. Mit uns befindet sich Ihre Entwicklung in guten Händen.",
+    "content": "Wir sind auf die Rekrutierung von Mitarbeitern für verschiedene Branchen spezialisiert, sowohl für temporäre als auch dauerhafte Positionen. Unsere Priorität ist es, Ihnen genau dann eine optimale Anzahl qualifizierter Mitarbeiter zur Verfügung zu stellen, wenn Sie sie benötigen, und dabei einen reibungslosen Prozess ohne unnötige Hindernisse zu gewährleisten. Wir bieten Ihnen unsere vielseitige Unterstützung an und stehen Ihnen immer zur Verfügung. Wir werden Ihnen helfen, Ihr Geschäft zu entwickeln und sicherstellen, dass die mit dem Personal verbundenen Herausforderungen der Vergangenheit angehören. In unserem Angebot finden Sie auch Schulungsprogramme, durch die sich neue Mitarbeiter schnell in Ihrem Unternehmen einleben und ihre Effizienz sowie Integration in das Team erheblich verbessern können. Kontaktieren Sie uns, um mehr darüber zu erfahren, wie wir gemeinsam zum Erfolg Ihres Unternehmens beitragen können. Mit uns befindet sich Ihre Entwicklung in guten Händen.",
     "button": "Rufen Sie uns an!"
   },
   "Housing": {

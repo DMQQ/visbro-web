@@ -111,30 +111,11 @@ export default function AppFooter() {
             <Link href="/biuroservis/visbro-car-rental" className="md:px-2">
               {t("rental")}
             </Link>
-
-            <Link href={"/biuroservis"} className="md:px-2">
-              {t("biuroservis")}
-            </Link>
           </div>
         </nav>
       </section>
 
       <hr className="border-zinc-800" />
-
-      <section className="p-5 w-full md:w-3/4 m-auto">
-        {/* Adresse Franz-Flemming-Straße 43A • 04179 • Leipzig . Steuernummer IN WARTUNG
-Amtsgericht Leipzig USt-IdNr. IN WARTUNG .Website www.visbro.de Bank TARGO BANK
-SWIFT/BIC CMCIDEDD IBAN DE26 3002 0900 5390 8207 79 Bank TARGO BANK
-Kontoinhaber Kamil Wojciech Czarnecki Bankkonto DE26 3002 0900 5390 8207 79 */}
-
-        <div className="text-zinc-400 text-center gap-5 text-sm">
-          Adresse Franz-Flemming-Straße 43A • 04179 • Leipzig Steuernummer IN
-          WARTUNG Amtsgericht Leipzig USt-IdNr. IN WARTUNG Website www.visbro.de
-          Bank TARGO BANK SWIFT/BIC CMCIDEDD IBAN DE26 3002 0900 5390 8207 79
-          Bank TARGO BANK Kontoinhaber Kamil Wojciech Czarnecki Bankkonto DE26
-          3002 0900 5390 8207 79
-        </div>
-      </section>
 
       <hr className="border-zinc-800" />
 
@@ -145,6 +126,11 @@ Kontoinhaber Kamil Wojciech Czarnecki Bankkonto DE26 3002 0900 5390 8207 79 */}
             BGJar
           </a>
         </div>
+
+        <Link href={"/impressum"} className="underline text-zinc-200">
+          Impressum
+        </Link>
+
         <div>
           <a href="https://github.com/DMQQ" target="_blank" rel="nofollow">
             2024 By DMQ

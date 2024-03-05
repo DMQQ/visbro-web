@@ -2,7 +2,11 @@
   "Contact": {
     "heading": "İletişim",
     "heading_helper": "Sorularınız mı var? Recruiterlarımıza yazın!",
-
+    "positions": {
+      "ceo": "Yönetici",
+      "recruiter": "İstihdam Uzmanı",
+      "manager": "Yönetici"
+    },
     "location_heading": "Konum",
     "phone_heading": "Merkez Telefon",
     "open_hours": "Açık"
@@ -25,7 +29,7 @@
     "heading_helper": "İşimizden ve şirketimizden fotoğraflar"
   },
   "Career": {
-    "heading": "Visbro Personal Solution'da Kariyer",
+    "heading": "Visbro Personal Solutions'da Kariyer",
     "content": "Eğer yaratıcılıkla dolu, olağanüstü iletişim ve organizasyon becerileriyle öne çıkan, aynı zamanda hiçbir zorluğa korkusuzca yaklaşabilen ve ayrıca yabancı dillerle de ilgilenen bir kişiyseniz, o zaman size özel bir teklifimiz var! Visbro ekibimize katılın ve kariyerinizi oluşturmaya başlayın; işbirliği, sadakat ve güvenin ön planda olduğu bir ortamda. Belki de en kolay işlerden birine ait olmayabilir, ancak kesinlikle iyi bir ödül alıyor ve büyük bir memnuniyet sağlıyor. Eğer bunun sizin için doğru bir fırsat olduğunu düşünüyorsanız, tereddüt etmeyin! Bize bağlılığınızı ve yaratıcılığınızı gösterin, size gelişme ve profesyonel hedeflerinizi gerçekleştirme fırsatı vereceğiz. Visbro, her gün yeni zorluklar getiren bir yer; siz de bunun bir parçası olma şansına sahipsiniz. Tepki göstermeye ve bize katılmaya cesaretlendiriyoruz! Visbro'nun kariyer bölümünü ziyaret edin.\n",
     "form": {
       "name": {
@@ -196,7 +200,7 @@
       },
       "submit": "Gönder"
     },
-    "content": "\nVisbro Personal Solution UG olarak, etkili işbirliğinin her işletmenin başarısı için anahtar olduğunu anlıyoruz. Bir yıldan fazla süredir, ülke genelindeki girişimcilerin güçlü ve verimli takımlar kurmalarına ve stratejik iş hedeflerine ulaşmalarına yardımcı oluyoruz. İK hizmetlerimiz, müşterilerimizin ihtiyaçlarına derin bir anlayışa dayanmakta olup personel yönetiminde kapsamlı destek sağlamaktadır. <br></br><br></br>\nDeneyimli bir uzman ekibi olarak, sizi işe alım ve seçimden, çalışan eğitim ve geliştirmeye, performans yönetimine ve yetenek koruma konularında desteklemeye hazırız. Yaklaşımımız işbirliğine ve ortaklık yaklaşımına dayanmaktadır ve bu, kalıcı ve verimli iş ilişkilerine dönüşmektedir.\nİşletmenizin gelişimine nasıl destek olabileceğimizi ve iş hedeflerinize ulaşmada nasıl katkıda bulunabileceğimizi tartışmak için aşağıdaki iletişim formunu kullanmanızı öneririz.\n"
+    "content": "\nVisbro Personal Solutions UG olarak, etkili işbirliğinin her işletmenin başarısı için anahtar olduğunu anlıyoruz. Bir yıldan fazla süredir, ülke genelindeki girişimcilerin güçlü ve verimli takımlar kurmalarına ve stratejik iş hedeflerine ulaşmalarına yardımcı oluyoruz. İK hizmetlerimiz, müşterilerimizin ihtiyaçlarına derin bir anlayışa dayanmakta olup personel yönetiminde kapsamlı destek sağlamaktadır. \nDeneyimli bir uzman ekibi olarak, sizi işe alım ve seçimden, çalışan eğitim ve geliştirmeye, performans yönetimine ve yetenek koruma konularında desteklemeye hazırız. Yaklaşımımız işbirliğine ve ortaklık yaklaşımına dayanmaktadır ve bu, kalıcı ve verimli iş ilişkilerine dönüşmektedir.\nİşletmenizin gelişimine nasıl destek olabileceğimizi ve iş hedeflerinize ulaşmada nasıl katkıda bulunabileceğimizi tartışmak için aşağıdaki iletişim formunu kullanmanızı öneririz.\n"
   },
 
   "ApplicationForm": {

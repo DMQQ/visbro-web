@@ -2,7 +2,11 @@
   "Contact": {
     "heading": "الاتصال",
     "heading_helper": "هل لديك أسئلة؟ اكتب لموظفي التوظيف لدينا!",
-
+    "positions": {
+      "ceo": "المدير",
+      "recruiter": "موظف التوظيف",
+      "manager": "مدير"
+    },
     "location_heading": "الموقع",
     "phone_heading": "هاتف الرئيسية",
     "open_hours": "مفتوح"

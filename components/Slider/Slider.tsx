@@ -39,7 +39,9 @@ export default function Slider({ images }: any) {
           <h1 className="text-white mt-16 xs:mt-0 text-4xl sm:text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-center sm:text-start">
             {t.rich("heading", {
               span: (text) => (
-                <span className="text-blue-500 font-extrabold">{text}</span>
+                <span className="text-blue-500 font-extrabold">
+                  Visbro Personal Solutions
+                </span>
               ),
             })}
           </h1>

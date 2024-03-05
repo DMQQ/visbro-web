@@ -2,7 +2,11 @@
   "Contact": {
     "heading": "Kontakt",
     "heading_helper": "Masz pytania? Napisz do naszych rekruterów!",
-
+    "positions": {
+      "ceo": "Dyrektor",
+      "recruiter": "Rekruter",
+      "manager": "Kierownik"
+    },
     "location_heading": "Lokalizacja",
     "phone_heading": "Telefon do siedziby",
     "open_hours": "Czynne"
@@ -25,7 +29,7 @@
     "heading_helper": "Zdjęcia z naszej pracy oraz firmy"
   },
   "Career": {
-    "heading": "Kariera w Visbro Personal Solution",
+    "heading": "Kariera w Visbro Personal Solutions",
     "content": "Jeżeli jesteś osobą pełną kreatywności, wyróżniającą się wybitnymi zdolnościami komunikacyjnymi i organizacyjnymi, a także nie boisz się żadnych wyzwań, dodatkowo posługujesz się językami obcymi, to mamy dla Ciebie wyjątkową propozycję! Dołącz do naszego zespołu Visbro i rozpocznij budowanie swojej kariery w środowisku, gdzie na pierwszym miejscu stawiamy współpracę, lojalność i zaufanie. Oferujemy pracę, która może i nie należy do najłatwiejszych, ale z pewnością jest dobrze wynagradzana i daje ogromną satysfakcję. Jeśli czujesz, że to propozycja dla Ciebie, nie zwlekaj! Pokaż nam swoje zaangażowanie i kreatywność, a my damy Ci szansę na rozwój i realizację zawodowych ambicji w naszym dynamicznym zespole. Visbro to miejsce, gdzie każdy dzień przynosi nowe wyzwania, a Ty masz szansę stać się ich częścią. Zachęcamy do reagowania i dołączenia do nas!     Do zakładki kariera w visbro\n",
     "form": {
       "name": {
@@ -196,7 +200,7 @@
       },
       "submit": "Wyślij"
     },
-    "content": "\nW Visbro Personal Solution UG, wiemy, że skuteczna współpraca jest\nkluczowa dla sukcesu każdego biznesu. Od ponad roku pomagamy\nprzedsiębiorcom w całym kraju w budowaniu silnych i wydajnych\nzespołów oraz w osiąganiu ich strategicznych celów biznesowych. Nasze\nusługi HR opierają się na głębokim zrozumieniu potrzeb naszych klientów\ni zapewniają kompleksowe wsparcie w zarządzaniu personelem. <br></br> <br></br> \nJako doświadczony zespół specjalistów, jesteśmy gotowi wesprzeć Cię\nwe wszystkich aspektach zarządzania zasobami ludzkimi - od rekrutacji i\nselekcji, przez szkolenia i rozwój pracowników, po zarządzanie\nwydajnością i retencję talentów. Nasze podejście opiera się na\nwspółpracy i partnerskim podejściu, które przekłada się na trwałe i\nowocne relacje biznesowe. <br></br> <br></br> \nZachęcamy do skorzystania z formularza kontaktowego poniżej, abyśmy\nmogli omówić, jak możemy wesprzeć rozwój Twojego biznesu i\nprzyczynić się do osiągnięcia Twoich celów biznesowych.\n\n"
+    "content": "\nW Visbro Personal Solutions UG, wiemy, że skuteczna współpraca jest\nkluczowa dla sukcesu każdego biznesu. Od ponad roku pomagamy\nprzedsiębiorcom w całym kraju w budowaniu silnych i wydajnych\nzespołów oraz w osiąganiu ich strategicznych celów biznesowych. Nasze\nusługi HR opierają się na głębokim zrozumieniu potrzeb naszych klientów\ni zapewniają kompleksowe wsparcie w zarządzaniu personelem. <br></br> <br></br> \nJako doświadczony zespół specjalistów, jesteśmy gotowi wesprzeć Cię\nwe wszystkich aspektach zarządzania zasobami ludzkimi - od rekrutacji i\nselekcji, przez szkolenia i rozwój pracowników, po zarządzanie\nwydajnością i retencję talentów. Nasze podejście opiera się na\nwspółpracy i partnerskim podejściu, które przekłada się na trwałe i\nowocne relacje biznesowe. \nZachęcamy do skorzystania z formularza kontaktowego poniżej, abyśmy\nmogli omówić, jak możemy wesprzeć rozwój Twojego biznesu i\nprzyczynić się do osiągnięcia Twoich celów biznesowych.\n\n"
   },
 
   "ApplicationForm": {
