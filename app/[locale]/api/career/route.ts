@@ -67,17 +67,29 @@ async function uploadFile(
   }
 }
 
-const careerSchema = zfd.formData({
-  name: zfd.text(z.string().max(100)),
-  surname: zfd.text(z.string().max(100)),
-  email: zfd.text(z.string().email()),
-  education: zfd.text(z.string()),
-  gender: zfd.text(z.string()),
-  languages: zfd.text(z.string()),
-  hasDriverLicenseCatB: zfd.text(z.string()),
-  civilState: zfd.text(z.string()),
-  additionalInfo: zfd.text(z.string().min(200).max(1000)),
-  cv: zfd.file().optional(),
+// const careerSchema = zfd.formData({
+//   name: zfd.text(z.string().max(100)),
+//   surname: zfd.text(z.string().max(100)),
+//   email: zfd.text(z.string().email()),
+//   education: zfd.text(z.string()),
+//   gender: zfd.text(z.string()),
+//   languages: zfd.text(z.string()),
+//   hasDriverLicenseCatB: zfd.text(z.string()),
+//   civilState: zfd.text(z.string()),
+//   additionalInfo: zfd.text(z.string().min(200).max(1000)),
+//   cv: zfd.file().optional(),
+// });
+
+const careerSchema = z.object({
+  name: z.string().max(100),
+  surname: z.string().max(100),
+  email: z.string().email(),
+  education: z.string(),
+  gender: z.string(),
+  languages: z.string(),
+  hasDriverLicenseCatB: z.boolean(),
+  civilState: z.string(),
+  additionalInfo: z.string().min(200).max(1000),
 });
 
 export const POST = async (req: NextRequest, { params }: any) => {
