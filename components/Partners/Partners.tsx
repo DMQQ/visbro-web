@@ -76,10 +76,11 @@ export default function Partners() {
           <div key={partner} className="w-40 h-40 flex-shrink-0 relative">
             <Image
               quality={80}
-              fill
+              width={150}
+              height={150}
               alt={partner}
               src={"/partners/logo/" + partner}
-              className="select-none w-auto h-auto"
+              className="select-none w-auto h-auto flex-1"
             />
           </div>
         ))}

@@ -5,6 +5,8 @@ export default function Checkbox(props: {
   onChange: ChangeEventHandler<HTMLInputElement>;
   label: string;
   onBlur: any;
+
+  link?: string;
 }) {
   return (
     <div className="flex items-center p-2 my-2">
@@ -20,7 +22,18 @@ export default function Checkbox(props: {
         htmlFor="default-checkbox"
         className="ms-2 text-sm font-medium text-zinc-900 dark:text-white rtl:text-base"
       >
-        {props.label}
+        {props.link ? (
+          <a
+            href={props.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline "
+          >
+            {props.label}
+          </a>
+        ) : (
+          props.label
+        )}
       </label>
     </div>
   );

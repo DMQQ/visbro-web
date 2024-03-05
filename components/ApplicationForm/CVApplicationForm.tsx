@@ -22,6 +22,8 @@ interface EntryFieldProps {
     [key: string]: string;
   };
   translationNamespace: string;
+
+  link?: string;
 }
 
 export const EntryField = ({
@@ -84,6 +86,7 @@ export const EntryField = ({
         label={t(`${key}.text`)}
         onChange={formik.handleChange(key)}
         onBlur={formik.handleBlur(key)}
+        link={rest.link}
       />
     );
   }

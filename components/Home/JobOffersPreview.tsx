@@ -1,8 +1,9 @@
 import { Link } from "@/navigation";
+import { JobOfferNinox, NinoxResponse } from "@/types";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
-async function fetchBestOffers() {
+async function fetchBestOffers(locale: string) {
   "use server";
   try {
     const res = await fetch(process.env.BASE_API_URL + "/JobOffers/records", {
@@ -14,12 +15,15 @@ async function fetchBestOffers() {
       },
     });
 
-    const data = await res.json();
+    const data = (await res.json()) as JobOfferNinox[];
 
-    return data.slice(0, 4).map((field: any) => ({
-      offerId: field.id,
-      ...field.fields,
-    }));
+    return data
+      ?.filter((dt) => dt.fields.lang !== locale)
+      .slice(0, 4)
+      ?.map((field: any) => ({
+        offerId: field.id,
+        ...field.fields,
+      }));
   } catch (error) {
     return [];
   }
@@ -28,7 +32,7 @@ async function fetchBestOffers() {
 export default async function JobOffersPreview(props: { locale: string }) {
   const t = await getTranslations("Home");
 
-  const offers = await fetchBestOffers();
+  const offers = await fetchBestOffers(props.locale);
 
   return (
     <article className="w-full p-5 mt-32 flex justify-center items-center">
@@ -62,13 +66,13 @@ export default async function JobOffersPreview(props: { locale: string }) {
                 className="w-full rounded-md max-h-52 sm:max-h-48 object-cover"
               />
               <div className="flex-1">
-                <h3 className="mt-2 text-lg  font-bold">{offer.name}</h3>
+                <h3 className="mt-2 text-lg  font-bold">{offer?.name}</h3>
                 <p className="text-zinc-300 mt-2">
-                  {offer.content.slice(0, 100)}
+                  {offer?.content?.slice(0, 100)}
                 </p>
 
                 <ul className="mt-2">
-                  {offer.benefits.split(";").map((benefit: string) => (
+                  {offer?.benefits?.split(";")?.map((benefit: string) => (
                     <li key={benefit} className="text-zinc-300">
                       {benefit}
                     </li>

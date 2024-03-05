@@ -125,7 +125,7 @@ export default function ApplicationModal({
           .max(50, tErr("length", { min: 0, max: 50 })),
         bankCode: Yup.string()
           .required(t("bankCode.error"))
-          .max(10, tErr("length", { min: 0, max: 10 })),
+          .max(20, tErr("length", { min: 0, max: 10 })),
         address: Yup.string()
           .required(t("address.error"))
           .max(100, tErr("length", { min: 0, max: 100 })),
@@ -147,8 +147,9 @@ export default function ApplicationModal({
     []
   );
 
-  const [idFile, setIdFile] = useState<File | null>(null);
-  const [driverLicense, setDriverLicense] = useState<File | null>(null);
+  const [idFile, setIdFile] = useState<File[]>([]);
+  const [driverLicense, setDriverLicense] = useState<File[]>([]);
+  const [CVFile, setCVFile] = useState<File | null>(null);
 
   const { handleSubmit, state } = useFormSubmit((data) => {
     const formData = new FormData();
@@ -156,8 +157,11 @@ export default function ApplicationModal({
     Object.keys(data).forEach((key) => formData.append(key, data[key]));
     formData.append("offerId", offerTitle); // Id doesnt mean anything in ninox since it displays rows (sorted?) so name of the offer will bring more sense
 
-    formData.append("idFile", idFile!);
-    formData.append("driverLicenseFile", driverLicense!);
+    formData.append("idFileFront", idFile[0]);
+    formData.append("idFileBack", idFile[1]);
+    formData.append("driverLicenseFileFront", driverLicense[0]);
+    formData.append("driverLicenseFileBack", driverLicense[1]);
+    formData.append("CVFile", CVFile!);
 
     return axios.post("/api/job-offer", formData);
   });
@@ -215,10 +219,10 @@ export default function ApplicationModal({
 
     if (
       step === "files" &&
-      (idFile === null ||
-        idFile === undefined ||
-        driverLicense === null ||
-        driverLicense === undefined)
+      (idFile.length < 2 ||
+        driverLicense.length < 2 ||
+        CVFile === undefined ||
+        CVFile == null)
     ) {
       return true;
     }
@@ -282,24 +286,43 @@ export default function ApplicationModal({
                 formik={formik as any}
                 key={key}
                 listKey={key as any}
-                files={["documentId", "driverLicense"]}
+                link={
+                  key === "dataProcessingConsent"
+                    ? "/Datenschutzerklärung.pdf"
+                    : undefined
+                }
               />
             ))}
 
             {step === "files" && (
               <div>
                 <DropFile
-                  multiple={false}
-                  onChange={(ev: any) => setIdFile(ev.target.files?.[0])}
+                  accept="image/*"
+                  maxFileCount={2}
+                  multiple
+                  onChange={(ev: any) =>
+                    setIdFile([...ev.target.files]?.slice(0, 2))
+                  }
                   formats="PNG,JPG,GIF MAX 7MB"
                   label={t(`documentId.text`)}
                 />
 
                 <DropFile
-                  multiple={false}
+                  accept="image/*"
+                  maxFileCount={2}
+                  multiple
                   formats="PNG,JPG,GIF MAX 7MB"
-                  onChange={(ev: any) => setDriverLicense(ev.target.files?.[0])}
+                  onChange={(ev: any) =>
+                    setDriverLicense([...ev.target.files]?.slice(0, 2))
+                  }
                   label={t(`driverLicense.text`)}
+                />
+                <DropFile
+                  hideImagePreview
+                  multiple={false}
+                  formats="PNG,JPG,PDF,DOC,DOCX etc"
+                  onChange={(ev: any) => setCVFile(ev.target.files?.[0])}
+                  label={"CV (Cirriculum vitae)"}
                 />
               </div>
             )}
