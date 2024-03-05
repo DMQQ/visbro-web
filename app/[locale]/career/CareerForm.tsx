@@ -5,6 +5,7 @@ import {
   TabSelect,
   TextArea,
 } from "@/components/ApplicationForm/CVApplicationForm";
+import DropFile from "@/components/DropFile/DropFile";
 import Button from "@/components/ui/Button/Button";
 import { languages } from "@/utils/languagesList";
 import useFormSubmit from "@/utils/useFormSubmit";
@@ -12,7 +13,7 @@ import useSelects from "@/utils/useSelects";
 import axios from "axios";
 import { Formik } from "formik";
 import { useTranslations } from "next-intl";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import * as Yup from "yup";
 
 const Form = () => {
@@ -72,21 +73,28 @@ const Form = () => {
     additionalInfo: "textarea",
   } as any;
 
+  const [CVFile, setCVFile] = useState<File | null>(null);
+
   const { handleSubmit, state } = useFormSubmit((data) => {
     return axios.post("/api/career", data);
   });
+
+  const onSubmit = async (props: any) => {
+    const formData = new FormData();
+
+    Object.keys(props).forEach((key) => formData.append(key, props[key]));
+
+    formData.append("cv", CVFile!);
+
+    await handleSubmit(formData);
+  };
 
   return (
     <article className="w-full md:w-2/3 lg:w-3/5 xl:w-1/3 p-5 mt-10 ">
       <section className="dark:dark:bg-zinc-900 p-2 rounded-md w-full">
         <Formik
           validationSchema={contactFormValidationSchema}
-          onSubmit={(data) => {
-            handleSubmit({
-              ...data,
-              hasDriverLicenseCatB: data.hasDriverLicenseCatB === "Tak",
-            });
-          }}
+          onSubmit={onSubmit}
           initialValues={{
             name: "",
             surname: "",
@@ -160,11 +168,19 @@ const Form = () => {
                 formKey="hasDriverLicenseCatB"
               />
 
+              <DropFile
+                hideImagePreview
+                multiple={false}
+                onChange={(ev: any) => setCVFile(ev.target.files?.[0])}
+                formats="DOCX, DOC, PDF, PNG, JPG etc"
+                label={"CV (Curriculum Vitae)"}
+              />
+
               <TextArea
                 formKey="additionalInfo"
                 formik={f}
                 label={t("additionalInfo.text")}
-                rows={8}
+                rows={7}
               />
 
               <AlertBox
@@ -181,7 +197,9 @@ const Form = () => {
               <div className="p-2">
                 <Button
                   loading={state.loading}
-                  disabled={!(f.isValid && f.dirty) || state.isSuccess}
+                  disabled={
+                    !(f.isValid && f.dirty) || state.isSuccess || !CVFile
+                  }
                   onClick={f.handleSubmit}
                   className={`py-3 w-full`}
                   text={t("submit")}

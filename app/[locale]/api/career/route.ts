@@ -2,19 +2,23 @@ import { redirect } from "@/navigation";
 import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 
+import * as zfd from "zod-form-data";
 import * as z from "zod";
-import { limiter } from "../config/limiter";
 
-const collabSchema = z.object({
-  name: z.string().max(100),
-  surname: z.string().max(100),
-  email: z.string().email(),
-  education: z.string(),
-  gender: z.string(),
-  languages: z.string(),
-  hasDriverLicenseCatB: z.boolean(),
-  civilState: z.string(),
-  additionalInfo: z.string().min(200).max(1000),
+import { limiter } from "../config/limiter";
+import { postData, uploadFile } from "@/utils/ninox";
+
+const careerSchema = zfd.formData({
+  name: zfd.text(z.string().max(100)),
+  surname: zfd.text(z.string().max(100)),
+  email: zfd.text(z.string().email()),
+  education: zfd.text(z.string()),
+  gender: zfd.text(z.string()),
+  languages: zfd.text(z.string()),
+  hasDriverLicenseCatB: zfd.text(z.string()),
+  civilState: zfd.text(z.string()),
+  additionalInfo: zfd.text(z.string().min(200).max(1000)),
+  cv: zfd.file().optional(),
 });
 
 export const POST = async (req: NextRequest, { params }: any) => {
@@ -32,15 +36,29 @@ export const POST = async (req: NextRequest, { params }: any) => {
       },
     });
 
-  const data = await req.json();
+  const formData = await req.formData();
 
-  const res = collabSchema.safeParse(data);
+  const res = careerSchema.safeParse(formData) as {
+    success: boolean;
+    error: any;
+    data: any;
+  };
+
+  let data = {} as {
+    [key: string]: string;
+  };
+
+  Object.keys(res?.data).forEach((key) => {
+    if (key !== "cv") data[key] = res.data[key];
+  });
+
+  const file = res.data.cv as Blob;
 
   if (!res.success) {
     return Response.json(
       {
         message: "Invalid data",
-        error: res.error.issues.map((issue) => ({
+        error: res.error.issues.map((issue: any) => ({
           message: issue.message,
           field: issue.path,
         })),
@@ -50,22 +68,15 @@ export const POST = async (req: NextRequest, { params }: any) => {
   }
 
   try {
-    const res = await axios.post(
-      process.env.BASE_API_URL + "/Career/records",
-      [
-        {
-          fields: {
-            ...data,
-            hasDriverLicenseCatB: data.hasDriverLicenseCatB ? "Yes" : "No",
-          },
-        },
-      ],
+    const recordId = await postData(
       {
-        headers: {
-          Authorization: "Bearer " + process.env.AUTH_TOKEN,
-        },
-      }
+        ...data,
+        hasDriverLicenseCatB: data.hasDriverLicenseCatB ? "Yes" : "No",
+      },
+      { table: "Career" }
     );
+
+    await uploadFile(file, { recordId, table: "Career" });
   } catch (error) {
     return Response.json({ message: "Error" }, { status: 400 });
   }

@@ -4,7 +4,6 @@ import {
   EntryField,
   TextArea,
 } from "@/components/ApplicationForm/CVApplicationForm";
-import DropFile from "@/components/DropFile/DropFile";
 import Button from "@/components/ui/Button/Button";
 import useFormSubmit from "@/utils/useFormSubmit";
 import axios from "axios";
@@ -52,22 +51,12 @@ const Form = () => {
     });
   }, []);
 
-  const [CVFile, setCVFile] = useState<File | null>(null);
-
   const { handleSubmit, state } = useFormSubmit((data) => {
-    return axios.post("/api/collaboration", data, {
-      headers: { locale: "pl" },
-    });
+    return axios.post("/api/collaboration", data);
   });
 
   const onSubmit = async (props: any) => {
-    const formData = new FormData();
-
-    Object.keys(props).forEach((key) => formData.append(key, props[key]));
-
-    formData.append("cv", CVFile!);
-
-    await handleSubmit(formData);
+    await handleSubmit(props);
   };
 
   return (
@@ -118,13 +107,6 @@ const Form = () => {
                 listKey={"phoneNumber"}
                 translationNamespace="Collaboration.form"
               />
-              <DropFile
-                hideImagePreview
-                multiple={false}
-                onChange={(ev: any) => setCVFile(ev.target.files?.[0])}
-                formats="DOCX, DOC, PDF, PNG, JPG etc"
-                label={"CV (Curriculum Vitae)"}
-              />
 
               <TextArea
                 formik={f}
@@ -148,9 +130,7 @@ const Form = () => {
                 <Button
                   loading={state.loading}
                   buttonType="submit"
-                  disabled={
-                    !(f.isValid && f.dirty) || state.isSuccess || !CVFile
-                  }
+                  disabled={!(f.isValid && f.dirty) || state.isSuccess}
                   onClick={f.handleSubmit}
                   className={`py-3 w-full`}
                   text={t("submit")}
