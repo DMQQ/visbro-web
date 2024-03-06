@@ -119,7 +119,7 @@ export default function AppFooter() {
 
       <hr className="border-zinc-800" />
 
-      <section className="p-5 text-zinc-600 flex justify-between">
+      <section className="p-5 text-zinc-600 gap-5 flex justify-between flex-col sm:flex-row">
         <div>
           Free SVG Background by{" "}
           <a target="_blank" href="https://bgjar.com">
@@ -135,6 +135,7 @@ export default function AppFooter() {
           <a href="https://github.com/DMQQ" target="_blank" rel="nofollow">
             2024 By DMQ
           </a>
+          &<a href="https://github.com/mokk4s">MOKK4S</a>
         </div>
       </section>
     </footer>
