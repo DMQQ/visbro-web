@@ -63,13 +63,11 @@ export default function Partners() {
   return (
     <div className="w-full lg:w-3/4 m-auto mt-16 overflow-hidden">
       <div
-        // image-container
         className=" flex flex-row gap-5 transition-transform duration-200 linear"
         style={{
           transform: `translateX(${
             currentImage * (TILE_WIDTH + TILE_PADDING) * DIRECTION
           }px)`,
-          // transform: `translateX(${currentImage * (160 + 20) * -1}px)`,
         }}
       >
         {partners.map((partner) => (
@@ -79,7 +77,7 @@ export default function Partners() {
               quality={80}
               alt={partner}
               src={"/partners/logo/" + partner}
-              className="select-none w-auto h-auto flex-1"
+              className="select-none w-auto h-full flex-1"
             />
           </div>
         ))}

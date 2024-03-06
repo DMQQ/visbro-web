@@ -50,7 +50,7 @@ export default function Housing({ params: { locale } }: any) {
             height={500}
             src={src}
             className={clsx(
-              "object-cover w-full h-full max-h-80 2xl:max-h-[22rem] 2xl:flex",
+              "object-cover w-full h-full max-h-[22rem] 2xl:max-h-[22rem] 2xl:flex",
               {
                 hidden: index % 2 === 1,
               }
