@@ -18,11 +18,11 @@ async function fetchBestOffers(locale: string) {
     const data = (await res.json()) as JobOfferNinox[];
 
     return data
-      ?.filter((dt) => dt.fields.lang !== locale)
+      ?.filter((dt) => dt.fields.lang === locale)
       .slice(0, 4)
       ?.map((field: any) => ({
-        offerId: field.id,
         ...field.fields,
+        offerId: field.id,
       }));
   } catch (error) {
     return [];
@@ -66,17 +66,22 @@ export default async function JobOffersPreview(props: { locale: string }) {
                 className="w-full rounded-md max-h-52 sm:max-h-48 object-cover"
               />
               <div className="flex-1">
-                <h3 className="mt-2 text-lg  font-bold">{offer?.name}</h3>
+                <h3 className="mt-2 text-lg  font-bold">
+                  {offer?.name?.slice(0, 100)}
+                </h3>
                 <p className="text-zinc-300 mt-2">
                   {offer?.content?.slice(0, 100)}
                 </p>
 
                 <ul className="mt-2">
-                  {offer?.benefits?.split(";")?.map((benefit: string) => (
-                    <li key={benefit} className="text-zinc-300">
-                      {benefit}
-                    </li>
-                  ))}
+                  {offer?.benefits
+                    ?.split(";")
+                    ?.slice(0, 5)
+                    ?.map((benefit: string) => (
+                      <li key={benefit} className="text-zinc-300">
+                        {benefit}
+                      </li>
+                    ))}
                 </ul>
               </div>
               <Link

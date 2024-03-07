@@ -31,11 +31,11 @@ async function fetchOffers(locale: string) {
       .map(
         (field: any) =>
           ({
-            offerId: field.id,
             ...(field?.fields || {}),
+            offerId: field.id,
           } as TJobOffer)
       )
-      .filter((data: TJobOffer) => data.lang !== locale)
+      .filter((data: TJobOffer) => data.lang === locale)
       .reverse();
   } catch (error) {
     return [];
@@ -94,11 +94,15 @@ export default async function JobOffers({ params: { locale } }: any) {
 
                 <div className="flex flex-col sm:flex-row justify-between items-end flex-1 mt-2">
                   <ul className="w-full flex flex-col list-disc ps-5">
-                    {requirements?.split(";")?.map((b: string) => (
-                      <li key={b} className="text-white text-sm mr-5">
-                        {b}
-                      </li>
-                    ))}
+                    {requirements
+
+                      .split(";")
+                      ?.slice(0, 5)
+                      ?.map((b: string) => (
+                        <li key={b} className="text-white text-sm mr-5">
+                          {b}
+                        </li>
+                      ))}
                   </ul>
 
                   <Link

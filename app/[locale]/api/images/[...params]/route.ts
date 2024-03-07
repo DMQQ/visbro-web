@@ -24,6 +24,8 @@ export const GET = async (
       }
     );
 
+    if (!res.ok) throw new Error("Response is not ok");
+
     const blob = await res.blob();
 
     const headers = new Headers();
