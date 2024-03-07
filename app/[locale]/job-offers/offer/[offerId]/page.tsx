@@ -107,8 +107,8 @@ export default async function OfferPage({
             </h1>
 
             <article className="mt-5">
-              <h2 className="font-bold text-md">{t("requirements")}</h2>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
+              <h2 className="font-bold text-lg mb-2">{t("requirements")}</h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5 gap-5">
                 {(data?.requirements?.split(";") as string[])?.map(
                   (req, index) => (
                     <li key={req + index}>{req}</li>
@@ -118,8 +118,10 @@ export default async function OfferPage({
             </article>
 
             <article className="mt-5">
-              <h2 className="font-bold text-md">{t("responsibilities")}</h2>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
+              <h2 className="font-bold text-lg mb-2">
+                {t("responsibilities")}
+              </h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5 gap-5">
                 {(data?.responsibilities?.split(";") as string[])?.map(
                   (res, index) => (
                     <li key={res + index}>{res}</li>
@@ -129,8 +131,8 @@ export default async function OfferPage({
             </article>
 
             <article className="mt-5">
-              <h2 className="font-bold text-md">{t("benefits")}</h2>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5">
+              <h2 className="font-bold text-lg mb-2">{t("benefits")}</h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5 gap-5">
                 {(data?.benefits?.split(";") as string[])?.map(
                   (benefit, index) => (
                     <li key={benefit + index}>{benefit}</li>
@@ -140,7 +142,7 @@ export default async function OfferPage({
             </article>
 
             <div className="mt-5">
-              <h2 className="font-bold text-md">{t("description")}</h2>
+              <h2 className="font-bold text-lg mb-2">{t("description")}</h2>
 
               <p className="mt-2 text-lg">{data?.content}</p>
             </div>

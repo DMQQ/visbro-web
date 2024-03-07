@@ -66,19 +66,19 @@ export default async function JobOffersPreview(props: { locale: string }) {
                 className="w-full rounded-md max-h-52 sm:max-h-48 object-cover"
               />
               <div className="flex-1">
-                <h3 className="mt-2 text-lg  font-bold">
+                <h3 className="mt-2 text-xl font-bold">
                   {offer?.name?.slice(0, 100)}
                 </h3>
                 <p className="text-zinc-300 mt-2">
                   {offer?.content?.slice(0, 100)}
                 </p>
 
-                <ul className="mt-2">
+                <ul className="mt-2 list-disc ps-5">
                   {offer?.benefits
                     ?.split(";")
-                    ?.slice(0, 5)
+                    ?.slice(0, 2)
                     ?.map((benefit: string) => (
-                      <li key={benefit} className="text-zinc-300">
+                      <li key={benefit} className="text-zinc-100 mb-2">
                         {benefit}
                       </li>
                     ))}
@@ -87,7 +87,7 @@ export default async function JobOffersPreview(props: { locale: string }) {
               <Link
                 locale={props.locale}
                 href={"/job-offers/offer/" + offer.offerId}
-                className="mt-5 bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800 text-blue-100 text-md p-2 py-3 text-center rounded-md ho"
+                className="mt-2 bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800 text-blue-100 text-md p-2 py-3 text-center rounded-md ho"
                 about={`Job offer ${offer.name}`}
               >
                 {t("buttons.offer")}
