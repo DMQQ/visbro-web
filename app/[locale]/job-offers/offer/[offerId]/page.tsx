@@ -108,12 +108,12 @@ export default async function OfferPage({
 
             <article className="mt-5">
               <h2 className="font-bold text-lg mb-2">{t("requirements")}</h2>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5 gap-5">
-                {(data?.requirements?.split(";") as string[])?.map(
-                  (req, index) => (
+              <ul className=" list-disc ps-5 gap-5">
+                {(data?.requirements?.split(";") as string[])
+                  ?.filter((val) => val.trim() !== "")
+                  ?.map((req, index) => (
                     <li key={req + index}>{req}</li>
-                  )
-                )}
+                  ))}
               </ul>
             </article>
 
@@ -121,23 +121,23 @@ export default async function OfferPage({
               <h2 className="font-bold text-lg mb-2">
                 {t("responsibilities")}
               </h2>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5 gap-5">
-                {(data?.responsibilities?.split(";") as string[])?.map(
-                  (res, index) => (
+              <ul className="mt-2 list-disc ps-5 gap-5">
+                {(data?.responsibilities?.split(";") as string[])
+                  ?.filter((val) => val.trim() !== "")
+                  ?.map((res, index) => (
                     <li key={res + index}>{res}</li>
-                  )
-                )}
+                  ))}
               </ul>
             </article>
 
             <article className="mt-5">
               <h2 className="font-bold text-lg mb-2">{t("benefits")}</h2>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 mt-2 list-disc ps-5 gap-5">
-                {(data?.benefits?.split(";") as string[])?.map(
-                  (benefit, index) => (
+              <ul className="mt-2 list-disc ps-5 gap-5">
+                {(data?.benefits?.split(";") as string[])
+                  ?.filter((val) => val.trim() !== "")
+                  ?.map((benefit, index) => (
                     <li key={benefit + index}>{benefit}</li>
-                  )
-                )}
+                  ))}
               </ul>
             </article>
 

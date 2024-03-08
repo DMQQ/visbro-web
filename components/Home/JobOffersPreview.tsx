@@ -74,7 +74,7 @@ export default async function JobOffersPreview(props: { locale: string }) {
                 </p>
 
                 <ul className="mt-2 list-disc ps-5">
-                  {offer?.benefits
+                  {offer?.requirements
                     ?.split(";")
                     ?.slice(0, 2)
                     ?.map((benefit: string) => (
