@@ -39,7 +39,6 @@ const images = [
   "/gallery/22.jpg",
   "/gallery/23.jpg",
   "/gallery/24.jpg",
-  "/gallery/25.jpg",
   "/gallery/26.jpg",
 ];
 
