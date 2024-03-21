@@ -63,7 +63,7 @@ export default async function JobOffersPreview(props: { locale: string }) {
                     : "/slider/Forklift.jpg"
                 }
                 alt="offer image"
-                className="w-full rounded-md max-h-52 sm:max-h-48 object-cover"
+                className="w-full rounded-md max-h-52 sm:max-h-48 lg:h-48 object-cover"
               />
               <div className="flex-1">
                 <h3 className="mt-2 text-xl font-bold">

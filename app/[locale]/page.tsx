@@ -48,7 +48,7 @@ export default async function Home({ params: { locale } }: any) {
 
   return (
     <main className="w-full">
-      <Slider images={images} />
+      <Slider images={images} locale={locale} />
 
       <WhyUs />
 

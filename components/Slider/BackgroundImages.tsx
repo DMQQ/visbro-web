@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const INTERVAL = 3500;
+const INTERVAL = 5000;
 
 export default function BackgroundImages({
   images,
