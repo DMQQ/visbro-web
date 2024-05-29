@@ -58,6 +58,8 @@ export default async function JobOffersPreview(props: { locale: string }) {
               className="dark:bg-zinc-950 flex-shrink w-full p-4 rounded-2xl flex flex-col border-zinc-900"
             >
               <Image
+                //disable optimization until i figure out how to make it work with
+                unoptimized
                 priority={false}
                 width={300}
                 height={200}

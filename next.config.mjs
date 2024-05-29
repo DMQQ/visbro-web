@@ -5,8 +5,6 @@ export default {
   ...withNextIntl({}),
 
   images: {
-    unoptimized: true,
-
     domains: [
       "localhost",
       "/api/images",

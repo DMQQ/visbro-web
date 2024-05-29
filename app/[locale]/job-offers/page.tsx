@@ -74,6 +74,8 @@ export default async function JobOffers({ params: { locale } }: any) {
             >
               <div className="flex">
                 <NextImage
+                  // disable optimization until i figure out how to make it work with
+                  unoptimized
                   priority
                   width={300}
                   height={200}
