@@ -5,6 +5,10 @@ import { getTranslations } from "next-intl/server";
 import NextImage from "next/image";
 import { TJobOffer } from "@/types";
 
+const API = process.env.BASE_API_URL;
+
+const TOKEN = process.env.AUTH_TOKEN;
+
 export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations({ locale, namespace: "JobOffers" });
 
@@ -16,9 +20,9 @@ export async function generateMetadata({ params: { locale } }: any) {
 
 async function fetchOffers(locale: string) {
   try {
-    const res = await fetch(process.env.BASE_API_URL + `/JobOffers/records`, {
+    const res = await fetch(API + `/JobOffers/records`, {
       headers: {
-        Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        Authorization: "Bearer " + TOKEN,
       },
       next: {
         revalidate: 3600,

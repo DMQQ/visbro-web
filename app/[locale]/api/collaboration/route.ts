@@ -5,6 +5,10 @@ import { NextRequest, NextResponse } from "next/server";
 import * as z from "zod";
 import { limiter } from "../config/limiter";
 
+const API = process.env.BASE_API_URL;
+
+const TOKEN = process.env.AUTH_TOKEN;
+
 const collabSchema = z.object({
   name: z.string().max(100),
   surname: z.string().max(100),
@@ -47,15 +51,11 @@ export const POST = async (req: NextRequest, { params }: any) => {
     );
 
   try {
-    await axios.post(
-      process.env.BASE_API_URL + "/collaboration/records",
-      [{ fields: data }],
-      {
-        headers: {
-          Authorization: "Bearer " + process.env.AUTH_TOKEN,
-        },
-      }
-    );
+    await axios.post(API + "/collaboration/records", [{ fields: data }], {
+      headers: {
+        Authorization: "Bearer " + TOKEN,
+      },
+    });
   } catch (error) {
     return Response.json(
       {

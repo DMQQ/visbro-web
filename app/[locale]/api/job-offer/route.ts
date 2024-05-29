@@ -11,6 +11,10 @@ type Tables =
   | "services"
   | "Career";
 
+const API = process.env.BASE_API_URL;
+
+const TOKEN = process.env.AUTH_TOKEN;
+
 async function uploadFile(
   file: Blob,
   destination: {
@@ -23,12 +27,11 @@ async function uploadFile(
 
   try {
     const res = await axios.post(
-      process.env.BASE_API_URL +
-        `/${destination.table}/records/${destination.recordId}/files`,
+      API + `/${destination.table}/records/${destination.recordId}/files`,
       formdata,
       {
         headers: {
-          Authorization: "Bearer " + process.env.AUTH_TOKEN,
+          Authorization: "Bearer " + TOKEN,
         },
       }
     );
@@ -48,7 +51,7 @@ async function postData<T>(
   console.log("where log");
 
   const res = await axios.post(
-    process.env.BASE_API_URL + `/${destination.table}/records`,
+    API + `/${destination.table}/records`,
     [
       {
         fields: data,
@@ -56,7 +59,7 @@ async function postData<T>(
     ],
     {
       headers: {
-        Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        Authorization: "Bearer " + TOKEN,
       },
     }
   );

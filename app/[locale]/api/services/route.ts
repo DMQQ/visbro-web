@@ -16,6 +16,10 @@ const collabSchema = z.object({
   additionalInfo: z.string().max(256),
 });
 
+const API = process.env.BASE_API_URL;
+
+const TOKEN = process.env.AUTH_TOKEN;
+
 export const POST = async (req: NextRequest, { params }: any) => {
   const remaining = await limiter.removeTokens(1);
 
@@ -47,15 +51,11 @@ export const POST = async (req: NextRequest, { params }: any) => {
     );
 
   try {
-    await axios.post(
-      process.env.BASE_API_URL + "/Services/records",
-      [{ fields: data }],
-      {
-        headers: {
-          Authorization: "Bearer " + process.env.AUTH_TOKEN,
-        },
-      }
-    );
+    await axios.post(API + "/Services/records", [{ fields: data }], {
+      headers: {
+        Authorization: "Bearer " + TOKEN,
+      },
+    });
   } catch (error) {
     return Response.json(
       {

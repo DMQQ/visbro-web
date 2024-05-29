@@ -7,6 +7,10 @@ import * as z from "zod";
 
 import { limiter } from "../config/limiter";
 
+const API = process.env.BASE_API_URL;
+
+const TOKEN = process.env.AUTH_TOKEN;
+
 type Tables =
   | "collaboration"
   | "JobOffers"
@@ -21,7 +25,7 @@ async function postData<T>(
   }
 ) {
   const res = await axios.post(
-    process.env.BASE_API_URL + `/${destination.table}/records`,
+    API + `/${destination.table}/records`,
     [
       {
         fields: data,
@@ -29,7 +33,7 @@ async function postData<T>(
     ],
     {
       headers: {
-        Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        Authorization: "Bearer " + TOKEN,
       },
     }
   );

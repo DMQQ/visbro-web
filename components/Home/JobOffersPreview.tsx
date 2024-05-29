@@ -3,12 +3,16 @@ import { JobOfferNinox, NinoxResponse } from "@/types";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
+const API = process.env.BASE_API_URL;
+
+const TOKEN = process.env.AUTH_TOKEN;
+
 async function fetchBestOffers(locale: string) {
   "use server";
   try {
-    const res = await fetch(process.env.BASE_API_URL + "/JobOffers/records", {
+    const res = await fetch(API + "/JobOffers/records", {
       headers: {
-        Authorization: "Bearer " + process.env.AUTH_TOKEN,
+        Authorization: "Bearer " + TOKEN,
       },
       next: {
         revalidate: 3600,

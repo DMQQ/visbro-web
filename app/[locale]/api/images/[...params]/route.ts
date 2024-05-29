@@ -1,5 +1,9 @@
 import { NextRequest } from "next/server";
 
+const API = process.env.BASE_API_URL;
+
+const TOKEN = process.env.AUTH_TOKEN;
+
 export const GET = async (
   req: NextRequest,
   {
@@ -15,10 +19,10 @@ export const GET = async (
 
   try {
     const res = await fetch(
-      process.env.BASE_API_URL + `/JobOffers/records/${recordId}/files/${url}`,
+      API + `/JobOffers/records/${recordId}/files/${url}`,
       {
         headers: {
-          Authorization: "Bearer " + process.env.AUTH_TOKEN,
+          Authorization: "Bearer " + TOKEN,
         },
         cache: "force-cache",
       }

@@ -6,17 +6,21 @@ import clsx from "clsx";
 import { TJobOffer } from "@/types";
 import { notFound } from "next/navigation";
 
+const API = process.env.BASE_API_URL;
+
+const TOKEN = process.env.AUTH_TOKEN;
+
 async function getOfferIds() {
   try {
     const response = await fetch(
-      process.env.BASE_API_URL + "/JobOffers/records",
+      API + "/JobOffers/records",
 
       {
         next: {
           revalidate: 3600,
         },
         headers: {
-          Authorization: "Bearer " + process.env.AUTH_TOKEN,
+          Authorization: "Bearer " + TOKEN,
         },
       }
     );
@@ -47,17 +51,14 @@ export async function generateStaticParams() {
 
 async function getOfferById(id: string, locale: string): Promise<TJobOffer> {
   try {
-    const res = await fetch(
-      process.env.BASE_API_URL + `/JobOffers/records/${id}`,
-      {
-        headers: {
-          Authorization: "Bearer " + process.env.AUTH_TOKEN,
-        },
-        next: {
-          revalidate: 3600,
-        },
-      }
-    );
+    const res = await fetch(API + `/JobOffers/records/${id}`, {
+      headers: {
+        Authorization: "Bearer " + TOKEN,
+      },
+      next: {
+        revalidate: 3600,
+      },
+    });
 
     const data = await res.json();
 
