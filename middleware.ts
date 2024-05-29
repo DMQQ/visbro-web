@@ -9,17 +9,6 @@ export default async function middleware(request: NextRequest) {
     localePrefix: "always",
   });
 
-  const regexp = /^http:\/\/localhost:3000\/pl\/api\/.+$/;
-  const isApiUrl = regexp.test(request.url);
-
-  if (isApiUrl) {
-    if (
-      process.env.BASE_API_URL === undefined ||
-      process.env.AUTH_TOKEN === undefined
-    )
-      throw new Error("Missing env variables");
-  }
-
   return intl(request);
 }
 
