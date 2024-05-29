@@ -13,6 +13,11 @@ export default async function middleware(request: NextRequest) {
   const isApiUrl = regexp.test(request.url);
 
   if (isApiUrl) {
+    if (
+      process.env.BASE_API_URL === undefined ||
+      process.env.AUTH_TOKEN === undefined
+    )
+      throw new Error("Missing env variables");
   }
 
   return intl(request);
