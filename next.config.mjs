@@ -5,10 +5,15 @@ export default {
   ...withNextIntl({}),
 
   images: {
-    domains: [
-      "./public/images",
-      "/api/images",
-      "https://visbro-web.vercel.app/pl/api/images",
-    ],
+    domains: ["localhost", "/api/images", "https://visbro-web.vercel.app"],
+  },
+
+  async rewrites() {
+    return [
+      {
+        source: "/:locale/api/images/:imageName",
+        destination: "/api/images/:imageName",
+      },
+    ];
   },
 };
