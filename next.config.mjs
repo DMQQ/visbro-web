@@ -1,4 +1,5 @@
 import createNextIntlPlugin from "next-intl/plugin";
+import { hostname } from "os";
 
 const withNextIntl = createNextIntlPlugin("./i18n.ts");
 export default {
@@ -19,6 +20,16 @@ export default {
         hostname: "visbro-web.vercel.app", // Specify the hostname of your Vercel app
         port: "", // Specify the port if needed, leave empty if not using a custom port
         pathname: "/pl/api/images/**", // Specify the pathname pattern to match your route
+      },
+      {
+        protocol: "https", // Specify the protocol (http or https)
+        hostname: "visbro-web-dmqqs-projects.vercel.app", // Specify the hostname of your Vercel app
+        port: "", // Specify the port if needed, leave empty if not using a custom port
+        pathname: "/api/images/**", // Specify the pathname pattern to match your route
+      },
+      {
+        hostname: "visbro.de",
+        pathname: "/api/images/**",
       },
     ],
   },

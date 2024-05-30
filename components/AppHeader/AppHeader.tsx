@@ -26,7 +26,7 @@ export default function AppHeader() {
     <>
       <header
         style={{ zIndex: 101 }}
-        className="fixed top-0 dark:bg-zinc-900 w-full p-2 px-5 flex justify-between items-center shadow-lg"
+        className="fixed top-0 dark:bg-zinc-900 w-full p-3 px-5 flex justify-between items-center shadow-lg"
       >
         <Link
           href="/"
@@ -35,11 +35,11 @@ export default function AppHeader() {
         >
           <Image
             priority
-            width={200}
-            height={100}
+            width={100}
+            height={50}
             alt="logo"
             src={"/logo.png"}
-            className="w-52 object-cover"
+            className="w-32 object-cover"
           />
         </Link>
 
