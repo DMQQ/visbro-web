@@ -132,10 +132,10 @@ export default function AppFooter() {
         </Link>
 
         <div>
-          <a href="https://github.com/DMQQ" target="_blank" rel="nofollow">
+          <a href="https://dmqq.pl" target="_blank" rel="nofollow">
             2024 By DMQ
-          </a>
-          &<a href="https://github.com/mokk4s">MOKK4S</a>
+          </a>{" "}
+          & <a href="https://github.com/mokk4s">MOKK4S</a>
         </div>
       </section>
     </footer>

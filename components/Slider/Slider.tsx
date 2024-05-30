@@ -39,7 +39,7 @@ export default function Slider({ images, locale }: any) {
         <section className="w-full relative top-1/2 -translate-y-[50vh] lg:top-0 lg:-translate-y-2 p-5 md:w-10/12 lg:w-4/5 z-40 xl:w-1/2 flex-[3] xl:flex-[2] justify-center items-center lg:items-start flex flex-col ">
           <h1
             className={clsx(
-              "text-white mt-16 xs:mt-0 text-4xl sm:text-5xl lg:text-5xl xl:text-5xl 3xl:text-7xl font-bold text-center sm:text-start",
+              "text-white mt-16 xs:mt-0 text-4xl sm:text-5xl lg:text-5xl xl:text-5xl 3xl:text-7xl font-bold sm:text-start",
               {
                 "2xl:text-6xl": !["de", "ru", "tr"].includes(locale),
               }

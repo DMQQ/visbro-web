@@ -38,6 +38,8 @@ export default async function JobOffersPreview(props: { locale: string }) {
 
   const offers = await fetchBestOffers(props.locale);
 
+  if (offers.length === 0) return null;
+
   return (
     <article className="w-full p-5 mt-32 flex justify-center items-center">
       <section className="w-full lg:w-3/4 ">

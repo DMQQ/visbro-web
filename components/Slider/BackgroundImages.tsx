@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const INTERVAL = 5000;
+const INTERVAL = 6000;
 
 export default function BackgroundImages({
   images,
@@ -20,7 +20,7 @@ export default function BackgroundImages({
 
   return (
     <div
-      className={`absolute top-0 left-0 flex transition ease-out duration-500`}
+      className={`absolute top-0 left-0 flex transition ease-out duration-700`}
       style={{
         transform: `translateX(-${currentImage * 100}vw)`,
       }}
@@ -28,7 +28,7 @@ export default function BackgroundImages({
       {images.map((images, index) => (
         <div className="w-screen h-screen relative" key={index}>
           <img
-            fetchPriority={index === 0 ? "high" : "low"}
+            fetchPriority={index < 2 ? "high" : "low"}
             src={images.image}
             srcSet={images.srcset}
             alt="Background image"

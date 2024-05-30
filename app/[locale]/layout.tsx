@@ -46,7 +46,7 @@ function RootLayout({
           style={{
             backgroundImage: "url(/bg.svg)",
 
-            backgroundSize: "cover",
+            backgroundSize: "contain",
           }}
         >
           <AppHeader />
