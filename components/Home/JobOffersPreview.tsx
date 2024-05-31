@@ -1,5 +1,6 @@
 import { Link } from "@/navigation";
 import { JobOfferNinox, NinoxResponse } from "@/types";
+import clsx from "clsx";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
@@ -68,10 +69,15 @@ export default async function JobOffersPreview(props: { locale: string }) {
                 src={
                   offer.image
                     ? `/${props.locale}/api/images/${offer.offerId}/${offer.image}`
-                    : "/slider/Forklift.jpg"
+                    : "/notavailable.jpg"
                 }
                 alt="offer image"
-                className="w-full rounded-md max-h-52 sm:max-h-48 lg:h-48 object-cover"
+                className={clsx(
+                  "w-full rounded-md max-h-52 sm:max-h-48 lg:h-48 object-cover",
+                  {
+                    grayscale: !offer.image,
+                  }
+                )}
               />
               <div className="flex-1">
                 <h3 className="mt-2 text-xl font-bold">

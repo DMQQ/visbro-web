@@ -72,22 +72,24 @@ export default async function JobOffers({ params: { locale } }: any) {
               key={index}
               className="mb-5 flex flex-col md:flex-row gap-3 rounded-2xl bg-zinc-950 border border-zinc-900 hover:bg-zinc-900 p-4 transition duration-200"
             >
-              <div className="flex">
-                <NextImage
-                  // disable optimization until i figure out how to make it work with
-                  unoptimized
-                  priority
-                  width={300}
-                  height={200}
-                  src={
-                    image
-                      ? `/${locale}/api/images/${offerId}/${image}`
-                      : "/slider/Forklift.jpg"
-                  }
-                  alt="offer thumbnail"
-                  className="md:max-w-64 rounded-md object-cover flex-1"
-                />
-              </div>
+              {image && (
+                <div className="flex">
+                  <NextImage
+                    // disable optimization until i figure out how to make it work with
+                    unoptimized
+                    priority
+                    width={300}
+                    height={200}
+                    src={
+                      image
+                        ? `/${locale}/api/images/${offerId}/${image}`
+                        : "/slider/Forklift.jpg"
+                    }
+                    alt="offer thumbnail"
+                    className="md:max-w-64 rounded-md object-cover flex-1"
+                  />
+                </div>
+              )}
               <section className="flex flex-col flex-[4]">
                 <h2 className="font-bold text-xl sm:text-2xl ">{name}</h2>
                 <p className="text-zinc-400  block sm:hidden">

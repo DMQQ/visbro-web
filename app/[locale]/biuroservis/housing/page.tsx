@@ -43,6 +43,7 @@ export default function Housing({ params: { locale } }: any) {
           "/gallery/9.jpg",
         ].map((src, index) => (
           <Image
+            quality={90}
             priority
             key={src}
             alt="Bh"
@@ -50,7 +51,7 @@ export default function Housing({ params: { locale } }: any) {
             height={500}
             src={src}
             className={clsx(
-              "object-cover w-full h-full max-h-[22rem] 2xl:max-h-[22rem] 2xl:flex",
+              "object-cover w-full h-full max-h-[22rem] 2xl:max-h-[18rem] 2xl:flex",
               {
                 hidden: index % 2 === 1,
               }

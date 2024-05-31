@@ -57,9 +57,9 @@ export default function ChangeLanguage() {
 
       <div
         aria-label="menu-list"
-        className="absolute hidden group-hover:block right-12 translate-x-10 top-5 rounded-lg bg-zinc-950"
+        className="absolute hidden group-hover:block right-16 translate-x-10 top-6 rounded-lg bg-zinc-950"
       >
-        <ul className=" text-zinc-300 w-12 overflow-hidden">
+        <ul className=" text-zinc-300 w-10 overflow-hidden">
           {localesWithFlags.map(([locale, flag]) => (
             <li key={locale} className="p-2">
               <Link
@@ -69,13 +69,11 @@ export default function ChangeLanguage() {
                 className="flex items-center"
               >
                 <Image
-                  priority={false}
-                  fetchPriority="low"
-                  width={30}
+                  width={20}
                   height={20}
                   src={flag}
                   alt={locale + " flag"}
-                  className="w-9 rounded-sm"
+                  className="w-6 rounded-sm"
                 />
               </Link>
             </li>

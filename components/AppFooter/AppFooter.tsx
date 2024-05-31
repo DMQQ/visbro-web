@@ -121,7 +121,7 @@ export default function AppFooter() {
 
       <section className="p-5 text-zinc-600 gap-5 flex justify-between flex-col sm:flex-row">
         <div>
-          Free SVG Background by{" "}
+          SVG Background by{" "}
           <a target="_blank" href="https://bgjar.com">
             BGJar
           </a>

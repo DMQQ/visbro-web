@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { Suspense, useMemo } from "react";
+import { useMemo } from "react";
 
 import { getTranslations } from "next-intl/server";
 
@@ -83,7 +83,7 @@ export default function Contact({ params: { locale } }: any) {
           {recruters.map((details, key) => (
             <section
               key={key}
-              className={`bg-zinc-900 rounded-md flex flex-col`}
+              className={`bg-zinc-900 rounded-lg flex flex-col`}
             >
               <Image
                 width={144}
@@ -128,7 +128,7 @@ export default function Contact({ params: { locale } }: any) {
                       height={30}
                       src={"/flags/" + locale + ".png"}
                       alt={locale + " Flag"}
-                      className="w-8 rounded-sm"
+                      className="w-8 rounded-[3.5px]"
                     />
                   ))}
                 </div>
