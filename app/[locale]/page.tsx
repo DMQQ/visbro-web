@@ -38,8 +38,12 @@ export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations({ locale, namespace: "Home" });
 
   return {
-    title: "Visbro Personal Solution",
+    title: "Visbro Personal Solutions",
     description: t("text.short_about"),
+
+    openGraph: {
+      title: "Visbro Personal Solutions",
+    },
   };
 }
 

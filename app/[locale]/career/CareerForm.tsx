@@ -141,25 +141,29 @@ const Form = () => {
                 />
               </div>
 
-              <EntryField
-                multiSelect
-                translationNamespace="Career.form"
-                formik={f}
-                listKey="languages"
-                selects={{
-                  languages: Object.entries(languages).map(([key, native]) => ({
-                    label: native,
-                    value: native,
-                  })),
-                }}
-              />
+              <div className="flex flex-col sm:flex-row">
+                <EntryField
+                  multiSelect
+                  translationNamespace="Career.form"
+                  formik={f}
+                  listKey="languages"
+                  selects={{
+                    languages: Object.entries(languages).map(
+                      ([key, native]) => ({
+                        label: native,
+                        value: native,
+                      })
+                    ),
+                  }}
+                />
 
-              <EntryField
-                translationNamespace="Career.form"
-                formik={f}
-                listKey="civilState"
-                selects={selects}
-              />
+                <EntryField
+                  translationNamespace="Career.form"
+                  formik={f}
+                  listKey="civilState"
+                  selects={selects}
+                />
+              </div>
 
               <TabSelect
                 options={selects.driverLicense}

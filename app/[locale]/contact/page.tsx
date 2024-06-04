@@ -39,13 +39,7 @@ export default function Contact({ params: { locale } }: any) {
         contacts: ["+49 1520 8941615", "kamil.czarnecki@visbro.de"],
         languages: ["de", "en", "pl"],
       },
-      {
-        image: "/workers/Michał.webp",
-        name: "Michal Kotwicki",
-        position: t("positions.manager"),
-        contacts: ["+49 174 2606102", "Michal.kotwicki@visbro.de"],
-        languages: ["pl", "en"],
-      },
+
       {
         image: "/workers/Kaja.webp",
         name: "Kaja Zimoch",

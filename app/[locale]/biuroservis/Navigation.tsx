@@ -9,7 +9,7 @@ const subRoutes = [
   { route: "/recrutation", text: "recruitment" },
   { route: "/housing", text: "housing" },
   { route: "/cleaning-services", text: "cleaning-services" },
-  { route: "/truck-rental", text: "car-rental" },
+  // { route: "/truck-rental", text: "car-rental" },
 ];
 
 export default function Navigation() {

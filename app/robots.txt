@@ -1,5 +1,2 @@
-User-Agent: *
-Allow: /
-Disallow: /private/
-
-Sitemap: http://srv18.mikr.us:40202/
+User-agent: *
+Disallow:

@@ -107,10 +107,6 @@ export default function AppFooter() {
             <Link href="/career" className="md:px-2">
               {t("career")}
             </Link>
-
-            <Link href="/biuroservis/truck-rental" className="md:px-2">
-              {t("rental")}
-            </Link>
           </div>
         </nav>
       </section>

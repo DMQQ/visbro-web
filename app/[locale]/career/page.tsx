@@ -29,7 +29,7 @@ export default function Career({ params: { locale } }: any) {
           {t("content")}
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mt-5">
+        {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 mt-5">
           {[
             "/slider/Delivery.jpg",
             "/home/cleaningCut.jpg",
@@ -48,7 +48,7 @@ export default function Career({ params: { locale } }: any) {
               />
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
       <Form />
     </main>
