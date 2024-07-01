@@ -20,7 +20,7 @@ export default function Slider({ images, locale }: any) {
         className="absolute w-full h-full flex items-center justify-center flex-col-reverse lg:flex-row-reverse"
       >
         <section className="hidden lg:grid grid-cols-2 md:grid-cols-2 gap-2 justify-center px-5 pt-3 flex-1 lg:flex-[2] xl:flex-[2]">
-          {[
+          {/* {[
             "Forklift.jpg",
             "Delivery.webp",
             "Warehouse.webp",
@@ -36,13 +36,13 @@ export default function Slider({ images, locale }: any) {
               alt="Work image"
               className="object-cover h-[17rem] 3xl:h-72 w-full"
             />
-          ))}
+          ))} */}
         </section>
 
-        <section className="w-full relative top-1/2 -translate-y-[50vh] lg:top-0 lg:-translate-y-2 p-5 md:w-10/12 lg:w-4/5 z-40 xl:w-1/2 flex-[3] xl:flex-[2] justify-center items-center lg:items-start flex flex-col ">
+        <section className="w-full relative top-1/2 -translate-y-[50vh] lg:top-0 lg:-translate-y-2 p-5 md:w-10/12 lg:w-4/5 z-40 flex-[3] justify-center items-center lg:items-start flex flex-col ">
           <h1
             className={clsx(
-              "text-white mt-16 xs:mt-0 text-4xl sm:text-5xl lg:text-5xl xl:text-5xl 3xl:text-7xl font-bold sm:text-start",
+              "text-white mt-16 xs:mt-0 text-4xl sm:text-5xl lg:text-6xl  3xl:text-7xl font-bold sm:text-start",
               {
                 "2xl:text-6xl": !["de", "ru", "tr"].includes(locale),
               }
@@ -57,11 +57,11 @@ export default function Slider({ images, locale }: any) {
             })}
           </h1>
 
-          <p className="w-full mt-5 max-w-screen-md text-md sm:!text-xl 2xl:w-3/4 text-zinc-300 rtl:text-xl">
+          <p className="w-full mt-5 text-md sm:!text-xl 2xl:w-3/4 text-zinc-300 rtl:text-xl max-w-3xl">
             {t("text.short_about")}
           </p>
 
-          <div className="mt-5 flex gap-3 justify-center flex-col xs:flex-row flex-wrap w-full sm:w-2/3 2xl:w-3/4">
+          <div className="mt-5 flex gap-3 justify-center flex-col xs:flex-row flex-wrap w-full max-w-3xl">
             <Link
               href={"/about-us"}
               className="flex-1 bg-white text-center text-black p-2 py-4 rounded-md hover:bg-zinc-200"

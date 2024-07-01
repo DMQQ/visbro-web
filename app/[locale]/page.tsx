@@ -15,9 +15,8 @@ const images = [
     "AmazonDriver-screen-sm.webp",
   ],
   ["Delivery.webp", "Delivery-screen-md.webp", "Delivery-screen-sm.webp"],
-  ["Farm.webp", "Farm-screen-md.webp", "Farm-screen-sm.webp"],
+  ["amazon.webp", "amazon.webp", "amazon.webp"],
   ["FarmField.webp", "FarmField-screen-md.webp", "FarmField-screen-sm.webp"],
-  ["Forklift.webp", "Forklift-screen-md.webp", "Forklift-screen-sm.webp"],
   ["Gastro2.webp", "Gastro2-screen-md.webp", "Gastro2-screen-sm.webp"],
   ["Warehouse.webp", "Warehouse-screen-md.webp", "Warehouse-screen-sm.webp"],
 ].map((srcs) => {
