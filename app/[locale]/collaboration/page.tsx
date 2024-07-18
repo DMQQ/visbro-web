@@ -9,7 +9,7 @@ export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations({ locale, namespace: "Collaboration" });
 
   return {
-    title: t("title"),
+    title: t("title") + " - Visbro Personal Solutions",
     description: t.rich("content", {
       br: () => "",
     }),

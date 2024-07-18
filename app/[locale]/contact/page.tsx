@@ -12,7 +12,7 @@ export async function generateMetadata({ params: { locale } }: any) {
   const t = await getTranslations({ locale, namespace: "Contact" });
 
   return {
-    title: t("heading"),
+    title: t("heading") + " - Visbro Personal Solutions",
     content: "Contact with Visbro Personal Solution +49 1520 8941615",
   };
 }
