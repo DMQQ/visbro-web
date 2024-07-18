@@ -93,6 +93,44 @@ export default async function OfferPage({
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "JobPosting",
+            title: data?.name,
+            description: data?.content,
+            hiringOrganization: {
+              "@type": "Organization",
+              name: "Visbro Personal Solution",
+              sameAs: "https://visbro.com",
+            },
+            jobLocation: {
+              "@type": "Place",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: " Franz-Flemming-Straße 43a/2OG",
+                postalCode: "04179",
+                addressCountry: "DE",
+              },
+              provider: {
+                "@type": "Organization",
+                name: "Visbro Personal Solution",
+              },
+            },
+            responsibilities: data?.responsibilities,
+            qualifications: data?.requirements,
+            benefits: data?.benefits,
+            employmentType: "FULL_TIME",
+            baseSalary: {
+              "@type": "MonetaryAmount",
+              currency: "EUR",
+            },
+          }),
+        }}
+      ></script>
+
       <main className={`w-full h-full min-h-screen sm:pb-16`}>
         <article
           className={clsx(

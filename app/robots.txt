@@ -1,2 +1,15 @@
 User-agent: *
+
+Sitemap: https://visbro.de/sitemap.xml
+Sitemap: https://visbro.de/pl/sitemap.xml
+Sitemap: https://visbro.de/en/sitemap.xml
+Sitemap: https://visbro.de/de/sitemap.xml
+Sitemap: https://visbro.de/ua/sitemap.xml
+Sitemap: https://visbro.de/tr/sitemap.xml
+Sitemap: https://visbro.de/ro/sitemap.xml
+Sitemap: https://visbro.de/ru/sitemap.xml
+Sitemap: https://visbro.de/ar/sitemap.xml
+Sitemap: https://visbro.de/as/sitemap.xml
+
 Disallow:
+
