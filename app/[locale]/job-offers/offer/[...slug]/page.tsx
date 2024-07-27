@@ -38,11 +38,11 @@ async function getOfferIds() {
 export async function generateStaticParams() {
   const jobOffers = (await getOfferIds()) as number[];
 
-  const params = [] as { locale: string; offerId: string }[];
+  const params = [] as { locale: string; slug: string[] }[];
 
   for (let offer of jobOffers) {
     for (let locale of locales) {
-      params.push({ locale, offerId: offer.toString() });
+      params.push({ locale, slug: [offer.toString()] });
     }
   }
 

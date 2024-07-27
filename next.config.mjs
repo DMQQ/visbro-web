@@ -1,5 +1,4 @@
 import createNextIntlPlugin from "next-intl/plugin";
-import { hostname } from "os";
 
 const withNextIntl = createNextIntlPlugin("./i18n.ts");
 export default {

@@ -36,13 +36,13 @@ export const POST = async (req: NextRequest, { params }: any) => {
 
   const data = await req.json();
 
-  const res = collabSchema.safeParse(data);
+  const res = collabSchema.safeParse(data) as any;
 
   if (!res.success)
     return Response.json(
       {
         message: "Invalid data",
-        error: res.error.issues.map((issue) => ({
+        error: res?.error?.issues?.map((issue) => ({
           message: issue.message,
           field: issue.path,
         })),

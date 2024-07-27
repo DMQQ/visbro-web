@@ -141,7 +141,7 @@ export const POST = async (req: NextRequest, { params }: any) => {
     finalData[key] = finalV;
   });
 
-  const res = collabSchema.safeParse(finalData);
+  const res = collabSchema.safeParse(finalData) as any;
 
   const offerId = finalData.offerId;
 
@@ -152,7 +152,7 @@ export const POST = async (req: NextRequest, { params }: any) => {
     return Response.json(
       {
         message: "Invalid data",
-        error: res.error.issues.map((issue) => ({
+        error: res?.error?.issues?.map((issue) => ({
           message: issue.message,
           field: issue.path,
         })),

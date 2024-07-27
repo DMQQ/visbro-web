@@ -63,7 +63,16 @@ export default async function JobOffers({ params: { locale } }: any) {
           </h1>
         </div>
 
-        {/* <Search /> */}
+        {offers?.length === 0 && (
+          <div className="flex justify-center items-center">
+            <NextImage
+              src={"/empty.svg"}
+              alt="No offers available"
+              width={800}
+              height={800}
+            />
+          </div>
+        )}
 
         {offers.map(
           ({ name, content, offerId, image, requirements }, index) => (
@@ -76,18 +85,18 @@ export default async function JobOffers({ params: { locale } }: any) {
                   className="flex"
                   locale={locale}
                   href={
-                    "/job-offers/offer/" +
-                    offerId +
-                    "/" +
-                    name.replace(" ", "-").replace("/", "-").toLowerCase()
+                    `/job-offers/offer/${offerId}/${name
+                      .replace(" ", "-")
+                      .replace("/", "-")
+                      .toLowerCase()}` as any
                   }
                 >
-                  <NextImage
+                  <img
                     // disable optimization until i figure out how to make it work with
-                    unoptimized
-                    priority
-                    width={300}
-                    height={200}
+                    // unoptimized
+                    // priority
+                    // width={300}
+                    // height={200}
                     src={
                       image
                         ? `/${locale}/api/images/${offerId}/${image}`
@@ -125,10 +134,13 @@ export default async function JobOffers({ params: { locale } }: any) {
                   <Link
                     locale={locale}
                     href={
-                      "/job-offers/offer/" +
-                      offerId +
-                      "/" +
-                      name.replace(" ", "-").replace("/", "-").toLowerCase()
+                      ("/job-offers/offer/" +
+                        offerId +
+                        "/" +
+                        name
+                          .replace(" ", "-")
+                          .replace("/", "-")
+                          .toLowerCase()) as any
                     }
                     className="p-2 bg-blue-900 transition-colors flex-shrink-0 max-h-12 hover:bg-blue-950 active:bg-blue-800 rounded-md text-blue-100 sm:!w-48 text-center  mt-5 sm:mt-0 w-full py-3"
                   >

@@ -5,4 +5,8 @@ import { pathnames } from "./pathnames";
 export const localePrefix = "always"; // Default
 
 export const { Link, redirect, usePathname, useRouter } =
-  createLocalizedPathnamesNavigation({ locales, localePrefix, pathnames });
+  createLocalizedPathnamesNavigation({
+    locales,
+    localePrefix,
+    pathnames,
+  }) as any;
