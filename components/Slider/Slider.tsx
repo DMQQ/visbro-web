@@ -1,6 +1,5 @@
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import BackgroundImages from "./BackgroundImages";
 import SocialMedia from "../SocialMedia/SocialMedia";
 import clsx from "clsx";
@@ -19,25 +18,7 @@ export default function Slider({ images, locale }: any) {
         style={{ backgroundColor: "rgba(0,0,0,0.75)" }}
         className="absolute w-full h-full flex items-center justify-center flex-col-reverse lg:flex-row-reverse"
       >
-        <section className="hidden lg:grid grid-cols-2 md:grid-cols-2 gap-2 justify-center px-5 pt-3 flex-1 lg:flex-[2] xl:flex-[2]">
-          {/* {[
-            "Forklift.jpg",
-            "Delivery.webp",
-            "Warehouse.webp",
-            "Amazon.webp",
-          ].map((src) => (
-            <Image
-              quality={"100"}
-              width={450}
-              height={400}
-              priority
-              key={src}
-              src={"/home_tiles/" + src}
-              alt="Work image"
-              className="object-cover h-[17rem] 3xl:h-72 w-full"
-            />
-          ))} */}
-        </section>
+        <section className="hidden lg:grid grid-cols-2 md:grid-cols-2 gap-2 justify-center px-5 pt-3 flex-1 lg:flex-[2] xl:flex-[2]"></section>
 
         <section className="w-full relative top-1/2 -translate-y-[50vh] lg:top-0 lg:-translate-y-2 p-5 md:w-10/12 lg:w-4/5 z-40 flex-[3] justify-center items-center lg:items-start flex flex-col ">
           <h1
@@ -57,7 +38,7 @@ export default function Slider({ images, locale }: any) {
             })}
           </h1>
 
-          <p className="w-full mt-5 text-md sm:!text-xl 2xl:w-3/4 text-zinc-300 rtl:text-xl max-w-3xl">
+          <p className="w-full mt-5 text-md sm:!text-xl 2xl:w-3/4 text-zinc-100 rtl:text-xl max-w-3xl">
             {t("text.short_about")}
           </p>
 

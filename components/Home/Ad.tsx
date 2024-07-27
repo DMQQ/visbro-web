@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Ad() {
   const keys = ["recruting", "cleaning", "legal"];
   const images = [
-    "/home/people.jpg",
+    "/home_tiles/Amazon.webp",
     "/home/cleaningCut.jpg",
     "/home/legalCut.jpg",
   ];
@@ -35,7 +35,7 @@ export default function Ad() {
               height={390}
               src={images[index]}
               alt={"Decorative image"}
-              className="w-full md:w-1/2 object-cover max-h-96 rounded-md mt-5 md:mt-0"
+              className="w-full md:w-1/2 object-cover 2xl:max-h-96 rounded-md mt-5 md:mt-0"
             />
             <div
               className={clsx("flex-1", {
