@@ -1,11 +1,13 @@
 import Slider from "@/components/Slider/Slider";
 import { unstable_setRequestLocale } from "next-intl/server";
-
 import { getTranslations } from "next-intl/server";
 import Ad from "@/components/Home/Ad";
 import JobOffersPreview from "@/components/Home/JobOffersPreview";
 import PartnersList from "@/components/Home/PartnersList";
 import WhyUs from "@/components/Home/WhyUs";
+import { locales } from "@/locales";
+
+import { keywords, titles } from "../../seo";
 
 const BREAKPOINTS = ["1200w", "800w", "400w"];
 const images = [
@@ -32,130 +34,26 @@ const images = [
   };
 });
 
-const keywords = {
-  de: [
-    "Personalvermittlung",
-    "Rekrutierung",
-    "Stellenvermittlung",
-    "Jobvermittlung",
-    "Personalsuche",
-    "Kandidatensuche",
-    "Bewerbermanagement",
-    "Einstellung",
-    "Personalbeschaffung",
-    "Personalberatung",
-    "Headhunting",
-    "Fachkräftesuche",
-    "Jobangebote",
-    "Arbeitsvermittlung",
-    "Karriereberatung",
-    "Bewerbungsprozess",
-    "Personaldienstleistungen",
-    "Personalagentur",
-  ],
-  pl: [
-    "pośrednictwo pracy",
-    "rekrutacja",
-    "agencja zatrudnienia",
-    "rekrutowanie",
-    "poszukiwanie pracowników",
-    "zarządzanie kandydatami",
-    "zatrudnienie",
-    "pozyskiwanie pracowników",
-    "doradztwo personalne",
-    "headhunting",
-    "poszukiwanie specjalistów",
-    "oferty pracy",
-    "pośrednictwo zawodowe",
-    "doradztwo kariery",
-    "proces rekrutacyjny",
-    "usługi personalne",
-    "agencja personalna",
-  ],
-  ro: [
-    "recrutare",
-    "agenție de recrutare",
-    "plasare de forță de muncă",
-    "căutare de candidați",
-    "gestionare candidați",
-    "angajare",
-    "achiziție de personal",
-    "consultanță în personal",
-    "headhunting",
-    "căutare de specialiști",
-    "oferte de muncă",
-    "servicii de plasare a forței de muncă",
-    "consiliere în carieră",
-    "proces de recrutare",
-    "servicii de resurse umane",
-    "agenție de personal",
-  ],
-  tr: [
-    "işe alım",
-    "işe alım ajansı",
-    "işe yerleştirme",
-    "aday arama",
-    "aday yönetimi",
-    "istihdam",
-    "personel temini",
-    "insan kaynakları danışmanlığı",
-    "headhunting",
-    "uzman arama",
-    "iş ilanları",
-    "işe yerleştirme hizmetleri",
-    "kariyer danışmanlığı",
-    "işe alım süreci",
-    "insan kaynakları hizmetleri",
-    "personel ajansı",
-  ],
-  ua: [
-    "рекрутинг",
-    "агенція з підбору персоналу",
-    "працевлаштування",
-    "пошук кандидатів",
-    "управління кандидатами",
-    "найм",
-    "залучення персоналу",
-    "кадрове консультування",
-    "хедхантинг",
-    "пошук спеціалістів",
-    "вакансії",
-    "послуги з працевлаштування",
-    "консультування з кар'єри",
-    "процес підбору персоналу",
-    "кадрові послуги",
-    "агенція з підбору кадрів",
-  ],
-} as const;
-
 export async function generateMetadata({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Home" });
 
   return {
-    title: "Visbro Personal Solutions ",
-    description: t("text.short_about"),
-    keywords: (keywords?.[locale as keyof typeof keywords] || []).join(", "),
+    title:
+      titles["index"][locale as keyof typeof titles.index] ||
+      t("headings.title"),
+    description: t("text.short_about").slice(0, 160),
+    keywords: (
+      keywords["index"]?.[locale as keyof typeof keywords.index] || []
+    ).join(", "),
     alternate: [
+      locales.map((locale) => ({
+        hrefLang: locale,
+        href: `/${locale}`,
+      })),
       {
-        hrefLang: "de",
-        href: "/de",
-      },
-      {
-        hrefLang: "pl",
-        href: "/pl",
-      },
-      {
-        hrefLang: "ro",
-        href: "/ro",
-      },
-      {
-        hrefLang: "tr",
-        href: "/tr",
-      },
-      {
-        hrefLang: "ua",
-        href: "/ua",
+        hrefLang: "x-default",
+        href: "/",
       },
     ],
   };

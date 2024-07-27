@@ -68,8 +68,9 @@ async function getOfferById(id: string, locale: string): Promise<TJobOffer> {
   }
 }
 
-export async function generateMetadata({ params: { locale, offerId } }: any) {
+export async function generateMetadata({ params: { locale, slug } }: any) {
   unstable_setRequestLocale(locale);
+  const offerId = slug?.[0] || 0;
 
   const data = await getOfferById(offerId, locale);
 
@@ -81,9 +82,10 @@ export async function generateMetadata({ params: { locale, offerId } }: any) {
 
 export default async function OfferPage({
   searchParams,
-  params: { locale, offerId },
+  params: { locale, slug },
 }: any) {
   unstable_setRequestLocale(locale);
+  const offerId = slug?.[0] || 0;
 
   const data = await getOfferById(offerId, locale);
   const t = await getTranslations({

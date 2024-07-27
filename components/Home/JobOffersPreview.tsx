@@ -100,7 +100,12 @@ export default async function JobOffersPreview(props: { locale: string }) {
               </div>
               <Link
                 locale={props.locale}
-                href={"/job-offers/offer/" + offer.offerId}
+                href={
+                  "/job-offers/offer/" +
+                  offer?.offerId +
+                  "/" +
+                  offer?.name?.replace(" ", "-").replace("/", "-").toLowerCase()
+                }
                 className="mt-2 bg-blue-900 transition-colors hover:bg-blue-950 active:bg-blue-800 text-blue-100 text-md p-2 py-3 text-center rounded-md ho"
                 about={`Job offer ${offer.name}`}
               >

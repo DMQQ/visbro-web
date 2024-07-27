@@ -4,6 +4,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import NextImage from "next/image";
 import { TJobOffer } from "@/types";
+import { keywords } from "@/seo";
 
 const API = process.env.BASE_API_URL;
 
@@ -15,6 +16,7 @@ export async function generateMetadata({ params: { locale } }: any) {
   return {
     title: t("heading") + " - Visbro Personal Solutions",
     description: "Visbro Job offers",
+    keywords: keywords.index?.[locale as keyof typeof keywords.index],
   };
 }
 
@@ -64,16 +66,22 @@ export default async function JobOffers({ params: { locale } }: any) {
         {/* <Search /> */}
 
         {offers.map(
-          (
-            { name, content, benefits, offerId, image, requirements },
-            index
-          ) => (
+          ({ name, content, offerId, image, requirements }, index) => (
             <article
               key={index}
               className="mb-5 flex flex-col md:flex-row gap-3 rounded-2xl bg-zinc-950 border border-zinc-900 hover:bg-zinc-900 p-4 transition duration-200"
             >
               {image && (
-                <div className="flex">
+                <Link
+                  className="flex"
+                  locale={locale}
+                  href={
+                    "/job-offers/offer/" +
+                    offerId +
+                    "/" +
+                    name.replace(" ", "-").replace("/", "-").toLowerCase()
+                  }
+                >
                   <NextImage
                     // disable optimization until i figure out how to make it work with
                     unoptimized
@@ -88,7 +96,7 @@ export default async function JobOffers({ params: { locale } }: any) {
                     alt="offer thumbnail"
                     className="md:max-w-64 rounded-md object-cover flex-1"
                   />
-                </div>
+                </Link>
               )}
               <section className="flex flex-col flex-[4]">
                 <h2 className="font-bold text-xl sm:text-2xl ">{name}</h2>
@@ -106,6 +114,7 @@ export default async function JobOffers({ params: { locale } }: any) {
 
                       .split(";")
                       ?.slice(0, 5)
+                      .filter((val) => val.trim() !== "")
                       ?.map((b: string) => (
                         <li key={b} className="text-white text-sm mr-5">
                           {b}
@@ -115,7 +124,12 @@ export default async function JobOffers({ params: { locale } }: any) {
 
                   <Link
                     locale={locale}
-                    href={"/job-offers/offer/" + offerId}
+                    href={
+                      "/job-offers/offer/" +
+                      offerId +
+                      "/" +
+                      name.replace(" ", "-").replace("/", "-").toLowerCase()
+                    }
                     className="p-2 bg-blue-900 transition-colors flex-shrink-0 max-h-12 hover:bg-blue-950 active:bg-blue-800 rounded-md text-blue-100 sm:!w-48 text-center  mt-5 sm:mt-0 w-full py-3"
                   >
                     {t("buttons.card.apply")}
