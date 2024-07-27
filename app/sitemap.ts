@@ -17,11 +17,10 @@ const pathnames = [
   "/collaboration",
   "/gallery",
   "/job-offers",
-  "/job-offers/offer/1",
-  "/job-offers/offer/2",
-  "/job-offers/offer/3",
-  "/job-offers/offer/4",
-  "/[...slug]",
+  "/job-offers/offer/12",
+  "/job-offers/offer/14",
+  "/job-offers/offer/15",
+  "/job-offers/offer/16",
 ];
 const host = "https://visbro.de";
 

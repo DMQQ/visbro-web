@@ -19,7 +19,12 @@ export default function SocialMedia() {
   return (
     <div className={clsx("gap-2 flex flex-row z-50", {})}>
       {socials.map((social, index) => (
-        <a href={socialLinks[index]} key={index} target="_blank" rel="nofollow">
+        <a
+          href={socialLinks[index]}
+          key={index}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             priority
             src={social}

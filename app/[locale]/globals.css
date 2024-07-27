@@ -12,6 +12,12 @@
   }
 }
 
+body {
+  font-family: "Inter", sans-serif;
+  background-image: url(/bg.svg);
+  background-size: contain;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -76,4 +82,9 @@ img {
 
 .tooltip:hover::before {
   opacity: 1; /* Show the tooltip on hover */
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
 }

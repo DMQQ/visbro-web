@@ -43,11 +43,6 @@ function RootLayout({
       <NextIntlClientProvider locale={params.locale} messages={messages}>
         <body
           className={`${inter.className} bg-white text-black dark:dark:bg-zinc-950 dark:text-white`}
-          style={{
-            backgroundImage: "url(/bg.svg)",
-
-            backgroundSize: "contain",
-          }}
         >
           <AppHeader />
           <main className="mt-16">{children}</main>

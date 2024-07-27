@@ -1,14 +1,14 @@
 export const titles = {
   index: {
-    pl: "Praca w Niemczech | Oferty pracy w Niemczech | Pośrednik pracy | Visbro Personal Solutions",
-    de: "Arbeiten in Deutschland | Jobangebote in Deutschland | Arbeitsvermittlung | Visbro Personal Solutions",
-    ro: "Muncă în Germania | Oferte de muncă în Germania | Intermediar de muncă | Visbro Personal Solutions",
-    ru: "Работа в Германии | Вакансии в Германии | Рабочее агентство | Visbro Personal Solutions",
-    tr: "Almanya'da Çalışma | Almanya'da İş İlanları | İş Bulma Kurumu | Visbro Personal Solutions",
-    ua: "Робота в Німеччині | Вакансії в Німеччині | Посередник з працевлаштування | Visbro Personal Solutions",
-    es: "Trabajar en Alemania | Ofertas de trabajo en Alemania | Agencia de empleo | Visbro Personal Solutions",
-    ar: "العمل في ألمانيا | عروض العمل في ألمانيا | وسيط العمل | حلول فيسبرو الشخصية",
-    en: "Work in Germany | Job Offers in Germany | Employment Agency | Visbro Personal Solutions",
+    pl: "Praca w Niemczech | Visbro Personal Solutions",
+    de: "Arbeiten in Deutschland | Visbro Personal Solutions",
+    ro: "Muncă în Germania | Visbro Personal Solutions",
+    ru: "Работа в Германии | Visbro Personal Solutions",
+    tr: "Almanya'da Çalışma | Visbro Personal Solutions",
+    ua: "Робота в Німеччині | Visbro Personal Solutions",
+    es: "Trabajar en Alemania | Visbro Personal Solutions",
+    ar: "العمل في ألمانيا | حلول فيسبرو الشخصية",
+    en: "Work in Germany | Visbro Personal Solutions",
   },
 } as const;
 

@@ -92,10 +92,6 @@ export default function Modal() {
     return (
       <main
         tabIndex={10}
-        style={{
-          background: "rgba(0,0,0,0.7)",
-          zIndex: 1000,
-        }}
         className="modal-overlay fixed top-0 w-screen h-screen"
       >
         <section

@@ -104,6 +104,8 @@ export default function Contact({ params: { locale } }: any) {
                   <div className="flex flex-col mt-2 justify-center text-zinc-300 flex-wrap">
                     {details.contacts.map((value, index) => (
                       <a
+                        rel="noopener noreferrer"
+                        target="_blank"
                         href={index === 0 ? `tel:${value}` : `mailto:${value}`}
                         key={value}
                         className="text-center mb-2"

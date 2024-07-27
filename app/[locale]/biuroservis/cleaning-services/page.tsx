@@ -27,6 +27,8 @@ export default function CleaningServices({ params: { locale } }: any) {
 
         <div className=" w-full flex">
           <a
+            rel="noopener noreferrer"
+            target="_blank"
             data-tel="+49 1520 8941615"
             href="tel:+49 1520 8941615"
             className=" bg-blue-900 hover:bg-blue-950 transition-colors rounded-md px-4 py-4 text-center w-full tooltip"

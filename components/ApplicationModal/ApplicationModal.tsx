@@ -1,12 +1,12 @@
 "use client";
 import { EntryField } from "@/components/ApplicationForm/CVApplicationForm";
 import Button from "@/components/ui/Button/Button";
-import { useRouter } from "@/navigation";
+import { usePathname, useRouter } from "@/navigation";
 import useFormSubmit from "@/utils/useFormSubmit";
 import useSelects from "@/utils/useSelects";
 import { useFormik } from "formik";
 import { useTranslations } from "next-intl";
-import { useSearchParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import * as Yup from "yup";
@@ -250,7 +250,8 @@ export default function ApplicationModal({
   }, [params.get("modal")]);
 
   const router = useRouter();
-
+  const pathname = usePathname();
+  const routeParams = useParams();
   const t2 = useTranslations("ApplicationForm");
 
   return (
@@ -270,7 +271,15 @@ export default function ApplicationModal({
           <h2 className="text-white font-bold text-3xl px-2">
             {t2("heading")}
           </h2>
-          <button onClick={() => router.back()}>
+          <button
+            onClick={() =>
+              router.replace({
+                pathname: pathname,
+                params: routeParams,
+                query: { modal: false },
+              })
+            }
+          >
             <RxCross1 color="#fff" size={25} />
           </button>
         </div>

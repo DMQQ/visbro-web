@@ -8,6 +8,7 @@ import WhyUs from "@/components/Home/WhyUs";
 import { locales } from "@/locales";
 
 import { keywords, titles } from "../../seo";
+import { Metadata } from "next";
 
 const BREAKPOINTS = ["1200w", "800w", "400w"];
 const images = [
@@ -42,7 +43,7 @@ export async function generateMetadata({ params: { locale } }: any) {
     title:
       titles["index"][locale as keyof typeof titles.index] ||
       t("headings.title"),
-    description: t("text.short_about").slice(0, 160),
+    description: t("text.short_about").slice(0, 150),
     keywords: (
       keywords["index"]?.[locale as keyof typeof keywords.index] || []
     ).join(", "),
@@ -56,7 +57,39 @@ export async function generateMetadata({ params: { locale } }: any) {
         href: "/",
       },
     ],
-  };
+    openGraph: {
+      title:
+        titles["index"][locale as keyof typeof titles.index] ||
+        t("headings.title"),
+      description: t("text.short_about").slice(0, 150),
+      url: `https://visbro.de/`,
+      type: "website",
+      locale: locale,
+      images: images.map(({ image, srcset }) => ({
+        url: `https://visbro.de/slider/${image}`,
+        srcset: srcset,
+        alt: "Slider",
+      })),
+      countryName: (locale as string).toUpperCase(),
+      phoneNumbers: [
+        "+49 1520 8941615",
+        "+49 1577 2264941",
+        "+49 1577 2264940",
+      ],
+      emails: [
+        "Biuro.rekrutacja@visbro.de",
+        "kamil.czarnecki@visbro.de",
+        "Elena.lungu@visbro.de ",
+      ],
+      siteName: "Visbro Personal Solution",
+      alternateLocale: locales,
+    },
+
+    twitter: {
+      title: "Visbro Personal Solution",
+      description: t("text.short_about").slice(0, 150),
+    },
+  } as Metadata;
 }
 
 export default async function Home({ params: { locale } }: any) {
