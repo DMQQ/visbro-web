@@ -57,6 +57,7 @@ export async function generateMetadata({ params: { locale } }: any) {
         href: "/",
       },
     ],
+
     openGraph: {
       title:
         titles["index"][locale as keyof typeof titles.index] ||
@@ -95,8 +96,6 @@ export async function generateMetadata({ params: { locale } }: any) {
 export default async function Home({ params: { locale } }: any) {
   unstable_setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: "Home" });
-
   return (
     <main className="w-full">
       <Slider images={images} locale={locale} />
@@ -107,65 +106,6 @@ export default async function Home({ params: { locale } }: any) {
 
       <JobOffersPreview locale={locale} />
       <PartnersList />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Visbro Personal Solution",
-            url: "https://visbro.com",
-            sameAs: [
-              "https://www.facebook.com/profile.php?id=61556830941642",
-              "https://www.tiktok.com/@visbro.personal.s?_t=8k2Ttg57UZM&_r=1",
-            ],
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+4915208941615",
-              contactType: "Customer service",
-              areaServed: "DE",
-              availableLanguage: [
-                "German",
-                "Polish",
-                "English",
-                "Russian",
-                "Ukrainian",
-                "Romanian",
-              ],
-            },
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: " Franz-Flemming-Straße 43a/2OG",
-              postalCode: "04179",
-              addressCountry: "DE",
-            },
-            provider: {
-              "@type": "Organization",
-              name: "Visbro Personal Solution",
-            },
-            description: t("text.short_about"),
-          }),
-        }}
-      ></script>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Visbro Personal Solution",
-            url: "https://visbro.com",
-            provider: {
-              "@type": "Organization",
-              name: "Visbro Personal Solution",
-            },
-            areaServed: "DE",
-            description: t("text.short_about"),
-          }),
-        }}
-      ></script>
     </main>
   );
 }
