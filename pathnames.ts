@@ -115,5 +115,16 @@ export const pathnames = {
     ar: "/عروض-العمل/عرض",
     en: "/job-offers/offer",
   },
+  "/job-offers/offer/[...slug]": {
+    de: "/stellenangebote/angebot/[...slug]",
+    ro: "/oferte-de-munca/oferta/[...slug]",
+    ru: "/vakansii/predlozhenie/[...slug]",
+    pl: "/oferty-pracy/oferta/[...slug]",
+    tr: "/is-ilanlari/teklif/[...slug]",
+    ua: "/vakansii/propozytsiia/[...slug]",
+    es: "/ofertas-de-trabajo/oferta/[...slug]",
+    ar: "/عروض-العمل/عرض/[...slug]",
+    en: "/job-offers/offer/[...slug]",
+  },
   "/[...slug]": "/[...slug]",
 } satisfies Pathnames<typeof locales>;
