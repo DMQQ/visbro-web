@@ -15,9 +15,13 @@ const socialLinks = [
   "#",
 ];
 
-export default function SocialMedia() {
+export default function SocialMedia(props: { classes?: string }) {
   return (
-    <div className={clsx("gap-2 flex flex-row z-50", {})}>
+    <div
+      className={clsx("gap-2 flex flex-row z-50", {
+        [props.classes]: props.classes,
+      })}
+    >
       {socials.map((social, index) => (
         <a
           href={socialLinks[index]}
