@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { locales } from "../locales";
+import { pathnames as translations } from "@/pathnames";
 
 const defaultLocale = "en" as const;
 
@@ -9,6 +10,9 @@ const pathnames = [
   "/contact",
   "/impressum",
   "/biuroservis",
+  "/biuroservis/recrutation",
+  "/biuroservis/housing",
+  "/biuroservis/cleaning-services",
   "/career",
   "/collaboration",
   "/gallery",
@@ -17,12 +21,19 @@ const pathnames = [
   "/job-offers/offer/2",
   "/job-offers/offer/3",
   "/job-offers/offer/4",
+  "/[...slug]",
 ];
 const host = "https://visbro.de";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   function getUrl(pathname: string, locale: string) {
-    return `${host}/${locale}${pathname === "/" ? "" : pathname}`;
+    if (pathname === "/" || locale === defaultLocale) {
+      return `${host}/${locale}${pathname === "/" ? "" : pathname}`;
+    }
+
+    // @ts-ignore
+    const translatedPathname = translations[pathname]?.[locale] || pathname;
+    return `${host}/${locale}${translatedPathname}`;
   }
 
   return pathnames.map((pathname, index) => ({
