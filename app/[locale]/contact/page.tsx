@@ -41,26 +41,11 @@ export default function Contact({ params: { locale } }: any) {
       },
 
       {
-        image: "/workers/Kaja.webp",
-        name: "Kaja Zimoch",
-        position: t("positions.recruiter"),
-        contacts: [
-          "+49 1577 2264941",
-          "Kaja.zimoch@visbro.de ",
-          "Biuro.rekrutacja@visbro.de ",
-        ],
+        name: "Michał Kotwicki",
+        image: "/workers/michal.png",
+        position: t("positions.ceo"),
+        contacts: ["+49 174 2606102", "Michał.kotwicki@visbro.de"],
         languages: ["de", "en", "pl"],
-      },
-      {
-        image: "/workers/Elena.webp",
-        name: "Elena Lungu",
-        position: t("positions.recruiter"),
-        contacts: [
-          "+49 1577 2264940",
-          "Birou.recrutare@visbro.de",
-          "Elena.lungu@visbro.de ",
-        ],
-        languages: ["ru", "ro", "de", "en"],
       },
     ],
     [locale]
@@ -69,30 +54,23 @@ export default function Contact({ params: { locale } }: any) {
   return (
     <PageWrapper style="flex justify-center items-center">
       <article className="w-full p-5 sm:w-2/3 m-auto -translate-y-16">
-        <h1 className="text-4xl lg:text-6xl font-bold  text-white mt-16">
-          {t("heading")}
-        </h1>
+        <h1 className="text-4xl lg:text-6xl font-bold  text-white mt-16">{t("heading")}</h1>
 
-        <article className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-5 mt-16">
+        <article className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5 mt-16">
           {recruters.map((details, key) => (
-            <section
-              key={key}
-              className={`bg-zinc-900 rounded-lg flex flex-col`}
-            >
+            <section key={key} className={`bg-zinc-900 rounded-lg flex flex-col gap-3`}>
               <Image
                 width={144}
                 height={144}
                 priority
                 src={details.image}
                 alt="Zdjęcie rekrutera"
-                className={`rounded-full m-auto w-36 h-36 mt-5 object-cover`}
+                className={`rounded-full m-auto w-40 h-40 mt-5 object-cover`}
               />
 
               <div className="px-5 pb-5 py-2 flex flex-col  flex-1">
-                <div className="flex-1 items-center flex flex-col ">
-                  <h2 className={`font-bold text-2xl text-center`}>
-                    {details.name}
-                  </h2>
+                <div className="flex-1 items-center flex flex-col">
+                  <h2 className={`font-bold text-2xl text-center`}>{details.name}</h2>
                   <p
                     style={{
                       letterSpacing: 0.5,
@@ -101,7 +79,7 @@ export default function Contact({ params: { locale } }: any) {
                   >
                     {details.position}
                   </p>
-                  <div className="flex flex-col mt-2 justify-center text-zinc-300 flex-wrap">
+                  <div className="flex flex-col mt-2 justify-center text-zinc-300 flex-wrap mt-2 gap-2">
                     {details.contacts.map((value, index) => (
                       <a
                         rel="noopener noreferrer"
@@ -133,12 +111,8 @@ export default function Contact({ params: { locale } }: any) {
           ))}
         </article>
 
-        <h2 className="text-3xl lg:text-4xl font-bold  text-white mt-16">
-          {t("location_heading")}
-        </h2>
-        <p className="mb-5 text-zinc-300">
-          Franz-Flemming-Straße 43a 04179 Leipzig, Deutschland
-        </p>
+        <h2 className="text-3xl lg:text-4xl font-bold  text-white mt-16">{t("location_heading")}</h2>
+        <p className="mb-5 text-zinc-300">Franz-Flemming-Straße 43a 04179 Leipzig, Deutschland</p>
 
         <Map zoom={15} position={[51.349860469934505, 12.3051689]}></Map>
       </article>
