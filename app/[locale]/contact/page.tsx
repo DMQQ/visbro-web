@@ -47,6 +47,13 @@ export default function Contact({ params: { locale } }: any) {
         contacts: ["+49 174 2606102", "Michał.kotwicki@visbro.de"],
         languages: ["de", "en", "pl"],
       },
+      {
+        name: "Jakub Wiraszka",
+        image: "/workers/jakub.jpeg",
+        position: t("positions.regional_ceo"),
+        contacts: ["+49 1573 2881155"],
+        languages: ["de", "en", "pl", "fi", "no"],
+      },
     ],
     [locale]
   );
@@ -102,7 +109,7 @@ export default function Contact({ params: { locale } }: any) {
                       height={30}
                       src={"/flags/" + locale + ".png"}
                       alt={locale + " Flag"}
-                      className="w-8 rounded-[3.5px]"
+                      className="w-9 h-7 rounded-[3.5px]"
                     />
                   ))}
                 </div>

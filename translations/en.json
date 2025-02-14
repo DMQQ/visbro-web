@@ -5,7 +5,8 @@
     "positions": {
       "ceo": "Director",
       "recruiter": "Recruiter",
-      "manager": "Manager"
+      "manager": "Manager",
+      "regional_ceo": "Regional Director"
     },
     "location_heading": "Location",
     "phone_heading": "Headquarters Phone",

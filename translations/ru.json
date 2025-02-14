@@ -5,7 +5,8 @@
     "positions": {
       "ceo": "Директор",
       "recruiter": "Рекрутер",
-      "manager": "Менеджер"
+      "manager": "Менеджер",
+      "regional_ceo": "Региональный директор"
     },
     "location_heading": "Местоположение",
     "phone_heading": "Телефон офиса",

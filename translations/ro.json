@@ -5,7 +5,8 @@
     "positions": {
       "ceo": "Director",
       "recruiter": "Recruiter",
-      "manager": "Manager"
+      "manager": "Manager",
+      "regional_ceo": "Director regional"
     },
     "location_heading": "Locație",
     "phone_heading": "Telefon Sediu Central",

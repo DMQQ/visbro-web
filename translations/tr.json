@@ -5,7 +5,8 @@
     "positions": {
       "ceo": "Yönetici",
       "recruiter": "İstihdam Uzmanı",
-      "manager": "Yönetici"
+      "manager": "Yönetici",
+      "regional_ceo": "Bölge Müdürü"
     },
     "location_heading": "Konum",
     "phone_heading": "Merkez Telefon",

@@ -5,7 +5,8 @@
     "positions": {
       "ceo": "Geschäftsführer",
       "recruiter": "Personalvermittler",
-      "manager": "Manager"
+      "manager": "Manager",
+      "regional_ceo": "Regionaldirektor"
     },
     "location_heading": "Standort",
     "phone_heading": "Telefon für die Zentrale",
